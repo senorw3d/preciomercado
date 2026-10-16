@@ -9,8 +9,8 @@ import { BONDS_DATASET, RATINGS_LIST, SECTORS_LIST, RATING_EQUIVALENCE_TABLE } f
 import { MarketApiConnector } from './api.js?v=1.0.6';
 import { Data912Service } from './data912-service.js?v=1.0.6';
 import { ISINValidator } from './isin-validator.js?v=1.0.5';
-import { YieldCurveChart } from './curve-chart.js?v=1.2.0';
-import { SquarifiedTreemap } from './treemap.js?v=1.0.2';
+import { YieldCurveChart } from './curve-chart.js?v=1.2.1';
+import { SquarifiedTreemap } from './treemap.js?v=1.0.3';
 
 class TradingDeskApp {
   constructor() {
@@ -208,7 +208,7 @@ class TradingDeskApp {
         let tooltip = 'Rescatable anticipadamente por el emisor (Callable)';
         if (b.callDate || b.callPrice) {
           const d = b.callDate ? `Fecha límite / Call: ${b.callDate}` : '';
-          const p = b.callPrice ? `Precio: $${Number(b.callPrice).toFixed(2)}` : '';
+          const p = b.callPrice ? `Precio: $${this.formatNumber(Number(b.callPrice), 2)}` : '';
           tooltip = [d, p].filter(Boolean).join(' • ');
         }
         return `<td style="text-align: center; font-weight: 700; font-size: 0.74rem; color: var(--accent-cyan); cursor: help;" title="${tooltip}"><span style="border-bottom: 1px dotted var(--accent-cyan); cursor: help;">Sí</span></td>`;
@@ -444,21 +444,21 @@ class TradingDeskApp {
         const parts = spotItem.fecha.split('-');
         el1dDate.textContent = parts.length === 3 ? `${parts[2]}/${parts[1]}` : 'Spot';
       }
-      if (el1dTna) el1dTna.textContent = `${spotTna.toFixed(2).replace('.', ',')}%`;
-      if (el1dTea) el1dTea.textContent = `${spotTea.toFixed(2).replace('.', ',')}%`;
-      if (el1dTem) el1dTem.textContent = `${spotTem.toFixed(2).replace('.', ',')}%`;
+      if (el1dTna) el1dTna.textContent = `${this.formatNumber(spotTna, 2)}%`;
+      if (el1dTea) el1dTea.textContent = `${this.formatNumber(spotTea, 2)}%`;
+      if (el1dTem) el1dTem.textContent = `${this.formatNumber(spotTem, 2)}%`;
 
-      if (el1wTna) el1wTna.textContent = `${weekTna.toFixed(2).replace('.', ',')}%`;
-      if (el1wTea) el1wTea.textContent = `${weekTea.toFixed(2).replace('.', ',')}%`;
-      if (el1wRange) el1wRange.textContent = `${weekMin.toFixed(1).replace('.', ',')} - ${weekMax.toFixed(1).replace('.', ',')}%`;
+      if (el1wTna) el1wTna.textContent = `${this.formatNumber(weekTna, 2)}%`;
+      if (el1wTea) el1wTea.textContent = `${this.formatNumber(weekTea, 2)}%`;
+      if (el1wRange) el1wRange.textContent = `${this.formatNumber(weekMin, 1)} - ${this.formatNumber(weekMax, 1)}%`;
 
-      if (el1mTna) el1mTna.textContent = `${monthTna.toFixed(2).replace('.', ',')}%`;
-      if (el1mTea) el1mTea.textContent = `${monthTea.toFixed(2).replace('.', ',')}%`;
-      if (el1mRange) el1mRange.textContent = `${monthMin.toFixed(1).replace('.', ',')} - ${monthMax.toFixed(1).replace('.', ',')}%`;
+      if (el1mTna) el1mTna.textContent = `${this.formatNumber(monthTna, 2)}%`;
+      if (el1mTea) el1mTea.textContent = `${this.formatNumber(monthTea, 2)}%`;
+      if (el1mRange) el1mRange.textContent = `${this.formatNumber(monthMin, 1)} - ${this.formatNumber(monthMax, 1)}%`;
 
-      if (el1yTna) el1yTna.textContent = `${yearTna.toFixed(2).replace('.', ',')}%`;
-      if (el1yTea) el1yTea.textContent = `${yearTea.toFixed(2).replace('.', ',')}%`;
-      if (el1yRange) el1yRange.textContent = `${yearMin.toFixed(1).replace('.', ',')} - ${yearMax.toFixed(1).replace('.', ',')}%`;
+      if (el1yTna) el1yTna.textContent = `${this.formatNumber(yearTna, 2)}%`;
+      if (el1yTea) el1yTea.textContent = `${this.formatNumber(yearTea, 2)}%`;
+      if (el1yRange) el1yRange.textContent = `${this.formatNumber(yearMin, 1)} - ${this.formatNumber(yearMax, 1)}%`;
     } catch (err) {
       // In case of network/offline issues, the existing reliable defaults remain displayed
       console.warn('[BCRA TAMAR] Offline or fetch notice:', err.message);
@@ -1370,7 +1370,7 @@ class TradingDeskApp {
       this.userHasManuallyEditedFx = false;
       const rate = this.latestFx?.mep || 1542.50;
       if (fxRateInput) {
-        fxRateInput.value = rate.toFixed(2);
+        fxRateInput.value = this.formatInputNumber(rate, 2);
         this.updateFxBadgesActiveState('MEP');
         this.refreshModalCurrencyView();
       }
@@ -1380,7 +1380,7 @@ class TradingDeskApp {
       this.userHasManuallyEditedFx = false;
       const rate = this.latestFx?.ccl || 1620.50;
       if (fxRateInput) {
-        fxRateInput.value = rate.toFixed(2);
+        fxRateInput.value = this.formatInputNumber(rate, 2);
         this.updateFxBadgesActiveState('CCL');
         this.refreshModalCurrencyView();
       }
@@ -1388,7 +1388,7 @@ class TradingDeskApp {
 
     fxRateInput?.addEventListener('input', () => {
       this.userHasManuallyEditedFx = true;
-      const currentVal = parseFloat(fxRateInput.value);
+      const currentVal = this.parseInputNumber(fxRateInput.value);
       if (this.latestFx && !isNaN(currentVal)) {
         if (Math.abs(currentVal - this.latestFx.ccl) < 0.1) {
           this.updateFxBadgesActiveState('CCL');
@@ -1401,30 +1401,52 @@ class TradingDeskApp {
       this.refreshModalCurrencyView();
     });
 
+    fxRateInput?.addEventListener('blur', (e) => {
+      const n = this.parseInputNumber(e.target.value);
+      if (!isNaN(n)) e.target.value = this.formatInputNumber(n, 2);
+    });
+
     calcCleanInput?.addEventListener('input', (e) => {
-      const newCleanPrice = parseFloat(e.target.value);
+      const newCleanPrice = this.parseInputNumber(e.target.value);
       if (!isNaN(newCleanPrice) && this.selectedBondForModal) {
         this.updateModalCalculatorFromCleanPrice(newCleanPrice);
       }
     });
 
+    calcCleanInput?.addEventListener('blur', (e) => {
+      const n = this.parseInputNumber(e.target.value);
+      if (!isNaN(n)) e.target.value = this.formatInputNumber(n, 2);
+    });
+
     calcDirtyInput?.addEventListener('input', (e) => {
-      const newDirtyPrice = parseFloat(e.target.value);
+      const newDirtyPrice = this.parseInputNumber(e.target.value);
       if (!isNaN(newDirtyPrice) && this.selectedBondForModal) {
         this.updateModalCalculatorFromDirtyPrice(newDirtyPrice);
       }
     });
 
+    calcDirtyInput?.addEventListener('blur', (e) => {
+      const n = this.parseInputNumber(e.target.value);
+      if (!isNaN(n)) e.target.value = this.formatInputNumber(n, 2);
+    });
+
     calcTirInput?.addEventListener('input', (e) => {
-      const targetTIR = parseFloat(e.target.value);
+      const targetTIR = this.parseInputNumber(e.target.value);
       if (!isNaN(targetTIR) && this.selectedBondForModal) {
         this.updateModalCalculatorFromTIR(targetTIR);
       }
     });
 
-    // Number format toggle button
-    document.getElementById('btn-toggle-number-format')?.addEventListener('click', () => {
-      this.toggleNumberFormat();
+    calcTirInput?.addEventListener('blur', (e) => {
+      const n = this.parseInputNumber(e.target.value);
+      if (!isNaN(n)) e.target.value = this.formatInputNumber(n, 2);
+    });
+
+    // Number format toggle buttons (header, footer, modal)
+    document.querySelectorAll('.btn-toggle-number-format, #btn-toggle-number-format').forEach(btn => {
+      btn.addEventListener('click', () => {
+        this.toggleNumberFormat();
+      });
     });
     this.updateNumberFormatButton();
   }
@@ -1965,11 +1987,11 @@ class TradingDeskApp {
 
     // Helper formatters
     const fmtMillions = (n) => {
-      if (!n || isNaN(n)) return '0.0M';
-      if (n >= 1e9) return `${(n / 1e9).toFixed(1)}B`;
-      if (n >= 1e6) return `${(n / 1e6).toFixed(1)}M`;
-      if (n >= 1e3) return `${(n / 1e3).toFixed(0)}k`;
-      return Math.round(n).toLocaleString('es-AR');
+      if (!n || isNaN(n)) return '0,0M';
+      if (n >= 1e9) return `${this.formatNumber(n / 1e9, 1)}B`;
+      if (n >= 1e6) return `${this.formatNumber(n / 1e6, 1)}M`;
+      if (n >= 1e3) return `${this.formatNumber(n / 1e3, 0)}k`;
+      return this.formatNumber(Math.round(n), 0);
     };
 
     // 1. MEP Card (Headline in Cable USD, footer in MEP original)
@@ -1978,7 +2000,7 @@ class TradingDeskApp {
     const mepNomEl = document.getElementById('home-mep-nom');
     const mepCable = d.mepCableUSD || (d.mepUSD * (d.canjeRatio || (53.75 / 56.26)));
     if (mepValEl) mepValEl.textContent = `US$ ${fmtMillions(mepCable)}`;
-    if (mepTradesEl) mepTradesEl.textContent = `${d.mepOps.toLocaleString('es-AR')} ops`;
+    if (mepTradesEl) mepTradesEl.textContent = `${this.formatNumber(d.mepOps, 0)} ops`;
     if (mepNomEl) mepNomEl.textContent = `US$ ${fmtMillions(d.mepUSD)} MEP`;
 
     // 2. CCL Card (Already Cable USD, footer with nominals)
@@ -1986,7 +2008,7 @@ class TradingDeskApp {
     const cclTradesEl = document.getElementById('home-ccl-trades');
     const cclNomEl = document.getElementById('home-ccl-nom');
     if (cclValEl) cclValEl.textContent = `US$ ${fmtMillions(d.cclUSD)}`;
-    if (cclTradesEl) cclTradesEl.textContent = `${d.cclOps.toLocaleString('es-AR')} ops`;
+    if (cclTradesEl) cclTradesEl.textContent = `${this.formatNumber(d.cclOps, 0)} ops`;
     if (cclNomEl) cclNomEl.textContent = `${fmtMillions(d.cclNom)} nom`;
 
     // 3. ARS Card (Headline in Cable USD, footer in Pesos original)
@@ -1994,7 +2016,7 @@ class TradingDeskApp {
     const arsTradesEl = document.getElementById('home-ars-trades');
     const arsUsdEqEl = document.getElementById('home-ars-usd-equiv');
     if (arsValEl) arsValEl.textContent = `US$ ${fmtMillions(d.arsUSD)}`;
-    if (arsTradesEl) arsTradesEl.textContent = `${d.arsOps.toLocaleString('es-AR')} ops`;
+    if (arsTradesEl) arsTradesEl.textContent = `${this.formatNumber(d.arsOps, 0)} ops`;
     if (arsUsdEqEl) arsUsdEqEl.textContent = `$ ${fmtMillions(d.arsARS)} ARS`;
 
     // 4. Total Consolidado Card
@@ -2003,9 +2025,9 @@ class TradingDeskApp {
     const totCountEl = document.getElementById('home-total-species-count');
     const cclRefEl = document.getElementById('home-ccl-ref');
     if (totValEl) totValEl.textContent = `US$ ${fmtMillions(d.totalUSD)}`;
-    if (totTradesEl) totTradesEl.textContent = `${d.totalOps.toLocaleString('es-AR')} trades`;
+    if (totTradesEl) totTradesEl.textContent = `${this.formatNumber(d.totalOps, 0)} trades`;
     if (totCountEl) totCountEl.textContent = `${d.speciesCount} ONs operadas`;
-    if (cclRefEl) cclRefEl.textContent = `$${Math.round(d.cclRate).toLocaleString('es-AR')}`;
+    if (cclRefEl) cclRefEl.textContent = `$${this.formatNumber(Math.round(d.cclRate), 0)}`;
 
     // Liquidity Distribution Bar (all converted to Cable USD)
     const pctMEP = d.totalUSD > 0 ? ((mepCable / d.totalUSD) * 100) : 0;
@@ -2022,9 +2044,9 @@ class TradingDeskApp {
     const lblMep = document.getElementById('pct-mep-label');
     const lblCcl = document.getElementById('pct-ccl-label');
     const lblArs = document.getElementById('pct-ars-label');
-    if (lblMep) lblMep.textContent = `${pctMEP.toFixed(1)}% (US$ ${fmtMillions(mepCable)})`;
-    if (lblCcl) lblCcl.textContent = `${pctCCL.toFixed(1)}% (US$ ${fmtMillions(d.cclUSD)})`;
-    if (lblArs) lblArs.textContent = `${pctARS.toFixed(1)}% (US$ ${fmtMillions(d.arsUSD)})`;
+    if (lblMep) lblMep.textContent = `${this.formatNumber(pctMEP, 1)}% (US$ ${fmtMillions(mepCable)})`;
+    if (lblCcl) lblCcl.textContent = `${this.formatNumber(pctCCL, 1)}% (US$ ${fmtMillions(d.cclUSD)})`;
+    if (lblArs) lblArs.textContent = `${this.formatNumber(pctARS, 1)}% (US$ ${fmtMillions(d.arsUSD)})`;
 
     // Render Top 10 Ranking
     const rankContainer = document.getElementById('home-top-ranking-list');
@@ -2050,7 +2072,7 @@ class TradingDeskApp {
             </div>
             <div style="text-align: right; font-family: var(--font-mono);">
               <div class="top-ranking-monto" style="font-size: 0.82rem; font-weight: 800; color: var(--accent-lime);">US$ ${fmtMillions(item.usdVal)}</div>
-              <div style="font-size: 0.68rem; color: ${chgColor}; font-weight: 600;">${chgSign}${item.chg.toFixed(2)}% • ${item.ops} ops</div>
+              <div style="font-size: 0.68rem; color: ${chgColor}; font-weight: 600;">${chgSign}${this.formatNumber(item.chg, 2)}% • ${this.formatNumber(item.ops, 0)} ops</div>
             </div>
           </div>
         `;
@@ -2176,7 +2198,7 @@ class TradingDeskApp {
             vol: i.vol,
             ops: i.ops,
             chg: i.chg,
-            subLabel: (i.chg > 0 ? `+${i.chg.toFixed(2)}%` : `${(i.chg || 0).toFixed(2)}%`),
+            subLabel: (i.chg > 0 ? `+${this.formatNumber(i.chg, 2)}%` : `${this.formatNumber(i.chg || 0, 2)}%`),
             bondRef: i.bondRef,
             maturity: i.bondRef?.maturity || '',
             isIssuerSummary: false
@@ -2198,7 +2220,7 @@ class TradingDeskApp {
               vol: restVol,
               ops: restOps,
               chg: weightedChg,
-              subLabel: (weightedChg > 0 ? `+${weightedChg.toFixed(2)}%` : `${weightedChg.toFixed(2)}%`),
+              subLabel: (weightedChg > 0 ? `+${this.formatNumber(weightedChg, 2)}%` : `${this.formatNumber(weightedChg, 2)}%`),
               isIssuerSummary: false
             });
           }
@@ -2231,7 +2253,7 @@ class TradingDeskApp {
               vol: i.vol,
               ops: i.ops,
               chg: i.chg,
-              subLabel: (i.chg > 0 ? `+${i.chg.toFixed(2)}%` : `${(i.chg || 0).toFixed(2)}%`),
+              subLabel: (i.chg > 0 ? `+${this.formatNumber(i.chg, 2)}%` : `${this.formatNumber(i.chg || 0, 2)}%`),
               bondRef: i.bondRef,
               maturity: i.bondRef?.maturity || '',
               isIssuerSummary: false
@@ -2252,7 +2274,7 @@ class TradingDeskApp {
                 vol: tailVol,
                 ops: tailOps,
                 chg: tailChg,
-                subLabel: (tailChg > 0 ? `+${tailChg.toFixed(2)}%` : `${tailChg.toFixed(2)}%`),
+                subLabel: (tailChg > 0 ? `+${this.formatNumber(tailChg, 2)}%` : `${this.formatNumber(tailChg, 2)}%`),
                 isIssuerSummary: false
               });
             }
@@ -2592,26 +2614,64 @@ class TradingDeskApp {
     });
   }
 
+  formatInputNumber(val, decimals = 2) {
+    if (val === null || val === undefined || isNaN(val)) return '';
+    const num = Number(val);
+    const fixedStr = num.toFixed(decimals);
+    if (this.numberLocale === 'ar') {
+      return fixedStr.replace('.', ',');
+    }
+    return fixedStr;
+  }
+
+  parseInputNumber(rawVal) {
+    if (rawVal === null || rawVal === undefined) return NaN;
+    if (typeof rawVal === 'number') return rawVal;
+    let s = String(rawVal).trim();
+    if (!s) return NaN;
+    s = s.replace(/[$USAR\s]/gi, '');
+    const hasDot = s.includes('.');
+    const hasComma = s.includes(',');
+    if (hasDot && hasComma) {
+      if (s.lastIndexOf(',') > s.lastIndexOf('.')) {
+        s = s.replace(/\./g, '').replace(',', '.');
+      } else {
+        s = s.replace(/,/g, '');
+      }
+    } else if (hasComma) {
+      s = s.replace(',', '.');
+    }
+    const n = parseFloat(s);
+    return isNaN(n) ? NaN : n;
+  }
+
   toggleNumberFormat() {
     this.numberLocale = (this.numberLocale === 'ar') ? 'us' : 'ar';
     localStorage.setItem('argen_bonds_number_locale', this.numberLocale);
     this.updateNumberFormatButton();
+    this.syncBcraTamarRates();
+    this.syncBcraUvaRates();
+    if (this.selectedGroup === 'Inicio') {
+      this.renderHomeMarket();
+    }
     this.requestDashboardUpdate();
     if (this.selectedBondForModal) {
+      this.syncFxRateToSelectedCurrency();
       this.refreshModalCurrencyView();
     }
   }
 
   updateNumberFormatButton() {
-    const btn = document.getElementById('btn-toggle-number-format');
-    if (!btn) return;
-    if (this.numberLocale === 'ar') {
-      btn.textContent = '1.234,56';
-      btn.title = 'Formato numérico actual: Argentina (1.234,56). Clic para cambiar a Internacional (1,234.56)';
-    } else {
-      btn.textContent = '1,234.56';
-      btn.title = 'Formato numérico actual: Internacional (1,234.56). Clic para cambiar a Argentina (1.234,56)';
-    }
+    const isAr = (this.numberLocale === 'ar');
+    const label = isAr ? '1.234,56' : '1,234.56';
+    const title = isAr 
+      ? 'Formato numérico actual: Argentina (1.234,56). Clic para cambiar a Internacional (1,234.56)'
+      : 'Formato numérico actual: Internacional (1,234.56). Clic para cambiar a Argentina (1.234,56)';
+
+    document.querySelectorAll('.btn-toggle-number-format, #btn-toggle-number-format').forEach(btn => {
+      btn.textContent = label;
+      btn.title = title;
+    });
   }
 
   formatDate(dateStr) {
@@ -2636,7 +2696,9 @@ class TradingDeskApp {
   getFxRate() {
     const fxInput = document.getElementById('calc-fx-rate');
     const defaultRate = (this.modalCurrency === 'CCL') ? (this.latestFx?.ccl || 1620.50) : (this.latestFx?.mep || 1542.50);
-    return (fxInput && parseFloat(fxInput.value) > 0) ? parseFloat(fxInput.value) : defaultRate;
+    if (!fxInput) return defaultRate;
+    const val = this.parseInputNumber(fxInput.value);
+    return (val > 0) ? val : defaultRate;
   }
 
   syncFxRateToSelectedCurrency() {
@@ -2646,18 +2708,18 @@ class TradingDeskApp {
     const cclRate = this.latestFx?.ccl || 1620.50;
 
     if (this.modalCurrency === 'CCL') {
-      fxInput.value = cclRate.toFixed(2);
+      fxInput.value = this.formatInputNumber(cclRate, 2);
       this.updateFxBadgesActiveState('CCL');
     } else if (this.modalCurrency === 'MEP') {
-      fxInput.value = mepRate.toFixed(2);
+      fxInput.value = this.formatInputNumber(mepRate, 2);
       this.updateFxBadgesActiveState('MEP');
     } else if (this.modalCurrency === 'ARS') {
       const payCode = this.getBondPaymentCurrencyCode(this.selectedBondForModal);
       if (payCode === 'CCL') {
-        fxInput.value = cclRate.toFixed(2);
+        fxInput.value = this.formatInputNumber(cclRate, 2);
         this.updateFxBadgesActiveState('CCL');
       } else {
-        fxInput.value = mepRate.toFixed(2);
+        fxInput.value = this.formatInputNumber(mepRate, 2);
         this.updateFxBadgesActiveState('MEP');
       }
     }
@@ -2667,7 +2729,7 @@ class TradingDeskApp {
     const mepBadge = document.getElementById('modal-mep-badge');
     const cclBadge = document.getElementById('modal-ccl-badge');
     const fxInput = document.getElementById('calc-fx-rate');
-    const currentVal = fxInput ? parseFloat(fxInput.value) : 0;
+    const currentVal = fxInput ? this.parseInputNumber(fxInput.value) : 0;
 
     let active = overrideActive;
     if (!active) {
@@ -2969,11 +3031,11 @@ class TradingDeskApp {
     const parity = FinancialMath.calculateParity(dirtyPriceForCalc, bond.technicalValue);
     const { modifiedDuration } = FinancialMath.calculateRiskMetrics(dirtyPriceForCalc, bond.cashFlows, tir, bond.settlementDate, bond.frequency);
 
-    // Note: <input type="number"> elements strictly require standard numeric representation (e.g. 100.50 with dot, not comma)
-    document.getElementById('calc-clean-price').value = !isNaN(cleanVal) ? cleanVal.toFixed(2) : '';
+    // Localized inputs using formatInputNumber (replaces HTML5 dot-only limitation)
+    document.getElementById('calc-clean-price').value = !isNaN(cleanVal) ? this.formatInputNumber(cleanVal, 2) : '';
     document.getElementById('calc-accrued-interest').value = `${currSymbol}${this.formatNumber(accruedVal, 4)}`;
-    document.getElementById('calc-dirty-price').value = !isNaN(dirtyVal) ? dirtyVal.toFixed(2) : '';
-    document.getElementById('calc-result-tir').value = !isNaN(tir) ? tir.toFixed(2) : '';
+    document.getElementById('calc-dirty-price').value = !isNaN(dirtyVal) ? this.formatInputNumber(dirtyVal, 2) : '';
+    document.getElementById('calc-result-tir').value = !isNaN(tir) ? this.formatInputNumber(tir, 2) : '';
     document.getElementById('calc-result-parity').value = `${this.formatNumber(parity, 1)}%`;
     document.getElementById('calc-result-duration').value = `${this.formatNumber(modifiedDuration, 2)} yrs`;
 
@@ -3028,10 +3090,10 @@ class TradingDeskApp {
 
     const mult = isArsBond ? 1.0 : ((curr === 'ARS') ? fxRate : 1.0);
 
-    document.getElementById('calc-dirty-price').value = (dirtyPriceBase * mult).toFixed(2);
-    document.getElementById('calc-result-parity').value = `${parity.toFixed(1)}%`;
-    document.getElementById('calc-result-tir').value = tir.toFixed(2);
-    document.getElementById('calc-result-duration').value = `${modifiedDuration.toFixed(2)} yrs`;
+    document.getElementById('calc-dirty-price').value = this.formatInputNumber(dirtyPriceBase * mult, 2);
+    document.getElementById('calc-result-parity').value = `${this.formatNumber(parity, 1)}%`;
+    document.getElementById('calc-result-tir').value = this.formatInputNumber(tir, 2);
+    document.getElementById('calc-result-duration').value = `${this.formatNumber(modifiedDuration, 2)} yrs`;
   }
 
   updateModalCalculatorFromDirtyPrice(inputDirtyPrice) {
@@ -3050,10 +3112,10 @@ class TradingDeskApp {
 
     const mult = isArsBond ? 1.0 : ((curr === 'ARS') ? fxRate : 1.0);
 
-    document.getElementById('calc-clean-price').value = (cleanPriceBase * mult).toFixed(2);
-    document.getElementById('calc-result-parity').value = `${parity.toFixed(1)}%`;
-    document.getElementById('calc-result-tir').value = tir.toFixed(2);
-    document.getElementById('calc-result-duration').value = `${modifiedDuration.toFixed(2)} yrs`;
+    document.getElementById('calc-clean-price').value = this.formatInputNumber(cleanPriceBase * mult, 2);
+    document.getElementById('calc-result-parity').value = `${this.formatNumber(parity, 1)}%`;
+    document.getElementById('calc-result-tir').value = this.formatInputNumber(tir, 2);
+    document.getElementById('calc-result-duration').value = `${this.formatNumber(modifiedDuration, 2)} yrs`;
   }
 
   updateModalCalculatorFromTIR(targetTIR) {
@@ -3069,10 +3131,10 @@ class TradingDeskApp {
     const parity = FinancialMath.calculateParity(dirtyPrice, bond.technicalValue);
     const { modifiedDuration } = FinancialMath.calculateRiskMetrics(dirtyPrice, bond.cashFlows, targetTIR, bond.settlementDate, bond.frequency);
 
-    document.getElementById('calc-clean-price').value = (cleanPrice * mult).toFixed(2);
-    document.getElementById('calc-dirty-price').value = (dirtyPrice * mult).toFixed(2);
-    document.getElementById('calc-result-parity').value = `${parity.toFixed(1)}%`;
-    document.getElementById('calc-result-duration').value = `${modifiedDuration.toFixed(2)} yrs`;
+    document.getElementById('calc-clean-price').value = this.formatInputNumber(cleanPrice * mult, 2);
+    document.getElementById('calc-dirty-price').value = this.formatInputNumber(dirtyPrice * mult, 2);
+    document.getElementById('calc-result-parity').value = `${this.formatNumber(parity, 1)}%`;
+    document.getElementById('calc-result-duration').value = `${this.formatNumber(modifiedDuration, 2)} yrs`;
   }
 
   exportCashFlowsToCSV(bond) {
@@ -3125,18 +3187,18 @@ class TradingDeskApp {
         this.latestFx = fx;
         const mepEl = document.getElementById('modal-mep-rate');
         const cclEl = document.getElementById('modal-ccl-rate');
-        if (mepEl) mepEl.textContent = `$${fx.mep.toFixed(2)}`;
-        if (cclEl) cclEl.textContent = `$${fx.ccl.toFixed(2)}`;
+        if (mepEl) mepEl.textContent = `$${this.formatNumber(fx.mep, 2)}`;
+        if (cclEl) cclEl.textContent = `$${this.formatNumber(fx.ccl, 2)}`;
 
         const mepBadge = document.getElementById('modal-mep-badge');
         const cclBadge = document.getElementById('modal-ccl-badge');
-        if (mepBadge) mepBadge.textContent = `MEP: $${fx.mep.toFixed(2)}`;
-        if (cclBadge) cclBadge.textContent = `CCL: $${fx.ccl.toFixed(2)}`;
+        if (mepBadge) mepBadge.textContent = `MEP: $${this.formatNumber(fx.mep, 2)}`;
+        if (cclBadge) cclBadge.textContent = `CCL: $${this.formatNumber(fx.ccl, 2)}`;
 
         const fxInput = document.getElementById('calc-fx-rate');
         if (fxInput && !this.userHasManuallyEditedFx) {
           const targetFx = (this.modalCurrency === 'CCL') ? fx.ccl : fx.mep;
-          fxInput.value = targetFx.toFixed(2);
+          fxInput.value = this.formatInputNumber(targetFx, 2);
         }
         this.updateFxBadgesActiveState();
       }

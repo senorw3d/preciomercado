@@ -12,7 +12,7 @@
   <!-- Chart.js CDN -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css?v=1.0.31">
+  <link rel="stylesheet" href="css/styles.css?v=1.0.32">
 </head>
 <body>
 
@@ -44,6 +44,7 @@
         </div>
         <button id="btn-refresh-quotes" class="nav-btn" style="border: 1px solid var(--accent-lime); color: var(--accent-lime);" title="Actualizar cotizaciones en vivo">🔄 Actualizar</button>
         <button id="btn-api-config" class="nav-btn" style="border: 1px solid var(--border-color); display: none;">📡 Feed Data912</button>
+        <button id="btn-toggle-number-format-header" class="nav-btn btn-toggle-number-format" title="Cambiar formato numérico (Argentina 1.000,00 vs Internacional 1,000.00)" style="font-family: var(--font-mono); font-size: 0.76rem; font-weight: 700; border: 1px solid var(--border-color);">1.234,56</button>
         <button id="theme-toggle" class="nav-btn" style="border: 1px solid var(--border-color);">🌓 Theme</button>
       </div>
     </div>
@@ -573,7 +574,7 @@
 
     <!-- FOOTER CONTROLS / LOCALE TOGGLE -->
     <div style="display: flex; justify-content: flex-end; align-items: center; padding: 0.75rem 0.25rem 0.25rem; margin-top: 0.5rem;">
-      <button id="btn-toggle-number-format" title="Cambiar formato numérico (Argentina 1.000,00 vs Internacional 1,000.00)" style="background: none; border: none; color: var(--text-dim); font-size: 0.72rem; font-family: var(--font-mono); cursor: pointer; padding: 0.25rem 0.5rem; border-radius: 4px; transition: color 0.15s ease, background 0.15s ease; opacity: 0.75;">
+      <button id="btn-toggle-number-format" class="btn-toggle-number-format" title="Cambiar formato numérico (Argentina 1.000,00 vs Internacional 1,000.00)" style="background: none; border: none; color: var(--text-dim); font-size: 0.72rem; font-family: var(--font-mono); cursor: pointer; padding: 0.25rem 0.5rem; border-radius: 4px; transition: color 0.15s ease, background 0.15s ease; opacity: 0.75;">
         1.234,56
       </button>
     </div>
@@ -729,40 +730,41 @@
       <div id="fx-rate-container" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; background: var(--bg-card-hover); padding: 8px 14px; border-radius: 6px; border: 1px solid var(--border-color); flex-wrap: wrap; gap: 0.6rem;">
         <div style="display: flex; gap: 0.6rem; align-items: center;">
           <label style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted);">Tipo de Cambio Implícito (TC):</label>
-          <input type="number" id="calc-fx-rate" class="num-tabular" value="1542.50" style="width: 110px; padding: 4px 8px; font-size: 0.85rem; border: 1px solid var(--border-color); border-radius: 4px;">
+          <input type="text" inputmode="decimal" id="calc-fx-rate" class="num-tabular" value="1.542,50" style="width: 110px; padding: 4px 8px; font-size: 0.85rem; border: 1px solid var(--border-color); border-radius: 4px;">
           <span style="font-size: 0.75rem; color: var(--text-dim);">(ARS / USD)</span>
         </div>
-        <div id="fx-source-badge" style="font-size: 0.75rem; color: var(--text-dim); display: flex; gap: 0.8rem; align-items: center; flex-wrap: wrap;">
+        <div id="fx-source-badge" style="font-size: 0.75rem; color: var(--text-dim); display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap;">
           <span style="display: none;">📌 Fuente FX: <strong id="fx-source-name" class="text-cyan">DolarApi en Vivo</strong></span>
-          <span id="modal-mep-badge" class="badge fx-rate-badge active-fx" title="Clic para aplicar cotización MEP al Tipo de Cambio">MEP: $1,542.50</span>
-          <span id="modal-ccl-badge" class="badge fx-rate-badge" title="Clic para aplicar cotización Cable (CCL) al Tipo de Cambio">CCL: $1,620.50</span>
+          <span id="modal-mep-badge" class="badge fx-rate-badge active-fx" title="Clic para aplicar cotización MEP al Tipo de Cambio">MEP: $1.542,50</span>
+          <span id="modal-ccl-badge" class="badge fx-rate-badge" title="Clic para aplicar cotización Cable (CCL) al Tipo de Cambio">CCL: $1.620,50</span>
+          <button type="button" id="btn-toggle-number-format-modal" class="badge fx-rate-badge btn-toggle-number-format" title="Cambiar formato decimal (1.234,56 vs 1,234.56)" style="margin-left: 2px; font-family: var(--font-mono); font-weight: 700; cursor: pointer;">1.234,56</button>
         </div>
       </div>
 
       <div class="calc-grid">
         <div class="calc-field">
           <label id="lbl-clean-price">Precio Limpio (Clean Price)</label>
-          <input type="number" id="calc-clean-price" class="num-tabular" step="0.1" value="100.0">
+          <input type="text" inputmode="decimal" id="calc-clean-price" class="num-tabular" value="100,00">
         </div>
         <div class="calc-field">
           <label id="lbl-accrued-interest">Interés Corrido (IC)</label>
-          <input type="text" id="calc-accrued-interest" class="num-tabular" readonly value="0.00">
+          <input type="text" id="calc-accrued-interest" class="num-tabular" readonly value="0,00">
         </div>
         <div class="calc-field">
           <label id="lbl-dirty-price">Precio Sucio (Dirty Price) ✍</label>
-          <input type="number" id="calc-dirty-price" class="num-tabular" step="0.01" value="0.00">
+          <input type="text" inputmode="decimal" id="calc-dirty-price" class="num-tabular" value="100,00">
         </div>
         <div class="calc-field">
           <label>TIR / YTM Resultante (%)</label>
-          <input type="number" id="calc-result-tir" class="num-tabular" step="0.05" value="7.50">
+          <input type="text" inputmode="decimal" id="calc-result-tir" class="num-tabular" value="7,50">
         </div>
         <div class="calc-field">
           <label>Paridad (%)</label>
-          <input type="text" id="calc-result-parity" class="num-tabular" readonly value="100.0%">
+          <input type="text" id="calc-result-parity" class="num-tabular" readonly value="100,0%">
         </div>
         <div class="calc-field">
           <label>Duration Modificada</label>
-          <input type="text" id="calc-result-duration" class="num-tabular" readonly value="2.5 yrs">
+          <input type="text" id="calc-result-duration" class="num-tabular" readonly value="2,50 yrs">
         </div>
       </div>
 
@@ -792,6 +794,6 @@
   </div>
 
   <!-- Application Logic JS Entry Point -->
-  <script type="module" src="js/app.js?v=1.3.10"></script>
+  <script type="module" src="js/app.js?v=1.3.11"></script>
 </body>
 </html>

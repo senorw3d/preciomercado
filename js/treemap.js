@@ -3,6 +3,18 @@
  * High-performance, zero-dependency Finviz-style interactive treemap renderer.
  */
 
+function formatTreemapNum(val, decimals = 0) {
+  if (val === null || val === undefined || isNaN(val)) return '-';
+  if (window.app && typeof window.app.formatNumber === 'function') {
+    return window.app.formatNumber(val, decimals);
+  }
+  const isUS = localStorage.getItem('argen_bonds_number_locale') === 'us';
+  return Number(val).toLocaleString(isUS ? 'en-US' : 'es-AR', {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals
+  });
+}
+
 export class SquarifiedTreemap {
   constructor(canvasId, options = {}) {
     this.canvas = typeof canvasId === 'string' ? document.getElementById(canvasId) : canvasId;
@@ -346,7 +358,7 @@ export class SquarifiedTreemap {
           if (item.subLabel) {
             subText = item.subLabel;
           } else if (item.chg !== undefined) {
-            subText = (item.chg > 0 ? `+${item.chg.toFixed(2)}%` : `${(item.chg || 0).toFixed(2)}%`);
+            subText = (item.chg > 0 ? `+${formatTreemapNum(item.chg, 2)}%` : `${formatTreemapNum(item.chg || 0, 2)}%`);
           }
 
           if (r.h >= 45 && r.w >= 50 && subText) {
@@ -394,16 +406,16 @@ export class SquarifiedTreemap {
           <div style="font-size: 0.76rem; color: #cbd5e1; margin-top: 3px; font-weight: 500;">${item.sector || 'Corporativo'} • ${item.speciesCount || 1} ONs activas</div>
           <div style="border-top: 1px solid rgba(56, 189, 248, 0.25); margin: 6px 0; padding-top: 6px; font-size: 0.78rem; font-family: var(--font-mono); display: grid; grid-template-columns: 1.25fr 1fr; gap: 5px;">
             <div style="color: #93c5fd; font-weight: 600;">Total Operado Cable:</div>
-            <div style="text-align: right; color: #facc15; font-weight: 800;">US$ ${Math.round(item.cableUSD).toLocaleString('es-AR')}</div>
+            <div style="text-align: right; color: #facc15; font-weight: 800;">US$ ${formatTreemapNum(Math.round(item.cableUSD), 0)}</div>
             <div style="color: #93c5fd; font-weight: 600;">Cuota de Mercado:</div>
-            <div style="text-align: right; color: #ffffff; font-weight: 700;">${item.sharePct ? item.sharePct.toFixed(1) + '%' : '--'}</div>
+            <div style="text-align: right; color: #ffffff; font-weight: 700;">${item.sharePct ? formatTreemapNum(item.sharePct, 1) + '%' : '--'}</div>
             <div style="color: #93c5fd; font-weight: 600;">Operaciones Totales:</div>
-            <div style="text-align: right; color: #ffffff; font-weight: 700;">${(item.ops || 0).toLocaleString('es-AR')} ops</div>
+            <div style="text-align: right; color: #ffffff; font-weight: 700;">${formatTreemapNum(item.ops || 0, 0)} ops</div>
             <div style="color: #93c5fd; font-weight: 600;">Desglose x Moneda:</div>
             <div style="text-align: right; color: #e2e8f0; font-size: 0.72rem; font-weight: 500;">MEP + CCL + Pesos</div>
           </div>
           <div style="margin-top: 5px; font-size: 0.72rem; color: #cbd5e1; border-top: 1px dashed rgba(255,255,255,0.15); padding-top: 4px; font-family: var(--font-mono);">
-            MEP: <span style="color:#fff;">US$ ${Math.round(item.mepUSD || 0).toLocaleString('es-AR')}</span> | CCL: <span style="color:#fff;">US$ ${Math.round(item.cclUSD || 0).toLocaleString('es-AR')}</span> | ARS: <span style="color:#fff;">$ ${Math.round((item.arsARS || 0) / 1e6).toLocaleString('es-AR')}M</span>
+            MEP: <span style="color:#fff;">US$ ${formatTreemapNum(Math.round(item.mepUSD || 0), 0)}</span> | CCL: <span style="color:#fff;">US$ ${formatTreemapNum(Math.round(item.cclUSD || 0), 0)}</span> | ARS: <span style="color:#fff;">$ ${formatTreemapNum(Math.round((item.arsARS || 0) / 1e6), 0)}M</span>
           </div>
         `;
       } else {
@@ -427,18 +439,18 @@ export class SquarifiedTreemap {
               <span style="letter-spacing: 0.5px;">${item.symbol}</span>
               ${vtoFormatted ? `<span style="font-size: 0.75rem; color: #ffffff; font-weight: 600; font-family: var(--font-mono); background: rgba(56, 189, 248, 0.2); padding: 1px 5px; border-radius: 4px; border: 1px solid rgba(56, 189, 248, 0.4);">${vtoFormatted}</span>` : ''}
             </div>
-            <span style="color: ${chgColor}; font-family: var(--font-mono); font-size: 0.9rem; font-weight: 700;">${chgSign}${Number(item.chg || 0).toFixed(2)}%</span>
+            <span style="color: ${chgColor}; font-family: var(--font-mono); font-size: 0.9rem; font-weight: 700;">${chgSign}${formatTreemapNum(item.chg || 0, 2)}%</span>
           </div>
           <div style="font-size: 0.8rem; color: #ffffff; margin-top: 3px; font-weight: 500;">${item.name || item.issuer || item.category || ''}</div>
           <div style="border-top: 1px solid rgba(56, 189, 248, 0.25); margin: 7px 0; padding-top: 7px; font-size: 0.78rem; font-family: var(--font-mono); display: grid; grid-template-columns: 1.15fr 1fr; gap: 5px;">
             <div style="color: #93c5fd; font-weight: 600;">Monto Cable USD:</div>
-            <div style="text-align: right; color: #ffffff; font-weight: 800;">US$ ${Math.round(item.cableUSD || item.usdVal || 0).toLocaleString('es-AR')}</div>
+            <div style="text-align: right; color: #ffffff; font-weight: 800;">US$ ${formatTreemapNum(Math.round(item.cableUSD || item.usdVal || 0), 0)}</div>
             <div style="color: #93c5fd; font-weight: 600;">Último Precio:</div>
-            <div style="text-align: right; color: #ffffff; font-weight: 700;">$${Number(item.px || 0).toFixed(2)}</div>
+            <div style="text-align: right; color: #ffffff; font-weight: 700;">$${formatTreemapNum(item.px || 0, 2)}</div>
             <div style="color: #93c5fd; font-weight: 600;">Volumen Nom:</div>
-            <div style="text-align: right; color: #ffffff; font-weight: 700;">${(item.vol || 0).toLocaleString('es-AR')}</div>
+            <div style="text-align: right; color: #ffffff; font-weight: 700;">${formatTreemapNum(item.vol || 0, 0)}</div>
             <div style="color: #93c5fd; font-weight: 600;">Operaciones:</div>
-            <div style="text-align: right; color: #ffffff; font-weight: 700;">${(item.ops || 0).toLocaleString('es-AR')} ops</div>
+            <div style="text-align: right; color: #ffffff; font-weight: 700;">${formatTreemapNum(item.ops || 0, 0)} ops</div>
           </div>
         `;
       }

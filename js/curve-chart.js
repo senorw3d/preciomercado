@@ -4,6 +4,18 @@
  * Draws Ticker Labels directly next to each point on the chart canvas with theme-aware contrast.
  */
 
+function formatChartNum(val, decimals = 2) {
+  if (val === null || val === undefined || isNaN(val)) return '-';
+  if (window.app && typeof window.app.formatNumber === 'function') {
+    return window.app.formatNumber(val, decimals);
+  }
+  const isUS = localStorage.getItem('argen_bonds_number_locale') === 'us';
+  return Number(val).toLocaleString(isUS ? 'en-US' : 'es-AR', {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals
+  });
+}
+
 export class YieldCurveChart {
   constructor(canvasId) {
     this.canvasId = canvasId;
@@ -531,9 +543,9 @@ export class YieldCurveChart {
               return `${m}/${yr}`;
             }
             if (isTEA || isYTM) {
-              return typeof val === 'number' ? `${val % 1 === 0 ? val : val.toFixed(1)}%` : val;
+              return typeof val === 'number' ? `${val % 1 === 0 ? formatChartNum(val, 0) : formatChartNum(val, 1)}%` : val;
             }
-            return typeof val === 'number' ? (val % 1 === 0 ? val : val.toFixed(1)) : val;
+            return typeof val === 'number' ? (val % 1 === 0 ? formatChartNum(val, 0) : formatChartNum(val, 1)) : val;
           }
         }
       },
@@ -559,7 +571,7 @@ export class YieldCurveChart {
           font: { family: 'JetBrains Mono, monospace', weight: 'bold' },
           callback: function(val) {
             if (typeof val === 'number') {
-              return `${val % 1 === 0 ? val : val.toFixed(1)}${(isTEA || isYTM) ? 'a' : '%'}`;
+              return `${val % 1 === 0 ? formatChartNum(val, 0) : formatChartNum(val, 1)}${(isTEA || isYTM) ? 'a' : '%'}`;
             }
             return val;
           }
@@ -591,7 +603,7 @@ export class YieldCurveChart {
           font: { family: 'JetBrains Mono, monospace', weight: 'bold' },
           callback: function(val) {
             if (typeof val === 'number') {
-              return `${val % 1 === 0 ? val : val.toFixed(1)}%`;
+              return `${val % 1 === 0 ? formatChartNum(val, 0) : formatChartNum(val, 1)}%`;
             }
             return val;
           }
@@ -651,7 +663,7 @@ export class YieldCurveChart {
               label: (item) => {
                 const p = item.raw;
                 if (!p.ticker) {
-                  return (isTEA || isYTM) ? `Duración Estimada: ${p.y.toFixed(2)} años` : `Rendimiento Estimado: ${p.y.toFixed(2)}%`;
+                  return (isTEA || isYTM) ? `Duración Estimada: ${formatChartNum(p.y, 2)} años` : `Rendimiento Estimado: ${formatChartNum(p.y, 2)}%`;
                 }
                 const lines = [];
                 const dirtyPrice = p.dirtyPrice ?? p.bondObj?.dirtyPrice;
@@ -662,7 +674,7 @@ export class YieldCurveChart {
                   lines.push(`Moneda / Segmento: ${p.category}`);
                 }
                 if (dirtyPrice !== undefined && dirtyPrice !== null) {
-                  const chg = typeof pctChange === 'number' ? ` (${pctChange > 0 ? '+' : ''}${pctChange.toFixed(2)}%)` : '';
+                  const chg = typeof pctChange === 'number' ? ` (${pctChange > 0 ? '+' : ''}${formatChartNum(pctChange, 2)}%)` : '';
                   const qDate = p.quoteDate ?? p.bondObj?.quoteDate;
                   let dateStr = '';
                   if (qDate) {
@@ -678,9 +690,9 @@ export class YieldCurveChart {
                     const yy = String(today.getFullYear()).slice(-2);
                     dateStr = ` ${dd}/${mm}/${yy}`;
                   }
-                  lines.push(`Último Precio: $${Number(dirtyPrice).toFixed(2)}${chg}${dateStr}`);
+                  lines.push(`Último Precio: $${formatChartNum(dirtyPrice, 2)}${chg}${dateStr}`);
                   if (cleanPrice !== undefined && cleanPrice !== null && Math.abs(cleanPrice - dirtyPrice) > 0.001) {
-                    lines.push(`Precio Clean: $${Number(cleanPrice).toFixed(2)}`);
+                    lines.push(`Precio Clean: $${formatChartNum(cleanPrice, 2)}`);
                   }
                 }
                 if (p.maturity) {
@@ -689,15 +701,15 @@ export class YieldCurveChart {
                   lines.push(`Vencimiento: ${matFmt}`);
                 }
                 if (p.tea) {
-                  lines.push(`Tasa Efectiva Anual (TEA): ${p.tea.toFixed(2)}%`);
+                  lines.push(`Tasa Efectiva Anual (TEA): ${formatChartNum(p.tea, 2)}%`);
                 }
-                lines.push(`Rendimiento YTM / TIR (%): ${(p.tir ?? (isTEA || isYTM ? p.x : p.y)).toFixed(2)}%`);
-                lines.push(`Duración: ${(p.duration ?? (isTEA || isYTM ? p.y : p.x)).toFixed(2)} años`);
+                lines.push(`Rendimiento YTM / TIR (%): ${formatChartNum(p.tir ?? (isTEA || isYTM ? p.x : p.y), 2)}%`);
+                lines.push(`Duración: ${formatChartNum(p.duration ?? (isTEA || isYTM ? p.y : p.x), 2)} años`);
                 if (p.macaulayDuration) {
-                  lines.push(`Duración Macaulay: ${p.macaulayDuration.toFixed(2)} años`);
+                  lines.push(`Duración Macaulay: ${formatChartNum(p.macaulayDuration, 2)} años`);
                 }
                 if (p.parity !== undefined && p.parity !== null) {
-                  lines.push(`Paridad: ${Number(p.parity).toFixed(1)}%`);
+                  lines.push(`Paridad: ${formatChartNum(p.parity, 1)}%`);
                 }
                 if (p.rating) {
                   lines.push(`Rating: ${p.rating}`);
