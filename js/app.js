@@ -1349,12 +1349,15 @@ class TradingDeskApp {
     const fxRateInput = document.getElementById('calc-fx-rate');
 
     this.modalCurrency = 'MEP'; // Default 'MEP', 'CCL', 'ARS'
+    this.userHasManuallyEditedFx = false;
 
     document.querySelectorAll('.btn-calc-curr').forEach(btn => {
       btn.addEventListener('click', (e) => {
         document.querySelectorAll('.btn-calc-curr').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         this.modalCurrency = btn.dataset.curr;
+        this.userHasManuallyEditedFx = false;
+        this.syncFxRateToSelectedCurrency();
         this.refreshModalCurrencyView();
 
         if (this.selectedBondForModal) {
@@ -1364,20 +1367,37 @@ class TradingDeskApp {
     });
 
     document.getElementById('modal-mep-badge')?.addEventListener('click', () => {
-      if (this.latestFx?.mep && fxRateInput) {
-        fxRateInput.value = this.latestFx.mep.toFixed(2);
+      this.userHasManuallyEditedFx = false;
+      const rate = this.latestFx?.mep || 1542.50;
+      if (fxRateInput) {
+        fxRateInput.value = rate.toFixed(2);
+        this.updateFxBadgesActiveState('MEP');
         this.refreshModalCurrencyView();
       }
     });
 
     document.getElementById('modal-ccl-badge')?.addEventListener('click', () => {
-      if (this.latestFx?.ccl && fxRateInput) {
-        fxRateInput.value = this.latestFx.ccl.toFixed(2);
+      this.userHasManuallyEditedFx = false;
+      const rate = this.latestFx?.ccl || 1620.50;
+      if (fxRateInput) {
+        fxRateInput.value = rate.toFixed(2);
+        this.updateFxBadgesActiveState('CCL');
         this.refreshModalCurrencyView();
       }
     });
 
     fxRateInput?.addEventListener('input', () => {
+      this.userHasManuallyEditedFx = true;
+      const currentVal = parseFloat(fxRateInput.value);
+      if (this.latestFx && !isNaN(currentVal)) {
+        if (Math.abs(currentVal - this.latestFx.ccl) < 0.1) {
+          this.updateFxBadgesActiveState('CCL');
+        } else if (Math.abs(currentVal - this.latestFx.mep) < 0.1) {
+          this.updateFxBadgesActiveState('MEP');
+        } else {
+          this.updateFxBadgesActiveState('NONE');
+        }
+      }
       this.refreshModalCurrencyView();
     });
 
@@ -2615,7 +2635,67 @@ class TradingDeskApp {
 
   getFxRate() {
     const fxInput = document.getElementById('calc-fx-rate');
-    return (fxInput && parseFloat(fxInput.value) > 0) ? parseFloat(fxInput.value) : 1280.0;
+    const defaultRate = (this.modalCurrency === 'CCL') ? (this.latestFx?.ccl || 1620.50) : (this.latestFx?.mep || 1542.50);
+    return (fxInput && parseFloat(fxInput.value) > 0) ? parseFloat(fxInput.value) : defaultRate;
+  }
+
+  syncFxRateToSelectedCurrency() {
+    const fxInput = document.getElementById('calc-fx-rate');
+    if (!fxInput) return;
+    const mepRate = this.latestFx?.mep || 1542.50;
+    const cclRate = this.latestFx?.ccl || 1620.50;
+
+    if (this.modalCurrency === 'CCL') {
+      fxInput.value = cclRate.toFixed(2);
+      this.updateFxBadgesActiveState('CCL');
+    } else if (this.modalCurrency === 'MEP') {
+      fxInput.value = mepRate.toFixed(2);
+      this.updateFxBadgesActiveState('MEP');
+    } else if (this.modalCurrency === 'ARS') {
+      const payCode = this.getBondPaymentCurrencyCode(this.selectedBondForModal);
+      if (payCode === 'CCL') {
+        fxInput.value = cclRate.toFixed(2);
+        this.updateFxBadgesActiveState('CCL');
+      } else {
+        fxInput.value = mepRate.toFixed(2);
+        this.updateFxBadgesActiveState('MEP');
+      }
+    }
+  }
+
+  updateFxBadgesActiveState(overrideActive = null) {
+    const mepBadge = document.getElementById('modal-mep-badge');
+    const cclBadge = document.getElementById('modal-ccl-badge');
+    const fxInput = document.getElementById('calc-fx-rate');
+    const currentVal = fxInput ? parseFloat(fxInput.value) : 0;
+
+    let active = overrideActive;
+    if (!active) {
+      if (this.latestFx && currentVal > 0) {
+        if (Math.abs(currentVal - this.latestFx.ccl) < 0.5) {
+          active = 'CCL';
+        } else if (Math.abs(currentVal - this.latestFx.mep) < 0.5) {
+          active = 'MEP';
+        }
+      }
+      if (!active) {
+        if (this.modalCurrency === 'CCL') {
+          active = 'CCL';
+        } else if (this.modalCurrency === 'MEP') {
+          active = 'MEP';
+        } else {
+          const payCode = this.getBondPaymentCurrencyCode(this.selectedBondForModal);
+          active = (payCode === 'CCL') ? 'CCL' : 'MEP';
+        }
+      }
+    }
+
+    if (mepBadge) {
+      mepBadge.classList.toggle('active-fx', active === 'MEP');
+    }
+    if (cclBadge) {
+      cclBadge.classList.toggle('active-fx', active === 'CCL');
+    }
   }
 
   getBondPaymentCurrencyCode(bond) {
@@ -2713,6 +2793,8 @@ class TradingDeskApp {
       flowHeader.textContent = `Flujo Total (${bond.paymentCurrency})`;
     }
 
+    this.userHasManuallyEditedFx = false;
+    this.syncFxRateToSelectedCurrency();
     this.refreshModalCurrencyView();
 
     // Update settlement mode indicator
@@ -2881,6 +2963,7 @@ class TradingDeskApp {
       if (mepBadge) mepBadge.textContent = `MEP: $${this.formatNumber(this.latestFx.mep, 2)}`;
       if (cclBadge) cclBadge.textContent = `CCL: $${this.formatNumber(this.latestFx.ccl, 2)}`;
     }
+    this.updateFxBadgesActiveState();
 
     const tir = FinancialMath.calculateTIR(dirtyPriceForCalc, bond.cashFlows, bond.settlementDate, bond.frequency);
     const parity = FinancialMath.calculateParity(dirtyPriceForCalc, bond.technicalValue);
@@ -3051,9 +3134,11 @@ class TradingDeskApp {
         if (cclBadge) cclBadge.textContent = `CCL: $${fx.ccl.toFixed(2)}`;
 
         const fxInput = document.getElementById('calc-fx-rate');
-        if (fxInput && (!fxInput.value || parseFloat(fxInput.value) === 1280)) {
-          fxInput.value = fx.mep.toFixed(2);
+        if (fxInput && !this.userHasManuallyEditedFx) {
+          const targetFx = (this.modalCurrency === 'CCL') ? fx.ccl : fx.mep;
+          fxInput.value = targetFx.toFixed(2);
         }
+        this.updateFxBadgesActiveState();
       }
 
       // Process corporate market quotes for the Home Overview (Heatmap & Volume Metrics)

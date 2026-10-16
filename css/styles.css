@@ -711,6 +711,40 @@ body {
   box-shadow: 0 2px 6px rgba(15, 39, 74, 0.3);
 }
 
+/* Modal FX Rate Badges */
+.fx-rate-badge {
+  font-size: 0.72rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.fx-rate-badge:hover {
+  border-color: var(--accent-lime);
+  color: var(--text-main);
+  background-color: var(--bg-card-hover);
+}
+
+.fx-rate-badge.active-fx {
+  border-color: #38bdf8 !important;
+  background: rgba(56, 189, 248, 0.15) !important;
+  color: #38bdf8 !important;
+  font-weight: 700;
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.25);
+}
+
+[data-theme="light"] .fx-rate-badge.active-fx {
+  border-color: #0284c7 !important;
+  background: rgba(2, 132, 199, 0.12) !important;
+  color: #0369a1 !important;
+  font-weight: 700;
+}
+
 /* Market Trade Info Bar in Modal */
 .market-data-bar {
   display: grid;
