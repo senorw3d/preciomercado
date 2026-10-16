@@ -991,3 +991,70 @@ th.sorted-th {
   opacity: 1;
   transform: translate(-50%, 0) scale(1);
 }
+
+/* === Cápsula fija/dinámica de Moneda de Pago en Modal === */
+.pay-curr-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 14px;
+  border-radius: 9999px;
+  background: rgba(15, 28, 63, 0.78);
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #f8fafc;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  user-select: none;
+  transition: all 0.25s ease;
+}
+
+.pay-curr-pill.pulse {
+  animation: pill-pulse 0.45s ease-in-out;
+}
+
+@keyframes pill-pulse {
+  0% { transform: scale(1); border-color: rgba(56, 189, 248, 0.45); }
+  50% { transform: scale(1.06); border-color: var(--accent-cyan); box-shadow: 0 0 14px rgba(56, 189, 248, 0.6); }
+  100% { transform: scale(1); border-color: rgba(56, 189, 248, 0.45); }
+}
+
+/* === Tarjetas de Indicadores (UVA & TAMAR) con Curvas de Tendencia (Opción 2) === */
+.tamar-pill-card {
+  position: relative !important;
+  overflow: hidden !important;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.tamar-pill-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(56, 189, 248, 0.35) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.tamar-pill-card .card-content {
+  position: relative;
+  z-index: 2;
+}
+
+.tamar-pill-card .card-trend-svg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 44px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.55;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tamar-pill-card:hover .card-trend-svg {
+  opacity: 0.85;
+  transform: scaleY(1.08);
+}
+

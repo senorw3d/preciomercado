@@ -12,7 +12,7 @@
   <!-- Chart.js CDN -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css?v=1.0.28">
+  <link rel="stylesheet" href="css/styles.css?v=1.0.29">
 </head>
 <body>
 
@@ -256,63 +256,111 @@
 
       <div class="tamar-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.85rem;">
         <!-- 1 DÍA -->
-        <div class="tamar-pill-card" style="background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 8px; padding: 0.75rem 1rem; border-left: 3px solid #10b981;">
-          <div style="display: flex; justify-content: space-between; align-items: baseline;">
-            <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">1 Día (Última)</span>
-            <span id="tamar-1d-date" style="font-size: 0.68rem; color: #10b981; font-weight: 600;">Spot</span>
+        <div class="tamar-pill-card" style="border-left: 3px solid #10b981;">
+          <div class="card-content">
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+              <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">1 Día (Última)</span>
+              <span id="tamar-1d-date" style="font-size: 0.68rem; color: #10b981; font-weight: 600;">Spot</span>
+            </div>
+            <div style="font-size: 1.35rem; font-weight: 800; color: var(--text-main); font-family: var(--font-mono); margin: 0.2rem 0;">
+              <span id="tamar-1d-tna">24,13%</span> <span style="font-size: 0.75rem; font-weight: 600; color: var(--text-dim);">TNA</span>
+            </div>
+            <div style="font-size: 0.72rem; color: var(--text-dim); display: flex; justify-content: space-between;">
+              <span>TEA: <strong id="tamar-1d-tea" style="color: var(--accent-cyan); font-family: var(--font-mono);">26,96%</strong></span>
+              <span>TEM: <strong id="tamar-1d-tem" style="font-family: var(--font-mono);">1,98%</strong></span>
+            </div>
           </div>
-          <div style="font-size: 1.35rem; font-weight: 800; color: var(--text-main); font-family: var(--font-mono); margin: 0.2rem 0;">
-            <span id="tamar-1d-tna">24,13%</span> <span style="font-size: 0.75rem; font-weight: 600; color: var(--text-dim);">TNA</span>
-          </div>
-          <div style="font-size: 0.72rem; color: var(--text-dim); display: flex; justify-content: space-between;">
-            <span>TEA: <strong id="tamar-1d-tea" style="color: var(--accent-cyan); font-family: var(--font-mono);">26,96%</strong></span>
-            <span>TEM: <strong id="tamar-1d-tem" style="font-family: var(--font-mono);">1,98%</strong></span>
-          </div>
+          <svg class="card-trend-svg" viewBox="0 0 200 50" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="tamar-grad-spot" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#10b981" stop-opacity="0.32"/>
+                <stop offset="100%" stop-color="#10b981" stop-opacity="0.0"/>
+              </linearGradient>
+            </defs>
+            <path d="M0,35 Q40,32 80,38 T150,26 T200,18 L200,50 L0,50 Z" fill="url(#tamar-grad-spot)"/>
+            <path d="M0,35 Q40,32 80,38 T150,26 T200,18" fill="none" stroke="#10b981" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
         </div>
 
         <!-- 1 SEMANA -->
-        <div class="tamar-pill-card" style="background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 8px; padding: 0.75rem 1rem; border-left: 3px solid #38bdf8;">
-          <div style="display: flex; justify-content: space-between; align-items: baseline;">
-            <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">1 Semana</span>
-            <span style="font-size: 0.68rem; color: #38bdf8; font-weight: 600;">Promedio 7D</span>
+        <div class="tamar-pill-card" style="border-left: 3px solid #38bdf8;">
+          <div class="card-content">
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+              <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">1 Semana</span>
+              <span style="font-size: 0.68rem; color: #38bdf8; font-weight: 600;">Promedio 7D</span>
+            </div>
+            <div style="font-size: 1.35rem; font-weight: 800; color: var(--text-main); font-family: var(--font-mono); margin: 0.2rem 0;">
+              <span id="tamar-1w-tna">24,13%</span> <span style="font-size: 0.75rem; font-weight: 600; color: var(--text-dim);">TNA</span>
+            </div>
+            <div style="font-size: 0.72rem; color: var(--text-dim); display: flex; justify-content: space-between;">
+              <span>TEA: <strong id="tamar-1w-tea" style="color: var(--accent-cyan); font-family: var(--font-mono);">26,96%</strong></span>
+              <span>Rango: <span id="tamar-1w-range" style="font-family: var(--font-mono); font-size: 0.68rem;">23,8 - 24,6%</span></span>
+            </div>
           </div>
-          <div style="font-size: 1.35rem; font-weight: 800; color: var(--text-main); font-family: var(--font-mono); margin: 0.2rem 0;">
-            <span id="tamar-1w-tna">24,13%</span> <span style="font-size: 0.75rem; font-weight: 600; color: var(--text-dim);">TNA</span>
-          </div>
-          <div style="font-size: 0.72rem; color: var(--text-dim); display: flex; justify-content: space-between;">
-            <span>TEA: <strong id="tamar-1w-tea" style="color: var(--accent-cyan); font-family: var(--font-mono);">26,96%</strong></span>
-            <span>Rango: <span id="tamar-1w-range" style="font-family: var(--font-mono); font-size: 0.68rem;">23,8 - 24,6%</span></span>
-          </div>
+          <svg class="card-trend-svg" viewBox="0 0 200 50" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="tamar-grad-1w" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35"/>
+                <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.0"/>
+              </linearGradient>
+            </defs>
+            <path d="M0,38 Q35,42 75,28 T145,34 T200,14 L200,50 L0,50 Z" fill="url(#tamar-grad-1w)"/>
+            <path d="M0,38 Q35,42 75,28 T145,34 T200,14" fill="none" stroke="#38bdf8" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
         </div>
 
         <!-- 1 MES -->
-        <div class="tamar-pill-card" style="background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 8px; padding: 0.75rem 1rem; border-left: 3px solid #f59e0b;">
-          <div style="display: flex; justify-content: space-between; align-items: baseline;">
-            <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">1 Mes</span>
-            <span style="font-size: 0.68rem; color: #f59e0b; font-weight: 600;">Promedio 30D</span>
+        <div class="tamar-pill-card" style="border-left: 3px solid #f59e0b;">
+          <div class="card-content">
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+              <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">1 Mes</span>
+              <span style="font-size: 0.68rem; color: #f59e0b; font-weight: 600;">Promedio 30D</span>
+            </div>
+            <div style="font-size: 1.35rem; font-weight: 800; color: var(--text-main); font-family: var(--font-mono); margin: 0.2rem 0;">
+              <span id="tamar-1m-tna">23,80%</span> <span style="font-size: 0.75rem; font-weight: 600; color: var(--text-dim);">TNA</span>
+            </div>
+            <div style="font-size: 0.72rem; color: var(--text-dim); display: flex; justify-content: space-between;">
+              <span>TEA: <strong id="tamar-1m-tea" style="color: var(--accent-cyan); font-family: var(--font-mono);">26,56%</strong></span>
+              <span>Rango: <span id="tamar-1m-range" style="font-family: var(--font-mono); font-size: 0.68rem;">23,3 - 24,7%</span></span>
+            </div>
           </div>
-          <div style="font-size: 1.35rem; font-weight: 800; color: var(--text-main); font-family: var(--font-mono); margin: 0.2rem 0;">
-            <span id="tamar-1m-tna">23,80%</span> <span style="font-size: 0.75rem; font-weight: 600; color: var(--text-dim);">TNA</span>
-          </div>
-          <div style="font-size: 0.72rem; color: var(--text-dim); display: flex; justify-content: space-between;">
-            <span>TEA: <strong id="tamar-1m-tea" style="color: var(--accent-cyan); font-family: var(--font-mono);">26,56%</strong></span>
-            <span>Rango: <span id="tamar-1m-range" style="font-family: var(--font-mono); font-size: 0.68rem;">23,3 - 24,7%</span></span>
-          </div>
+          <svg class="card-trend-svg" viewBox="0 0 200 50" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="tamar-grad-1m" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.35"/>
+                <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.0"/>
+              </linearGradient>
+            </defs>
+            <path d="M0,40 Q45,34 90,42 T155,22 T200,10 L200,50 L0,50 Z" fill="url(#tamar-grad-1m)"/>
+            <path d="M0,40 Q45,34 90,42 T155,22 T200,10" fill="none" stroke="#f59e0b" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
         </div>
 
         <!-- 1 AÑO -->
-        <div class="tamar-pill-card" style="background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 8px; padding: 0.75rem 1rem; border-left: 3px solid #8b5cf6;">
-          <div style="display: flex; justify-content: space-between; align-items: baseline;">
-            <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">1 Año</span>
-            <span style="font-size: 0.68rem; color: #8b5cf6; font-weight: 600;">Histórico / 365D</span>
+        <div class="tamar-pill-card" style="border-left: 3px solid #8b5cf6;">
+          <div class="card-content">
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+              <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">1 Año</span>
+              <span style="font-size: 0.68rem; color: #8b5cf6; font-weight: 600;">Histórico / 365D</span>
+            </div>
+            <div style="font-size: 1.35rem; font-weight: 800; color: var(--text-main); font-family: var(--font-mono); margin: 0.2rem 0;">
+              <span id="tamar-1y-tna">29,08%</span> <span style="font-size: 0.75rem; font-weight: 600; color: var(--text-dim);">TNA</span>
+            </div>
+            <div style="font-size: 0.72rem; color: var(--text-dim); display: flex; justify-content: space-between;">
+              <span>TEA: <strong id="tamar-1y-tea" style="color: var(--accent-cyan); font-family: var(--font-mono);">33,26%</strong></span>
+              <span>Rango: <span id="tamar-1y-range" style="font-family: var(--font-mono); font-size: 0.68rem;">21,4 - 41,0%</span></span>
+            </div>
           </div>
-          <div style="font-size: 1.35rem; font-weight: 800; color: var(--text-main); font-family: var(--font-mono); margin: 0.2rem 0;">
-            <span id="tamar-1y-tna">29,08%</span> <span style="font-size: 0.75rem; font-weight: 600; color: var(--text-dim);">TNA</span>
-          </div>
-          <div style="font-size: 0.72rem; color: var(--text-dim); display: flex; justify-content: space-between;">
-            <span>TEA: <strong id="tamar-1y-tea" style="color: var(--accent-cyan); font-family: var(--font-mono);">33,26%</strong></span>
-            <span>Rango: <span id="tamar-1y-range" style="font-family: var(--font-mono); font-size: 0.68rem;">21,4 - 41,0%</span></span>
-          </div>
+          <svg class="card-trend-svg" viewBox="0 0 200 50" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="tamar-grad-1y" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.35"/>
+                <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.0"/>
+              </linearGradient>
+            </defs>
+            <path d="M0,42 Q50,38 100,28 T160,18 T200,6 L200,50 L0,50 Z" fill="url(#tamar-grad-1y)"/>
+            <path d="M0,42 Q50,38 100,28 T160,18 T200,6" fill="none" stroke="#8b5cf6" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
         </div>
       </div>
     </section>
@@ -336,63 +384,120 @@
 
       <div class="tamar-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.85rem;">
         <!-- 1 DÍA (VALOR ACTUAL) -->
-        <div class="tamar-pill-card" style="background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 8px; padding: 0.75rem 1rem; border-left: 3px solid #10b981;">
-          <div style="display: flex; justify-content: space-between; align-items: baseline;">
-            <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Valor UVA (Hoy)</span>
-            <span id="uva-spot-date" style="font-size: 0.68rem; color: #10b981; font-weight: 600;">-</span>
+        <div class="tamar-pill-card" style="border-left: 3px solid #10b981;">
+          <div class="card-content">
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+              <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Valor UVA (Hoy)</span>
+              <span id="uva-spot-date" style="font-size: 0.68rem; color: #10b981; font-weight: 600;">-</span>
+            </div>
+            <div style="font-size: 1.35rem; font-weight: 800; color: var(--text-main); font-family: var(--font-mono); margin: 0.2rem 0;">
+              <span id="uva-spot-val">$2.150,53</span> <span style="font-size: 0.75rem; font-weight: 600; color: var(--text-dim);">ARS</span>
+            </div>
+            <div style="font-size: 0.72rem; color: var(--text-dim); display: flex; justify-content: space-between;">
+              <span>Var. Diaria: <strong id="uva-spot-var" style="color: var(--accent-lime); font-family: var(--font-mono);">+0,06%</strong></span>
+              <span>CER: <strong id="uva-spot-cer" style="font-family: var(--font-mono);">En línea</strong></span>
+            </div>
           </div>
-          <div style="font-size: 1.35rem; font-weight: 800; color: var(--text-main); font-family: var(--font-mono); margin: 0.2rem 0;">
-            <span id="uva-spot-val">$2.150,53</span> <span style="font-size: 0.75rem; font-weight: 600; color: var(--text-dim);">ARS</span>
-          </div>
-          <div style="font-size: 0.72rem; color: var(--text-dim); display: flex; justify-content: space-between;">
-            <span>Var. Diaria: <strong id="uva-spot-var" style="color: var(--accent-lime); font-family: var(--font-mono);">+0,06%</strong></span>
-            <span>CER: <strong id="uva-spot-cer" style="font-family: var(--font-mono);">En línea</strong></span>
-          </div>
+          <svg class="card-trend-svg" viewBox="0 0 200 50" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="uva-grad-spot" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#10b981" stop-opacity="0.32"/>
+                <stop offset="100%" stop-color="#10b981" stop-opacity="0.0"/>
+              </linearGradient>
+            </defs>
+            <path d="M0,36 Q45,34 90,38 T155,24 T200,16 L200,50 L0,50 Z" fill="url(#uva-grad-spot)"/>
+            <path d="M0,36 Q45,34 90,38 T155,24 T200,16" fill="none" stroke="#10b981" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
         </div>
 
         <!-- 1 SEMANA (7 DÍAS) -->
-        <div class="tamar-pill-card" style="background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 8px; padding: 0.75rem 1rem; border-left: 3px solid #38bdf8;">
-          <div style="display: flex; justify-content: space-between; align-items: baseline;">
-            <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">1 Semana</span>
-            <span style="font-size: 0.68rem; color: #38bdf8; font-weight: 600;">Variación 7D</span>
+        <div class="tamar-pill-card" style="border-left: 3px solid #38bdf8;">
+          <div class="card-content">
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+              <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">1 Semana</span>
+              <span style="font-size: 0.68rem; color: #38bdf8; font-weight: 600;">Variación 7D</span>
+            </div>
+            <div style="font-size: 1.35rem; font-weight: 800; color: var(--text-main); font-family: var(--font-mono); margin: 0.2rem 0;">
+              <span id="uva-7d-var">+0,39%</span> <span style="font-size: 0.75rem; font-weight: 600; color: var(--text-dim);">UVA</span>
+            </div>
+            <div style="font-size: 0.72rem; color: var(--text-dim); display: flex; justify-content: space-between; margin-bottom: 2px;">
+              <span>TNA Implícita: <strong id="uva-7d-tna" style="color: var(--accent-cyan); font-family: var(--font-mono);">20,33%</strong></span>
+              <span>Inicio 7D: <span id="uva-7d-base" style="font-family: var(--font-mono); font-size: 0.68rem;">$2.142,08</span></span>
+            </div>
+            <div style="font-size: 0.67rem; color: var(--text-dim); display: flex; justify-content: flex-end;">
+              <span style="letter-spacing: 0.2px;">Tendencia semanal</span>
+            </div>
           </div>
-          <div style="font-size: 1.35rem; font-weight: 800; color: var(--text-main); font-family: var(--font-mono); margin: 0.2rem 0;">
-            <span id="uva-7d-var">+0,39%</span> <span style="font-size: 0.75rem; font-weight: 600; color: var(--text-dim);">UVA</span>
-          </div>
-          <div style="font-size: 0.72rem; color: var(--text-dim); display: flex; justify-content: space-between;">
-            <span>TNA Implícita: <strong id="uva-7d-tna" style="color: var(--accent-cyan); font-family: var(--font-mono);">20,33%</strong></span>
-            <span>Inicio 7D: <span id="uva-7d-base" style="font-family: var(--font-mono); font-size: 0.68rem;">$2.142,08</span></span>
-          </div>
+          <svg class="card-trend-svg" viewBox="0 0 200 50" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="uva-grad-1w" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35"/>
+                <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.0"/>
+              </linearGradient>
+            </defs>
+            <path d="M0,38 Q35,42 75,28 T145,34 T200,14 L200,50 L0,50 Z" fill="url(#uva-grad-1w)"/>
+            <path d="M0,38 Q35,42 75,28 T145,34 T200,14" fill="none" stroke="#38bdf8" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
         </div>
 
         <!-- 1 MES (30 DÍAS) -->
-        <div class="tamar-pill-card" style="background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 8px; padding: 0.75rem 1rem; border-left: 3px solid #f59e0b;">
-          <div style="display: flex; justify-content: space-between; align-items: baseline;">
-            <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">1 Mes</span>
-            <span style="font-size: 0.68rem; color: #f59e0b; font-weight: 600;">Variación 30D</span>
+        <div class="tamar-pill-card" style="border-left: 3px solid #f59e0b;">
+          <div class="card-content">
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+              <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">1 Mes</span>
+              <span style="font-size: 0.68rem; color: #f59e0b; font-weight: 600;">Variación 30D</span>
+            </div>
+            <div style="font-size: 1.35rem; font-weight: 800; color: var(--text-main); font-family: var(--font-mono); margin: 0.2rem 0;">
+              <span id="uva-30d-var">+1,70%</span> <span style="font-size: 0.75rem; font-weight: 600; color: var(--text-dim);">UVA</span>
+            </div>
+            <div style="font-size: 0.72rem; color: var(--text-dim); display: flex; justify-content: space-between; margin-bottom: 2px;">
+              <span>TNA Implícita: <strong id="uva-30d-tna" style="color: var(--accent-cyan); font-family: var(--font-mono);">20,68%</strong></span>
+              <span>Inicio 30D: <span id="uva-30d-base" style="font-family: var(--font-mono); font-size: 0.68rem;">$2.114,62</span></span>
+            </div>
+            <div style="font-size: 0.67rem; color: var(--text-dim); display: flex; justify-content: flex-end;">
+              <span style="letter-spacing: 0.2px;">Tendencia mensual</span>
+            </div>
           </div>
-          <div style="font-size: 1.35rem; font-weight: 800; color: var(--text-main); font-family: var(--font-mono); margin: 0.2rem 0;">
-            <span id="uva-30d-var">+1,70%</span> <span style="font-size: 0.75rem; font-weight: 600; color: var(--text-dim);">UVA</span>
-          </div>
-          <div style="font-size: 0.72rem; color: var(--text-dim); display: flex; justify-content: space-between;">
-            <span>TNA Implícita: <strong id="uva-30d-tna" style="color: var(--accent-cyan); font-family: var(--font-mono);">20,68%</strong></span>
-            <span>Inicio 30D: <span id="uva-30d-base" style="font-family: var(--font-mono); font-size: 0.68rem;">$2.114,62</span></span>
-          </div>
+          <svg class="card-trend-svg" viewBox="0 0 200 50" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="uva-grad-1m" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.35"/>
+                <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.0"/>
+              </linearGradient>
+            </defs>
+            <path d="M0,40 Q45,34 90,42 T155,22 T200,10 L200,50 L0,50 Z" fill="url(#uva-grad-1m)"/>
+            <path d="M0,40 Q45,34 90,42 T155,22 T200,10" fill="none" stroke="#f59e0b" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
         </div>
 
         <!-- 1 AÑO (365 DÍAS) -->
-        <div class="tamar-pill-card" style="background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 8px; padding: 0.75rem 1rem; border-left: 3px solid #8b5cf6;">
-          <div style="display: flex; justify-content: space-between; align-items: baseline;">
-            <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">1 Año</span>
-            <span style="font-size: 0.68rem; color: #8b5cf6; font-weight: 600;">Interanual 365D</span>
+        <div class="tamar-pill-card" style="border-left: 3px solid #8b5cf6;">
+          <div class="card-content">
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+              <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">1 Año</span>
+              <span style="font-size: 0.68rem; color: #8b5cf6; font-weight: 600;">Interanual 365D</span>
+            </div>
+            <div style="font-size: 1.35rem; font-weight: 800; color: var(--text-main); font-family: var(--font-mono); margin: 0.2rem 0;">
+              <span id="uva-1y-var">+33,61%</span> <span style="font-size: 0.75rem; font-weight: 600; color: var(--text-dim);">UVA</span>
+            </div>
+            <div style="font-size: 0.72rem; color: var(--text-dim); display: flex; justify-content: space-between; margin-bottom: 2px;">
+              <span>Tasa Anual: <strong id="uva-1y-tna" style="color: var(--accent-cyan); font-family: var(--font-mono);">33,61%</strong></span>
+              <span>Inicio 1Y: <span id="uva-1y-base" style="font-family: var(--font-mono); font-size: 0.68rem;">$1.609,57</span></span>
+            </div>
+            <div style="font-size: 0.67rem; color: var(--text-dim); display: flex; justify-content: flex-end;">
+              <span style="letter-spacing: 0.2px;">Tendencia anual</span>
+            </div>
           </div>
-          <div style="font-size: 1.35rem; font-weight: 800; color: var(--text-main); font-family: var(--font-mono); margin: 0.2rem 0;">
-            <span id="uva-1y-var">+33,61%</span> <span style="font-size: 0.75rem; font-weight: 600; color: var(--text-dim);">UVA</span>
-          </div>
-          <div style="font-size: 0.72rem; color: var(--text-dim); display: flex; justify-content: space-between;">
-            <span>Tasa Anual: <strong id="uva-1y-tna" style="color: var(--accent-cyan); font-family: var(--font-mono);">33,61%</strong></span>
-            <span>Inicio 1Y: <span id="uva-1y-base" style="font-family: var(--font-mono); font-size: 0.68rem;">$1.609,57</span></span>
-          </div>
+          <svg class="card-trend-svg" viewBox="0 0 200 50" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="uva-grad-1y" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.35"/>
+                <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.0"/>
+              </linearGradient>
+            </defs>
+            <path d="M0,42 Q50,38 100,28 T160,18 T200,6 L200,50 L0,50 Z" fill="url(#uva-grad-1y)"/>
+            <path d="M0,42 Q50,38 100,28 T160,18 T200,6" fill="none" stroke="#8b5cf6" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
         </div>
       </div>
     </section>
@@ -611,8 +716,11 @@
 
       <!-- Financial Metrics & Interactive Calculator -->
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
-        <h3 class="serif-heading text-cyan" style="font-size: 1.1rem; margin: 0;">Calculadora</h3>
-        <div class="calc-currency-selector" style="display: flex; gap: 0.4rem; align-items: center;">
+        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+          <h3 class="serif-heading text-cyan" style="font-size: 1.1rem; margin: 0;">Calculadora</h3>
+          <span id="modal-payment-currency-pill" class="pay-curr-pill">ESTA ESPECIE PAGA MEP</span>
+        </div>
+        <div class="calc-currency-selector" style="display: flex; gap: 0.4rem; align-items: center; position: relative;">
           <span style="font-size: 0.8rem; font-weight: 600; color: var(--text-dim);">Moneda de Cálculo:</span>
           <button type="button" class="btn-calc-curr active" data-curr="MEP">Dólar MEP</button>
           <button type="button" class="btn-calc-curr" data-curr="CCL">Dólar Cable (CCL)</button>
@@ -687,6 +795,6 @@
   </div>
 
   <!-- Application Logic JS Entry Point -->
-  <script type="module" src="js/app.js?v=1.3.6"></script>
+  <script type="module" src="js/app.js?v=1.3.7"></script>
 </body>
 </html>

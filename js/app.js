@@ -1347,6 +1347,13 @@ class TradingDeskApp {
         btn.classList.add('active');
         this.modalCurrency = btn.dataset.curr;
         this.refreshModalCurrencyView();
+
+        const pillEl = document.getElementById('modal-payment-currency-pill');
+        if (pillEl) {
+          pillEl.classList.remove('pulse');
+          void pillEl.offsetWidth; // trigger reflow
+          pillEl.classList.add('pulse');
+        }
       });
     });
 
@@ -2686,6 +2693,25 @@ class TradingDeskApp {
   refreshModalCurrencyView() {
     const bond = this.selectedBondForModal;
     if (!bond) return;
+
+    // Update payment currency pill in Calculator header
+    const pillEl = document.getElementById('modal-payment-currency-pill');
+    if (pillEl) {
+      let payText = 'MEP';
+      const p = (bond.paymentCurrency || '').toLowerCase();
+      if (p.includes('cable') || p.includes('ccl')) {
+        payText = 'CABLE';
+      } else if (p.includes('mep') || p.includes('dolar') || p.includes('dólar')) {
+        payText = 'MEP';
+      } else if (p.includes('peso') || p.includes('ars')) {
+        payText = 'PESOS';
+      } else if (p.includes('uva')) {
+        payText = 'UVA';
+      } else {
+        payText = (bond.paymentCurrency || 'MEP').toUpperCase();
+      }
+      pillEl.textContent = `ESTA ESPECIE PAGA ${payText}`;
+    }
 
     const isArsBond = (bond.currency === 'ARS' || bond.paymentCurrency === 'Pesos');
     const curr = this.modalCurrency || (isArsBond ? 'ARS' : 'MEP');
