@@ -1,0 +1,29 @@
+# Dependencias y entornos
+node_modules/
+.vscode/
+.idea/
+.agents/
+.firebase/
+
+# Archivos de depuración y scripts temporales de desarrollo/scraping
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.ps1
+*.py
+*.txt
+*.tsv
+*.xlsx
+xl/
+console.error*
+download_aviso.js
+get_links.js
+list_bonds.js
+check_missing.js
+inspect_dataset.mjs
+merge_dataset.mjs
+build_new_bonds.mjs
+generate_bonds_builder.js
+test_new_bonds_math.mjs
+historico_data/
