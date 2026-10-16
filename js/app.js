@@ -1330,9 +1330,18 @@ class TradingDeskApp {
     }
 
     // Bond Detail Modal Close
-    document.getElementById('modal-close-btn')?.addEventListener('click', () => {
+    const closeBondModal = () => {
       document.getElementById('bond-modal')?.classList.remove('active');
+      clearTimeout(this._payHintTimer);
+      clearTimeout(this._payHintFadeTimer);
+      document.querySelector('.calc-currency-selector .pay-curr-bubble')?.remove();
+    };
+
+    document.getElementById('modal-close-btn')?.addEventListener('click', closeBondModal);
+    document.getElementById('bond-modal')?.addEventListener('click', (e) => {
+      if (e.target.id === 'bond-modal') closeBondModal();
     });
+
     // Modal Real-Time Calculator Listeners
     const calcCleanInput = document.getElementById('calc-clean-price');
     const calcDirtyInput = document.getElementById('calc-dirty-price');
@@ -1348,11 +1357,8 @@ class TradingDeskApp {
         this.modalCurrency = btn.dataset.curr;
         this.refreshModalCurrencyView();
 
-        const pillEl = document.getElementById('modal-payment-currency-pill');
-        if (pillEl) {
-          pillEl.classList.remove('pulse');
-          void pillEl.offsetWidth; // trigger reflow
-          pillEl.classList.add('pulse');
+        if (this.selectedBondForModal) {
+          this.showPaymentCurrencyHint(this.selectedBondForModal);
         }
       });
     });
@@ -2612,28 +2618,63 @@ class TradingDeskApp {
     return (fxInput && parseFloat(fxInput.value) > 0) ? parseFloat(fxInput.value) : 1280.0;
   }
 
-  showPaymentCurrencyHint(curr) {
+  getBondPaymentCurrencyCode(bond) {
+    if (!bond) return 'MEP';
+    const p = (bond.paymentCurrency || '').toLowerCase();
+    if (p.includes('cable') || p.includes('ccl') || p.includes('divisa')) return 'CCL';
+    if (p.includes('peso') || p.includes('ars') || bond.currency === 'ARS') return 'ARS';
+    if (p.includes('mep') || p.includes('dolar') || p.includes('dólar')) return 'MEP';
+    if (bond.ticker) {
+      if (bond.ticker.endsWith('C')) return 'CCL';
+      if (bond.ticker.endsWith('D')) return 'MEP';
+      if (bond.ticker.endsWith('O')) return 'ARS';
+    }
+    return 'MEP';
+  }
+
+  showPaymentCurrencyHint(bond) {
     const wrap = document.querySelector('.calc-currency-selector');
-    if (!wrap) return;
+    if (!wrap || !bond) return;
+
     wrap.style.position = 'relative';
     wrap.querySelector('.pay-curr-bubble')?.remove();
     clearTimeout(this._payHintTimer);
+    clearTimeout(this._payHintFadeTimer);
+
+    const payCode = this.getBondPaymentCurrencyCode(bond);
     const labels = { MEP: 'MEP', CCL: 'CABLE', ARS: 'PESOS' };
+    const label = labels[payCode] || payCode;
+
     const bubble = document.createElement('div');
     bubble.className = 'pay-curr-bubble';
     bubble.setAttribute('role', 'status');
-    bubble.textContent = `ESTA ESPECIE PAGA ${labels[curr] || curr}`;
+    bubble.textContent = `ESTA ESPECIE PAGA ${label}`;
     wrap.appendChild(bubble);
-    // Position after the modal is laid out
-    setTimeout(() => {
-      const btn = wrap.querySelector(`.btn-calc-curr[data-curr="${curr}"]`);
-      if (btn) bubble.style.left = (btn.offsetLeft + btn.offsetWidth / 2) + 'px';
+
+    const positionBubble = () => {
+      const btn = wrap.querySelector(`.btn-calc-curr[data-curr="${payCode}"]`);
+      if (btn) {
+        const leftCenter = btn.offsetLeft + (btn.offsetWidth / 2);
+        const bottomPos = wrap.offsetHeight - btn.offsetTop + 8;
+        bubble.style.left = `${leftCenter}px`;
+        bubble.style.bottom = `${bottomPos}px`;
+      }
+    };
+
+    positionBubble();
+    requestAnimationFrame(() => {
+      positionBubble();
       bubble.classList.add('show');
-    }, 60);
+    });
+
+    // Stays visible for 3 seconds then smoothly fades out and is removed
     this._payHintTimer = setTimeout(() => {
       bubble.classList.remove('show');
-      setTimeout(() => bubble.remove(), 400);
-    }, 3060);
+      bubble.classList.add('hide');
+      this._payHintFadeTimer = setTimeout(() => {
+        bubble.remove();
+      }, 400);
+    }, 3000);
   }
 
   openModal(bond) {
@@ -2651,7 +2692,6 @@ class TradingDeskApp {
     document.querySelectorAll('.btn-calc-curr').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.curr === this.modalCurrency);
     });
-    this.showPaymentCurrencyHint(this.modalCurrency);
 
     const isinStatus = bond.isin || 'S/D';
     let amountStr = '';
@@ -2688,30 +2728,16 @@ class TradingDeskApp {
     }
 
     document.getElementById('bond-modal')?.classList.add('active');
+
+    // Trigger floating 3-second disclaimer directly above the payment currency button
+    setTimeout(() => {
+      this.showPaymentCurrencyHint(bond);
+    }, 60);
   }
 
   refreshModalCurrencyView() {
     const bond = this.selectedBondForModal;
     if (!bond) return;
-
-    // Update payment currency pill in Calculator header
-    const pillEl = document.getElementById('modal-payment-currency-pill');
-    if (pillEl) {
-      let payText = 'MEP';
-      const p = (bond.paymentCurrency || '').toLowerCase();
-      if (p.includes('cable') || p.includes('ccl')) {
-        payText = 'CABLE';
-      } else if (p.includes('mep') || p.includes('dolar') || p.includes('dólar')) {
-        payText = 'MEP';
-      } else if (p.includes('peso') || p.includes('ars')) {
-        payText = 'PESOS';
-      } else if (p.includes('uva')) {
-        payText = 'UVA';
-      } else {
-        payText = (bond.paymentCurrency || 'MEP').toUpperCase();
-      }
-      pillEl.textContent = `ESTA ESPECIE PAGA ${payText}`;
-    }
 
     const isArsBond = (bond.currency === 'ARS' || bond.paymentCurrency === 'Pesos');
     const curr = this.modalCurrency || (isArsBond ? 'ARS' : 'MEP');
