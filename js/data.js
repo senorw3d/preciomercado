@@ -3492,78 +3492,6 @@ export const BONDS_DATASET = [
     ]
   },
   {
-    "id": "bond_ICC4O",
-    "ticker": "ICC4O",
-    "tickerPesos": "ICC4O",
-    "isin": "AR0245082422",
-    "issuer": "ICBC (Argentina) S.A. Clase IV",
-    "shortIssuer": "ICBC",
-    "rating": "A1+(arg)",
-    "ratingAgency": "FIX SCR",
-    "type": "ON",
-    "instrumentGroup": "Pesos TAMAR",
-    "currency": "ARS",
-    "paymentCurrency": "Pesos",
-    "law": "Argentina",
-    "isCallable": false,
-    "structureType": "Bullet",
-    "couponType": "TAMAR",
-    "sector": "Bancos & Servicios Financieros",
-    "maturity": "2026-11-28",
-    "issueDate": "2025-11-28",
-    "issuedAmount": 48759644000,
-    "couponRate": 37.5,
-    "spread": 3.01,
-    "referenceRate": "TAMAR",
-    "frequency": 4,
-    "dayCount": "ACT/365",
-    "dirtyPrice": 104.62,
-    "lastCouponDate": "2026-08-28",
-    "pricePesos": 104.62,
-    "volume": 32000,
-    "tradesCount": 18,
-    "volumePesos": 32000,
-    "tradesPesos": 18,
-    "cashFlows": [
-      {
-        "couponNo": 1,
-        "date": "2026-02-28",
-        "days": 92,
-        "amortization": 0,
-        "coupon": 9.4521,
-        "amount": 9.4521,
-        "residual": 100
-      },
-      {
-        "couponNo": 2,
-        "date": "2026-05-28",
-        "days": 89,
-        "amortization": 0,
-        "coupon": 9.1438,
-        "amount": 9.1438,
-        "residual": 100
-      },
-      {
-        "couponNo": 3,
-        "date": "2026-08-28",
-        "days": 92,
-        "amortization": 0,
-        "coupon": 9.4521,
-        "amount": 9.4521,
-        "residual": 100
-      },
-      {
-        "couponNo": 4,
-        "date": "2026-11-28",
-        "days": 92,
-        "amortization": 100,
-        "coupon": 9.4521,
-        "amount": 109.4521,
-        "residual": 0
-      }
-    ]
-  },
-  {
     "id": "bond_T661O",
     "ticker": "T661O",
     "tickerPesos": "T661O",
@@ -16807,6 +16735,416 @@ export const BONDS_DATASET = [
         "amortization": 100,
         "coupon": 4.5625,
         "amount": 104.5625,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_ICC4O",
+    "ticker": "ICC4O",
+    "tickerPesos": "ICC4O",
+    "aliases": [
+      "ICC40"
+    ],
+    "isin": "AR0245082422",
+    "issuer": "ICBC (Argentina) S.A. Clase IV",
+    "shortIssuer": "ICBC",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Pesos TAMAR",
+    "currency": "ARS",
+    "paymentCurrency": "Pesos",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "TAMAR",
+    "sector": "Bancos & Servicios Financieros",
+    "maturity": "2026-11-28",
+    "issuedAmount": 48759644000,
+    "couponRate": 28.5,
+    "spread": 3.5,
+    "frequency": 4,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 100,
+    "pricePesos": 100,
+    "volume": 0,
+    "tradesCount": 0,
+    "volumePesos": 0,
+    "tradesPesos": 0,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2026-02-28",
+        "amortization": 0,
+        "coupon": 7.1822,
+        "amount": 7.1822,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2026-05-28",
+        "amortization": 0,
+        "coupon": 7.1822,
+        "amount": 7.1822,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2026-08-28",
+        "amortization": 0,
+        "coupon": 7.1822,
+        "amount": 7.1822,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2026-11-28",
+        "amortization": 100,
+        "coupon": 6.9534,
+        "amount": 106.9534,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_ICC5O",
+    "ticker": "ICC5O",
+    "tickerPesos": "ICC5O",
+    "aliases": [
+      "ICC50"
+    ],
+    "isin": "AR0092791067",
+    "issuer": "ICBC (Argentina) S.A. Clase V",
+    "shortIssuer": "ICBC",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Pesos TAMAR",
+    "currency": "ARS",
+    "paymentCurrency": "Pesos",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "TAMAR",
+    "sector": "Bancos & Servicios Financieros",
+    "maturity": "2027-03-11",
+    "issuedAmount": 68543835100,
+    "couponRate": 28.5,
+    "spread": 3.5,
+    "frequency": 4,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 100,
+    "pricePesos": 100,
+    "volume": 0,
+    "tradesCount": 0,
+    "volumePesos": 0,
+    "tradesPesos": 0,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2026-06-11",
+        "amortization": 0,
+        "coupon": 7.1822,
+        "amount": 7.1822,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2026-09-11",
+        "amortization": 0,
+        "coupon": 7.1822,
+        "amount": 7.1822,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2026-12-11",
+        "amortization": 0,
+        "coupon": 7.1822,
+        "amount": 7.1822,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2027-03-11",
+        "amortization": 100,
+        "coupon": 6.9534,
+        "amount": 106.9534,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_ICC6D",
+    "ticker": "ICC6D",
+    "tickerMEP": "ICC6D",
+    "tickerCable": "ICC6C",
+    "tickerPesos": "ICC6O",
+    "aliases": [
+      "ICC60"
+    ],
+    "isin": "AR0529985522",
+    "issuer": "ICBC (Argentina) S.A. Clase VI",
+    "shortIssuer": "ICBC",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Bancos & Servicios Financieros",
+    "maturity": "2027-05-22",
+    "issuedAmount": 45080301,
+    "couponRate": 3.7,
+    "frequency": 4,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 100,
+    "priceMEP": 100,
+    "volume": 0,
+    "tradesCount": 0,
+    "volumeMEP": 0,
+    "tradesMEP": 0,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2026-08-22",
+        "amortization": 0,
+        "coupon": 0.9329,
+        "amount": 0.9329,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2026-11-22",
+        "amortization": 0,
+        "coupon": 0.9329,
+        "amount": 0.9329,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2027-02-22",
+        "amortization": 0,
+        "coupon": 0.9329,
+        "amount": 0.9329,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2027-05-22",
+        "amortization": 100,
+        "coupon": 0.9013,
+        "amount": 100.9013,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_ICC7O",
+    "ticker": "ICC7O",
+    "tickerPesos": "ICC7O",
+    "aliases": [
+      "ICC70"
+    ],
+    "isin": "AR0676479378",
+    "issuer": "ICBC (Argentina) S.A. Clase VII",
+    "shortIssuer": "ICBC",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Pesos TAMAR",
+    "currency": "ARS",
+    "paymentCurrency": "Pesos",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "TAMAR",
+    "sector": "Bancos & Servicios Financieros",
+    "maturity": "2027-06-17",
+    "issuedAmount": 50000000000,
+    "couponRate": 28.5,
+    "spread": 3.5,
+    "frequency": 4,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 100,
+    "pricePesos": 100,
+    "volume": 0,
+    "tradesCount": 0,
+    "volumePesos": 0,
+    "tradesPesos": 0,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2026-09-17",
+        "amortization": 0,
+        "coupon": 7.1822,
+        "amount": 7.1822,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2026-12-17",
+        "amortization": 0,
+        "coupon": 7.1822,
+        "amount": 7.1822,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2027-03-17",
+        "amortization": 0,
+        "coupon": 7.1822,
+        "amount": 7.1822,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2027-06-17",
+        "amortization": 100,
+        "coupon": 6.9534,
+        "amount": 106.9534,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_ICC8O",
+    "ticker": "ICC8O",
+    "tickerPesos": "ICC8O",
+    "aliases": [
+      "ICC80"
+    ],
+    "isin": "AR0890074054",
+    "issuer": "ICBC (Argentina) S.A. Clase VIII",
+    "shortIssuer": "ICBC",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Pesos TAMAR",
+    "currency": "ARS",
+    "paymentCurrency": "Pesos",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "TAMAR",
+    "sector": "Bancos & Servicios Financieros",
+    "maturity": "2027-08-28",
+    "issuedAmount": 50000000000,
+    "couponRate": 28.5,
+    "spread": 3.5,
+    "frequency": 4,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 100,
+    "pricePesos": 100,
+    "volume": 0,
+    "tradesCount": 0,
+    "volumePesos": 0,
+    "tradesPesos": 0,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2026-11-28",
+        "amortization": 0,
+        "coupon": 7.1822,
+        "amount": 7.1822,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2027-02-28",
+        "amortization": 0,
+        "coupon": 7.1822,
+        "amount": 7.1822,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2027-05-28",
+        "amortization": 0,
+        "coupon": 6.9534,
+        "amount": 6.9534,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2027-08-28",
+        "amortization": 100,
+        "coupon": 7.1822,
+        "amount": 107.1822,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_ICC9D",
+    "ticker": "ICC9D",
+    "tickerMEP": "ICC9D",
+    "tickerCable": "ICC9C",
+    "tickerPesos": "ICC9O",
+    "aliases": [
+      "ICC90"
+    ],
+    "isin": "AR0780343197",
+    "issuer": "ICBC (Argentina) S.A. Clase IX",
+    "shortIssuer": "ICBC",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Bancos & Servicios Financieros",
+    "maturity": "2027-08-28",
+    "issuedAmount": 35000000,
+    "couponRate": 3.5,
+    "frequency": 4,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 100,
+    "priceMEP": 100,
+    "volume": 0,
+    "tradesCount": 0,
+    "volumeMEP": 0,
+    "tradesMEP": 0,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2026-11-28",
+        "amortization": 0,
+        "coupon": 0.8822,
+        "amount": 0.8822,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2027-02-28",
+        "amortization": 0,
+        "coupon": 0.8822,
+        "amount": 0.8822,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2027-05-28",
+        "amortization": 0,
+        "coupon": 0.8534,
+        "amount": 0.8534,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2027-08-28",
+        "amortization": 100,
+        "coupon": 0.8822,
+        "amount": 100.8822,
         "residual": 0
       }
     ]

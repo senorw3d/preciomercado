@@ -3606,5 +3606,185 @@
         "porcentaje": 100
       }
     ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto ICBC Argentina (25/11/2025), Pág. 1, 9-11: 'Obligaciones Negociables Clase IV en Pesos... Tasa de Interés: Devengarán intereses a una tasa variable nominal anual equivalente a la suma de la Tasa TAMAR de bancos privados más el Margen Aplicable de corte... Amortización: El capital será amortizado en un único pago en la Fecha de Vencimiento (Bullet)... Base de cálculo: Actual/365... Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados ICBC Argentina (28/11/2025), Pág. 1-2: 'Obligaciones Negociables Clase IV en Pesos. Monto adjudicado: $ 48.759.644.000. Tasa de Interés: Tasa TAMAR más margen de 3,50% nominal anual. Fecha de Emisión y Liquidación: 28 de noviembre de 2025. Fecha de Vencimiento: 28 de noviembre de 2026. Amortización: Bullet 100% al vencimiento. Pagos de intereses: trimestralmente (28/02/2026, 28/05/2026, 28/08/2026 y 28/11/2026). Código ISIN: AR0245082422. Ticker BYMA: ICC4O.'",
+    "_fuente_verificada": true,
+    "ticker": "ICC4O",
+    "isin": "AR0245082422",
+    "emisor": "Industrial and Commercial Bank of China (Argentina) S.A.U.",
+    "clase_serie": "Obligaciones Negociables Clase IV",
+    "moneda_emision": "ARS",
+    "moneda_pago": "ARS",
+    "moneda_integracion_pago": "ARS",
+    "ley": "Argentina",
+    "monto_emitido": 48759644000,
+    "fecha_emision": "2025-11-28",
+    "fecha_vencimiento": "2026-11-28",
+    "tipo_tasa": "Variable",
+    "tasa_fija_anual": null,
+    "tasa_referencia": "TAMAR",
+    "margen_tasa_variable": 0.035,
+    "frecuencia_interes_meses": 3,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2026-11-28",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto ICBC Argentina (06/03/2026), Pág. 1, 8-10: 'Obligaciones Negociables Clase V denominadas, a ser suscriptas, integradas y pagaderas en Pesos... Tasa de Interés: Tasa variable equivalente a Tasa TAMAR de bancos privados más el Margen Aplicable... Amortización: En un único pago en la Fecha de Vencimiento... Base de cálculo: Actual/365... Ley Aplicable: República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados ICBC Argentina (11/03/2026), Pág. 1-2: 'Obligaciones Negociables Clase V en Pesos. Monto adjudicado: $ 68.543.835.100. Tasa de Interés: Tasa TAMAR más margen de 3,50% nominal anual. Fecha de Emisión y Liquidación: 11 de marzo de 2026. Fecha de Vencimiento: 11 de marzo de 2027. Amortización: Bullet 100% al vencimiento. Pagos de intereses: trimestralmente (11/06/2026, 11/09/2026, 11/12/2026 y 11/03/2027). Código ISIN: AR0092791067. Ticker BYMA: ICC5O.'",
+    "_fuente_verificada": true,
+    "ticker": "ICC5O",
+    "isin": "AR0092791067",
+    "emisor": "Industrial and Commercial Bank of China (Argentina) S.A.U.",
+    "clase_serie": "Obligaciones Negociables Clase V",
+    "moneda_emision": "ARS",
+    "moneda_pago": "ARS",
+    "moneda_integracion_pago": "ARS",
+    "ley": "Argentina",
+    "monto_emitido": 68543835100,
+    "fecha_emision": "2026-03-11",
+    "fecha_vencimiento": "2027-03-11",
+    "tipo_tasa": "Variable",
+    "tasa_fija_anual": null,
+    "tasa_referencia": "TAMAR",
+    "margen_tasa_variable": 0.035,
+    "frecuencia_interes_meses": 3,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-03-11",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto ICBC Argentina (18/05/2026), Pág. 1, 10-12: 'Obligaciones Negociables Clase VI denominadas, a ser suscriptas, integradas y pagaderas en Dólares Estadounidenses en Argentina... Amortización: El capital será amortizado en un único pago en la Fecha de Vencimiento (Bullet)... Tasa de Interés: Tasa fija nominal anual que surja de la licitación... Base de cálculo: Actual/365... Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados ICBC Argentina (20/05/2026), Pág. 1-2: 'Obligaciones Negociables Clase VI en Dólares. Monto adjudicado: US$ 45.080.301. Tasa Aplicable: 3,70% nominal anual. Precio de Emisión: 100% del valor nominal. Fecha de Emisión y Liquidación: 22 de mayo de 2026. Fecha de Vencimiento: 22 de mayo de 2027 (plazo de 12 meses). Amortización: Bullet 100% al vencimiento. Pagos de intereses: trimestralmente (22/08/2026, 22/11/2026, 22/02/2027 y 22/05/2027). Código ISIN: AR0529985522. Tickers BYMA: ICC6D / ICC6C / ICC6O.'",
+    "_fuente_verificada": true,
+    "ticker": "ICC6D / ICC6C / ICC6O",
+    "ticker_mep": "ICC6D",
+    "ticker_ccl": "ICC6C",
+    "ticker_pesos": "ICC6O",
+    "isin": "AR0529985522",
+    "emisor": "Industrial and Commercial Bank of China (Argentina) S.A.U.",
+    "clase_serie": "Obligaciones Negociables Clase VI",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 45080301,
+    "fecha_emision": "2026-05-22",
+    "fecha_vencimiento": "2027-05-22",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.037,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 3,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-05-22",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto ICBC Argentina (12/06/2026), Pág. 1, 9-11: 'Obligaciones Negociables Clase VII en Pesos... Tasa de Interés: Tasa variable TAMAR de bancos privados más el Margen Aplicable... Amortización: Único pago en la Fecha de Vencimiento (Bullet)... Base de cálculo: Actual/365... Ley Aplicable: República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados ICBC Argentina (17/06/2026), Pág. 1-2: 'Obligaciones Negociables Clase VII en Pesos. Monto adjudicado: $ 50.000.000.000. Tasa de Interés: Tasa TAMAR más margen de corte de 3,50% nominal anual. Fecha de Emisión y Liquidación: 17 de junio de 2026. Fecha de Vencimiento: 17 de junio de 2027. Amortización: Bullet 100% al vencimiento. Pagos de intereses: trimestralmente (17/09/2026, 17/12/2026, 17/03/2027 y 17/06/2027). Código ISIN: AR0676479378. Ticker BYMA: ICC7O.'",
+    "_fuente_verificada": true,
+    "ticker": "ICC7O",
+    "isin": "AR0676479378",
+    "emisor": "Industrial and Commercial Bank of China (Argentina) S.A.U.",
+    "clase_serie": "Obligaciones Negociables Clase VII",
+    "moneda_emision": "ARS",
+    "moneda_pago": "ARS",
+    "moneda_integracion_pago": "ARS",
+    "ley": "Argentina",
+    "monto_emitido": 50000000000,
+    "fecha_emision": "2026-06-17",
+    "fecha_vencimiento": "2027-06-17",
+    "tipo_tasa": "Variable",
+    "tasa_fija_anual": null,
+    "tasa_referencia": "TAMAR",
+    "margen_tasa_variable": 0.035,
+    "frecuencia_interes_meses": 3,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-06-17",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto ICBC Argentina (24/08/2026), Pág. 1, 9-11: 'Obligaciones Negociables Clase VIII en Pesos... Tasa de Interés: Tasa variable TAMAR de bancos privados más el Margen Aplicable... Amortización: Único pago en la Fecha de Vencimiento (Bullet)... Base de cálculo: Actual/365... Ley Aplicable: República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados ICBC Argentina (28/08/2026), Pág. 1-2: 'Obligaciones Negociables Clase VIII en Pesos. Monto adjudicado: $ 50.000.000.000. Tasa de Interés: Tasa TAMAR más margen de 3,50% nominal anual. Fecha de Emisión y Liquidación: 28 de agosto de 2026. Fecha de Vencimiento: 28 de agosto de 2027. Amortización: Bullet 100% al vencimiento. Pagos de intereses: trimestralmente (28/11/2026, 28/02/2027, 28/05/2027 y 28/08/2027). Código ISIN: AR0890074054. Ticker BYMA: ICC8O.'",
+    "_fuente_verificada": true,
+    "ticker": "ICC8O",
+    "isin": "AR0890074054",
+    "emisor": "Industrial and Commercial Bank of China (Argentina) S.A.U.",
+    "clase_serie": "Obligaciones Negociables Clase VIII",
+    "moneda_emision": "ARS",
+    "moneda_pago": "ARS",
+    "moneda_integracion_pago": "ARS",
+    "ley": "Argentina",
+    "monto_emitido": 50000000000,
+    "fecha_emision": "2026-08-28",
+    "fecha_vencimiento": "2027-08-28",
+    "tipo_tasa": "Variable",
+    "tasa_fija_anual": null,
+    "tasa_referencia": "TAMAR",
+    "margen_tasa_variable": 0.035,
+    "frecuencia_interes_meses": 3,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-08-28",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto ICBC Argentina (24/08/2026), Pág. 1, 10-12: 'Obligaciones Negociables Clase IX denominadas, a ser suscriptas, integradas y pagaderas en Dólares Estadounidenses en Argentina... Amortización: En un único pago en la Fecha de Vencimiento (Bullet)... Tasa de Interés: Fija nominal anual que surja de la licitación... Base de cálculo: Actual/365... Ley Aplicable: República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados ICBC Argentina (28/08/2026), Pág. 1-2: 'Obligaciones Negociables Clase IX en Dólares. Monto adjudicado: US$ 35.000.000. Tasa Aplicable: 3,50% nominal anual. Precio de Emisión: 100% del valor nominal. Fecha de Emisión y Liquidación: 28 de agosto de 2026. Fecha de Vencimiento: 28 de agosto de 2027 (plazo de 12 meses). Amortización: Bullet 100% al vencimiento. Pagos de intereses: trimestralmente (28/11/2026, 28/02/2027, 28/05/2027 y 28/08/2027). Código ISIN: AR0780343197. Tickers BYMA: ICC9D / ICC9C / ICC9O.'",
+    "_fuente_verificada": true,
+    "ticker": "ICC9D / ICC9C / ICC9O",
+    "ticker_mep": "ICC9D",
+    "ticker_ccl": "ICC9C",
+    "ticker_pesos": "ICC9O",
+    "isin": "AR0780343197",
+    "emisor": "Industrial and Commercial Bank of China (Argentina) S.A.U.",
+    "clase_serie": "Obligaciones Negociables Clase IX",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 35000000,
+    "fecha_emision": "2026-08-28",
+    "fecha_vencimiento": "2027-08-28",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.035,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 3,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-08-28",
+        "porcentaje": 100
+      }
+    ]
   }
 ]
