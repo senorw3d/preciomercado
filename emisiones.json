@@ -3226,5 +3226,220 @@
         "porcentaje": 10
       }
     ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Capex S.A. Clase IV (16/02/2023): 'Obligaciones Negociables Clase IV denominadas en Dólares a tasa fija con vencimiento a los 48 meses contados desde la Fecha de Emisión y Liquidación a ser suscriptas e integradas en efectivo, en Pesos al Tipo de Cambio Inicial, y pagaderas en Pesos al Tipo de Cambio Aplicable.' -- 'Amortización: El capital será amortizado en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Base de Cálculo: Actual/365.' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Capex S.A. Clase IV (23/02/2023): 'Obligaciones Negociables Clase IV: Valor nominal a emitirse: US$ 17.566.441. Fecha de Emisión y Liquidación: 27 de febrero de 2023. Fecha de Vencimiento: 27 de febrero de 2027. Tasa Aplicable: 0,00% nominal anual. Amortización: El capital de las Obligaciones Negociables Clase IV será amortizado en un único pago en la Fecha de Vencimiento, es decir el 27 de febrero de 2027. Código ISIN: ARCAPX560048. Ticker BYMA: CAC4O / CAC4D.'",
+    "_fuente_verificada": true,
+    "ticker": "CAC4D / CAC4O",
+    "ticker_mep": "CAC4D",
+    "ticker_pesos": "CAC4O",
+    "isin": "ARCAPX560048",
+    "emisor": "Capex S.A.",
+    "clase_serie": "Obligaciones Negociables Clase IV",
+    "moneda_emision": "USD",
+    "moneda_pago": "ARS",
+    "moneda_integracion_pago": "ARS",
+    "ley": "Argentina",
+    "monto_emitido": 17566441,
+    "fecha_emision": "2023-02-27",
+    "fecha_vencimiento": "2027-02-27",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 0,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-02-27",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Capex S.A. Clase X (01/07/2024): 'Obligaciones Negociables Clase X denominadas en Dólares a tasa de interés fija a licitar con vencimiento a los 36 meses contados desde la Fecha de Emisión y Liquidación a ser suscriptas e integradas en Pesos al Tipo de Cambio Inicial, y pagaderas en Pesos al Tipo de Cambio Aplicable.' -- 'Amortización: El capital será amortizado en un único pago en la Fecha de Vencimiento.' -- 'Base de Cálculo: Actual/365.' -- 'Ley: Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Capex S.A. Clase X (03/07/2024): 'Obligaciones Negociables Clase X: Valor nominal a emitirse: US$ 55.599.334. Fecha de Emisión y Liquidación: 5 de julio de 2024. Fecha de Vencimiento: 5 de julio de 2027. Tasa Aplicable: 0,00% nominal anual. Amortización: El capital de las Obligaciones Negociables Clase X será amortizado en un único pago a ser realizado en la Fecha de Vencimiento de las Obligaciones Negociables Clase X, es decir el 5 de julio de 2027. Código ISIN: AR0669378199. Ticker BYMA: CACAO / CACAD / CACAC.'",
+    "_fuente_verificada": true,
+    "ticker": "CACAD / CACAC / CACAO",
+    "ticker_mep": "CACAD",
+    "ticker_ccl": "CACAC",
+    "ticker_pesos": "CACAO",
+    "isin": "AR0669378199",
+    "emisor": "Capex S.A.",
+    "clase_serie": "Obligaciones Negociables Clase X",
+    "moneda_emision": "USD",
+    "moneda_pago": "ARS",
+    "moneda_integracion_pago": "ARS",
+    "ley": "Argentina",
+    "monto_emitido": 55599334,
+    "fecha_emision": "2024-07-05",
+    "fecha_vencimiento": "2027-07-05",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 0,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-07-05",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Capex S.A. Clase VII (29/08/2023): 'Obligaciones Negociables Clase VII denominadas en Dólares, a ser suscriptas, integradas y pagaderas en Pesos al Tipo de Cambio Aplicable con vencimiento a los 48 meses contados desde la Fecha de Emisión y Liquidación.' -- 'Amortización: Pago íntegro al vencimiento (Bullet).' -- 'Base de Cálculo: Actual/365.' -- 'Ley: Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Capex S.A. Clase VII (01/09/2023): 'Obligaciones Negociables Clase VII: Monto colocado: US$ 39.323.500. Fecha de colocación: 5 de septiembre de 2023. Fecha de vencimiento: 7 de septiembre de 2027. Tasa Fija Aplicable: 0,00% nominal anual. Amortización: 100% en la Fecha de Vencimiento. Código ISIN: ARCAPX560089. Ticker BYMA: CAC7D / CAC7O.'",
+    "_fuente_verificada": true,
+    "ticker": "CAC7D / CAC7O",
+    "ticker_mep": "CAC7D",
+    "ticker_pesos": "CAC7O",
+    "isin": "ARCAPX560089",
+    "emisor": "Capex S.A.",
+    "clase_serie": "Obligaciones Negociables Clase VII",
+    "moneda_emision": "USD",
+    "moneda_pago": "ARS",
+    "moneda_integracion_pago": "ARS",
+    "ley": "Argentina",
+    "monto_emitido": 39323500,
+    "fecha_emision": "2023-09-05",
+    "fecha_vencimiento": "2027-09-07",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 0,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-09-07",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Capex S.A. Clase XI (09/06/2025): 'Obligaciones Negociables Clase XI denominadas y a ser suscriptas, integradas y pagaderas en Dólares en Argentina, a tasa de interés fija con vencimiento a los 36 meses contados desde la Fecha de Emisión y Liquidación.' -- 'Amortización: El capital será amortizado en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Base de Cálculo: Actual/365.' -- 'Ley: Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Capex S.A. Clase XI (12/06/2025): 'Obligaciones Negociables Clase XI: Valor nominal a emitirse: US$ 45.097.020. Fecha de Emisión y Liquidación: 17 de junio de 2025. Fecha de Vencimiento: 17 de junio de 2028. Tasa Aplicable: 7,75% nominal anual. Fechas de Pago de Intereses: Trimestralmente (17 de septiembre, 17 de diciembre, 17 de marzo y 17 de junio). Amortización: El capital será amortizado en un único pago el 17 de junio de 2028. Código ISIN: AR0561391449. Ticker BYMA: CACBD / CACBC / CACBO.'",
+    "_fuente_verificada": true,
+    "ticker": "CACBD / CACBC / CACBO",
+    "ticker_mep": "CACBD",
+    "ticker_ccl": "CACBC",
+    "ticker_pesos": "CACBO",
+    "isin": "AR0561391449",
+    "emisor": "Capex S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XI",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 45097020,
+    "fecha_emision": "2025-06-17",
+    "fecha_vencimiento": "2028-06-17",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0775,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 3,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2028-06-17",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto y Canje Capex S.A. Clase V (24/07/2023): 'Obligaciones Negociables Clase V denominadas en Dólares a tasa de interés fija igual a 9,250% nominal anual con vencimiento el 25 de agosto de 2028.' -- 'Amortización: En ocho cuotas semestrales iguales y consecutivas del 12,50% cada una comenzando el 25 de febrero de 2025.' -- 'Ley Aplicable: Ley del Estado de Nueva York.'",
+    "_evidencia_resultados": "Aviso de Resultados Capex S.A. Clase V (21/08/2023): 'Obligaciones Negociables Clase V: Monto a emitirse (incluyendo Contraprestación por Canje): US$ 188.801.600. Tasa Aplicable: 9,250% nominal anual. Fecha de Liquidación: 25 de agosto de 2023. Fecha de Vencimiento: 25 de agosto de 2028. Amortización: 8 cuotas semestrales de 12,50% cada una (25 de febrero y 25 de agosto de cada año desde 2025 hasta 2028). Fechas de Pago de Intereses: 25 de febrero y 25 de agosto de cada año. Código ISIN: Regulación S: USP20058AE63 / Norma 144A: US139612AF25. Ticker BYMA: CAC5D / CAC5C / CAC5O.'",
+    "_fuente_verificada": true,
+    "ticker": "CAC5D / CAC5C / CAC5O",
+    "ticker_mep": "CAC5D",
+    "ticker_ccl": "CAC5C",
+    "ticker_pesos": "CAC5O",
+    "isin": "USP20058AE63",
+    "emisor": "Capex S.A.",
+    "clase_serie": "Obligaciones Negociables Clase V",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "ley": "Nueva York",
+    "monto_emitido": 188801600,
+    "fecha_emision": "2023-08-25",
+    "fecha_vencimiento": "2028-08-25",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0925,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Amortizable",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2025-02-25",
+        "porcentaje": 12.5
+      },
+      {
+        "fecha": "2025-08-25",
+        "porcentaje": 12.5
+      },
+      {
+        "fecha": "2026-02-25",
+        "porcentaje": 12.5
+      },
+      {
+        "fecha": "2026-08-25",
+        "porcentaje": 12.5
+      },
+      {
+        "fecha": "2027-02-25",
+        "porcentaje": 12.5
+      },
+      {
+        "fecha": "2027-08-25",
+        "porcentaje": 12.5
+      },
+      {
+        "fecha": "2028-02-25",
+        "porcentaje": 12.5
+      },
+      {
+        "fecha": "2028-08-25",
+        "porcentaje": 12.5
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Capex S.A. Clase XII (28/11/2025): 'Obligaciones Negociables Clase XII denominadas y pagaderas en Dólares en Argentina a tasa fija a licitar con vencimiento a los 42 meses contados desde la Fecha de Emisión y Liquidación.' -- 'Amortización: Cancelación total en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Base de Cálculo: Actual/365.' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Capex S.A. Clase XII (02/12/2025): 'Obligaciones Negociables Clase XII: Valor nominal a emitirse: US$ 70.905.879. Fecha de Emisión y Liquidación: 4 de diciembre de 2025. Fecha de Vencimiento: 4 de junio de 2029. Tasa Aplicable: 8,25% nominal anual. Fechas de Pago de Intereses: Semestralmente (4 de junio y 4 de diciembre de cada año). Amortización: En un único pago en la Fecha de Vencimiento (04/06/2029). Código ISIN: AR0629138345. Ticker BYMA: CACDD / CACDC / CACDO.'",
+    "_fuente_verificada": true,
+    "ticker": "CACDD / CACDC / CACDO",
+    "ticker_mep": "CACDD",
+    "ticker_ccl": "CACDC",
+    "ticker_pesos": "CACDO",
+    "isin": "AR0629138345",
+    "emisor": "Capex S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XII",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 70905879,
+    "fecha_emision": "2025-12-04",
+    "fecha_vencimiento": "2029-06-04",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0825,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2029-06-04",
+        "porcentaje": 100
+      }
+    ]
   }
 ]

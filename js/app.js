@@ -5,7 +5,7 @@
  */
 
 import { FinancialMath } from './financial-math.js?v=1.0.8';
-import { BONDS_DATASET, RATINGS_LIST, SECTORS_LIST, RATING_EQUIVALENCE_TABLE } from './data.js?v=1.0.36';
+import { BONDS_DATASET, RATINGS_LIST, SECTORS_LIST, RATING_EQUIVALENCE_TABLE } from './data.js?v=1.0.37';
 import { MarketApiConnector } from './api.js?v=1.0.6';
 import { Data912Service } from './data912-service.js?v=1.0.6';
 import { ISINValidator } from './isin-validator.js?v=1.0.5';
