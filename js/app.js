@@ -5,7 +5,7 @@
  */
 
 import { FinancialMath } from './financial-math.js?v=1.0.8';
-import { BONDS_DATASET, RATINGS_LIST, SECTORS_LIST, RATING_EQUIVALENCE_TABLE } from './data.js?v=1.0.37';
+import { BONDS_DATASET, RATINGS_LIST, SECTORS_LIST, RATING_EQUIVALENCE_TABLE } from './data.js?v=1.0.38';
 import { MarketApiConnector } from './api.js?v=1.0.6';
 import { Data912Service } from './data912-service.js?v=1.0.6';
 import { ISINValidator } from './isin-validator.js?v=1.0.5';
@@ -34,7 +34,7 @@ class TradingDeskApp {
     ]);
 
     this.bonds = JSON.parse(JSON.stringify(BONDS_DATASET))
-      .filter(b => (!b.maturity || b.maturity >= todayStr))
+      .filter(b => b && typeof b === 'object' && b.ticker && (!b.maturity || b.maturity >= todayStr))
       .filter(b => !UNREVIEWED_TICKERS.has(b.ticker) && 
                    !UNREVIEWED_TICKERS.has(b.tickerPesos) && 
                    !UNREVIEWED_TICKERS.has(b.tickerMEP) && 

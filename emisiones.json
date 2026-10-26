@@ -3441,5 +3441,37 @@
         "porcentaje": 100
       }
     ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto VMOS S.A. Clase 1 (15/09/2026), Pág. 1, 14-16: 'Obligaciones Negociables Clase 1 con recurso limitado en los términos del art. 3 de la Ley de Obligaciones Negociables, denominadas, a ser suscriptas, integradas y pagaderas en Dólares Estadounidenses en Argentina... Amortización: El capital de las Obligaciones Negociables será amortizado en un único pago en la Fecha de Vencimiento (Bullet)... Base de Cálculo para el Pago de los Intereses: Para el cálculo de los intereses se considerará la cantidad real de días transcurridos y un año de trescientos sesenta y cinco (365) días (cantidad real de días transcurridos/365)... Ley Aplicable: Las Obligaciones Negociables se regirán por, y serán interpretadas de conformidad con, las leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados VMOS S.A. Clase 1 (17/09/2026), Pág. 1-2: 'Moneda de emisión: Dólares Estadounidenses en el país. Valor Nominal de las Obligaciones Negociables a emitirse: US$ 233.654.373. Tasa de Interés de las Obligaciones Negociables Clase 1: 6,25% nominal anual. Precio de Emisión: 100% del valor nominal. Fecha de Emisión y Liquidación: 22 de septiembre de 2026. Fecha de Vencimiento: 22 de septiembre de 2030 (plazo de 48 meses). Amortización: El capital de las Obligaciones Negociables será amortizado en un único pago en la Fecha de Vencimiento. Fechas de Pago de Intereses: trimestralmente por períodos vencidos excepto el primer cupón a los 6 meses (22/03/2027, 22/06/2027, 22/09/2027, 22/12/2027, 22/03/2028, 22/06/2028, 22/09/2028, 22/12/2028, 22/03/2029, 22/06/2029, 22/09/2029, 22/12/2029, 22/03/2030, 22/06/2030 y 22/09/2030). Duration: 3.58 años. Código ISIN: AR0735310937. Tickers BYMA: VMC1D / VMC1C / VMC1O.'",
+    "_fuente_verificada": true,
+    "ticker": "VMC1D / VMC1C / VMC1O",
+    "ticker_mep": "VMC1D",
+    "ticker_ccl": "VMC1C",
+    "ticker_pesos": "VMC1O",
+    "isin": "AR0735310937",
+    "emisor": "VMOS S.A.U. (Vaca Muerta Oil Sur)",
+    "clase_serie": "Obligaciones Negociables Clase 1",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 233654373,
+    "fecha_emision": "2026-09-22",
+    "fecha_vencimiento": "2030-09-22",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0625,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 3,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2030-09-22",
+        "porcentaje": 100
+      }
+    ]
   }
 ]

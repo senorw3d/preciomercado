@@ -15944,7 +15944,7 @@ export const BONDS_DATASET = [
         "residual": 0
       }
     ]
-  },,
+  },
   {
     "id": "bond_CAC4O",
     "ticker": "CAC4O",
@@ -16217,6 +16217,176 @@ export const BONDS_DATASET = [
         "amortization": 100,
         "coupon": 1.95,
         "amount": 101.95,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_VMC1D",
+    "ticker": "VMC1D",
+    "tickerMEP": "VMC1D",
+    "tickerCable": "VMC1C",
+    "tickerPesos": "VMC1O",
+    "isin": "AR0735310937",
+    "issuer": "VMOS S.A. Clase 1",
+    "shortIssuer": "VMOS",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Petróleo y Gas",
+    "issueDate": "2026-09-22",
+    "maturity": "2030-09-22",
+    "issuedAmount": 233654373,
+    "couponRate": 6.25,
+    "frequency": 4,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 100,
+    "priceMEP": 100,
+    "volume": 0,
+    "tradesCount": 0,
+    "volumeMEP": 0,
+    "tradesMEP": 0,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2027-03-22",
+        "days": 181,
+        "amortization": 0,
+        "coupon": 3.0993,
+        "amount": 3.0993,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2027-06-22",
+        "days": 92,
+        "amortization": 0,
+        "coupon": 1.5753,
+        "amount": 1.5753,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2027-09-22",
+        "days": 92,
+        "amortization": 0,
+        "coupon": 1.5753,
+        "amount": 1.5753,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2027-12-22",
+        "days": 91,
+        "amortization": 0,
+        "coupon": 1.5582,
+        "amount": 1.5582,
+        "residual": 100
+      },
+      {
+        "couponNo": 5,
+        "date": "2028-03-22",
+        "days": 91,
+        "amortization": 0,
+        "coupon": 1.5582,
+        "amount": 1.5582,
+        "residual": 100
+      },
+      {
+        "couponNo": 6,
+        "date": "2028-06-22",
+        "days": 92,
+        "amortization": 0,
+        "coupon": 1.5753,
+        "amount": 1.5753,
+        "residual": 100
+      },
+      {
+        "couponNo": 7,
+        "date": "2028-09-22",
+        "days": 92,
+        "amortization": 0,
+        "coupon": 1.5753,
+        "amount": 1.5753,
+        "residual": 100
+      },
+      {
+        "couponNo": 8,
+        "date": "2028-12-22",
+        "days": 91,
+        "amortization": 0,
+        "coupon": 1.5582,
+        "amount": 1.5582,
+        "residual": 100
+      },
+      {
+        "couponNo": 9,
+        "date": "2029-03-22",
+        "days": 90,
+        "amortization": 0,
+        "coupon": 1.5411,
+        "amount": 1.5411,
+        "residual": 100
+      },
+      {
+        "couponNo": 10,
+        "date": "2029-06-22",
+        "days": 92,
+        "amortization": 0,
+        "coupon": 1.5753,
+        "amount": 1.5753,
+        "residual": 100
+      },
+      {
+        "couponNo": 11,
+        "date": "2029-09-22",
+        "days": 92,
+        "amortization": 0,
+        "coupon": 1.5753,
+        "amount": 1.5753,
+        "residual": 100
+      },
+      {
+        "couponNo": 12,
+        "date": "2029-12-22",
+        "days": 91,
+        "amortization": 0,
+        "coupon": 1.5582,
+        "amount": 1.5582,
+        "residual": 100
+      },
+      {
+        "couponNo": 13,
+        "date": "2030-03-22",
+        "days": 90,
+        "amortization": 0,
+        "coupon": 1.5411,
+        "amount": 1.5411,
+        "residual": 100
+      },
+      {
+        "couponNo": 14,
+        "date": "2030-06-22",
+        "days": 92,
+        "amortization": 0,
+        "coupon": 1.5753,
+        "amount": 1.5753,
+        "residual": 100
+      },
+      {
+        "couponNo": 15,
+        "date": "2030-09-22",
+        "days": 92,
+        "amortization": 100,
+        "coupon": 1.5753,
+        "amount": 101.5753,
         "residual": 0
       }
     ]
