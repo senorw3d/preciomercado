@@ -5,7 +5,7 @@
  */
 
 import { FinancialMath } from './financial-math.js?v=1.0.8';
-import { BONDS_DATASET, RATINGS_LIST, SECTORS_LIST, RATING_EQUIVALENCE_TABLE } from './data.js?v=1.0.35';
+import { BONDS_DATASET, RATINGS_LIST, SECTORS_LIST, RATING_EQUIVALENCE_TABLE } from './data.js?v=1.0.36';
 import { MarketApiConnector } from './api.js?v=1.0.6';
 import { Data912Service } from './data912-service.js?v=1.0.6';
 import { ISINValidator } from './isin-validator.js?v=1.0.5';
@@ -20,20 +20,17 @@ class TradingDeskApp {
     // Lista de especies pendientes de revisión contra Aviso de Resultados
     // Se excluyen de la vista activa hasta ser revisadas una por una con el usuario
     const UNREVIEWED_TICKERS = new Set([
-      // 20 locales pendientes de cotejo
+      // Locales pendientes de cotejo
       'NHC1O', 'LR7AO',
       'VWCFO', 'VWCDO', 'CFS9O', 'RC3CO',
       'GN49C', 'GN49D', 'GN49O', 'CP38C', 'CP38D', 'CP38O',
       'BDCKO',
       // Internacionales pendientes de cotejo
-      'AEC2D', 'AEC2O', 'YPC4D', 'YPC4O',
-      'BYCHD', 'BYCHO', 'BACGD', 'BACGO', 'YMC1D', 'YMC1O', 'RAC5D', 'RAC5O', 'DNC7D', 'DNC7O',
-      'RUCDD', 'RUCDO', 'YMCUD', 'YMCUO', 'BACHD', 'BACHO', 'TLCMD', 'TLCMO',
-      'DNCAD', 'DNCAO',
-      'YFCJD', 'YFCJO', 'RAC7D', 'RAC7O', 'VSCVD', 'VSCVO',
-      'RC1CD', 'RC1CO', 'LQC1D', 'LQC1O', 'TLCTD', 'TLCTO',
-      'VSCTD', 'VSCTO', 'VSCXD', 'VSCXO',
-      'YCAND', 'YCANO', 'YCAMD', 'YCAMO'
+      'AEC2D', 'AEC2O',
+      'BYCHD', 'BYCHO', 'BACGD', 'BACGO', 'RAC5D', 'RAC5O', 'DNC7D', 'DNC7O',
+      'RUCDD', 'RUCDO', 'BACHD', 'BACHO',
+      'RAC7D', 'RAC7O',
+      'RC1CD', 'RC1CO', 'LQC1D', 'LQC1O'
     ]);
 
     this.bonds = JSON.parse(JSON.stringify(BONDS_DATASET))

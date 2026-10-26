@@ -7756,66 +7756,6 @@ export const BONDS_DATASET = [
     ]
   },
   {
-    "id": "bond_YPC4D",
-    "ticker": "YPC4D",
-    "tickerMEP": "YPC4D",
-    "tickerCable": "YPC4C",
-    "tickerPesos": "YPC4O",
-    "isin": "US984245AF78",
-    "issuer": "YPF S.A. 2028",
-    "shortIssuer": "YPF S.A.",
-    "rating": "AAA(arg)",
-    "ratingAgency": "FIX SCR",
-    "type": "ON",
-    "instrumentGroup": "Hard USD",
-    "currency": "USD",
-    "paymentCurrency": "Dólar Cable",
-    "law": "Nueva York",
-    "isCallable": false,
-    "structureType": "Bullet",
-    "couponType": "Fijo",
-    "sector": "Energía & Petróleo",
-    "maturity": "2028-02-11",
-    "issuedAmount": 14818000,
-    "couponRate": 10,
-    "frequency": 2,
-    "dayCount": "ACT/365",
-    "dirtyPrice": 104.97,
-    "priceMEP": 104.97,
-    "priceCable": 104.55,
-    "pricePesos": 154831,
-    "volume": 50000,
-    "tradesCount": 20,
-    "volumeMEP": 50000,
-    "tradesMEP": 20,
-    "cashFlows": [
-      {
-        "couponNo": 1,
-        "date": "2027-02-11",
-        "amortization": 0,
-        "coupon": 5,
-        "amount": 5,
-        "residual": 100
-      },
-      {
-        "couponNo": 2,
-        "date": "2027-08-11",
-        "amortization": 0,
-        "coupon": 5,
-        "amount": 5,
-        "residual": 100
-      },
-      {
-        "couponNo": 3,
-        "date": "2028-02-11",
-        "amortization": 100,
-        "coupon": 5,
-        "amount": 105,
-        "residual": 0
-      }
-    ]
-  },
-  {
     "id": "bond_AER4D",
     "ticker": "AER4D",
     "tickerMEP": "AER4D",
