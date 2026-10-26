@@ -5,7 +5,7 @@
  */
 
 import { FinancialMath } from './financial-math.js?v=1.0.8';
-import { BONDS_DATASET, RATINGS_LIST, SECTORS_LIST, RATING_EQUIVALENCE_TABLE } from './data.js?v=1.0.38';
+import { BONDS_DATASET, RATINGS_LIST, SECTORS_LIST, RATING_EQUIVALENCE_TABLE } from './data.js?v=1.0.39';
 import { MarketApiConnector } from './api.js?v=1.0.6';
 import { Data912Service } from './data912-service.js?v=1.0.6';
 import { ISINValidator } from './isin-validator.js?v=1.0.5';
@@ -2045,7 +2045,7 @@ class TradingDeskApp {
       'HJC': 'John Deere', 'OTS': 'Otamérica', 'AFC': 'Banco Comafi', 'BGC': 'Banco Patagonia',
       'DNC': 'Edenor', 'PVC': 'Banco Provincia', 'BYC': 'Banco Galicia', 'SIC': 'Sidersa',
       'AER': 'AA2000', 'MIC': 'Mirgor', 'VBC': 'Banco de Valores', 'SXC': 'Mercado Pago',
-      'BAC': 'Banco Macro', 'MGC': 'Pampa Energía', 'TLC': 'Telecom', 'TTC': 'Tecpetrol',
+      'BAC': 'Banco Macro', 'MGC': 'Pampa Energía', 'MG1': 'Pampa Energía', 'TLC': 'Telecom', 'TTC': 'Tecpetrol',
       'TT1': 'Tecpetrol',
       'IRC': 'IRSA', 'STC': 'San Miguel', 'MR4': 'MSU Energy', 'PN3': 'Pan American Energy',
       'NPC': 'Central Puerto', 'WNC': 'Newsan', 'MCC': 'Pecom Energía',

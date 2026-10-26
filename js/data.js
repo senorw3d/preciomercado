@@ -11890,6 +11890,7 @@ export const BONDS_DATASET = [
     "tickerMEP": "MGCRD",
     "tickerCable": "MGCRC",
     "tickerPesos": "MGCRO",
+    "aliases": ["MG1RO", "MG1RD", "MG1RC"],
     "isin": "USP7464EAY25",
     "issuer": "Pampa Energía S.A. 2037",
     "shortIssuer": "Pampa Energía",
@@ -16387,6 +16388,425 @@ export const BONDS_DATASET = [
         "amortization": 100,
         "coupon": 1.5753,
         "amount": 101.5753,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_MGCTD",
+    "ticker": "MGCTD",
+    "tickerMEP": "MGCTD",
+    "tickerCable": "MGCTC",
+    "tickerPesos": "MGCTO",
+    "isin": "AR0145481872",
+    "issuer": "Pampa Energía S.A. Clase 27",
+    "shortIssuer": "Pampa Energía",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "maturity": "2029-04-01",
+    "issuedAmount": 200000000,
+    "couponRate": 5.49,
+    "frequency": 2,
+    "dayCount": "30/360",
+    "dirtyPrice": 100,
+    "priceMEP": 100,
+    "volume": 0,
+    "tradesCount": 0,
+    "volumeMEP": 0,
+    "tradesMEP": 0,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2026-10-01",
+        "amortization": 0,
+        "coupon": 2.745,
+        "amount": 2.745,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2027-04-01",
+        "amortization": 0,
+        "coupon": 2.745,
+        "amount": 2.745,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2027-10-01",
+        "amortization": 0,
+        "coupon": 2.745,
+        "amount": 2.745,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2028-04-01",
+        "amortization": 0,
+        "coupon": 2.745,
+        "amount": 2.745,
+        "residual": 100
+      },
+      {
+        "couponNo": 5,
+        "date": "2028-10-01",
+        "amortization": 0,
+        "coupon": 2.745,
+        "amount": 2.745,
+        "residual": 100
+      },
+      {
+        "couponNo": 6,
+        "date": "2029-04-01",
+        "amortization": 100,
+        "coupon": 2.745,
+        "amount": 102.745,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_MGCND",
+    "ticker": "MGCND",
+    "tickerMEP": "MGCND",
+    "tickerCable": "MGCNC",
+    "tickerPesos": "MGCNO",
+    "isin": "AR0765746752",
+    "issuer": "Pampa Energía S.A. Clase 22",
+    "shortIssuer": "Pampa Energía",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "maturity": "2028-10-04",
+    "issuedAmount": 83977835,
+    "couponRate": 5.75,
+    "frequency": 2,
+    "dayCount": "30/360",
+    "dirtyPrice": 100,
+    "priceMEP": 100,
+    "volume": 0,
+    "tradesCount": 0,
+    "volumeMEP": 0,
+    "tradesMEP": 0,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2025-04-04",
+        "amortization": 0,
+        "coupon": 2.875,
+        "amount": 2.875,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2025-10-04",
+        "amortization": 0,
+        "coupon": 2.875,
+        "amount": 2.875,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2026-04-04",
+        "amortization": 0,
+        "coupon": 2.875,
+        "amount": 2.875,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2026-10-04",
+        "amortization": 0,
+        "coupon": 2.875,
+        "amount": 2.875,
+        "residual": 100
+      },
+      {
+        "couponNo": 5,
+        "date": "2027-04-04",
+        "amortization": 0,
+        "coupon": 2.875,
+        "amount": 2.875,
+        "residual": 100
+      },
+      {
+        "couponNo": 6,
+        "date": "2027-10-04",
+        "amortization": 0,
+        "coupon": 2.875,
+        "amount": 2.875,
+        "residual": 100
+      },
+      {
+        "couponNo": 7,
+        "date": "2028-04-04",
+        "amortization": 0,
+        "coupon": 2.875,
+        "amount": 2.875,
+        "residual": 100
+      },
+      {
+        "couponNo": 8,
+        "date": "2028-10-04",
+        "amortization": 100,
+        "coupon": 2.875,
+        "amount": 102.875,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_MGCED",
+    "ticker": "MGCED",
+    "tickerMEP": "MGCED",
+    "tickerCable": "MGCEC",
+    "tickerPesos": "MGCEO",
+    "isin": "ARPAMP5600G7",
+    "issuer": "Pampa Energía S.A. Clase 13",
+    "shortIssuer": "Pampa Energía",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Dólar Linked",
+    "currency": "USD",
+    "paymentCurrency": "Pesos (Dólar Linked)",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "maturity": "2027-12-19",
+    "issuedAmount": 83153682,
+    "couponRate": 0,
+    "frequency": 0,
+    "dayCount": "30/360",
+    "dirtyPrice": 100,
+    "priceMEP": 100,
+    "volume": 0,
+    "tradesCount": 0,
+    "volumeMEP": 0,
+    "tradesMEP": 0,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2027-12-19",
+        "amortization": 100,
+        "coupon": 0,
+        "amount": 100,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_MGC3C",
+    "ticker": "MGC3C",
+    "tickerMEP": "MGC3D",
+    "tickerCable": "MGC3C",
+    "tickerPesos": "MGC3O",
+    "aliases": [
+      "MGC30"
+    ],
+    "isin": "USP7464EAB22",
+    "issuer": "Pampa Energía S.A. 2029",
+    "shortIssuer": "Pampa Energía",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar Cable",
+    "law": "Nueva York",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "maturity": "2029-04-15",
+    "issuedAmount": 300000000,
+    "couponRate": 9.125,
+    "frequency": 2,
+    "dayCount": "30/360",
+    "dirtyPrice": 100,
+    "priceMEP": 100,
+    "volume": 0,
+    "tradesCount": 0,
+    "volumeMEP": 0,
+    "tradesMEP": 0,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2019-10-15",
+        "amortization": 0,
+        "coupon": 4.5625,
+        "amount": 4.5625,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2020-04-15",
+        "amortization": 0,
+        "coupon": 4.5625,
+        "amount": 4.5625,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2020-10-15",
+        "amortization": 0,
+        "coupon": 4.5625,
+        "amount": 4.5625,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2021-04-15",
+        "amortization": 0,
+        "coupon": 4.5625,
+        "amount": 4.5625,
+        "residual": 100
+      },
+      {
+        "couponNo": 5,
+        "date": "2021-10-15",
+        "amortization": 0,
+        "coupon": 4.5625,
+        "amount": 4.5625,
+        "residual": 100
+      },
+      {
+        "couponNo": 6,
+        "date": "2022-04-15",
+        "amortization": 0,
+        "coupon": 4.5625,
+        "amount": 4.5625,
+        "residual": 100
+      },
+      {
+        "couponNo": 7,
+        "date": "2022-10-15",
+        "amortization": 0,
+        "coupon": 4.5625,
+        "amount": 4.5625,
+        "residual": 100
+      },
+      {
+        "couponNo": 8,
+        "date": "2023-04-15",
+        "amortization": 0,
+        "coupon": 4.5625,
+        "amount": 4.5625,
+        "residual": 100
+      },
+      {
+        "couponNo": 9,
+        "date": "2023-10-15",
+        "amortization": 0,
+        "coupon": 4.5625,
+        "amount": 4.5625,
+        "residual": 100
+      },
+      {
+        "couponNo": 10,
+        "date": "2024-04-15",
+        "amortization": 0,
+        "coupon": 4.5625,
+        "amount": 4.5625,
+        "residual": 100
+      },
+      {
+        "couponNo": 11,
+        "date": "2024-10-15",
+        "amortization": 0,
+        "coupon": 4.5625,
+        "amount": 4.5625,
+        "residual": 100
+      },
+      {
+        "couponNo": 12,
+        "date": "2025-04-15",
+        "amortization": 0,
+        "coupon": 4.5625,
+        "amount": 4.5625,
+        "residual": 100
+      },
+      {
+        "couponNo": 13,
+        "date": "2025-10-15",
+        "amortization": 0,
+        "coupon": 4.5625,
+        "amount": 4.5625,
+        "residual": 100
+      },
+      {
+        "couponNo": 14,
+        "date": "2026-04-15",
+        "amortization": 0,
+        "coupon": 4.5625,
+        "amount": 4.5625,
+        "residual": 100
+      },
+      {
+        "couponNo": 15,
+        "date": "2026-10-15",
+        "amortization": 0,
+        "coupon": 4.5625,
+        "amount": 4.5625,
+        "residual": 100
+      },
+      {
+        "couponNo": 16,
+        "date": "2027-04-15",
+        "amortization": 0,
+        "coupon": 4.5625,
+        "amount": 4.5625,
+        "residual": 100
+      },
+      {
+        "couponNo": 17,
+        "date": "2027-10-15",
+        "amortization": 0,
+        "coupon": 4.5625,
+        "amount": 4.5625,
+        "residual": 100
+      },
+      {
+        "couponNo": 18,
+        "date": "2028-04-15",
+        "amortization": 0,
+        "coupon": 4.5625,
+        "amount": 4.5625,
+        "residual": 100
+      },
+      {
+        "couponNo": 19,
+        "date": "2028-10-15",
+        "amortization": 0,
+        "coupon": 4.5625,
+        "amount": 4.5625,
+        "residual": 100
+      },
+      {
+        "couponNo": 20,
+        "date": "2029-04-15",
+        "amortization": 100,
+        "coupon": 4.5625,
+        "amount": 104.5625,
         "residual": 0
       }
     ]

@@ -560,7 +560,7 @@
     "_evidencia_prospecto": "Offering Memorandum / SEC Form 6-K Pampa Energía S.A. (November 2025): 'Principal Amount: US$ 450,000,000 plus US$ 500,000,000 reopening aggregate US$ 950,000,000 7.750% Senior Notes due November 14, 2037.' -- 'Interest will accrue at a rate of 7.750% per year and will be payable semiannually in arrears on May 14 and November 14 of each year.' -- 'Maturity: The notes will mature on November 14, 2037.' -- 'Governing Law: The indenture and the notes will be governed by the laws of the State of New York.' -- 'Interest will be computed on the basis of a 360-day year comprised of twelve 30-day months.' -- 'Bullet: The entire principal amount will be paid in full at maturity.'",
     "_evidencia_resultados": "Aviso de Resultados CNV / Pricing Term Sheet (14/11/2025): 'Obligaciones Negociables Clase 26 por un valor nominal total en circulación de US$ 950.000.000. Fecha de Emisión y Liquidación: 14 de noviembre de 2025. Fecha de Vencimiento: 14 de noviembre de 2037. Tasa de Interés: 7,750% fija nominal anual. Amortización: Bullet 100% al vencimiento el 14 de noviembre de 2037. Pagos de intereses: semestralmente los días 14 de mayo y 14 de noviembre. Código ISIN: Reg S USP7464EAY25 / 144A US697660AK16.'",
     "_fuente_verificada": true,
-    "ticker": "MGCRD / MGCRC / MGCRO",
+    "ticker": "MGCRD / MGCRC / MGCRO / MG1RO / MG1RD",
     "ticker_mep": "MGCRD",
     "ticker_ccl": "MGCRC",
     "isin": "USP7464EAY25",
@@ -585,6 +585,11 @@
         "fecha": "2037-11-14",
         "porcentaje": 100
       }
+    ],
+    "aliases": [
+      "MG1RO",
+      "MG1RD",
+      "MG1RC"
     ]
   },
   {
@@ -3470,6 +3475,134 @@
     "cronograma_amortizacion": [
       {
         "fecha": "2030-09-22",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Pampa Energía S.A. (26/03/2026), Pág. 1, 10-12: 'Obligaciones Negociables Clase 27 denominadas, a ser suscriptas, integradas y pagaderas en Dólares Estadounidenses en Argentina... Amortización: El capital de las Obligaciones Negociables Clase 27 será amortizado en un único pago en la Fecha de Vencimiento (Bullet)... Base para el cómputo de intereses: Los intereses se computarán en base a 30/360 días... Ley Aplicable: Las Obligaciones Negociables se regirán por las leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Pampa Energía S.A. (28/03/2026), Pág. 1-2: 'Moneda de emisión: Dólares Estadounidenses en el país. Valor Nominal adjudicado: US$ 200.000.000. Tasa Aplicable: 5,49% nominal anual. Precio de Emisión: 100% del valor nominal. Fecha de Emisión y Liquidación: 1 de abril de 2026. Fecha de Vencimiento: 1 de abril de 2029 (plazo de 36 meses). Amortización: Bullet 100% en la Fecha de Vencimiento. Fechas de Pago de Intereses: semestralmente los días 1 de octubre y 1 de abril de cada año (01/10/2026, 01/04/2027, 01/10/2027, 01/04/2028, 01/10/2028 y 01/04/2029). Código ISIN: AR0145481872. Tickers BYMA: MGCTD / MGCTC / MGCTO.'",
+    "_fuente_verificada": true,
+    "ticker": "MGCTD / MGCTC / MGCTO",
+    "ticker_mep": "MGCTD",
+    "ticker_ccl": "MGCTC",
+    "ticker_pesos": "MGCTO",
+    "isin": "AR0145481872",
+    "emisor": "Pampa Energía S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 27",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 200000000,
+    "fecha_emision": "2026-04-01",
+    "fecha_vencimiento": "2029-04-01",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0549,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2029-04-01",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Pampa Energía S.A. (01/10/2024), Pág. 1, 9-11: 'Obligaciones Negociables Clase 22 denominadas, a ser suscriptas, integradas y pagaderas en Dólares Estadounidenses en Argentina... Amortización: El capital de las Obligaciones Negociables Clase 22 será amortizado en un único pago en la Fecha de Vencimiento (Bullet)... Base para el cómputo de intereses: Los intereses se computarán en base a 30/360 días... Ley Aplicable: Las Obligaciones Negociables se regirán por las leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Pampa Energía S.A. (03/10/2024), Pág. 1-2: 'Moneda de emisión: Dólares Estadounidenses en el país. Valor Nominal adjudicado: US$ 83.977.835. Tasa Aplicable: 5,75% nominal anual. Precio de Emisión: 100% del valor nominal. Fecha de Emisión y Liquidación: 4 de octubre de 2024. Fecha de Vencimiento: 4 de octubre de 2028 (plazo de 48 meses). Amortización: Bullet 100% en la Fecha de Vencimiento. Fechas de Pago de Intereses: semestralmente los días 4 de abril y 4 de octubre de cada año (04/04/2025, 04/10/2025, 04/04/2026, 04/10/2026, 04/04/2027, 04/10/2027, 04/04/2028 y 04/10/2028). Código ISIN: AR0765746752. Tickers BYMA: MGCND / MGCNC / MGCNO.'",
+    "_fuente_verificada": true,
+    "ticker": "MGCND / MGCNC / MGCNO",
+    "ticker_mep": "MGCND",
+    "ticker_ccl": "MGCNC",
+    "ticker_pesos": "MGCNO",
+    "isin": "AR0765746752",
+    "emisor": "Pampa Energía S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 22",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 83977835,
+    "fecha_emision": "2024-10-04",
+    "fecha_vencimiento": "2028-10-04",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0575,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2028-10-04",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Pampa Energía S.A. (15/12/2022 y ampliación 03/03/2023), Pág. 1, 8-10: 'Obligaciones Negociables Clase 13 denominadas en Dólares Estadounidenses, a ser suscriptas, integradas y pagaderas en Pesos al Tipo de Cambio Aplicable (Dólar Linked)... Tasa de Interés: 0,00% nominal anual (Cupón Cero)... Amortización: El capital será amortizado en un único pago en la Fecha de Vencimiento... Ley Aplicable: Las Obligaciones Negociables se regirán por las leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Pampa Energía S.A. (19/12/2022 y ampliación 08/03/2023), Pág. 1-2: 'Moneda de denominación: Dólares Estadounidenses. Moneda de pago: Pesos al Tipo de Cambio Aplicable. Valor Nominal total en circulación: US$ 83.153.682. Tasa de Interés: 0,00% fija nominal anual. Fecha de Emisión y Liquidación original: 19 de diciembre de 2022. Fecha de Vencimiento: 19 de diciembre de 2027 (plazo de 60 meses). Amortización: Bullet 100% en la Fecha de Vencimiento. Código ISIN: ARPAMP5600G7. Tickers BYMA: MGCED / MGCEC / MGCEO.'",
+    "_fuente_verificada": true,
+    "ticker": "MGCED / MGCEC / MGCEO",
+    "ticker_mep": "MGCED",
+    "ticker_ccl": "MGCEC",
+    "ticker_pesos": "MGCEO",
+    "isin": "ARPAMP5600G7",
+    "emisor": "Pampa Energía S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 13 (Dólar Linked)",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_DL",
+    "moneda_integracion_pago": "ARS",
+    "ley": "Argentina",
+    "monto_emitido": 83153682,
+    "fecha_emision": "2022-12-19",
+    "fecha_vencimiento": "2027-12-19",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 12,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-12-19",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Offering Memorandum Pampa Energía S.A. (July 2019): 'US$ 300,000,000 9.125% Senior Notes due April 15, 2029.' -- 'Interest on the notes will accrue at the rate of 9.125% per year and will be payable semiannually in arrears on April 15 and October 15 of each year.' -- 'Maturity: The notes will mature on April 15, 2029.' -- 'Governing Law: The indenture and the notes will be governed by the laws of the State of New York.' -- 'Interest will be computed on the basis of a 360-day year comprised of twelve 30-day months (30/360).' -- 'Bullet: The entire principal amount will be paid in full on April 15, 2029.'",
+    "_evidencia_resultados": "Pricing Term Sheet / Aviso de Resultados CNV (09/07/2019): 'Obligaciones Negociables Clase 3 por un valor nominal de US$ 300.000.000. Fecha de Emisión y Liquidación: 9 de julio de 2019. Fecha de Vencimiento: 15 de abril de 2029. Tasa de Interés: 9,125% fija nominal anual. Amortización: Bullet 100% al vencimiento el 15 de abril de 2029. Pagos de intereses: semestralmente los días 15 de abril y 15 de octubre de cada año. Código ISIN: Reg S USP7464EAB22 / 144A US697660AH86. Tickers BYMA: MGC3D / MGC3C / MGC3O.'",
+    "_fuente_verificada": true,
+    "ticker": "MGC3D / MGC3C / MGC3O",
+    "ticker_mep": "MGC3D",
+    "ticker_ccl": "MGC3C",
+    "ticker_pesos": "MGC3O",
+    "isin": "USP7464EAB22",
+    "emisor": "Pampa Energía S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 3 (Senior Notes due 2029)",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_Cable",
+    "ley": "Nueva York",
+    "monto_emitido": 300000000,
+    "fecha_emision": "2019-07-09",
+    "fecha_vencimiento": "2029-04-15",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.09125,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2029-04-15",
         "porcentaje": 100
       }
     ]
