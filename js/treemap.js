@@ -443,15 +443,25 @@ export class SquarifiedTreemap {
           </div>
           <div style="font-size: 0.8rem; color: #ffffff; margin-top: 3px; font-weight: 500;">${item.name || item.issuer || item.category || ''}</div>
           <div style="border-top: 1px solid rgba(56, 189, 248, 0.25); margin: 7px 0; padding-top: 7px; font-size: 0.78rem; font-family: var(--font-mono); display: grid; grid-template-columns: 1.15fr 1fr; gap: 5px;">
-            <div style="color: #93c5fd; font-weight: 600;">Monto Cable USD:</div>
+            <div style="color: #93c5fd; font-weight: 600;">Total Cable USD:</div>
             <div style="text-align: right; color: #ffffff; font-weight: 800;">US$ ${formatTreemapNum(Math.round(item.cableUSD || item.usdVal || 0), 0)}</div>
-            <div style="color: #93c5fd; font-weight: 600;">Último Precio:</div>
-            <div style="text-align: right; color: #ffffff; font-weight: 700;">$${formatTreemapNum(item.px || 0, 2)}</div>
+            ${item.px > 0 ? `
+              <div style="color: #93c5fd; font-weight: 600;">Último Precio:</div>
+              <div style="text-align: right; color: #ffffff; font-weight: 700;">$${formatTreemapNum(item.px || 0, 2)}</div>
+            ` : ''}
             <div style="color: #93c5fd; font-weight: 600;">Volumen Nom:</div>
             <div style="text-align: right; color: #ffffff; font-weight: 700;">${formatTreemapNum(item.vol || 0, 0)}</div>
             <div style="color: #93c5fd; font-weight: 600;">Operaciones:</div>
             <div style="text-align: right; color: #ffffff; font-weight: 700;">${formatTreemapNum(item.ops || 0, 0)} ops</div>
           </div>
+          ${item.isConsolidatedTicker && ((item.mepUSD || 0) > 0 || (item.cclUSD || 0) > 0 || (item.arsARS || 0) > 0) ? `
+            <div style="margin-top: 6px; font-size: 0.70rem; color: #94a3b8; border-top: 1px dashed rgba(255,255,255,0.15); padding-top: 5px; font-family: var(--font-mono); line-height: 1.35;">
+              <span style="color: #38bdf8; font-weight: 700;">Desglose:</span>
+              ${(item.mepUSD || 0) > 0 ? `MEP: <span style="color:#fff;">US$ ${formatTreemapNum(Math.round(item.mepUSD), 0)}</span> ` : ''}
+              ${(item.cclUSD || 0) > 0 ? `| CCL: <span style="color:#fff;">US$ ${formatTreemapNum(Math.round(item.cclUSD), 0)}</span> ` : ''}
+              ${(item.arsARS || 0) > 0 ? `| ARS: <span style="color:#fff;">$ ${formatTreemapNum(Math.round(item.arsARS / 1e6), 1)}M</span>` : ''}
+            </div>
+          ` : ''}
         `;
       }
 

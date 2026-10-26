@@ -130,6 +130,8 @@ export class Data912Service {
     this.quotesMap = quoteMap;
     let updatedCount = 0;
 
+    const tradingDate = this.lastTradingDate || new Date().toISOString().split('T')[0];
+
     bonds.forEach(bond => {
       const t = (bond.ticker || '').toUpperCase().trim();
       if (!t) return;
@@ -201,6 +203,7 @@ export class Data912Service {
         bond.qBid = quote.q_bid || bond.qBid || 0;
         bond.qAsk = quote.q_ask || bond.qAsk || 0;
         bond.isLive = true;
+        bond.quoteDate = tradingDate;
         bond.lastUpdated = new Date().toISOString();
 
         updatedCount++;
@@ -211,7 +214,8 @@ export class Data912Service {
     return {
       updatedCount,
       totalQuotes: quoteMap.size,
-      timestamp: this.lastSync.toLocaleTimeString()
+      timestamp: this.lastSync.toLocaleTimeString(),
+      tradingDate
     };
   }
 }

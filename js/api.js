@@ -90,6 +90,72 @@ export class MarketApiConnector {
   }
 
   /**
+   * Returns the ISO date string (YYYY-MM-DD) of the last completed or currently active BYMA trading session.
+   * If today is a weekend, holiday, or before 10:30 ART, steps backward to the last valid market session.
+   */
+  getLastTradingDate() {
+    const formatter = new Intl.DateTimeFormat('en-US', {
+      timeZone: 'America/Argentina/Buenos_Aires',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false
+    });
+
+    const parts = formatter.formatToParts(new Date());
+    const map = {};
+    parts.forEach(p => map[p.type] = p.value);
+
+    let year = parseInt(map.year, 10);
+    let month = parseInt(map.month, 10);
+    let day = parseInt(map.day, 10);
+    const hour = parseInt(map.hour, 10);
+    const minute = parseInt(map.minute, 10);
+
+    const fixedHolidays = [
+      '01-01', '03-24', '04-02', '05-01', '05-25', '06-20',
+      '07-09', '11-06', '12-08', '12-25', '12-31'
+    ];
+    const bymaHolidays = new Set([
+      '2025-03-03', '2025-03-04', '2025-04-17', '2025-04-18', '2025-06-16', 
+      '2025-08-18', '2025-10-10', '2025-10-13', '2025-11-24',
+      '2026-02-16', '2026-02-17', '2026-04-03', '2026-06-15', '2026-08-17', 
+      '2026-10-12', '2026-11-23',
+      '2027-02-08', '2027-02-09', '2027-03-25', '2027-03-26', '2027-06-21', 
+      '2027-08-16', '2027-10-11', '2027-11-22'
+    ]);
+
+    // Construct local Argentina calendar date
+    let cur = new Date(Date.UTC(year, month - 1, day, 12, 0, 0));
+
+    // If today is a trading day but market hasn't opened yet (< 10:30 ART), last trade was yesterday
+    const isBeforeMarketOpen = (hour * 60 + minute) < (10 * 60 + 30);
+    if (isBeforeMarketOpen) {
+      cur.setUTCDate(cur.getUTCDate() - 1);
+    }
+
+    // Step backward until finding a valid business day (not weekend, not holiday)
+    while (true) {
+      const dow = cur.getUTCDay();
+      const y = cur.getUTCFullYear();
+      const m = String(cur.getUTCMonth() + 1).padStart(2, '0');
+      const d = String(cur.getUTCDate()).padStart(2, '0');
+      const dateStr = `${y}-${m}-${d}`;
+      const mmDd = `${m}-${d}`;
+
+      const isWeekend = (dow === 0 || dow === 6);
+      const isHoliday = fixedHolidays.includes(mmDd) || bymaHolidays.has(dateStr);
+
+      if (!isWeekend && !isHoliday) {
+        return dateStr;
+      }
+      cur.setUTCDate(cur.getUTCDate() - 1);
+    }
+  }
+
+  /**
    * Fetches real-time market quotes from Data912 free endpoints
    */
   async fetchLiveQuotes() {

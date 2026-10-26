@@ -1,5 +1,726 @@
 export const BONDS_DATASET = [
   {
+    "id": "bond_TLCQD",
+    "ticker": "TLCQD",
+    "tickerMEP": "TLCQD",
+    "tickerCable": "TLCQC",
+    "tickerPesos": "TLCQO",
+    "isin": "AR0006792755",
+    "issuer": "Telecom Argentina S.A. Clase 25",
+    "shortIssuer": "Telecom",
+    "rating": "AA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Telecomunicaciones",
+    "maturity": "2027-07-02",
+    "issuedAmount": 50000000,
+    "couponRate": 7.5,
+    "frequency": 4,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 102.50,
+    "priceMEP": 102.50,
+    "volume": 20000,
+    "tradesCount": 6,
+    "volumeMEP": 20000,
+    "tradesMEP": 6,
+    "cashFlows": [
+      {
+        "date": "2025-10-02",
+        "amortization": 0,
+        "coupon": 1.875,
+        "amount": 1.875,
+        "residual": 100
+      },
+      {
+        "date": "2026-01-02",
+        "amortization": 0,
+        "coupon": 1.875,
+        "amount": 1.875,
+        "residual": 100
+      },
+      {
+        "date": "2026-04-02",
+        "amortization": 0,
+        "coupon": 1.875,
+        "amount": 1.875,
+        "residual": 100
+      },
+      {
+        "date": "2026-07-02",
+        "amortization": 0,
+        "coupon": 1.875,
+        "amount": 1.875,
+        "residual": 100
+      },
+      {
+        "date": "2026-10-02",
+        "amortization": 0,
+        "coupon": 1.875,
+        "amount": 1.875,
+        "residual": 100
+      },
+      {
+        "date": "2027-01-02",
+        "amortization": 0,
+        "coupon": 1.875,
+        "amount": 1.875,
+        "residual": 100
+      },
+      {
+        "date": "2027-04-02",
+        "amortization": 0,
+        "coupon": 1.875,
+        "amount": 1.875,
+        "residual": 100
+      },
+      {
+        "date": "2027-07-02",
+        "amortization": 100,
+        "coupon": 1.875,
+        "amount": 101.875,
+        "residual": 0
+      }
+    ]
+  },
+
+  {
+    "id": "bond_TLCUD",
+    "ticker": "TLCUD",
+    "tickerMEP": "TLCUD",
+    "tickerCable": "TLCUC",
+    "tickerPesos": "TLCUO",
+    "isin": "AR0857544677",
+    "issuer": "Telecom Argentina S.A. Clase 28",
+    "shortIssuer": "Telecom",
+    "rating": "AA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Telecomunicaciones",
+    "maturity": "2029-03-05",
+    "issuedAmount": 81329886,
+    "couponRate": 6.5,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 101.65,
+    "priceMEP": 101.65,
+    "volume": 25000,
+    "tradesCount": 20,
+    "volumeMEP": 25000,
+    "tradesMEP": 20,
+    "cashFlows": [
+      {
+        "date": "2026-09-05",
+        "amortization": 0,
+        "coupon": 3.25,
+        "amount": 3.25,
+        "residual": 100
+      },
+      {
+        "date": "2027-03-05",
+        "amortization": 0,
+        "coupon": 3.25,
+        "amount": 3.25,
+        "residual": 100
+      },
+      {
+        "date": "2027-09-05",
+        "amortization": 0,
+        "coupon": 3.25,
+        "amount": 3.25,
+        "residual": 100
+      },
+      {
+        "date": "2028-03-05",
+        "amortization": 0,
+        "coupon": 3.25,
+        "amount": 3.25,
+        "residual": 100
+      },
+      {
+        "date": "2028-09-05",
+        "amortization": 0,
+        "coupon": 3.25,
+        "amount": 3.25,
+        "residual": 100
+      },
+      {
+        "date": "2029-03-05",
+        "amortization": 100,
+        "coupon": 3.25,
+        "amount": 103.25,
+        "residual": 0
+      }
+    ]
+  },
+
+  {
+    "id": "bond_BYZ2D",
+    "ticker": "BYZ2D",
+    "tickerMEP": "BYZ2D",
+    "tickerCable": "BYZ2C",
+    "tickerPesos": "BYZ2O",
+    "isin": "AR0033784361",
+    "issuer": "Banco Galicia Clase XXXIII Serie II",
+    "shortIssuer": "Banco Galicia",
+    "rating": "AA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Bancos & Finanzas",
+    "maturity": "2029-07-30",
+    "issuedAmount": 50000000,
+    "couponRate": 5.5,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 100.50,
+    "priceMEP": 100.50,
+    "volume": 40000,
+    "tradesCount": 14,
+    "volumeMEP": 40000,
+    "tradesMEP": 14,
+    "cashFlows": [
+      {
+        "date": "2025-07-30",
+        "amortization": 0,
+        "coupon": 2.75,
+        "amount": 2.75,
+        "residual": 100
+      },
+      {
+        "date": "2026-01-30",
+        "amortization": 0,
+        "coupon": 2.75,
+        "amount": 2.75,
+        "residual": 100
+      },
+      {
+        "date": "2026-07-30",
+        "amortization": 0,
+        "coupon": 2.75,
+        "amount": 2.75,
+        "residual": 100
+      },
+      {
+        "date": "2027-01-30",
+        "amortization": 0,
+        "coupon": 2.75,
+        "amount": 2.75,
+        "residual": 100
+      },
+      {
+        "date": "2027-07-30",
+        "amortization": 0,
+        "coupon": 2.75,
+        "amount": 2.75,
+        "residual": 100
+      },
+      {
+        "date": "2028-01-30",
+        "amortization": 0,
+        "coupon": 2.75,
+        "amount": 2.75,
+        "residual": 100
+      },
+      {
+        "date": "2028-07-30",
+        "amortization": 0,
+        "coupon": 2.75,
+        "amount": 2.75,
+        "residual": 100
+      },
+      {
+        "date": "2029-01-30",
+        "amortization": 0,
+        "coupon": 2.75,
+        "amount": 2.75,
+        "residual": 100
+      },
+      {
+        "date": "2029-07-30",
+        "amortization": 100,
+        "coupon": 2.75,
+        "amount": 102.75,
+        "residual": 0
+      }
+    ]
+  },
+
+  {
+    "id": "bond_BYZ1D",
+    "ticker": "BYZ1D",
+    "tickerMEP": "BYZ1D",
+    "tickerCable": "BYZ1C",
+    "tickerPesos": "BYZ1O",
+    "isin": "AR0528891382",
+    "issuer": "Banco Galicia Clase XXXIII Serie I",
+    "shortIssuer": "Banco Galicia",
+    "rating": "AA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Bancos & Finanzas",
+    "maturity": "2027-08-02",
+    "issuedAmount": 35000000,
+    "couponRate": 3.25,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 100.60,
+    "priceMEP": 100.60,
+    "volume": 35000,
+    "tradesCount": 12,
+    "volumeMEP": 35000,
+    "tradesMEP": 12,
+    "cashFlows": [
+      {
+        "date": "2025-08-02",
+        "amortization": 0,
+        "coupon": 1.625,
+        "amount": 1.625,
+        "residual": 100
+      },
+      {
+        "date": "2026-02-02",
+        "amortization": 0,
+        "coupon": 1.625,
+        "amount": 1.625,
+        "residual": 100
+      },
+      {
+        "date": "2026-08-02",
+        "amortization": 0,
+        "coupon": 1.625,
+        "amount": 1.625,
+        "residual": 100
+      },
+      {
+        "date": "2027-02-02",
+        "amortization": 0,
+        "coupon": 1.625,
+        "amount": 1.625,
+        "residual": 100
+      },
+      {
+        "date": "2027-08-02",
+        "amortization": 100,
+        "coupon": 1.625,
+        "amount": 101.625,
+        "residual": 0
+      }
+    ]
+  },
+
+  {
+    "id": "bond_BYY2D",
+    "ticker": "BYY2D",
+    "tickerMEP": "BYY2D",
+    "tickerCable": "BYY2C",
+    "tickerPesos": "BYY2O",
+    "isin": "AR0040043033",
+    "issuer": "Banco Galicia Clase XXXII Serie II",
+    "shortIssuer": "Banco Galicia",
+    "rating": "AA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Bancos & Finanzas",
+    "maturity": "2028-06-05",
+    "issuedAmount": 53059085,
+    "couponRate": 4.75,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 100.25,
+    "priceMEP": 100.25,
+    "volume": 45000,
+    "tradesCount": 15,
+    "volumeMEP": 45000,
+    "tradesMEP": 15,
+    "cashFlows": [
+      {
+        "date": "2025-06-05",
+        "amortization": 0,
+        "coupon": 2.375,
+        "amount": 2.375,
+        "residual": 100
+      },
+      {
+        "date": "2025-12-05",
+        "amortization": 0,
+        "coupon": 2.375,
+        "amount": 2.375,
+        "residual": 100
+      },
+      {
+        "date": "2026-06-05",
+        "amortization": 0,
+        "coupon": 2.375,
+        "amount": 2.375,
+        "residual": 100
+      },
+      {
+        "date": "2026-12-05",
+        "amortization": 0,
+        "coupon": 2.375,
+        "amount": 2.375,
+        "residual": 100
+      },
+      {
+        "date": "2027-06-05",
+        "amortization": 0,
+        "coupon": 2.375,
+        "amount": 2.375,
+        "residual": 100
+      },
+      {
+        "date": "2027-12-05",
+        "amortization": 0,
+        "coupon": 2.375,
+        "amount": 2.375,
+        "residual": 100
+      },
+      {
+        "date": "2028-06-05",
+        "amortization": 100,
+        "coupon": 2.375,
+        "amount": 102.375,
+        "residual": 0
+      }
+    ]
+  },
+
+  {
+    "id": "bond_PN36D",
+    "ticker": "PN36D",
+    "tickerMEP": "PN36D",
+    "tickerCable": "PN36C",
+    "tickerPesos": "PN36O",
+    "isin": "AR0677571967",
+    "issuer": "Pan American Energy Clase 36",
+    "shortIssuer": "Pan American Energy",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "maturity": "2031-11-13",
+    "issuedAmount": 120000000,
+    "couponRate": 7.25,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 107.60,
+    "priceMEP": 107.60,
+    "volume": 206129,
+    "tradesCount": 156,
+    "volumeMEP": 206129,
+    "tradesMEP": 156,
+    "cashFlows": [
+      {
+        "date": "2025-05-13",
+        "amortization": 0,
+        "coupon": 3.625,
+        "amount": 3.625,
+        "residual": 100
+      },
+      {
+        "date": "2025-11-13",
+        "amortization": 0,
+        "coupon": 3.625,
+        "amount": 3.625,
+        "residual": 100
+      },
+      {
+        "date": "2026-05-13",
+        "amortization": 0,
+        "coupon": 3.625,
+        "amount": 3.625,
+        "residual": 100
+      },
+      {
+        "date": "2026-11-13",
+        "amortization": 0,
+        "coupon": 3.625,
+        "amount": 3.625,
+        "residual": 100
+      },
+      {
+        "date": "2027-05-13",
+        "amortization": 0,
+        "coupon": 3.625,
+        "amount": 3.625,
+        "residual": 100
+      },
+      {
+        "date": "2027-11-13",
+        "amortization": 0,
+        "coupon": 3.625,
+        "amount": 3.625,
+        "residual": 100
+      },
+      {
+        "date": "2028-05-13",
+        "amortization": 0,
+        "coupon": 3.625,
+        "amount": 3.625,
+        "residual": 100
+      },
+      {
+        "date": "2028-11-13",
+        "amortization": 0,
+        "coupon": 3.625,
+        "amount": 3.625,
+        "residual": 100
+      },
+      {
+        "date": "2029-05-13",
+        "amortization": 0,
+        "coupon": 3.625,
+        "amount": 3.625,
+        "residual": 100
+      },
+      {
+        "date": "2029-11-13",
+        "amortization": 0,
+        "coupon": 3.625,
+        "amount": 3.625,
+        "residual": 100
+      },
+      {
+        "date": "2030-05-13",
+        "amortization": 0,
+        "coupon": 3.625,
+        "amount": 3.625,
+        "residual": 100
+      },
+      {
+        "date": "2030-11-13",
+        "amortization": 0,
+        "coupon": 3.625,
+        "amount": 3.625,
+        "residual": 100
+      },
+      {
+        "date": "2031-05-13",
+        "amortization": 0,
+        "coupon": 3.625,
+        "amount": 3.625,
+        "residual": 100
+      },
+      {
+        "date": "2031-11-13",
+        "amortization": 100,
+        "coupon": 3.625,
+        "amount": 103.625,
+        "residual": 0
+      }
+    ]
+  },
+
+  {
+    "id": "bond_PN35D",
+    "ticker": "PN35D",
+    "tickerMEP": "PN35D",
+    "tickerCable": "PN35C",
+    "tickerPesos": "PN35O",
+    "isin": "AR0623274765",
+    "issuer": "Pan American Energy Clase 35",
+    "shortIssuer": "Pan American Energy",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "maturity": "2029-09-27",
+    "issuedAmount": 138834000,
+    "couponRate": 7,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 104.20,
+    "priceMEP": 104.20,
+    "volume": 162286,
+    "tradesCount": 173,
+    "volumeMEP": 162286,
+    "tradesMEP": 173,
+    "cashFlows": [
+      {
+        "date": "2025-03-27",
+        "amortization": 0,
+        "coupon": 3.5,
+        "amount": 3.5,
+        "residual": 100
+      },
+      {
+        "date": "2025-09-27",
+        "amortization": 0,
+        "coupon": 3.5,
+        "amount": 3.5,
+        "residual": 100
+      },
+      {
+        "date": "2026-03-27",
+        "amortization": 0,
+        "coupon": 3.5,
+        "amount": 3.5,
+        "residual": 100
+      },
+      {
+        "date": "2026-09-27",
+        "amortization": 0,
+        "coupon": 3.5,
+        "amount": 3.5,
+        "residual": 100
+      },
+      {
+        "date": "2027-03-27",
+        "amortization": 0,
+        "coupon": 3.5,
+        "amount": 3.5,
+        "residual": 100
+      },
+      {
+        "date": "2027-09-27",
+        "amortization": 0,
+        "coupon": 3.5,
+        "amount": 3.5,
+        "residual": 100
+      },
+      {
+        "date": "2028-03-27",
+        "amortization": 0,
+        "coupon": 3.5,
+        "amount": 3.5,
+        "residual": 100
+      },
+      {
+        "date": "2028-09-27",
+        "amortization": 0,
+        "coupon": 3.5,
+        "amount": 3.5,
+        "residual": 100
+      },
+      {
+        "date": "2029-03-27",
+        "amortization": 0,
+        "coupon": 3.5,
+        "amount": 3.5,
+        "residual": 100
+      },
+      {
+        "date": "2029-09-27",
+        "amortization": 100,
+        "coupon": 3.5,
+        "amount": 103.5,
+        "residual": 0
+      }
+    ]
+  },
+
+  {
+    "id": "bond_AEC3D",
+    "ticker": "AEC3D",
+    "tickerMEP": "AEC3D",
+    "tickerCable": "AEC3C",
+    "tickerPesos": "AEC3O",
+    "isin": "AR0382592001",
+    "issuer": "AES Argentina Generación S.A. Clase 3",
+    "shortIssuer": "AES Argentina",
+    "rating": "AA-(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "maturity": "2028-08-06",
+    "issuedAmount": 50000000,
+    "couponRate": 6.47,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 99.50,
+    "priceMEP": 99.50,
+    "volume": 58877,
+    "tradesCount": 87,
+    "volumeMEP": 58877,
+    "tradesMEP": 87,
+    "cashFlows": [
+      {
+        "date": "2027-02-06",
+        "amortization": 0,
+        "coupon": 3.235,
+        "amount": 3.235,
+        "residual": 100
+      },
+      {
+        "date": "2027-08-06",
+        "amortization": 0,
+        "coupon": 3.235,
+        "amount": 3.235,
+        "residual": 100
+      },
+      {
+        "date": "2028-02-06",
+        "amortization": 0,
+        "coupon": 3.235,
+        "amount": 3.235,
+        "residual": 100
+      },
+      {
+        "date": "2028-08-06",
+        "amortization": 100,
+        "coupon": 3.235,
+        "amount": 103.235,
+        "residual": 0
+      }
+    ]
+  },
+
+  {
     "id": "bond_YM41D",
     "ticker": "YM41D",
     "tickerMEP": "YM41D",
@@ -762,7 +1483,7 @@ export const BONDS_DATASET = [
     "tickerMEP": "YFCOD",
     "tickerCable": "YFCOC",
     "tickerPesos": "YFCOO",
-    "isin": "AR0675704982",
+    "isin": "AR0594130012",
     "issuer": "YPF Energía Eléctrica S.A. Clase XXIII",
     "shortIssuer": "YPF Luz",
     "rating": "AAA(arg)",
@@ -9019,145 +9740,170 @@ export const BONDS_DATASET = [
     ]
   },
   {
-    "id": "bond_YFCJD",
-    "ticker": "YFCJD",
-    "tickerMEP": "YFCJD",
-    "tickerCable": "YFCJC",
-    "tickerPesos": "YFCJO",
-    "isin": "USP9897PAS31",
-    "issuer": "YPF Energía Eléctrica S.A. 2032",
-    "shortIssuer": "YPF Luz",
-    "rating": "AAA(arg)",
-    "ratingAgency": "FIX SCR",
-    "type": "ON",
-    "instrumentGroup": "Hard USD",
-    "currency": "USD",
-    "paymentCurrency": "Dólar Cable",
-    "law": "Nueva York",
-    "isCallable": true,
-    "structureType": "Bullet",
-    "couponType": "Fijo",
-    "sector": "Energía & Petróleo",
-    "maturity": "2032-10-16",
-    "issuedAmount": 420000000,
-    "couponRate": 7.875,
-    "frequency": 2,
-    "dayCount": "ACT/365",
-    "dirtyPrice": 103.56,
-    "priceMEP": 103.56,
-    "priceCable": 103.15,
-    "pricePesos": 152751,
-    "volume": 50000,
-    "tradesCount": 20,
-    "volumeMEP": 50000,
-    "tradesMEP": 20,
-    "cashFlows": [
-      {
-        "couponNo": 1,
-        "date": "2026-10-16",
-        "amortization": 0,
-        "coupon": 3.9375,
-        "amount": 3.9375,
-        "residual": 100
-      },
-      {
-        "couponNo": 2,
-        "date": "2027-04-16",
-        "amortization": 0,
-        "coupon": 3.9375,
-        "amount": 3.9375,
-        "residual": 100
-      },
-      {
-        "couponNo": 3,
-        "date": "2027-10-16",
-        "amortization": 0,
-        "coupon": 3.9375,
-        "amount": 3.9375,
-        "residual": 100
-      },
-      {
-        "couponNo": 4,
-        "date": "2028-04-16",
-        "amortization": 0,
-        "coupon": 3.9375,
-        "amount": 3.9375,
-        "residual": 100
-      },
-      {
-        "couponNo": 5,
-        "date": "2028-10-16",
-        "amortization": 0,
-        "coupon": 3.9375,
-        "amount": 3.9375,
-        "residual": 100
-      },
-      {
-        "couponNo": 6,
-        "date": "2029-04-16",
-        "amortization": 0,
-        "coupon": 3.9375,
-        "amount": 3.9375,
-        "residual": 100
-      },
-      {
-        "couponNo": 7,
-        "date": "2029-10-16",
-        "amortization": 0,
-        "coupon": 3.9375,
-        "amount": 3.9375,
-        "residual": 100
-      },
-      {
-        "couponNo": 8,
-        "date": "2030-04-16",
-        "amortization": 0,
-        "coupon": 3.9375,
-        "amount": 3.9375,
-        "residual": 100
-      },
-      {
-        "couponNo": 9,
-        "date": "2030-10-16",
-        "amortization": 0,
-        "coupon": 3.9375,
-        "amount": 3.9375,
-        "residual": 100
-      },
-      {
-        "couponNo": 10,
-        "date": "2031-04-16",
-        "amortization": 0,
-        "coupon": 3.9375,
-        "amount": 3.9375,
-        "residual": 100
-      },
-      {
-        "couponNo": 11,
-        "date": "2031-10-16",
-        "amortization": 0,
-        "coupon": 3.9375,
-        "amount": 3.9375,
-        "residual": 100
-      },
-      {
-        "couponNo": 12,
-        "date": "2032-04-16",
-        "amortization": 0,
-        "coupon": 3.9375,
-        "amount": 3.9375,
-        "residual": 100
-      },
-      {
-        "couponNo": 13,
-        "date": "2032-10-16",
-        "amortization": 100,
-        "coupon": 3.9375,
-        "amount": 103.9375,
-        "residual": 0
-      }
-    ]
-  },
+  "id": "bond_YFCJD",
+  "ticker": "YFCJD",
+  "tickerMEP": "YFCJD",
+  "tickerCable": "YFCJC",
+  "tickerPesos": "YFCJO",
+  "isin": "USP9897PAS31",
+  "issuer": "YPF Energía Eléctrica S.A. Clase XVIII (2032)",
+  "shortIssuer": "YPF Luz",
+  "rating": "AAA(arg)",
+  "ratingAgency": "FIX SCR",
+  "type": "ON",
+  "instrumentGroup": "Hard USD",
+  "currency": "USD",
+  "paymentCurrency": "Dólar Cable",
+  "law": "Nueva York",
+  "isCallable": true,
+  "structureType": "Amortizable",
+  "couponType": "Fijo",
+  "sector": "Energía & Petróleo",
+  "issueDate": "2024-10-16",
+  "maturity": "2032-10-16",
+  "issuedAmount": 420000000,
+  "couponRate": 7.875,
+  "frequency": 2,
+  "dayCount": "30/360",
+  "dirtyPrice": 103.56,
+  "priceMEP": 103.56,
+  "priceCable": 103.15,
+  "pricePesos": 152751,
+  "volume": 50000,
+  "tradesCount": 20,
+  "volumeMEP": 50000,
+  "tradesMEP": 20,
+  "cashFlows": [
+    {
+      "couponNo": 1,
+      "date": "2025-04-16",
+      "amortization": 0,
+      "coupon": 3.9375,
+      "amount": 3.9375,
+      "residual": 100
+    },
+    {
+      "couponNo": 2,
+      "date": "2025-10-16",
+      "amortization": 0,
+      "coupon": 3.9375,
+      "amount": 3.9375,
+      "residual": 100
+    },
+    {
+      "couponNo": 3,
+      "date": "2026-04-16",
+      "amortization": 0,
+      "coupon": 3.9375,
+      "amount": 3.9375,
+      "residual": 100
+    },
+    {
+      "couponNo": 4,
+      "date": "2026-10-16",
+      "amortization": 0,
+      "coupon": 3.9375,
+      "amount": 3.9375,
+      "residual": 100
+    },
+    {
+      "couponNo": 5,
+      "date": "2027-04-16",
+      "amortization": 0,
+      "coupon": 3.9375,
+      "amount": 3.9375,
+      "residual": 100
+    },
+    {
+      "couponNo": 6,
+      "date": "2027-10-16",
+      "amortization": 0,
+      "coupon": 3.9375,
+      "amount": 3.9375,
+      "residual": 100
+    },
+    {
+      "couponNo": 7,
+      "date": "2028-04-16",
+      "amortization": 0,
+      "coupon": 3.9375,
+      "amount": 3.9375,
+      "residual": 100
+    },
+    {
+      "couponNo": 8,
+      "date": "2028-10-16",
+      "amortization": 0,
+      "coupon": 3.9375,
+      "amount": 3.9375,
+      "residual": 100
+    },
+    {
+      "couponNo": 9,
+      "date": "2029-04-16",
+      "amortization": 0,
+      "coupon": 3.9375,
+      "amount": 3.9375,
+      "residual": 100
+    },
+    {
+      "couponNo": 10,
+      "date": "2029-10-16",
+      "amortization": 0,
+      "coupon": 3.9375,
+      "amount": 3.9375,
+      "residual": 100
+    },
+    {
+      "couponNo": 11,
+      "date": "2030-04-16",
+      "amortization": 0,
+      "coupon": 3.9375,
+      "amount": 3.9375,
+      "residual": 100
+    },
+    {
+      "couponNo": 12,
+      "date": "2030-10-16",
+      "amortization": 33,
+      "coupon": 3.9375,
+      "amount": 36.9375,
+      "residual": 67
+    },
+    {
+      "couponNo": 13,
+      "date": "2031-04-16",
+      "amortization": 0,
+      "coupon": 2.6381,
+      "amount": 2.6381,
+      "residual": 67
+    },
+    {
+      "couponNo": 14,
+      "date": "2031-10-16",
+      "amortization": 33,
+      "coupon": 2.6381,
+      "amount": 35.6381,
+      "residual": 34
+    },
+    {
+      "couponNo": 15,
+      "date": "2032-04-16",
+      "amortization": 0,
+      "coupon": 1.3388,
+      "amount": 1.3388,
+      "residual": 34
+    },
+    {
+      "couponNo": 16,
+      "date": "2032-10-16",
+      "amortization": 34,
+      "coupon": 1.3388,
+      "amount": 35.3388,
+      "residual": 0
+    }
+  ]
+},
   {
     "id": "bond_RAC7D",
     "ticker": "RAC7D",
@@ -12117,6 +12863,3148 @@ export const BONDS_DATASET = [
       }
     ]
   }
+,
+  {
+    "id": "bond_YFCFD",
+    "ticker": "YFCFD",
+    "tickerMEP": "YFCFD",
+    "tickerPesos": "YFCFO",
+    "isin": "AR0976739711",
+    "issuer": "YPF Energía Eléctrica S.A. Clase XIV",
+    "shortIssuer": "YPF Luz",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Dólar Linked",
+    "currency": "USD",
+    "paymentCurrency": "Pesos",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Amortizable",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "issueDate": "2024-02-27",
+    "maturity": "2027-02-27",
+    "issuedAmount": 18043469,
+    "couponRate": 3,
+    "frequency": 4,
+    "dayCount": "30/360",
+    "dirtyPrice": 99.2,
+    "priceMEP": 99.2,
+    "pricePesos": 148500,
+    "volume": 25000,
+    "tradesCount": 18,
+    "volumeMEP": 25000,
+    "tradesMEP": 18,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2024-05-27",
+        "amortization": 0,
+        "coupon": 0.75,
+        "amount": 0.75,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2024-08-27",
+        "amortization": 0,
+        "coupon": 0.75,
+        "amount": 0.75,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2024-11-27",
+        "amortization": 0,
+        "coupon": 0.75,
+        "amount": 0.75,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2025-02-27",
+        "amortization": 0,
+        "coupon": 0.75,
+        "amount": 0.75,
+        "residual": 100
+      },
+      {
+        "couponNo": 5,
+        "date": "2025-05-27",
+        "amortization": 0,
+        "coupon": 0.75,
+        "amount": 0.75,
+        "residual": 100
+      },
+      {
+        "couponNo": 6,
+        "date": "2025-08-27",
+        "amortization": 0,
+        "coupon": 0.75,
+        "amount": 0.75,
+        "residual": 100
+      },
+      {
+        "couponNo": 7,
+        "date": "2025-11-27",
+        "amortization": 0,
+        "coupon": 0.75,
+        "amount": 0.75,
+        "residual": 100
+      },
+      {
+        "couponNo": 8,
+        "date": "2026-02-27",
+        "amortization": 0,
+        "coupon": 0.75,
+        "amount": 0.75,
+        "residual": 100
+      },
+      {
+        "couponNo": 9,
+        "date": "2026-05-27",
+        "amortization": 0,
+        "coupon": 0.75,
+        "amount": 0.75,
+        "residual": 100
+      },
+      {
+        "couponNo": 10,
+        "date": "2026-08-27",
+        "amortization": 50,
+        "coupon": 0.75,
+        "amount": 50.75,
+        "residual": 50
+      },
+      {
+        "couponNo": 11,
+        "date": "2026-11-27",
+        "amortization": 0,
+        "coupon": 0.375,
+        "amount": 0.375,
+        "residual": 50
+      },
+      {
+        "couponNo": 12,
+        "date": "2027-02-27",
+        "amortization": 50,
+        "coupon": 0.375,
+        "amount": 50.375,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_YFCGD",
+    "ticker": "YFCGD",
+    "tickerMEP": "YFCGD",
+    "tickerCable": "YFCGC",
+    "tickerPesos": "YFCGO",
+    "isin": "AR0704160875",
+    "issuer": "YPF Energía Eléctrica S.A. Clase XV",
+    "shortIssuer": "YPF Luz",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "issueDate": "2024-02-27",
+    "maturity": "2027-02-27",
+    "issuedAmount": 11287656,
+    "couponRate": 6,
+    "frequency": 4,
+    "dayCount": "30/360",
+    "dirtyPrice": 101.5,
+    "priceMEP": 101.5,
+    "priceCable": 101.2,
+    "pricePesos": 151500,
+    "volume": 32000,
+    "tradesCount": 22,
+    "volumeMEP": 32000,
+    "tradesMEP": 22,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2024-05-27",
+        "amortization": 0,
+        "coupon": 1.5,
+        "amount": 1.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2024-08-27",
+        "amortization": 0,
+        "coupon": 1.5,
+        "amount": 1.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2024-11-27",
+        "amortization": 0,
+        "coupon": 1.5,
+        "amount": 1.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2025-02-27",
+        "amortization": 0,
+        "coupon": 1.5,
+        "amount": 1.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 5,
+        "date": "2025-05-27",
+        "amortization": 0,
+        "coupon": 1.5,
+        "amount": 1.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 6,
+        "date": "2025-08-27",
+        "amortization": 0,
+        "coupon": 1.5,
+        "amount": 1.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 7,
+        "date": "2025-11-27",
+        "amortization": 0,
+        "coupon": 1.5,
+        "amount": 1.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 8,
+        "date": "2026-02-27",
+        "amortization": 0,
+        "coupon": 1.5,
+        "amount": 1.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 9,
+        "date": "2026-05-27",
+        "amortization": 0,
+        "coupon": 1.5,
+        "amount": 1.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 10,
+        "date": "2026-08-27",
+        "amortization": 0,
+        "coupon": 1.5,
+        "amount": 1.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 11,
+        "date": "2026-11-27",
+        "amortization": 0,
+        "coupon": 1.5,
+        "amount": 1.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 12,
+        "date": "2027-02-27",
+        "amortization": 100,
+        "coupon": 1.5,
+        "amount": 101.5,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_YFCMD",
+    "ticker": "YFCMD",
+    "tickerMEP": "YFCMD",
+    "tickerCable": "YFCMC",
+    "tickerPesos": "YFCMO",
+    "isin": "AR0975634988",
+    "issuer": "YPF Energía Eléctrica S.A. Clase XXI",
+    "shortIssuer": "YPF Luz",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "issueDate": "2025-05-20",
+    "maturity": "2027-05-20",
+    "issuedAmount": 53827026,
+    "couponRate": 6.5,
+    "frequency": 4,
+    "dayCount": "30/360",
+    "dirtyPrice": 101.8,
+    "priceMEP": 101.8,
+    "priceCable": 101.5,
+    "pricePesos": 152000,
+    "volume": 45000,
+    "tradesCount": 28,
+    "volumeMEP": 45000,
+    "tradesMEP": 28,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2025-08-20",
+        "amortization": 0,
+        "coupon": 1.625,
+        "amount": 1.625,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2025-11-20",
+        "amortization": 0,
+        "coupon": 1.625,
+        "amount": 1.625,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2026-02-20",
+        "amortization": 0,
+        "coupon": 1.625,
+        "amount": 1.625,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2026-05-20",
+        "amortization": 0,
+        "coupon": 1.625,
+        "amount": 1.625,
+        "residual": 100
+      },
+      {
+        "couponNo": 5,
+        "date": "2026-08-20",
+        "amortization": 0,
+        "coupon": 1.625,
+        "amount": 1.625,
+        "residual": 100
+      },
+      {
+        "couponNo": 6,
+        "date": "2026-11-20",
+        "amortization": 0,
+        "coupon": 1.625,
+        "amount": 1.625,
+        "residual": 100
+      },
+      {
+        "couponNo": 7,
+        "date": "2027-02-20",
+        "amortization": 0,
+        "coupon": 1.625,
+        "amount": 1.625,
+        "residual": 100
+      },
+      {
+        "couponNo": 8,
+        "date": "2027-05-20",
+        "amortization": 100,
+        "coupon": 1.625,
+        "amount": 101.625,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_YFCID",
+    "ticker": "YFCID",
+    "tickerMEP": "YFCID",
+    "tickerCable": "YFCIC",
+    "tickerPesos": "YFCIO",
+    "isin": "AR0947502206",
+    "issuer": "YPF Energía Eléctrica S.A. Clase XVII",
+    "shortIssuer": "YPF Luz",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "issueDate": "2024-06-13",
+    "maturity": "2027-06-13",
+    "issuedAmount": 10199945,
+    "couponRate": 5.9,
+    "frequency": 4,
+    "dayCount": "30/360",
+    "dirtyPrice": 101.4,
+    "priceMEP": 101.4,
+    "priceCable": 101,
+    "pricePesos": 151200,
+    "volume": 38000,
+    "tradesCount": 20,
+    "volumeMEP": 38000,
+    "tradesMEP": 20,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2024-09-13",
+        "amortization": 0,
+        "coupon": 1.475,
+        "amount": 1.475,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2024-12-13",
+        "amortization": 0,
+        "coupon": 1.475,
+        "amount": 1.475,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2025-03-13",
+        "amortization": 0,
+        "coupon": 1.475,
+        "amount": 1.475,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2025-06-13",
+        "amortization": 0,
+        "coupon": 1.475,
+        "amount": 1.475,
+        "residual": 100
+      },
+      {
+        "couponNo": 5,
+        "date": "2025-09-13",
+        "amortization": 0,
+        "coupon": 1.475,
+        "amount": 1.475,
+        "residual": 100
+      },
+      {
+        "couponNo": 6,
+        "date": "2025-12-13",
+        "amortization": 0,
+        "coupon": 1.475,
+        "amount": 1.475,
+        "residual": 100
+      },
+      {
+        "couponNo": 7,
+        "date": "2026-03-13",
+        "amortization": 0,
+        "coupon": 1.475,
+        "amount": 1.475,
+        "residual": 100
+      },
+      {
+        "couponNo": 8,
+        "date": "2026-06-13",
+        "amortization": 0,
+        "coupon": 1.475,
+        "amount": 1.475,
+        "residual": 100
+      },
+      {
+        "couponNo": 9,
+        "date": "2026-09-13",
+        "amortization": 0,
+        "coupon": 1.475,
+        "amount": 1.475,
+        "residual": 100
+      },
+      {
+        "couponNo": 10,
+        "date": "2026-12-13",
+        "amortization": 0,
+        "coupon": 1.475,
+        "amount": 1.475,
+        "residual": 100
+      },
+      {
+        "couponNo": 11,
+        "date": "2027-03-13",
+        "amortization": 0,
+        "coupon": 1.475,
+        "amount": 1.475,
+        "residual": 100
+      },
+      {
+        "couponNo": 12,
+        "date": "2027-06-13",
+        "amortization": 100,
+        "coupon": 1.475,
+        "amount": 101.475,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_YFCLD",
+    "ticker": "YFCLD",
+    "tickerMEP": "YFCLD",
+    "tickerCable": "YFCLC",
+    "tickerPesos": "YFCLO",
+    "isin": "AR0338531962",
+    "issuer": "YPF Energía Eléctrica S.A. Clase XX",
+    "shortIssuer": "YPF Luz",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "issueDate": "2024-11-22",
+    "maturity": "2028-11-22",
+    "issuedAmount": 50981768,
+    "couponRate": 6.75,
+    "frequency": 4,
+    "dayCount": "30/360",
+    "dirtyPrice": 102.2,
+    "priceMEP": 102.2,
+    "priceCable": 102,
+    "pricePesos": 152500,
+    "volume": 62000,
+    "tradesCount": 35,
+    "volumeMEP": 62000,
+    "tradesMEP": 35,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2025-02-22",
+        "amortization": 0,
+        "coupon": 1.6875,
+        "amount": 1.6875,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2025-05-22",
+        "amortization": 0,
+        "coupon": 1.6875,
+        "amount": 1.6875,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2025-08-22",
+        "amortization": 0,
+        "coupon": 1.6875,
+        "amount": 1.6875,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2025-11-22",
+        "amortization": 0,
+        "coupon": 1.6875,
+        "amount": 1.6875,
+        "residual": 100
+      },
+      {
+        "couponNo": 5,
+        "date": "2026-02-22",
+        "amortization": 0,
+        "coupon": 1.6875,
+        "amount": 1.6875,
+        "residual": 100
+      },
+      {
+        "couponNo": 6,
+        "date": "2026-05-22",
+        "amortization": 0,
+        "coupon": 1.6875,
+        "amount": 1.6875,
+        "residual": 100
+      },
+      {
+        "couponNo": 7,
+        "date": "2026-08-22",
+        "amortization": 0,
+        "coupon": 1.6875,
+        "amount": 1.6875,
+        "residual": 100
+      },
+      {
+        "couponNo": 8,
+        "date": "2026-11-22",
+        "amortization": 0,
+        "coupon": 1.6875,
+        "amount": 1.6875,
+        "residual": 100
+      },
+      {
+        "couponNo": 9,
+        "date": "2027-02-22",
+        "amortization": 0,
+        "coupon": 1.6875,
+        "amount": 1.6875,
+        "residual": 100
+      },
+      {
+        "couponNo": 10,
+        "date": "2027-05-22",
+        "amortization": 0,
+        "coupon": 1.6875,
+        "amount": 1.6875,
+        "residual": 100
+      },
+      {
+        "couponNo": 11,
+        "date": "2027-08-22",
+        "amortization": 0,
+        "coupon": 1.6875,
+        "amount": 1.6875,
+        "residual": 100
+      },
+      {
+        "couponNo": 12,
+        "date": "2027-11-22",
+        "amortization": 0,
+        "coupon": 1.6875,
+        "amount": 1.6875,
+        "residual": 100
+      },
+      {
+        "couponNo": 13,
+        "date": "2028-02-22",
+        "amortization": 0,
+        "coupon": 1.6875,
+        "amount": 1.6875,
+        "residual": 100
+      },
+      {
+        "couponNo": 14,
+        "date": "2028-05-22",
+        "amortization": 0,
+        "coupon": 1.6875,
+        "amount": 1.6875,
+        "residual": 100
+      },
+      {
+        "couponNo": 15,
+        "date": "2028-08-22",
+        "amortization": 0,
+        "coupon": 1.6875,
+        "amount": 1.6875,
+        "residual": 100
+      },
+      {
+        "couponNo": 16,
+        "date": "2028-11-22",
+        "amortization": 100,
+        "coupon": 1.6875,
+        "amount": 101.6875,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_YFCPD",
+    "ticker": "YFCPD",
+    "tickerMEP": "YFCPD",
+    "tickerCable": "YFCPC",
+    "tickerPesos": "YFCPO",
+    "isin": "AR0458859128",
+    "issuer": "YPF Energía Eléctrica S.A. Clase XXIV",
+    "shortIssuer": "YPF Luz",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "issueDate": "2026-08-18",
+    "maturity": "2029-08-18",
+    "issuedAmount": 50000000,
+    "couponRate": 5,
+    "frequency": 2,
+    "dayCount": "30/360",
+    "dirtyPrice": 100.5,
+    "priceMEP": 100.5,
+    "priceCable": 100.2,
+    "pricePesos": 150000,
+    "volume": 55000,
+    "tradesCount": 30,
+    "volumeMEP": 55000,
+    "tradesMEP": 30,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2027-02-18",
+        "amortization": 0,
+        "coupon": 2.5,
+        "amount": 2.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2027-08-18",
+        "amortization": 0,
+        "coupon": 2.5,
+        "amount": 2.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2028-02-18",
+        "amortization": 0,
+        "coupon": 2.5,
+        "amount": 2.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2028-08-18",
+        "amortization": 0,
+        "coupon": 2.5,
+        "amount": 2.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 5,
+        "date": "2029-02-18",
+        "amortization": 0,
+        "coupon": 2.5,
+        "amount": 2.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 6,
+        "date": "2029-08-18",
+        "amortization": 100,
+        "coupon": 2.5,
+        "amount": 102.5,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_YFCAD",
+    "ticker": "YFCAD",
+    "tickerMEP": "YFCAD",
+    "tickerPesos": "YFCAO",
+    "isin": "ARYPFE5600G5",
+    "issuer": "YPF Energía Eléctrica S.A. Clase X",
+    "shortIssuer": "YPF Luz",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Dólar Linked",
+    "currency": "USD",
+    "paymentCurrency": "Pesos",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Amortizable",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "issueDate": "2022-02-03",
+    "maturity": "2032-02-03",
+    "issuedAmount": 63870000,
+    "couponRate": 5,
+    "frequency": 2,
+    "dayCount": "30/360",
+    "dirtyPrice": 97.5,
+    "priceMEP": 97.5,
+    "pricePesos": 145000,
+    "volume": 30000,
+    "tradesCount": 16,
+    "volumeMEP": 30000,
+    "tradesMEP": 16,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2022-08-03",
+        "amortization": 0,
+        "coupon": 2.5,
+        "amount": 2.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2023-02-03",
+        "amortization": 0,
+        "coupon": 2.5,
+        "amount": 2.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2023-08-03",
+        "amortization": 0,
+        "coupon": 2.5,
+        "amount": 2.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2024-02-03",
+        "amortization": 0,
+        "coupon": 2.5,
+        "amount": 2.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 5,
+        "date": "2024-08-03",
+        "amortization": 0,
+        "coupon": 2.5,
+        "amount": 2.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 6,
+        "date": "2025-02-03",
+        "amortization": 0,
+        "coupon": 2.5,
+        "amount": 2.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 7,
+        "date": "2025-08-03",
+        "amortization": 0,
+        "coupon": 2.5,
+        "amount": 2.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 8,
+        "date": "2026-02-03",
+        "amortization": 0,
+        "coupon": 2.5,
+        "amount": 2.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 9,
+        "date": "2026-08-03",
+        "amortization": 0,
+        "coupon": 2.5,
+        "amount": 2.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 10,
+        "date": "2027-02-03",
+        "amortization": 0,
+        "coupon": 2.5,
+        "amount": 2.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 11,
+        "date": "2027-08-03",
+        "amortization": 10,
+        "coupon": 2.5,
+        "amount": 12.5,
+        "residual": 90
+      },
+      {
+        "couponNo": 12,
+        "date": "2028-02-03",
+        "amortization": 10,
+        "coupon": 2.25,
+        "amount": 12.25,
+        "residual": 80
+      },
+      {
+        "couponNo": 13,
+        "date": "2028-08-03",
+        "amortization": 10,
+        "coupon": 2,
+        "amount": 12,
+        "residual": 70
+      },
+      {
+        "couponNo": 14,
+        "date": "2029-02-03",
+        "amortization": 10,
+        "coupon": 1.75,
+        "amount": 11.75,
+        "residual": 60
+      },
+      {
+        "couponNo": 15,
+        "date": "2029-08-03",
+        "amortization": 10,
+        "coupon": 1.5,
+        "amount": 11.5,
+        "residual": 50
+      },
+      {
+        "couponNo": 16,
+        "date": "2030-02-03",
+        "amortization": 10,
+        "coupon": 1.25,
+        "amount": 11.25,
+        "residual": 40
+      },
+      {
+        "couponNo": 17,
+        "date": "2030-08-03",
+        "amortization": 10,
+        "coupon": 1,
+        "amount": 11,
+        "residual": 30
+      },
+      {
+        "couponNo": 18,
+        "date": "2031-02-03",
+        "amortization": 10,
+        "coupon": 0.75,
+        "amount": 10.75,
+        "residual": 20
+      },
+      {
+        "couponNo": 19,
+        "date": "2031-08-03",
+        "amortization": 10,
+        "coupon": 0.5,
+        "amount": 10.5,
+        "residual": 10
+      },
+      {
+        "couponNo": 20,
+        "date": "2032-02-03",
+        "amortization": 10,
+        "coupon": 0.25,
+        "amount": 10.25,
+        "residual": 0
+      }
+    ]
+  }
+,
+  {
+    "id": "bond_GN43D",
+    "ticker": "GN43D",
+    "tickerMEP": "GN43D",
+    "tickerCable": "GN43C",
+    "tickerPesos": "GN43O",
+    "isin": "AR0667572231",
+    "issuer": "Genneia S.A. Clase XLIII (Bono Verde)",
+    "shortIssuer": "Genneia",
+    "rating": "AA.ar",
+    "ratingAgency": "Moody's Local",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "issueDate": "2024-03-08",
+    "maturity": "2027-03-08",
+    "issuedAmount": 20697951,
+    "couponRate": 6.25,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 101.40,
+    "priceMEP": 101.40,
+    "priceCable": 97.80,
+    "pricePesos": 154800,
+    "volume": 6500,
+    "tradesCount": 14,
+    "volumeMEP": 6500,
+    "tradesMEP": 14,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2027-03-08",
+        "amortization": 100,
+        "coupon": 3.125,
+        "amount": 103.125,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_GN48D",
+    "ticker": "GN48D",
+    "tickerMEP": "GN48D",
+    "tickerCable": "GN48C",
+    "tickerPesos": "GN48O",
+    "isin": "AR0580434501",
+    "issuer": "Genneia S.A. Clase XLVIII (Bono Verde)",
+    "shortIssuer": "Genneia",
+    "rating": "AA+.ar",
+    "ratingAgency": "Moody's Local",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "issueDate": "2025-03-05",
+    "maturity": "2028-03-05",
+    "issuedAmount": 27760264,
+    "couponRate": 6.5,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 102.10,
+    "priceMEP": 102.10,
+    "priceCable": 98.15,
+    "pricePesos": 156100,
+    "volume": 8000,
+    "tradesCount": 18,
+    "volumeMEP": 8000,
+    "tradesMEP": 18,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2027-03-05",
+        "amortization": 0,
+        "coupon": 3.25,
+        "amount": 3.25,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2027-09-05",
+        "amortization": 0,
+        "coupon": 3.25,
+        "amount": 3.25,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2028-03-05",
+        "amortization": 100,
+        "coupon": 3.25,
+        "amount": 103.25,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_TLCOD",
+    "ticker": "TLCOD",
+    "tickerMEP": "TLCOD",
+    "tickerCable": "TLCOC",
+    "tickerPesos": "TLCOO",
+    "isin": "AR0241562484",
+    "issuer": "Telecom Argentina S.A. Clase 23",
+    "shortIssuer": "Telecom",
+    "rating": "AA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Telecomunicaciones",
+    "issueDate": "2024-11-28",
+    "maturity": "2028-11-28",
+    "issuedAmount": 100000000,
+    "couponRate": 7,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 105.1,
+    "priceMEP": 105.1,
+    "priceCable": 104.7,
+    "pricePesos": 154500,
+    "volume": 47712,
+    "tradesCount": 70,
+    "volumeMEP": 47712,
+    "tradesMEP": 70,
+    "cashFlows": [
+      {
+        "date": "2027-05-28",
+        "amortization": 0,
+        "coupon": 3.5,
+        "amount": 3.5,
+        "residual": 100
+      },
+      {
+        "date": "2027-11-28",
+        "amortization": 0,
+        "coupon": 3.5,
+        "amount": 3.5,
+        "residual": 100
+      },
+      {
+        "date": "2028-05-28",
+        "amortization": 0,
+        "coupon": 3.5,
+        "amount": 3.5,
+        "residual": 100
+      },
+      {
+        "date": "2028-11-28",
+        "amortization": 100,
+        "coupon": 3.5,
+        "amount": 103.5,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_TLCVD",
+    "ticker": "TLCVD",
+    "tickerMEP": "TLCVD",
+    "tickerCable": "TLCVC",
+    "tickerPesos": "TLCVO",
+    "isin": "AR0031549709",
+    "issuer": "Telecom Argentina S.A. Clase 29",
+    "shortIssuer": "Telecom",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Telecomunicaciones",
+    "issueDate": "2026-05-29",
+    "maturity": "2027-05-29",
+    "issuedAmount": 26410490,
+    "couponRate": 3.5,
+    "frequency": 4,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 100.2,
+    "priceMEP": 100.2,
+    "priceCable": 99.8,
+    "pricePesos": 147795,
+    "volume": 35000,
+    "tradesCount": 15,
+    "volumeMEP": 35000,
+    "tradesMEP": 15,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2026-11-29",
+        "amortization": 0,
+        "coupon": 0.875,
+        "amount": 0.875,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2027-02-28",
+        "amortization": 0,
+        "coupon": 0.875,
+        "amount": 0.875,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2027-05-29",
+        "amortization": 100,
+        "coupon": 0.875,
+        "amount": 100.875,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_TLCWD",
+    "ticker": "TLCWD",
+    "tickerMEP": "TLCWD",
+    "tickerCable": "TLCWC",
+    "tickerPesos": "TLCWO",
+    "isin": "AR0931859976",
+    "issuer": "Telecom Argentina S.A. Clase 30",
+    "shortIssuer": "Telecom",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Telecomunicaciones",
+    "issueDate": "2026-05-29",
+    "maturity": "2030-05-29",
+    "issuedAmount": 35149670,
+    "couponRate": 6.25,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 99.5,
+    "priceMEP": 99.5,
+    "priceCable": 99.1,
+    "pricePesos": 146762,
+    "volume": 40000,
+    "tradesCount": 18,
+    "volumeMEP": 40000,
+    "tradesMEP": 18,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2026-11-29",
+        "amortization": 0,
+        "coupon": 3.125,
+        "amount": 3.125,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2027-05-29",
+        "amortization": 0,
+        "coupon": 3.125,
+        "amount": 3.125,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2027-11-29",
+        "amortization": 0,
+        "coupon": 3.125,
+        "amount": 3.125,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2028-05-29",
+        "amortization": 0,
+        "coupon": 3.125,
+        "amount": 3.125,
+        "residual": 100
+      },
+      {
+        "couponNo": 5,
+        "date": "2028-11-29",
+        "amortization": 0,
+        "coupon": 3.125,
+        "amount": 3.125,
+        "residual": 100
+      },
+      {
+        "couponNo": 6,
+        "date": "2029-05-29",
+        "amortization": 0,
+        "coupon": 3.125,
+        "amount": 3.125,
+        "residual": 100
+      },
+      {
+        "couponNo": 7,
+        "date": "2029-11-29",
+        "amortization": 0,
+        "coupon": 3.125,
+        "amount": 3.125,
+        "residual": 100
+      },
+      {
+        "couponNo": 8,
+        "date": "2030-05-29",
+        "amortization": 100,
+        "coupon": 3.125,
+        "amount": 103.125,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_VSCUD",
+    "ticker": "VSCUD",
+    "tickerMEP": "VSCUD",
+    "tickerCable": "VSCUC",
+    "tickerPesos": "VSCUO",
+    "isin": "AR0707929003",
+    "issuer": "Vista Energy Argentina S.A.U. 2030 (Clase XXVIII)",
+    "shortIssuer": "Vista Energy",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar Cable",
+    "law": "Argentina",
+    "isCallable": true,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "issueDate": "2025-03-07",
+    "maturity": "2030-03-07",
+    "issuedAmount": 92413570,
+    "couponRate": 7.5,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 101.85,
+    "priceMEP": 101.85,
+    "priceCable": 101.4,
+    "pricePesos": 150230,
+    "volume": 50000,
+    "tradesCount": 20,
+    "volumeMEP": 50000,
+    "tradesMEP": 20,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2027-03-07",
+        "amortization": 0,
+        "coupon": 3.75,
+        "amount": 3.75,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2027-09-07",
+        "amortization": 0,
+        "coupon": 3.75,
+        "amount": 3.75,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2028-03-07",
+        "amortization": 0,
+        "coupon": 3.75,
+        "amount": 3.75,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2028-09-07",
+        "amortization": 0,
+        "coupon": 3.75,
+        "amount": 3.75,
+        "residual": 100
+      },
+      {
+        "couponNo": 5,
+        "date": "2029-03-07",
+        "amortization": 0,
+        "coupon": 3.75,
+        "amount": 3.75,
+        "residual": 100
+      },
+      {
+        "couponNo": 6,
+        "date": "2029-09-07",
+        "amortization": 0,
+        "coupon": 3.75,
+        "amount": 3.75,
+        "residual": 100
+      },
+      {
+        "couponNo": 7,
+        "date": "2030-03-07",
+        "amortization": 100,
+        "coupon": 3.75,
+        "amount": 103.75,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_VSCRD",
+    "ticker": "VSCRD",
+    "tickerMEP": "VSCRD",
+    "tickerCable": "VSCRC",
+    "tickerPesos": "VSCRO",
+    "isin": "AR0138120560",
+    "issuer": "Vista Energy Argentina S.A.U. 2031 (Clase XXVI)",
+    "shortIssuer": "Vista Energy",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": true,
+    "structureType": "Amortizable",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "issueDate": "2024-10-10",
+    "maturity": "2031-10-10",
+    "issuedAmount": 150000000,
+    "couponRate": 7.65,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 101.2,
+    "priceMEP": 101.2,
+    "priceCable": 100.8,
+    "pricePesos": 149270,
+    "volume": 50000,
+    "tradesCount": 20,
+    "volumeMEP": 50000,
+    "tradesMEP": 20,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2027-04-10",
+        "amortization": 0,
+        "coupon": 3.825,
+        "amount": 3.825,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2027-10-10",
+        "amortization": 0,
+        "coupon": 3.825,
+        "amount": 3.825,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2028-04-10",
+        "amortization": 0,
+        "coupon": 3.825,
+        "amount": 3.825,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2028-10-10",
+        "amortization": 0,
+        "coupon": 3.825,
+        "amount": 3.825,
+        "residual": 100
+      },
+      {
+        "couponNo": 5,
+        "date": "2029-04-10",
+        "amortization": 0,
+        "coupon": 3.825,
+        "amount": 3.825,
+        "residual": 100
+      },
+      {
+        "couponNo": 6,
+        "date": "2029-10-10",
+        "amortization": 33,
+        "coupon": 3.825,
+        "amount": 36.825,
+        "residual": 67
+      },
+      {
+        "couponNo": 7,
+        "date": "2030-04-10",
+        "amortization": 0,
+        "coupon": 2.5628,
+        "amount": 2.5628,
+        "residual": 67
+      },
+      {
+        "couponNo": 8,
+        "date": "2030-10-10",
+        "amortization": 33,
+        "coupon": 2.5628,
+        "amount": 35.5628,
+        "residual": 34
+      },
+      {
+        "couponNo": 9,
+        "date": "2031-04-10",
+        "amortization": 0,
+        "coupon": 1.3005,
+        "amount": 1.3005,
+        "residual": 34
+      },
+      {
+        "couponNo": 10,
+        "date": "2031-10-10",
+        "amortization": 34,
+        "coupon": 1.3005,
+        "amount": 35.3005,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_VSCDO",
+    "ticker": "VSCDO",
+    "tickerMEP": "VSCDD",
+    "tickerCable": "VSCDC",
+    "tickerPesos": "VSCDO",
+    "isin": "AROILG5600C3",
+    "issuer": "Vista Energy Argentina S.A.U. 2031 (Clase XII)",
+    "shortIssuer": "Vista Energy",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Dólar Linked",
+    "currency": "USD",
+    "paymentCurrency": "Pesos",
+    "law": "Argentina",
+    "isCallable": true,
+    "structureType": "Amortizable",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "issueDate": "2024-02-27",
+    "maturity": "2031-08-27",
+    "issuedAmount": 100769730,
+    "couponRate": 5.85,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 100,
+    "priceMEP": 100,
+    "priceCable": 99.5,
+    "pricePesos": 147500,
+    "volume": 50000,
+    "tradesCount": 20,
+    "volumeMEP": 50000,
+    "tradesMEP": 20,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2027-02-27",
+        "amortization": 6.6667,
+        "coupon": 2.925,
+        "amount": 9.5917,
+        "residual": 60.0002
+      },
+      {
+        "couponNo": 2,
+        "date": "2027-08-27",
+        "amortization": 6.6667,
+        "coupon": 1.755,
+        "amount": 8.4217,
+        "residual": 53.3335
+      },
+      {
+        "couponNo": 3,
+        "date": "2028-02-27",
+        "amortization": 6.6667,
+        "coupon": 1.56,
+        "amount": 8.2267,
+        "residual": 46.6668
+      },
+      {
+        "couponNo": 4,
+        "date": "2028-08-27",
+        "amortization": 6.6667,
+        "coupon": 1.365,
+        "amount": 8.0317,
+        "residual": 40.0001
+      },
+      {
+        "couponNo": 5,
+        "date": "2029-02-27",
+        "amortization": 6.6667,
+        "coupon": 1.17,
+        "amount": 7.8367,
+        "residual": 33.3334
+      },
+      {
+        "couponNo": 6,
+        "date": "2029-08-27",
+        "amortization": 6.6667,
+        "coupon": 0.975,
+        "amount": 7.6417,
+        "residual": 26.6667
+      },
+      {
+        "couponNo": 7,
+        "date": "2030-02-27",
+        "amortization": 6.6667,
+        "coupon": 0.78,
+        "amount": 7.4467,
+        "residual": 20
+      },
+      {
+        "couponNo": 8,
+        "date": "2030-08-27",
+        "amortization": 6.6667,
+        "coupon": 0.585,
+        "amount": 7.2517,
+        "residual": 13.3333
+      },
+      {
+        "couponNo": 9,
+        "date": "2031-02-27",
+        "amortization": 6.6667,
+        "coupon": 0.39,
+        "amount": 7.0567,
+        "residual": 6.6662
+      },
+      {
+        "couponNo": 10,
+        "date": "2031-08-27",
+        "amortization": 6.6662,
+        "coupon": 0.195,
+        "amount": 6.8612,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_VSCQD",
+    "ticker": "VSCQD",
+    "tickerMEP": "VSCQD",
+    "tickerCable": "VSCQC",
+    "tickerPesos": "VSCQO",
+    "isin": "AR0941463967",
+    "issuer": "Vista Energy Argentina S.A.U. 2028 (Clase XXV)",
+    "shortIssuer": "Vista Energy",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Dólar Linked",
+    "currency": "USD",
+    "paymentCurrency": "Pesos",
+    "law": "Argentina",
+    "isCallable": true,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "issueDate": "2024-07-08",
+    "maturity": "2028-07-08",
+    "issuedAmount": 53195250,
+    "couponRate": 3,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 100,
+    "priceMEP": 100,
+    "priceCable": 99.5,
+    "pricePesos": 147500,
+    "volume": 50000,
+    "tradesCount": 20,
+    "volumeMEP": 50000,
+    "tradesMEP": 20,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2027-01-08",
+        "amortization": 0,
+        "coupon": 1.5,
+        "amount": 1.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2027-07-08",
+        "amortization": 0,
+        "coupon": 1.5,
+        "amount": 1.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2028-01-08",
+        "amortization": 0,
+        "coupon": 1.5,
+        "amount": 1.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2028-07-08",
+        "amortization": 100,
+        "coupon": 1.5,
+        "amount": 101.5,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_VSCMD",
+    "ticker": "VSCMD",
+    "tickerMEP": "VSCMD",
+    "tickerCable": "VSCMC",
+    "tickerPesos": "VSCMO",
+    "isin": "AROILG5600L4",
+    "issuer": "Vista Energy Argentina S.A.U. 2028 (Clase XXI)",
+    "shortIssuer": "Vista Energy",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Dólar Linked",
+    "currency": "USD",
+    "paymentCurrency": "Pesos",
+    "law": "Argentina",
+    "isCallable": true,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "issueDate": "2024-08-11",
+    "maturity": "2028-08-11",
+    "issuedAmount": 70000000,
+    "couponRate": 0.99,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 100,
+    "priceMEP": 100,
+    "priceCable": 99.5,
+    "pricePesos": 147500,
+    "volume": 50000,
+    "tradesCount": 20,
+    "volumeMEP": 50000,
+    "tradesMEP": 20,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2027-02-11",
+        "amortization": 0,
+        "coupon": 0.495,
+        "amount": 0.495,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2027-08-11",
+        "amortization": 0,
+        "coupon": 0.495,
+        "amount": 0.495,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2028-02-11",
+        "amortization": 0,
+        "coupon": 0.495,
+        "amount": 0.495,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2028-08-11",
+        "amortization": 100,
+        "coupon": 0.495,
+        "amount": 100.495,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_VSCKD",
+    "ticker": "VSCKD",
+    "tickerMEP": "VSCKD",
+    "tickerCable": "VSCKC",
+    "tickerPesos": "VSCKO",
+    "isin": "AROILG5600J8",
+    "issuer": "Vista Energy Argentina S.A.U. 2028 (Clase XIX)",
+    "shortIssuer": "Vista Energy",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Dólar Linked",
+    "currency": "USD",
+    "paymentCurrency": "Pesos",
+    "law": "Argentina",
+    "isCallable": true,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "issueDate": "2024-03-03",
+    "maturity": "2028-03-03",
+    "issuedAmount": 16457693,
+    "couponRate": 1,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 100,
+    "priceMEP": 100,
+    "priceCable": 99.5,
+    "pricePesos": 147500,
+    "volume": 50000,
+    "tradesCount": 20,
+    "volumeMEP": 50000,
+    "tradesMEP": 20,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2027-03-03",
+        "amortization": 0,
+        "coupon": 0.5,
+        "amount": 0.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2027-09-03",
+        "amortization": 0,
+        "coupon": 0.5,
+        "amount": 0.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2028-03-03",
+        "amortization": 100,
+        "coupon": 0.5,
+        "amount": 100.5,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_VSCID",
+    "ticker": "VSCID",
+    "tickerMEP": "VSCID",
+    "tickerCable": "VSCIC",
+    "tickerPesos": "VSCIO",
+    "isin": "AROILG5600H2",
+    "issuer": "Vista Energy Argentina S.A.U. 2026 (Clase XVII)",
+    "shortIssuer": "Vista Energy",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Dólar Linked",
+    "currency": "USD",
+    "paymentCurrency": "Pesos",
+    "law": "Argentina",
+    "isCallable": true,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "issueDate": "2023-12-06",
+    "maturity": "2026-12-06",
+    "issuedAmount": 31439467,
+    "couponRate": 0,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 100,
+    "priceMEP": 100,
+    "priceCable": 99.5,
+    "pricePesos": 147500,
+    "volume": 50000,
+    "tradesCount": 20,
+    "volumeMEP": 50000,
+    "tradesMEP": 20,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2026-12-06",
+        "amortization": 100,
+        "coupon": 0,
+        "amount": 100,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_VSCJD",
+    "ticker": "VSCJD",
+    "tickerMEP": "VSCJD",
+    "tickerCable": "VSCJC",
+    "tickerPesos": "VSCJO",
+    "isin": "AROILG5600I0",
+    "issuer": "Vista Energy Argentina S.A.U. 2027 (Clase XVIII)",
+    "shortIssuer": "Vista Energy",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Dólar Linked",
+    "currency": "USD",
+    "paymentCurrency": "Pesos",
+    "law": "Argentina",
+    "isCallable": true,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "issueDate": "2024-03-03",
+    "maturity": "2027-03-03",
+    "issuedAmount": 37892404,
+    "couponRate": 0,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 100,
+    "priceMEP": 100,
+    "priceCable": 99.5,
+    "pricePesos": 147500,
+    "volume": 50000,
+    "tradesCount": 20,
+    "volumeMEP": 50000,
+    "tradesMEP": 20,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2027-03-03",
+        "amortization": 100,
+        "coupon": 0,
+        "amount": 100,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_YMCPD",
+    "ticker": "YMCPD",
+    "tickerMEP": "YMCPD",
+    "tickerCable": "YMCPC",
+    "tickerPesos": "YMCPO",
+    "isin": "ARYPFS5601V2",
+    "issuer": "YPF S.A. 2027 (Clase XXIV)",
+    "shortIssuer": "YPF",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Dólar Linked",
+    "currency": "USD",
+    "paymentCurrency": "Pesos",
+    "law": "Argentina",
+    "isCallable": true,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "issueDate": "2024-04-25",
+    "maturity": "2027-04-25",
+    "issuedAmount": 267000000,
+    "couponRate": 1,
+    "frequency": 4,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 100,
+    "priceMEP": 100,
+    "priceCable": 99.5,
+    "pricePesos": 147500,
+    "volume": 50000,
+    "tradesCount": 20,
+    "volumeMEP": 50000,
+    "tradesMEP": 20,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2027-01-25",
+        "amortization": 0,
+        "coupon": 0.25,
+        "amount": 0.25,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2027-04-25",
+        "amortization": 100,
+        "coupon": 0.25,
+        "amount": 100.25,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_YMCRD",
+    "ticker": "YMCRD",
+    "tickerMEP": "YMCRD",
+    "tickerCable": "YMCRC",
+    "tickerPesos": "YMCRO",
+    "isin": "ARYPFS5601X8",
+    "issuer": "YPF S.A. 2028 (Clase XXVI)",
+    "shortIssuer": "YPF",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Dólar Linked",
+    "currency": "USD",
+    "paymentCurrency": "Pesos",
+    "law": "Argentina",
+    "isCallable": true,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "issueDate": "2024-09-12",
+    "maturity": "2028-09-12",
+    "issuedAmount": 367653486,
+    "couponRate": 0,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 100,
+    "priceMEP": 100,
+    "priceCable": 99.5,
+    "pricePesos": 147500,
+    "volume": 50000,
+    "tradesCount": 20,
+    "volumeMEP": 50000,
+    "tradesMEP": 20,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2028-09-12",
+        "amortization": 100,
+        "coupon": 0,
+        "amount": 100,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_YMCYD",
+    "ticker": "YMCYD",
+    "tickerMEP": "YMCYD",
+    "tickerCable": "YMCYC",
+    "tickerPesos": "YMCYO",
+    "isin": "AR0417757066",
+    "issuer": "YPF S.A. 2028 (Clase XXXII)",
+    "shortIssuer": "YPF",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": true,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "issueDate": "2024-10-10",
+    "maturity": "2028-10-10",
+    "issuedAmount": 125000000,
+    "couponRate": 6.5,
+    "frequency": 4,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 101.4,
+    "priceMEP": 101.4,
+    "priceCable": 100.95,
+    "pricePesos": 149500,
+    "volume": 50000,
+    "tradesCount": 20,
+    "volumeMEP": 50000,
+    "tradesMEP": 20,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2027-01-10",
+        "amortization": 0,
+        "coupon": 1.625,
+        "amount": 1.625,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2027-04-10",
+        "amortization": 0,
+        "coupon": 1.625,
+        "amount": 1.625,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2027-07-10",
+        "amortization": 0,
+        "coupon": 1.625,
+        "amount": 1.625,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2027-10-10",
+        "amortization": 0,
+        "coupon": 1.625,
+        "amount": 1.625,
+        "residual": 100
+      },
+      {
+        "couponNo": 5,
+        "date": "2028-01-10",
+        "amortization": 0,
+        "coupon": 1.625,
+        "amount": 1.625,
+        "residual": 100
+      },
+      {
+        "couponNo": 6,
+        "date": "2028-04-10",
+        "amortization": 0,
+        "coupon": 1.625,
+        "amount": 1.625,
+        "residual": 100
+      },
+      {
+        "couponNo": 7,
+        "date": "2028-07-10",
+        "amortization": 0,
+        "coupon": 1.625,
+        "amount": 1.625,
+        "residual": 100
+      },
+      {
+        "couponNo": 8,
+        "date": "2028-10-10",
+        "amortization": 100,
+        "coupon": 1.625,
+        "amount": 101.625,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_YMCZD",
+    "ticker": "YMCZD",
+    "tickerMEP": "YMCZD",
+    "tickerCable": "YMCZC",
+    "tickerPesos": "YMCZO",
+    "isin": "AR0079616063",
+    "issuer": "YPF S.A. 2028 (Clase XXXIII)",
+    "shortIssuer": "YPF",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": true,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "issueDate": "2024-10-10",
+    "maturity": "2028-10-10",
+    "issuedAmount": 140000000,
+    "couponRate": 7,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 101.8,
+    "priceMEP": 101.8,
+    "priceCable": 101.35,
+    "pricePesos": 150100,
+    "volume": 50000,
+    "tradesCount": 20,
+    "volumeMEP": 50000,
+    "tradesMEP": 20,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2027-04-10",
+        "amortization": 0,
+        "coupon": 3.5,
+        "amount": 3.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2027-10-10",
+        "amortization": 0,
+        "coupon": 3.5,
+        "amount": 3.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2028-04-10",
+        "amortization": 0,
+        "coupon": 3.5,
+        "amount": 3.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2028-10-10",
+        "amortization": 100,
+        "coupon": 3.5,
+        "amount": 103.5,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_YMCLD",
+    "ticker": "YMCLD",
+    "tickerMEP": "YMCLD",
+    "tickerCable": "YMCLC",
+    "tickerPesos": "YMCLO",
+    "isin": "ARYPFS5601M1",
+    "issuer": "YPF S.A. 2032 (Clase XX)",
+    "shortIssuer": "YPF",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Dólar Linked",
+    "currency": "USD",
+    "paymentCurrency": "Pesos",
+    "law": "Argentina",
+    "isCallable": true,
+    "structureType": "Amortizable",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "issueDate": "2021-02-12",
+    "maturity": "2032-07-22",
+    "issuedAmount": 384209900,
+    "couponRate": 5.75,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 100,
+    "priceMEP": 100,
+    "priceCable": 99.5,
+    "pricePesos": 147500,
+    "volume": 50000,
+    "tradesCount": 20,
+    "volumeMEP": 50000,
+    "tradesMEP": 20,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2027-01-22",
+        "amortization": 7.1428,
+        "coupon": 2.464,
+        "amount": 9.6068,
+        "residual": 78.5716
+      },
+      {
+        "couponNo": 2,
+        "date": "2027-07-22",
+        "amortization": 7.1428,
+        "coupon": 2.2589,
+        "amount": 9.4017,
+        "residual": 71.4288
+      },
+      {
+        "couponNo": 3,
+        "date": "2028-01-22",
+        "amortization": 7.1428,
+        "coupon": 2.0536,
+        "amount": 9.1964,
+        "residual": 64.286
+      },
+      {
+        "couponNo": 4,
+        "date": "2028-07-22",
+        "amortization": 7.1428,
+        "coupon": 1.8482,
+        "amount": 8.991,
+        "residual": 57.1432
+      },
+      {
+        "couponNo": 5,
+        "date": "2029-01-22",
+        "amortization": 7.1428,
+        "coupon": 1.6429,
+        "amount": 8.7857,
+        "residual": 50.0004
+      },
+      {
+        "couponNo": 6,
+        "date": "2029-07-22",
+        "amortization": 7.1428,
+        "coupon": 1.4375,
+        "amount": 8.5803,
+        "residual": 42.8576
+      },
+      {
+        "couponNo": 7,
+        "date": "2030-01-22",
+        "amortization": 7.1428,
+        "coupon": 1.2321,
+        "amount": 8.3749,
+        "residual": 35.7148
+      },
+      {
+        "couponNo": 8,
+        "date": "2030-07-22",
+        "amortization": 7.1428,
+        "coupon": 1.0268,
+        "amount": 8.1696,
+        "residual": 28.572
+      },
+      {
+        "couponNo": 9,
+        "date": "2031-01-22",
+        "amortization": 7.1428,
+        "coupon": 0.8214,
+        "amount": 7.9642,
+        "residual": 21.4292
+      },
+      {
+        "couponNo": 10,
+        "date": "2031-07-22",
+        "amortization": 7.1428,
+        "coupon": 0.6161,
+        "amount": 7.7589,
+        "residual": 14.2864
+      },
+      {
+        "couponNo": 11,
+        "date": "2032-01-22",
+        "amortization": 7.1428,
+        "coupon": 0.4107,
+        "amount": 7.5535,
+        "residual": 7.1436
+      },
+      {
+        "couponNo": 12,
+        "date": "2032-07-22",
+        "amortization": 7.1436,
+        "coupon": 0.2054,
+        "amount": 7.349,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_LOC5D",
+    "ticker": "LOC5D",
+    "tickerMEP": "LOC5D",
+    "tickerCable": "LOC5C",
+    "tickerPesos": "LOC5O",
+    "isin": "AR0579536985",
+    "issuer": "Loma Negra C.I.A.S.A. Clase 5",
+    "shortIssuer": "Loma Negra",
+    "rating": "AA+(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Materiales Básicos",
+    "issueDate": "2025-07-24",
+    "maturity": "2027-07-24",
+    "issuedAmount": 88478494,
+    "couponRate": 8,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 101.5,
+    "priceMEP": 101.5,
+    "priceCable": 101,
+    "pricePesos": 149700,
+    "volume": 35000,
+    "tradesCount": 15,
+    "volumeMEP": 35000,
+    "tradesMEP": 15,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2027-01-24",
+        "amortization": 0,
+        "coupon": 4,
+        "amount": 4,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2027-07-24",
+        "amortization": 100,
+        "coupon": 4,
+        "amount": 104,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_LOC6D",
+    "ticker": "LOC6D",
+    "tickerMEP": "LOC6D",
+    "tickerCable": "LOC6C",
+    "tickerPesos": "LOC6O",
+    "isin": "AR0204516451",
+    "issuer": "Loma Negra C.I.A.S.A. Clase 6",
+    "shortIssuer": "Loma Negra",
+    "rating": "AA+(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Materiales Básicos",
+    "issueDate": "2026-01-23",
+    "maturity": "2029-01-23",
+    "issuedAmount": 50000000,
+    "couponRate": 6.5,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 100.2,
+    "priceMEP": 100.2,
+    "priceCable": 99.8,
+    "pricePesos": 147800,
+    "volume": 30000,
+    "tradesCount": 12,
+    "volumeMEP": 30000,
+    "tradesMEP": 12,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2027-01-23",
+        "amortization": 0,
+        "coupon": 3.25,
+        "amount": 3.25,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2027-07-23",
+        "amortization": 0,
+        "coupon": 3.25,
+        "amount": 3.25,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2028-01-23",
+        "amortization": 0,
+        "coupon": 3.25,
+        "amount": 3.25,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2028-07-23",
+        "amortization": 0,
+        "coupon": 3.25,
+        "amount": 3.25,
+        "residual": 100
+      },
+      {
+        "couponNo": 5,
+        "date": "2029-01-23",
+        "amortization": 100,
+        "coupon": 3.25,
+        "amount": 103.25,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_LOC7D",
+    "ticker": "LOC7D",
+    "tickerMEP": "LOC7D",
+    "tickerCable": "LOC7C",
+    "tickerPesos": "LOC7O",
+    "isin": "AR0585647891",
+    "issuer": "Loma Negra C.I.A.S.A. Clase 7",
+    "shortIssuer": "Loma Negra",
+    "rating": "AA+(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Materiales Básicos",
+    "issueDate": "2026-10-22",
+    "maturity": "2029-10-22",
+    "issuedAmount": 35000000,
+    "couponRate": 6.25,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 99.8,
+    "priceMEP": 99.8,
+    "priceCable": 99.4,
+    "pricePesos": 147200,
+    "volume": 25000,
+    "tradesCount": 10,
+    "volumeMEP": 25000,
+    "tradesMEP": 10,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2027-04-22",
+        "amortization": 0,
+        "coupon": 3.125,
+        "amount": 3.125,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2027-10-22",
+        "amortization": 0,
+        "coupon": 3.125,
+        "amount": 3.125,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2028-04-22",
+        "amortization": 0,
+        "coupon": 3.125,
+        "amount": 3.125,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2028-10-22",
+        "amortization": 0,
+        "coupon": 3.125,
+        "amount": 3.125,
+        "residual": 100
+      },
+      {
+        "couponNo": 5,
+        "date": "2029-04-22",
+        "amortization": 0,
+        "coupon": 3.125,
+        "amount": 3.125,
+        "residual": 100
+      },
+      {
+        "couponNo": 6,
+        "date": "2029-10-22",
+        "amortization": 100,
+        "coupon": 3.125,
+        "amount": 103.125,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_TTC8D",
+    "ticker": "TTC8D",
+    "tickerMEP": "TTC8D",
+    "tickerCable": "TTC8C",
+    "tickerPesos": "TTC8O",
+    "isin": "AR0166027471",
+    "issuer": "Tecpetrol S.A. Clase 8",
+    "shortIssuer": "Tecpetrol",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "issueDate": "2024-10-24",
+    "maturity": "2027-10-24",
+    "issuedAmount": 50000000,
+    "couponRate": 5,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 100.5,
+    "priceMEP": 100.5,
+    "priceCable": 100.1,
+    "pricePesos": 148200,
+    "volume": 35000,
+    "tradesCount": 15,
+    "volumeMEP": 35000,
+    "tradesMEP": 15,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2027-04-24",
+        "amortization": 0,
+        "coupon": 2.5,
+        "amount": 2.5,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2027-10-24",
+        "amortization": 100,
+        "coupon": 2.5,
+        "amount": 102.5,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_TTC9D",
+    "ticker": "TTC9D",
+    "tickerMEP": "TTC9D",
+    "tickerCable": "TTC9C",
+    "tickerPesos": "TTC9O",
+    "isin": "AR0482976963",
+    "issuer": "Tecpetrol S.A. Clase 9",
+    "shortIssuer": "Tecpetrol",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "issueDate": "2024-10-24",
+    "maturity": "2029-10-24",
+    "issuedAmount": 110000000,
+    "couponRate": 6.8,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 102.2,
+    "priceMEP": 102.2,
+    "priceCable": 101.8,
+    "pricePesos": 150700,
+    "volume": 45000,
+    "tradesCount": 20,
+    "volumeMEP": 45000,
+    "tradesMEP": 20,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2027-04-24",
+        "amortization": 0,
+        "coupon": 3.4,
+        "amount": 3.4,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2027-10-24",
+        "amortization": 0,
+        "coupon": 3.4,
+        "amount": 3.4,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2028-04-24",
+        "amortization": 0,
+        "coupon": 3.4,
+        "amount": 3.4,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2028-10-24",
+        "amortization": 0,
+        "coupon": 3.4,
+        "amount": 3.4,
+        "residual": 100
+      },
+      {
+        "couponNo": 5,
+        "date": "2029-04-24",
+        "amortization": 0,
+        "coupon": 3.4,
+        "amount": 3.4,
+        "residual": 100
+      },
+      {
+        "couponNo": 6,
+        "date": "2029-10-24",
+        "amortization": 100,
+        "coupon": 3.4,
+        "amount": 103.4,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_TTCBD",
+    "ticker": "TTCBD",
+    "tickerMEP": "TTCBD",
+    "tickerCable": "TTCBC",
+    "tickerPesos": "TTCBO",
+    "isin": "AR0152326457",
+    "issuer": "Tecpetrol S.A. Clase 11",
+    "shortIssuer": "Tecpetrol",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "issueDate": "2024-10-16",
+    "maturity": "2027-10-16",
+    "issuedAmount": 85000000,
+    "couponRate": 6.5,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 101.8,
+    "priceMEP": 101.8,
+    "priceCable": 101.4,
+    "pricePesos": 150150,
+    "volume": 40000,
+    "tradesCount": 18,
+    "volumeMEP": 40000,
+    "tradesMEP": 18,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2027-04-16",
+        "amortization": 0,
+        "coupon": 3.25,
+        "amount": 3.25,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2027-10-16",
+        "amortization": 100,
+        "coupon": 3.25,
+        "amount": 103.25,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_TTCED",
+    "ticker": "TTCED",
+    "tickerMEP": "TTCED",
+    "tickerCable": "TTCEC",
+    "tickerPesos": "TTCEO",
+    "isin": "AR0121767674",
+    "issuer": "Tecpetrol S.A. Clase 13",
+    "shortIssuer": "Tecpetrol",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "issueDate": "2025-05-21",
+    "maturity": "2029-05-21",
+    "issuedAmount": 60000000,
+    "couponRate": 5.5,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 100.4,
+    "priceMEP": 100.4,
+    "priceCable": 100,
+    "pricePesos": 148000,
+    "volume": 35000,
+    "tradesCount": 14,
+    "volumeMEP": 35000,
+    "tradesMEP": 14,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2027-05-21",
+        "amortization": 0,
+        "coupon": 2.75,
+        "amount": 2.75,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2027-11-21",
+        "amortization": 0,
+        "coupon": 2.75,
+        "amount": 2.75,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2028-05-21",
+        "amortization": 0,
+        "coupon": 2.75,
+        "amount": 2.75,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2028-11-21",
+        "amortization": 0,
+        "coupon": 2.75,
+        "amount": 2.75,
+        "residual": 100
+      },
+      {
+        "couponNo": 5,
+        "date": "2029-05-21",
+        "amortization": 100,
+        "coupon": 2.75,
+        "amount": 102.75,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_TT1AD",
+    "ticker": "TT1AD",
+    "tickerMEP": "TT1AD",
+    "tickerCable": "TT1AC",
+    "tickerPesos": "TT1AO",
+    "isin": "USP90187AV02",
+    "issuer": "Tecpetrol S.A. Clase 10 Adicionales (2033)",
+    "shortIssuer": "Tecpetrol",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar Cable",
+    "law": "Nueva York",
+    "isCallable": true,
+    "structureType": "Amortizable",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "issueDate": "2026-09-14",
+    "maturity": "2033-01-22",
+    "issuedAmount": 150000000,
+    "couponRate": 7.625,
+    "frequency": 2,
+    "dayCount": "30/360",
+    "dirtyPrice": 102.5,
+    "priceMEP": 102.5,
+    "priceCable": 102.1,
+    "pricePesos": 151200,
+    "volume": 45000,
+    "tradesCount": 20,
+    "volumeMEP": 45000,
+    "tradesMEP": 20,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2027-01-22",
+        "amortization": 0,
+        "coupon": 3.8125,
+        "amount": 3.8125,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2027-07-22",
+        "amortization": 0,
+        "coupon": 3.8125,
+        "amount": 3.8125,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2028-01-22",
+        "amortization": 0,
+        "coupon": 3.8125,
+        "amount": 3.8125,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2028-07-22",
+        "amortization": 0,
+        "coupon": 3.8125,
+        "amount": 3.8125,
+        "residual": 100
+      },
+      {
+        "couponNo": 5,
+        "date": "2029-01-22",
+        "amortization": 0,
+        "coupon": 3.8125,
+        "amount": 3.8125,
+        "residual": 100
+      },
+      {
+        "couponNo": 6,
+        "date": "2029-07-22",
+        "amortization": 0,
+        "coupon": 3.8125,
+        "amount": 3.8125,
+        "residual": 100
+      },
+      {
+        "couponNo": 7,
+        "date": "2030-01-22",
+        "amortization": 0,
+        "coupon": 3.8125,
+        "amount": 3.8125,
+        "residual": 100
+      },
+      {
+        "couponNo": 8,
+        "date": "2030-07-22",
+        "amortization": 0,
+        "coupon": 3.8125,
+        "amount": 3.8125,
+        "residual": 100
+      },
+      {
+        "couponNo": 9,
+        "date": "2031-01-22",
+        "amortization": 33,
+        "coupon": 3.8125,
+        "amount": 36.8125,
+        "residual": 67
+      },
+      {
+        "couponNo": 10,
+        "date": "2031-07-22",
+        "amortization": 0,
+        "coupon": 2.5544,
+        "amount": 2.5544,
+        "residual": 67
+      },
+      {
+        "couponNo": 11,
+        "date": "2032-01-22",
+        "amortization": 33,
+        "coupon": 2.5544,
+        "amount": 35.5544,
+        "residual": 34
+      },
+      {
+        "couponNo": 12,
+        "date": "2032-07-22",
+        "amortization": 0,
+        "coupon": 1.2963,
+        "amount": 1.2963,
+        "residual": 34
+      },
+      {
+        "couponNo": 13,
+        "date": "2033-01-22",
+        "amortization": 34,
+        "coupon": 1.2963,
+        "amount": 35.2963,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_MGCUD",
+    "ticker": "MGCUD",
+    "tickerMEP": "MGCUD",
+    "tickerCable": "MGCUC",
+    "tickerPesos": "MGCUO",
+    "isin": "AR0502646802",
+    "issuer": "Pampa Energía S.A. Clase 28",
+    "shortIssuer": "Pampa Energía",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar MEP",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "issueDate": "2026-08-21",
+    "maturity": "2030-08-21",
+    "issuedAmount": 85000000,
+    "couponRate": 5.5,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 100.3,
+    "priceMEP": 100.3,
+    "priceCable": 99.9,
+    "pricePesos": 147900,
+    "volume": 40000,
+    "tradesCount": 18,
+    "volumeMEP": 40000,
+    "tradesMEP": 18,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2027-02-21",
+        "amortization": 0,
+        "coupon": 2.75,
+        "amount": 2.75,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2027-08-21",
+        "amortization": 0,
+        "coupon": 2.75,
+        "amount": 2.75,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2028-02-21",
+        "amortization": 0,
+        "coupon": 2.75,
+        "amount": 2.75,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2028-08-21",
+        "amortization": 0,
+        "coupon": 2.75,
+        "amount": 2.75,
+        "residual": 100
+      },
+      {
+        "couponNo": 5,
+        "date": "2029-02-21",
+        "amortization": 0,
+        "coupon": 2.75,
+        "amount": 2.75,
+        "residual": 100
+      },
+      {
+        "couponNo": 6,
+        "date": "2029-08-21",
+        "amortization": 0,
+        "coupon": 2.75,
+        "amount": 2.75,
+        "residual": 100
+      },
+      {
+        "couponNo": 7,
+        "date": "2030-02-21",
+        "amortization": 0,
+        "coupon": 2.75,
+        "amount": 2.75,
+        "residual": 100
+      },
+      {
+        "couponNo": 8,
+        "date": "2030-08-21",
+        "amortization": 100,
+        "coupon": 2.75,
+        "amount": 102.75,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_MGCQD",
+    "ticker": "MGCQD",
+    "tickerMEP": "MGCQD",
+    "tickerCable": "MGCQC",
+    "tickerPesos": "MGCQO",
+    "isin": "AR0519406398",
+    "issuer": "Pampa Energía S.A. Clase 25",
+    "shortIssuer": "Pampa Energía",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar Cable",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "issueDate": "2025-08-06",
+    "maturity": "2028-08-06",
+    "issuedAmount": 120000000,
+    "couponRate": 7.25,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 103.1,
+    "priceMEP": 103.1,
+    "priceCable": 102.7,
+    "pricePesos": 152000,
+    "volume": 45000,
+    "tradesCount": 20,
+    "volumeMEP": 45000,
+    "tradesMEP": 20,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2027-02-06",
+        "amortization": 0,
+        "coupon": 3.625,
+        "amount": 3.625,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2027-08-06",
+        "amortization": 0,
+        "coupon": 3.625,
+        "amount": 3.625,
+        "residual": 100
+      },
+      {
+        "couponNo": 3,
+        "date": "2028-02-06",
+        "amortization": 0,
+        "coupon": 3.625,
+        "amount": 3.625,
+        "residual": 100
+      },
+      {
+        "couponNo": 4,
+        "date": "2028-08-06",
+        "amortization": 100,
+        "coupon": 3.625,
+        "amount": 103.625,
+        "residual": 0
+      }
+    ]
+  },
+  {
+    "id": "bond_PN38D",
+    "ticker": "PN38D",
+    "tickerMEP": "PN38D",
+    "tickerCable": "PN38C",
+    "tickerPesos": "PN38O",
+    "isin": "AR0554009248",
+    "issuer": "Pan American Energy Clase 38",
+    "shortIssuer": "Pan American Energy",
+    "rating": "AAA(arg)",
+    "ratingAgency": "FIX SCR",
+    "type": "ON",
+    "instrumentGroup": "Hard USD",
+    "currency": "USD",
+    "paymentCurrency": "Dólar Cable",
+    "law": "Argentina",
+    "isCallable": false,
+    "structureType": "Bullet",
+    "couponType": "Fijo",
+    "sector": "Energía & Petróleo",
+    "issueDate": "2025-02-11",
+    "maturity": "2027-08-11",
+    "issuedAmount": 75000000,
+    "couponRate": 6.5,
+    "frequency": 2,
+    "dayCount": "ACT/365",
+    "dirtyPrice": 101.4,
+    "priceMEP": 101.4,
+    "priceCable": 100.95,
+    "pricePesos": 149500,
+    "volume": 35000,
+    "tradesCount": 16,
+    "volumeMEP": 35000,
+    "tradesMEP": 16,
+    "cashFlows": [
+      {
+        "couponNo": 1,
+        "date": "2027-02-11",
+        "amortization": 0,
+        "coupon": 3.25,
+        "amount": 3.25,
+        "residual": 100
+      },
+      {
+        "couponNo": 2,
+        "date": "2027-08-11",
+        "amortization": 100,
+        "coupon": 3.25,
+        "amount": 103.25,
+        "residual": 0
+      }
+    ]
+  },
 ];
 
 export const RATINGS_LIST = [

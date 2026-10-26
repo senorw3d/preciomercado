@@ -1,0 +1,3230 @@
+[
+  {
+    "evidencia_textual": "Suplemento de Prospecto Arcor (29/09/2026), Pág 11 y 14-16: '17. Ley Aplicable: Las Obligaciones Negociables se regirán por, y serán interpretadas de conformidad con, las leyes de la Argentina.' | '2. Moneda de denominación y pago: Dólares Estadounidenses en la Argentina.' | '15. Base de cálculo para el pago de los intereses: Para el cálculo de los intereses se considerará la cantidad real de días transcurridos y un año de 365 días (cantidad real de días transcurridos/365).' || Aviso de Resultados (11/10/2026): 'Obligaciones Negociables Clase 7: 3) Monto de Emisión: U$S 43.370.436. 4) Precio de Emisión: 100%. 5) Tasa de Interés: 5,69 % nominal anual. 8) Fecha de Emisión: 5 de octubre de 2026. 9) Fecha de Vencimiento de la Clase 7: 5 de octubre de 2029. 10) Fecha de Amortización: el capital de las Obligaciones Negociables será pagadero en un único pago en la Fecha de Vencimiento de la Clase 7, es decir, el 5 de octubre de 2029.'",
+    "ticker": "RC7CD / RC7CC / RC7CO",
+    "isin": "AR0939227226",
+    "emisor": "ARCOR S.A.I.C.",
+    "clase_serie": "Obligaciones Negociables Clase 7",
+    "moneda_emision": "USD",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 43370436,
+    "fecha_emision": "2026-10-05",
+    "fecha_vencimiento": "2029-10-05",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0569,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2029-10-05",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "evidencia_textual": "Suplemento de Prospecto Arcor (29/09/2026), Pág 11 y 18-20: '17. Ley Aplicable: Las Obligaciones Negociables se regirán por, y serán interpretadas de conformidad con, las leyes de la Argentina.' | '2. Moneda de denominación, integración y pago: Pesos.' | '11. Tasa de Interés: Las Obligaciones Negociables Clase 8 en circulación devengarán intereses sobre su capital pendiente de pago a una tasa variable anual que será equivalente a la suma de (a) la Tasa de Referencia (Tasa TAMAR Privada) más (b) el Margen Aplicable que surja del proceso licitatorio.' | '13. Base de cálculo para el pago de los intereses: Para el cálculo de los intereses se considerará la cantidad real de días transcurridos y un año de 365 días (cantidad real de días transcurridos/365).' || Aviso de Resultados (11/10/2026): 'Obligaciones Negociables Clase 8: 3) Monto de Emisión: $ 55.408.498.875. 5) Tasa de Interés: Tasa TAMAR Privada más el Margen Aplicable de 4,95%. 8) Fecha de Emisión: 5 de octubre de 2026. 9) Fecha de Vencimiento de la Clase 8: 5 de abril de 2028. 10) Amortización: único pago en la Fecha de Vencimiento (5 de abril de 2028).'",
+    "ticker": "RC8CO",
+    "isin": "AR0965588467",
+    "emisor": "ARCOR S.A.I.C.",
+    "clase_serie": "Obligaciones Negociables Clase 8",
+    "moneda_emision": "ARS",
+    "moneda_integracion_pago": "ARS",
+    "ley": "Argentina",
+    "monto_emitido": 55408498875,
+    "fecha_emision": "2026-10-05",
+    "fecha_vencimiento": "2028-04-05",
+    "tipo_tasa": "Variable",
+    "tasa_fija_anual": null,
+    "tasa_referencia": "TAMAR",
+    "margen_tasa_variable": 0.0495,
+    "frecuencia_interes_meses": 3,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2028-04-05",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "evidencia_textual": "Suplemento de Prospecto YPF Luz Clases XIX y XX (Régimen Emisor Frecuente, Noviembre 2024): 'Obligaciones Negociables Clase XIX denominadas, a ser suscriptas y pagaderas en Dólares Estadounidenses en el país. Plazo: 24 meses. Tasa Fija Nominal Anual: 5,25%. Frecuencia de pago de intereses: Trimestral. Base de cálculo: 30/360. Amortización de capital: íntegramente al vencimiento (Bullet). Ley Aplicable: Las Obligaciones Negociables se regirán por las leyes de la República Argentina.' || Aviso de Resultados (Noviembre 2024): 'Monto total emitido y colocado de las Obligaciones Negociables Clase XIX: USD 49.018.232. Fecha de emisión e integración: 22 de noviembre de 2024. Fecha de vencimiento: 22 de noviembre de 2026. Calificación crediticia asignada por FIX SCR: AAA(arg). Tasa de interés aplicable: 5,25% nominal anual.'",
+    "ticker": "YFCKD / YFCKC / YFCKO",
+    "isin": "AR0015491712",
+    "emisor": "YPF Energía Eléctrica S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XIX",
+    "moneda_emision": "USD",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 49018232,
+    "fecha_emision": "2024-11-22",
+    "fecha_vencimiento": "2026-11-22",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0525,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 3,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2026-11-22",
+        "porcentaje": 100
+      }
+    ],
+    "_evidencia_prospecto": "Suplemento de Prospecto YPF Luz Clases XIX y XX (Régimen Emisor Frecuente, Noviembre 2024): 'Obligaciones Negociables Clase XIX denominadas, a ser suscriptas y pagaderas en Dólares Estadounidenses en el país. Plazo: 24 meses. Tasa Fija Nominal Anual: 5,25%. Frecuencia de pago de intereses: Trimestral. Base de cálculo: 30/360. Amortización de capital: íntegramente al vencimiento (Bullet). Ley Aplicable: Las Obligaciones Negociables se regirán por las leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados (Noviembre 2024): 'Monto total emitido y colocado de las Obligaciones Negociables Clase XIX: USD 49.018.232. Fecha de emisión e integración: 22 de noviembre de 2024. Fecha de vencimiento: 22 de noviembre de 2026. Calificación crediticia asignada por FIX SCR: AAA(arg). Tasa de interés aplicable: 5,25% nominal anual.'",
+    "_fuente_verificada": true
+  },
+  {
+    "evidencia_textual": "Prospecto de Emisión Banco Macro S.A. (Noviembre 2016): 'Obligaciones Negociables Subordinadas Reajustables Clase A por un monto de US$ 400.000.000 con vencimiento el 4 de noviembre de 2026. Tasa de interés fija inicial del 6,750% nominal anual pagadera semestralmente el 4 de mayo y el 4 de noviembre de cada año.' || Notificación de Reajuste (Noviembre 2021): 'Al no haberse ejercido la opción de rescate (call) el 4 de noviembre de 2021, la tasa de interés aplicable para el período quinquenal 2021-2026 reajustó contractualmente a la Tasa del Bono del Tesoro de EE.UU. a 5 años (1,180%) más 546,3 puntos básicos, quedando fijada en 6,643% nominal anual. Base de cálculo: 30/360. Ley aplicable: Ley del Estado de Nueva York. Amortización: Pago único al vencimiento (Bullet) el 4 de noviembre de 2026.'",
+    "ticker": "BACAC / BACAD / BACAO",
+    "isin": "USP1047VAF42",
+    "emisor": "Banco Macro S.A.",
+    "clase_serie": "Obligaciones Negociables Subordinadas Reajustables Clase A",
+    "moneda_emision": "USD",
+    "moneda_integracion_pago": "USD_Cable",
+    "ley": "Nueva York",
+    "monto_emitido": 400000000,
+    "fecha_emision": "2016-11-04",
+    "fecha_vencimiento": "2026-11-04",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.06643,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2026-11-04",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Offering Memorandum / SEC Form 6-K Transportadora de Gas del Sur S.A. (Julio 2024): 'US$ 490,000,000 8.500% Senior Notes due 2031 (Series 3 Notes). Interest payable semi-annually on January 24 and July 24 of each year. Maturity: July 24, 2031. Day count convention: computed on the basis of a 360-day year consisting of twelve 30-day months (30/360). Governing Law: State of New York. Amortization: 100% at maturity (Bullet).'",
+    "_evidencia_resultados": "Aviso de Resultados y Liquidación (24 de julio de 2024): 'Monto total emitido y colocado de las Obligaciones Negociables Clase 3: USD 490.000.000 a la par con cupón fijo anual del 8,500%. Fecha de liquidación: 24 de julio de 2024. Vencimiento: 24 de julio de 2031.'",
+    "_fuente_verificada": true,
+    "ticker": "TSC3D / TSC3C / TSC3O",
+    "ticker_mep": "TSC3D",
+    "ticker_ccl": "TSC3C",
+    "isin": "USP9308RBA07",
+    "emisor": "Transportadora de Gas del Sur S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 3",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_Cable",
+    "ley": "Nueva York",
+    "monto_emitido": 490000000,
+    "fecha_emision": "2024-07-24",
+    "fecha_vencimiento": "2031-07-24",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.085,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2031-07-24",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Offering Memorandum / SEC Form 6-K Transportadora de Gas del Sur S.A. (Noviembre 2025): 'US$ 500,000,000 7.750% Senior Notes due 2035 (Series 4 Notes). Interest payable semi-annually on May 20 and November 20 of each year. Maturity: November 20, 2035. Day count convention: computed on the basis of a 360-day year consisting of twelve 30-day months (30/360). Governing Law: State of New York. Amortization: 100% at maturity (Bullet).'",
+    "_evidencia_resultados": "Aviso de Resultados y Liquidación (20 de noviembre de 2025): 'Monto total emitido y colocado de las Obligaciones Negociables Clase 4: USD 500.000.000 a tasa fija nominal anual del 7,750%. Fecha de emisión y liquidación: 20 de noviembre de 2025. Vencimiento: 20 de noviembre de 2035.'",
+    "_fuente_verificada": true,
+    "ticker": "TSC4C / TSC4D / TSC4O",
+    "ticker_mep": "TSC4D",
+    "ticker_ccl": "TSC4C",
+    "isin": "USP9308RBB89",
+    "emisor": "Transportadora de Gas del Sur S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 4",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_Cable",
+    "ley": "Nueva York",
+    "monto_emitido": 500000000,
+    "fecha_emision": "2025-11-20",
+    "fecha_vencimiento": "2035-11-20",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0775,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2035-11-20",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Loma Negra Clase 5 (Julio 2025): 'Obligaciones Negociables Clase 5 simples no convertibles en acciones denominadas y pagaderas en Dólares Estadounidenses en el país. Amortización: El capital será amortizado en un único pago en la Fecha de Vencimiento (Bullet a 24 meses). Tasa de Interés: Devengarán intereses a tasa fija nominal anual del 8,00% pagaderos semestralmente. Base de Cálculo: Se considerará la cantidad real de días transcurridos y un año de trescientos sesenta y cinco (365) días (cantidad real de días transcurridos/365). Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados y Adjudicación Loma Negra Clase 5 (24 de julio de 2025): 'Monto Total Emitido y Adjudicado: V/N USD 112.878.134. Precio de emisión: 100%. Tasa de Interés: 8,00% nominal anual. Fecha de Emisión y Liquidación: 24 de julio de 2025. Fecha de Vencimiento: 24 de julio de 2027. Calificación asignada por FIX SCR: AAA(arg).'",
+    "_fuente_verificada": true,
+    "ticker": "LOC5D / LOC5C / LOC5O",
+    "ticker_mep": "LOC5D",
+    "ticker_ccl": "LOC5C",
+    "isin": "AR0579536985",
+    "emisor": "Loma Negra C.I.A.S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 5",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 112878134,
+    "fecha_emision": "2025-07-24",
+    "fecha_vencimiento": "2027-07-24",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.08,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "ACT/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-07-24",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Loma Negra Clase 6 (Enero 2026): 'Obligaciones Negociables Clase 6 denominadas y pagaderas en Dólares Estadounidenses en Argentina. Plazo: 36 meses. Amortización: El capital se amortizará en un único pago en la Fecha de Vencimiento (Bullet). Tasa de Interés: Fija nominal anual del 6,50% pagadera semestralmente. Base de Cálculo: Real/365 (cantidad real de días transcurridos dividida por 365). Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados y Adjudicación Loma Negra Clase 6 (23 de enero de 2026): 'Monto Total Emitido y Adjudicado: V/N USD 60.000.000. Precio de colocación: 100%. Tasa fija de corte: 6,50% nominal anual. Fecha de Emisión y Liquidación: 23 de enero de 2026. Fecha de Vencimiento: 23 de enero de 2029. Calificación otorgada por FIX SCR: AAA(arg).'",
+    "_fuente_verificada": true,
+    "ticker": "LOC6D / LOC6C / LOC6O",
+    "ticker_mep": "LOC6D",
+    "ticker_ccl": "LOC6C",
+    "isin": "AR0204516451",
+    "emisor": "Loma Negra C.I.A.S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 6",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 60000000,
+    "fecha_emision": "2026-01-23",
+    "fecha_vencimiento": "2029-01-23",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.065,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "ACT/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2029-01-23",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Loma Negra Clase 7 (Octubre 2026): 'Obligaciones Negociables Clase 7 simples no convertibles en acciones por hasta US$ 70.000.000 ampliable. Denominadas y pagaderas en Dólares Estadounidenses en Argentina. Plazo: 36 meses. Amortización: 100% al vencimiento (Bullet). Intereses: Tasa fija nominal anual pagadera semestralmente. Base de cálculo: Cantidad real de días transcurridos dividida por 365 días (Real/365). Integración en efectivo o mediante canje voluntario de ON Clase 5. Ley Aplicable: República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Loma Negra Clase 7 (20 de octubre de 2026): 'Monto Total Adjudicado: USD 150.000.000. Tasa de Interés de corte: 6,25% nominal anual. Precio de emisión: 100%. Fecha de Emisión y Liquidación: 22 de octubre de 2026. Fecha de Vencimiento: 22 de octubre de 2029. Calificación de riesgo: AAA(arg) por FIX SCR.'",
+    "_fuente_verificada": true,
+    "ticker": "LOC7D / LOC7C / LOC7O",
+    "ticker_mep": "LOC7D",
+    "ticker_ccl": "LOC7C",
+    "isin": "AR0585647891",
+    "emisor": "Loma Negra C.I.A.S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 7",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 150000000,
+    "fecha_emision": "2026-10-22",
+    "fecha_vencimiento": "2029-10-22",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0625,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "ACT/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2029-10-22",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Offering Memorandum / SEC Form 6-K Tecpetrol S.A. (Noviembre 2023): 'US$ 750,000,000 7.625% Senior Notes due 2030 (Series 12 Notes). Interest payable semi-annually on May 3 and November 3 of each year. Maturity: November 3, 2030. Day count convention: computed on the basis of a 360-day year consisting of twelve 30-day months (30/360). Governing Law: State of New York. Amortization: 100% of principal upon maturity (Bullet).'",
+    "_evidencia_resultados": "Aviso de Resultados y Liquidación Tecpetrol S.A. (3 de noviembre de 2023): 'Monto total colocado de las Obligaciones Negociables Serie 12: USD 750.000.000 a la par con cupón fijo anual del 7,625%. Fecha de liquidación: 3 de noviembre de 2023. Vencimiento: 3 de noviembre de 2030. Calificación internacional: B1 (Moody's) / AAA(arg) (FIX SCR).'",
+    "_fuente_verificada": true,
+    "ticker": "TTCDD / TTCDC / TTCDO",
+    "ticker_mep": "TTCDD",
+    "ticker_ccl": "TTCDC",
+    "isin": "USP90187AT55",
+    "emisor": "Tecpetrol S.A.",
+    "clase_serie": "Obligaciones Negociables Serie 12 (Senior Notes 2030)",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_Cable",
+    "ley": "Nueva York",
+    "monto_emitido": 750000000,
+    "fecha_emision": "2023-11-03",
+    "fecha_vencimiento": "2030-11-03",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.07625,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2030-11-03",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Offering Memorandum / SEC Form 6-K Tecpetrol S.A. (Enero 2024): 'US$ 400,000,000 7.625% Senior Notes due 2033 (Series 10 Notes). Interest payable semi-annually on January 22 and July 22 of each year. Maturity: January 22, 2033. Day count convention: computed on the basis of a 360-day year consisting of twelve 30-day months (30/360). Governing Law: State of New York. Amortization: payable in three consecutive annual installments: 33% on January 22, 2031, 33% on January 22, 2032, and 34% on January 22, 2033.'",
+    "_evidencia_resultados": "Aviso de Resultados y Liquidación Tecpetrol S.A. (22 de enero de 2024): 'Monto total colocado de las Obligaciones Negociables Serie 10: USD 400.000.000 con reaperturas adicionales a tasa fija nominal anual del 7,625%. Fecha de emisión: 22 de enero de 2024. Vencimiento final: 22 de enero de 2033.'",
+    "_fuente_verificada": true,
+    "ticker": "TTCAD / TTCAC / TTCAO",
+    "ticker_mep": "TTCAD",
+    "ticker_ccl": "TTCAC",
+    "isin": "USP90187AR99",
+    "emisor": "Tecpetrol S.A.",
+    "clase_serie": "Obligaciones Negociables Serie 10 (Senior Notes 2033)",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_Cable",
+    "ley": "Nueva York",
+    "monto_emitido": 850000000,
+    "fecha_emision": "2024-01-22",
+    "fecha_vencimiento": "2033-01-22",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.07625,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Amortizable",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2031-01-22",
+        "porcentaje": 33
+      },
+      {
+        "fecha": "2032-01-22",
+        "porcentaje": 33
+      },
+      {
+        "fecha": "2033-01-22",
+        "porcentaje": 34
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Tecpetrol S.A. Clase 8 (Octubre 2024): 'Obligaciones Negociables Clase 8 simples no convertibles en acciones denominadas y pagaderas en Dólares Estadounidenses en Argentina. Amortización: Íntegra en un único pago en la Fecha de Vencimiento (Bullet a 36 meses). Tasa de Interés: Fija nominal anual del 5,00% pagadera semestralmente los días 24 de abril y 24 de octubre de cada año. Base de cálculo: Cantidad real de días transcurridos y un año de 365 días (ACT/365). Ley Aplicable: República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Tecpetrol S.A. Clase 8 (22 de octubre de 2024): 'Monto Total Emitido y Adjudicado Clase 8: USD 67.430.342. Precio de emisión: 100%. Tasa fija de corte: 5,00% nominal anual. Fecha de Emisión y Liquidación: 24 de octubre de 2024. Fecha de Vencimiento: 24 de octubre de 2027. Calificación asignada por FIX SCR: AAA(arg).'",
+    "_fuente_verificada": true,
+    "ticker": "TTC8D / TTC8C / TTC8O",
+    "ticker_mep": "TTC8D",
+    "ticker_ccl": "TTC8C",
+    "isin": "AR0166027471",
+    "emisor": "Tecpetrol S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 8",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 67430342,
+    "fecha_emision": "2024-10-24",
+    "fecha_vencimiento": "2027-10-24",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.05,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "ACT/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-10-24",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Tecpetrol S.A. Clase 9 (Octubre 2024): 'Obligaciones Negociables Clase 9 denominadas y pagaderas en Dólares Estadounidenses en Argentina. Amortización: Único pago en la Fecha de Vencimiento (Bullet a 60 meses). Tasa de Interés: Fija nominal anual del 6,80% pagadera semestralmente los días 24 de abril y 24 de octubre. Base de cálculo: Cantidad real de días transcurridos / 365 días (ACT/365). Ley Aplicable: República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Tecpetrol S.A. Clase 9 (22 de octubre de 2024): 'Monto Total Emitido y Adjudicado Clase 9: USD 80.541.942. Precio de emisión: 100%. Tasa fija de corte: 6,80% nominal anual. Fecha de Emisión y Liquidación: 24 de octubre de 2024. Fecha de Vencimiento: 24 de octubre de 2029. Calificación asignada por FIX SCR: AAA(arg).'",
+    "_fuente_verificada": true,
+    "ticker": "TTC9D / TTC9C / TTC9O",
+    "ticker_mep": "TTC9D",
+    "ticker_ccl": "TTC9C",
+    "isin": "AR0482976963",
+    "emisor": "Tecpetrol S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 9",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 80541942,
+    "fecha_emision": "2024-10-24",
+    "fecha_vencimiento": "2029-10-24",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.068,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "ACT/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2029-10-24",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Tecpetrol S.A. Clase 11 (Octubre 2024): 'Obligaciones Negociables Clase 11 denominadas y pagaderas en Dólares Estadounidenses en Argentina. Amortización: 100% al vencimiento (Bullet a 36 meses). Tasa de Interés: Fija nominal anual del 6,50% pagadera semestralmente los días 16 de abril y 16 de octubre. Base de cálculo: Días reales transcurridos / 365 días (ACT/365). Ley Aplicable: República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Tecpetrol S.A. Clase 11 (Octubre 2024): 'Monto Colocado Clase 11: USD 114.452.024 a la par a tasa fija nominal anual del 6,50%. Fecha de Emisión: 16 de octubre de 2024. Vencimiento: 16 de octubre de 2027. Calificación crediticia: AAA(arg) por FIX SCR.'",
+    "_fuente_verificada": true,
+    "ticker": "TTCBD / TTCBC / TTCBO",
+    "ticker_mep": "TTCBD",
+    "ticker_ccl": "TTCBC",
+    "isin": "AR0152326457",
+    "emisor": "Tecpetrol S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 11",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 114452024,
+    "fecha_emision": "2024-10-16",
+    "fecha_vencimiento": "2027-10-16",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.065,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "ACT/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-10-16",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Tecpetrol S.A. Clase 13 (Mayo 2025): 'Obligaciones Negociables Clase 13 denominadas y pagaderas en Dólares Estadounidenses en Argentina. Amortización: 100% al vencimiento (Bullet a 48 meses). Tasa de Interés: Fija nominal anual del 5,50% pagadera semestralmente los días 21 de noviembre y 21 de mayo de cada año. Base de cálculo: Cantidad real de días transcurridos / 365 días (ACT/365). Ley Aplicable: República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Tecpetrol S.A. Clase 13 (21 de mayo de 2025): 'Monto Colocado Clase 13: USD 100.000.000 a la par con cupón fijo anual del 5,50%. Fecha de Emisión: 21 de mayo de 2025. Vencimiento: 21 de mayo de 2029. Calificación crediticia: AAA(arg) por FIX SCR.'",
+    "_fuente_verificada": true,
+    "ticker": "TTCED / TTCEC / TTCEO",
+    "ticker_mep": "TTCED",
+    "ticker_ccl": "TTCEC",
+    "isin": "AR0121767674",
+    "emisor": "Tecpetrol S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 13",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 100000000,
+    "fecha_emision": "2025-05-21",
+    "fecha_vencimiento": "2029-05-21",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.055,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "ACT/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2029-05-21",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Tecpetrol S.A. (03/09/2026), Pág. 16, 20 y 200: 'Amortización: El capital de las Obligaciones Negociables será amortizado en 3 (tres) cuotas anuales consecutivas por un importe igual al porcentaje de capital de las Obligaciones Negociables que se indica a continuación frente a la fecha de pago correspondiente: 33% 22 de enero de 2031, 33% 22 de enero de 2032, 34% 22 de enero de 2033.' | 'Jurisdicción y Ley Aplicable: El Contrato de Fideicomiso y las Obligaciones Negociables se rigen por las leyes del Estado de Nueva York, Estados Unidos, y se interpretarán de acuerdo con las mismas.' | 'Base de cálculo: Se computarán intereses sobre una base de un año de 360 días compuesto por 12 meses de 30 días cada uno.' | 'Moneda de denominación y pago: Dólares estadounidenses en el exterior.'",
+    "_evidencia_resultados": "Aviso de Resultados Tecpetrol S.A. (08/09/2026 / 14/09/2026), Pág. 1-2: '2) Monto de la Emisión: U.S.$ 450.000.000. 3) Monto de capital total en circulación de las Obligaciones Negociables Clase 10 luego de la emisión de las Obligaciones Negociables Clase 10 Adicionales: U.S.$850.000.000. 4) Precio de Emisión y Liquidación: 101,623% del valor nominal. 5) Tasa de Interés: 7,625%. 6) Rendimiento Aplicable: 7,250%. 7) Fecha de Emisión y Liquidación: 14 de septiembre de 2026. 8) Fecha de Vencimiento: 22 de enero de 2033. 9) Fechas de Amortización: 33% 22 de enero de 2031, 33% 22 de enero de 2032, 34% 22 de enero de 2033. 10) Fechas de pago de intereses: semestralmente por período vencido (...) en la Fecha de Vencimiento, es decir, el 22 de enero de 2033. 11) Códigos ISIN originales: Regulación S: USP90187AR99 / 144A: US87876TAG94. 12) Códigos ISIN temporales: Regulación S: USP90187AV02.'",
+    "_fuente_verificada": true,
+    "ticker": "TT1AC / TT1AD / TT1AO",
+    "ticker_mep": "TT1AD",
+    "ticker_ccl": "TT1AC",
+    "isin": "USP90187AV02",
+    "emisor": "Tecpetrol S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 10 Adicionales",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_Cable",
+    "ley": "Nueva York",
+    "monto_emitido": 450000000,
+    "fecha_emision": "2026-09-14",
+    "fecha_vencimiento": "2033-01-22",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.07625,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Amortizable",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2031-01-22",
+        "porcentaje": 33
+      },
+      {
+        "fecha": "2032-01-22",
+        "porcentaje": 33
+      },
+      {
+        "fecha": "2033-01-22",
+        "porcentaje": 34
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Offering Memorandum / SEC Form 6-K Pampa Energía S.A. (September 2024): 'Principal Amount: US$ 410,000,000 7.950% Senior Notes due September 10, 2031. Interest will accrue at a rate of 7.950% per year and will be payable semiannually in arrears on March 10 and September 10 of each year, commencing March 10, 2025.' -- 'Maturity: The notes will mature on September 10, 2031.' -- 'Governing Law: The indenture and the notes will be governed by the laws of the State of New York.' -- 'Interest will be computed on the basis of a 360-day year comprised of twelve 30-day months.' -- 'Bullet: The entire principal amount will be paid in full at maturity.'",
+    "_evidencia_resultados": "Aviso de Resultados CNV / Pricing Term Sheet (10/09/2024): 'Obligaciones Negociables Clase 21 por un valor nominal total de US$ 410.000.000. Fecha de Emisión y Liquidación: 10 de septiembre de 2024. Fecha de Vencimiento: 10 de septiembre de 2031. Tasa de Interés: 7,950% fija nominal anual. Amortización: Bullet 100% al vencimiento. Pagos de intereses: semestralmente los días 10 de marzo y 10 de septiembre. Código ISIN: Reg S USP7464EAS56 / 144A US697660AH86.'",
+    "_fuente_verificada": true,
+    "ticker": "MGCMD / MGCMC / MGCMO",
+    "ticker_mep": "MGCMD",
+    "ticker_ccl": "MGCMC",
+    "isin": "USP7464EAS56",
+    "emisor": "Pampa Energía S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 21 (Senior Notes due 2031)",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_Cable",
+    "ley": "Nueva York",
+    "monto_emitido": 410000000,
+    "fecha_emision": "2024-09-10",
+    "fecha_vencimiento": "2031-09-10",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0795,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2031-09-10",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Offering Memorandum / SEC Form 6-K Pampa Energía S.A. (December 2024 / Reopening May 2025): 'Principal Amount: US$ 360,000,000 (issued Dec 2024) plus US$ 340,000,000 (issued May 2025) aggregate US$ 700,000,000 7.875% Senior Notes due December 16, 2034.' -- 'Interest will accrue at a rate of 7.875% per year and will be payable semiannually in arrears on June 16 and December 16 of each year.' -- 'Maturity: The notes will mature on December 16, 2034.' -- 'Governing Law: The indenture and the notes will be governed by the laws of the State of New York.' -- 'Interest will be computed on the basis of a 360-day year comprised of twelve 30-day months.' -- 'Bullet: The entire principal amount will be paid in full at maturity.'",
+    "_evidencia_resultados": "Aviso de Resultados CNV / Pricing Term Sheet (16/12/2024 y reapertura 22/05/2025): 'Obligaciones Negociables Clase 23 por un monto total en circulación de US$ 700.000.000. Fecha de Emisión y Liquidación: 16 de diciembre de 2024. Fecha de Vencimiento: 16 de diciembre de 2034. Tasa de Interés: 7,875% fija nominal anual. Amortización: Bullet 100% al vencimiento el 16 de diciembre de 2034. Pagos de intereses: semestralmente los días 16 de junio y 16 de diciembre. Código ISIN: Reg S USP7464EAT30 / 144A US697660AJ43.'",
+    "_fuente_verificada": true,
+    "ticker": "MGCOD / MGCOC / MGCOO",
+    "ticker_mep": "MGCOD",
+    "ticker_ccl": "MGCOC",
+    "isin": "USP7464EAT30",
+    "emisor": "Pampa Energía S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 23 (Senior Notes due 2034)",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_Cable",
+    "ley": "Nueva York",
+    "monto_emitido": 700000000,
+    "fecha_emision": "2024-12-16",
+    "fecha_vencimiento": "2034-12-16",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.07875,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2034-12-16",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Offering Memorandum / SEC Form 6-K Pampa Energía S.A. (November 2025): 'Principal Amount: US$ 450,000,000 plus US$ 500,000,000 reopening aggregate US$ 950,000,000 7.750% Senior Notes due November 14, 2037.' -- 'Interest will accrue at a rate of 7.750% per year and will be payable semiannually in arrears on May 14 and November 14 of each year.' -- 'Maturity: The notes will mature on November 14, 2037.' -- 'Governing Law: The indenture and the notes will be governed by the laws of the State of New York.' -- 'Interest will be computed on the basis of a 360-day year comprised of twelve 30-day months.' -- 'Bullet: The entire principal amount will be paid in full at maturity.'",
+    "_evidencia_resultados": "Aviso de Resultados CNV / Pricing Term Sheet (14/11/2025): 'Obligaciones Negociables Clase 26 por un valor nominal total en circulación de US$ 950.000.000. Fecha de Emisión y Liquidación: 14 de noviembre de 2025. Fecha de Vencimiento: 14 de noviembre de 2037. Tasa de Interés: 7,750% fija nominal anual. Amortización: Bullet 100% al vencimiento el 14 de noviembre de 2037. Pagos de intereses: semestralmente los días 14 de mayo y 14 de noviembre. Código ISIN: Reg S USP7464EAY25 / 144A US697660AK16.'",
+    "_fuente_verificada": true,
+    "ticker": "MGCRD / MGCRC / MGCRO",
+    "ticker_mep": "MGCRD",
+    "ticker_ccl": "MGCRC",
+    "isin": "USP7464EAY25",
+    "emisor": "Pampa Energía S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 26 (Senior Notes due 2037)",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_Cable",
+    "ley": "Nueva York",
+    "monto_emitido": 950000000,
+    "fecha_emision": "2025-11-14",
+    "fecha_vencimiento": "2037-11-14",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0775,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2037-11-14",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Pampa Energía S.A. (18/08/2026), Pág. 1, 11 y 13: 'Amortización: El capital de las Obligaciones Negociables será amortizado en un único pago a ser realizado en la Fecha de Vencimiento.' -- 'Base para el cómputo de intereses: Los intereses se computarán en base a los días corridos sobre un año de 365 días.' -- 'Ley Aplicable: Las Obligaciones Negociables se regirán e interpretarán por las leyes de Argentina.' -- 'Moneda: Dólares a ser suscriptas e integradas en efectivo, en Dólares en Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Pampa Energía S.A. (20/08/2026), Pág. 1-2: '4) Valor nominal a emitirse: US$ 138.387.000. 5) Fecha de Emisión y Liquidación: 21 de agosto de 2026. 6) Fecha de Vencimiento: 21 de agosto de 2030. 7) Amortización: El capital de las Obligaciones Negociables Clase 28 será amortizado en un único pago en la Fecha de Vencimiento, es decir, el 21 de agosto de 2030. 8) Tasa Aplicable: 5,5%. 9) Precio de Emisión: 100% del valor nominal. 10) Fechas de Pago de Intereses: Los intereses se pagarán en forma vencida, semestralmente a partir de la Fecha de Emisión y Liquidación en las siguientes fechas: 21 de febrero de 2027, 21 de agosto de 2027, 21 de febrero de 2028, 21 de agosto de 2028, 21 de febrero de 2029, 21 de agosto de 2029, 21 de febrero de 2030, y en la Fecha de Vencimiento, es decir, el 21 de agosto de 2030. Código ISIN: AR0502646802.'",
+    "_fuente_verificada": true,
+    "ticker": "MGCUD / MGCUC / MGCUO",
+    "ticker_mep": "MGCUD",
+    "ticker_ccl": "MGCUC",
+    "isin": "AR0502646802",
+    "emisor": "Pampa Energía S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 28",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 138387000,
+    "fecha_emision": "2026-08-21",
+    "fecha_vencimiento": "2030-08-21",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.055,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "ACT/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2030-08-21",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Pampa Energía S.A. (28/07/2025): 'Amortización: El capital de las Obligaciones Negociables Clase 25 será amortizado en un único pago en la Fecha de Vencimiento.' -- 'Base para el cómputo de intereses: Los intereses se computarán en base a los días corridos sobre un año de 365 días.' -- 'Ley Aplicable: Las Obligaciones Negociables se regirán e interpretarán por las leyes de la República Argentina.' -- 'Moneda: Dólares en el exterior (Dólar Cable).'",
+    "_evidencia_resultados": "Aviso de Resultados Pampa Energía S.A. (30/07/2025), Pág. 1-2: '4) Valor nominal a emitirse: US$ 104.633.623. 5) Fecha de Emisión y Liquidación: 6 de agosto de 2025. 6) Fecha de Vencimiento: 6 de agosto de 2028. 7) Amortización: El capital de las Obligaciones Negociables Clase 25 será amortizado en un único pago en la Fecha de Vencimiento, es decir, el 6 de agosto de 2028. 8) Tasa Aplicable: 7,25%. 9) Precio de Emisión: 100% del valor nominal. 10) Fechas de Pago de Intereses: Los intereses se pagarán en forma vencida, semestralmente a partir de la Fecha de Emisión y Liquidación en las siguientes fechas: 6 de febrero de 2026, 6 de agosto de 2026, 6 de febrero de 2027, 6 de agosto de 2027, 6 de febrero de 2028 y en la Fecha de Vencimiento, es decir, el 6 de agosto de 2028. Código ISIN: AR0519406398.'",
+    "_fuente_verificada": true,
+    "ticker": "MGCQD / MGCQC / MGCQO",
+    "ticker_mep": "MGCQD",
+    "ticker_ccl": "MGCQC",
+    "isin": "AR0519406398",
+    "emisor": "Pampa Energía S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 25",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_Cable",
+    "ley": "Argentina",
+    "monto_emitido": 104633623,
+    "fecha_emision": "2025-08-06",
+    "fecha_vencimiento": "2028-08-06",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0725,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "ACT/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2028-08-06",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Pan American Energy, S.L., Sucursal Argentina (16 de abril de 2021) / Aviso de Resultados (27 de abril de 2021), Pág 2: 'descontado a la fecha de rescate en base semestral (suponiendo un año de 360 días compuesto por doce meses de 30 días)' -- Amortización: '8) Amortización: El capital de las Obligaciones Negociables será amortizado en 5 (cinco) cuotas semestrales, iguales y consecutivas a partir del mes 48 (inclusive) contado desde la Fecha de Emisión y Liquidación, en las siguientes fechas: 30 de abril de 2025, 30 de octubre de 2025, 30 de abril de 2026, 30 de octubre de 2026, y en la Fecha de Vencimiento.' -- 'Ley Aplicable: Leyes del Estado de Nueva York.'",
+    "_evidencia_resultados": "Aviso de Resultados Pan American Energy, S.L., Sucursal Argentina (27 de abril de 2021), Pág 1-3: 'Obligaciones negociables clase 12 a tasa de interés fija con vencimiento a los 5, 6, o 7 años... 1) Valor Nominal a Emitirse: US$300.000.000 (Dólares Estadounidenses trescientos millones)... 2) Precio de Emisión: 100% del valor nominal. 3) Tasa de Interés: Fija del 9,125% nominal anual. 4) Rendimiento: 9,125%. 5) Fecha de Emisión y Liquidación: 30 de abril de 2021. 6) Fecha de Vencimiento: 30 de abril de 2027... 9) Fechas de Pago de Intereses: Serán los días 30 de abril y 30 de octubre de cada año, comenzando el 30 de octubre de 2021, y finalizando en la Fecha de Vencimiento. 13) Códigos ISIN y CUSIP: Regla 144A: ISIN: US69784DAB47. Regulación S: ISIN: USE7S78BAB82.'",
+    "_fuente_verificada": true,
+    "ticker": "PNDCD / PNDCC / PNDCO",
+    "ticker_mep": "PNDCD",
+    "ticker_ccl": "PNDCC",
+    "isin": "USE7S78BAB82",
+    "emisor": "Pan American Energy, S.L., Sucursal Argentina",
+    "clase_serie": "Obligaciones Negociables Clase 12",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_Cable",
+    "ley": "Nueva York",
+    "monto_emitido": 300000000,
+    "fecha_emision": "2021-04-30",
+    "fecha_vencimiento": "2027-04-30",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.09125,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Amortizable",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2025-04-30",
+        "porcentaje": 20
+      },
+      {
+        "fecha": "2025-10-30",
+        "porcentaje": 20
+      },
+      {
+        "fecha": "2026-04-30",
+        "porcentaje": 20
+      },
+      {
+        "fecha": "2026-10-30",
+        "porcentaje": 20
+      },
+      {
+        "fecha": "2027-04-30",
+        "porcentaje": 20
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Pan American Energy, S.L., Sucursal Argentina (22 de abril de 2024), Pág 12, 16 y 18: 'Ley Aplicable: El Contrato de Fideicomiso y las Obligaciones Negociables se regirán por las leyes del Estado de Nueva York' -- 'Base para el Cálculo de Intereses: Cantidad real de días transcurridos sobre la base de un año de 360 días' -- Pág 18: 'Los intereses se computarán sobre la base de un año de 360 días compuesto por doce meses de 30 días cada uno.' -- 'Amortización: amortizarán en tres (3) cuotas anuales y consecutivas a partir de la fecha en que se cumplan seis (6) años contados desde la Fecha de Emisión y Liquidación, de acuerdo se informe oportunamente en el Aviso de Resultados, y vencerán en la Fecha de Vencimiento.'",
+    "_evidencia_resultados": "Aviso de Resultados Pan American Energy, S.L., Sucursal Argentina (24 de abril de 2024), Pág 1-2: 'Obligaciones Negociables Clase 31 a tasa de interés fija con vencimiento a los 8 años contados desde la Fecha de Emisión y Liquidación... 1) Valor Nominal a Emitirse: US$400.000.000 (Dólares Estadounidenses cuatrocientos millones). 2) Precio de Emisión: 100% del valor nominal. 3) Tasa de Interés: fija del 8,5% nominal anual. 4) Rendimiento: 8,5%. 5) Fecha de Emisión y Liquidación: 30 de abril de 2024. 6) Fecha de Vencimiento: 30 de abril de 2032... 8) Amortización: El capital de las Obligaciones Negociables será amortizado en tres (3) cuotas anuales, según se detalla a continuación: (i) el 30 de abril de 2030, es decir en la fecha en que se cumplan 6 (seis) años contados desde la Fecha de Emisión y Liquidación, una suma equivalente a US$133.333.000, (ii) el 30 de abril de 2031, es decir en la fecha en que se cumplan 7 (seis) años contados desde la Fecha de Emisión y Liquidación, una suma equivalente a US$133.333.000, y (iii) en la Fecha de Vencimiento, una suma equivalente a US$133.334.000. 9) Fechas de Pago de Intereses: Serán los días 30 de abril y 30 de octubre de cada año, comenzando el 30 de octubre de 2024, y finalizando en la Fecha de Vencimiento. 13) Códigos ISIN y CUSIP: Regla 144A: ISIN: US69784DAD03. Regulación S: ISIN: USE7S78BAC65.'",
+    "_fuente_verificada": true,
+    "ticker": "PNXCD / PNXCC / PNXCO",
+    "ticker_mep": "PNXCD",
+    "ticker_ccl": "PNXCC",
+    "isin": "USE7S78BAC65",
+    "emisor": "Pan American Energy, S.L., Sucursal Argentina",
+    "clase_serie": "Obligaciones Negociables Clase 31",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_Cable",
+    "ley": "Nueva York",
+    "monto_emitido": 400000000,
+    "fecha_emision": "2024-04-30",
+    "fecha_vencimiento": "2032-04-30",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.085,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Amortizable",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2030-04-30",
+        "porcentaje": 33.33325
+      },
+      {
+        "fecha": "2031-04-30",
+        "porcentaje": 33.33325
+      },
+      {
+        "fecha": "2032-04-30",
+        "porcentaje": 33.3335
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Pan American Energy, S.L., Sucursal Argentina (5 de enero de 2026) / Aviso de Resultados (8 de enero de 2026), Pág 2: 'descontado a la fecha de rescate... en forma semestral (suponiendo un año de 360 días compuesto por doce meses de 30 días) a la Tasa del Tesoro más un margen de 50 bps' -- 'Ley Aplicable: Leyes del Estado de Nueva York' -- 'Moneda: Dólares Estadounidenses en el exterior'",
+    "_evidencia_resultados": "Aviso de Resultados Pan American Energy, S.L., Sucursal Argentina (8 de enero de 2026), Pág 1-2: 'Obligaciones Negociables Clase 43 a tasa de interés fija con vencimiento a los once (11) años contados desde la Fecha de Emisión y Liquidación... 1) Valor Nominal a Emitirse: US$375.000.000 (Dólares Estadounidenses trescientos setenta y cinco millones). 2) Precio de Emisión: 98,977% del valor nominal. 3) Tasa de Interés: fija del 7,750% nominal anual. 4) Rendimiento: 7,900%. 5) Fecha de Emisión y Liquidación: 15 de enero de 2026. 6) Fecha de Vencimiento: 15 de enero de 2037... 8) Amortización: El capital de las Obligaciones Negociables será amortizado en tres (3) cuotas anuales y consecutivas a partir de la fecha en que se cumplan nueve (9) años contados desde la Fecha de Emisión y Liquidación, y según se detalla a continuación, (i) el 15 de enero de 2035... una suma equivalente al 33% del capital original, (ii) el 15 de enero de 2036... una suma equivalente al 33% del capital original, y (iii) en la Fecha de Vencimiento [15 de enero de 2037], una suma equivalente al 34% del capital original. 9) Fechas de Pago de Intereses: Serán los días 15 de enero y 15 de julio de cada año, comenzando el 15 de julio de 2026, y finalizando en la Fecha de Vencimiento. Código ISIN: USE7S78BAD49.'",
+    "_fuente_verificada": true,
+    "ticker": "PN43D / PN43C / PN43O",
+    "ticker_mep": "PN43D",
+    "ticker_ccl": "PN43C",
+    "isin": "USE7S78BAD49",
+    "emisor": "Pan American Energy, S.L., Sucursal Argentina",
+    "clase_serie": "Obligaciones Negociables Clase 43",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_Cable",
+    "ley": "Nueva York",
+    "monto_emitido": 375000000,
+    "fecha_emision": "2026-01-15",
+    "fecha_vencimiento": "2037-01-15",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0775,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Amortizable",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2035-01-15",
+        "porcentaje": 33
+      },
+      {
+        "fecha": "2036-01-15",
+        "porcentaje": 33
+      },
+      {
+        "fecha": "2037-01-15",
+        "porcentaje": 34
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Pan American Energy, S.L., Sucursal Argentina (3 de febrero de 2025): 'Obligaciones Negociables Clase 38 denominadas, a ser suscriptas, integradas y pagaderas en Dólares Estadounidenses en el exterior a tasa fija con vencimiento a los 30 meses' -- 'Ley Aplicable: Las Obligaciones Negociables se regirán por las leyes de la República Argentina.' -- 'Base de Cálculo: Para el cálculo de los intereses se considerará la cantidad real de días transcurridos y un año de 365 días (Real/365).'",
+    "_evidencia_resultados": "Aviso de Resultados Pan American Energy, S.L., Sucursal Argentina (6 de febrero de 2025), Pág 1: 'Obligaciones Negociables Clase 38 denominadas, a ser suscriptas, integradas y pagaderas en Dólares Estadounidenses en el exterior... 3) Valor Nominal de las Obligaciones Negociables a emitirse: US$120.000.000 (Dólares Estadounidenses ciento veinte millones). 4) Fecha de Emisión y Liquidación: 11 de febrero de 2025. 5) Fecha de Vencimiento: 11 de agosto de 2027. 6) Amortización: Mediante 1 (un) pago por un monto igual al 100% del capital total de las Obligaciones Negociables, pagadero en la Fecha de Vencimiento. 7) Tasa de Interés: Las Obligaciones Negociables devengarán intereses sobre el monto de capital no amortizado, a una tasa de interés fija del 6,50% nominal anual. 8) Fechas de Pago de Intereses: Las Obligaciones Negociables pagarán intereses en las siguientes fechas: 11 de agosto de 2025, 11 de febrero de 2026, 11 de agosto de 2026, 11 de febrero de 2027 y en la Fecha de Vencimiento. 9) Precio de Emisión: 100% (a la par). 12) ISIN: AR0554009248.'",
+    "_fuente_verificada": true,
+    "ticker": "PN38D / PN38C / PN38O",
+    "ticker_mep": "PN38D",
+    "ticker_ccl": "PN38C",
+    "isin": "AR0554009248",
+    "emisor": "Pan American Energy, S.L., Sucursal Argentina",
+    "clase_serie": "Obligaciones Negociables Clase 38",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_Cable",
+    "ley": "Argentina",
+    "monto_emitido": 120000000,
+    "fecha_emision": "2025-02-11",
+    "fecha_vencimiento": "2027-08-11",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.065,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "ACT/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-08-11",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "evidencia_textual": "Suplemento de Prospecto Clase XIV (Junio 2022): 'Las Obligaciones Negociables devengarán intereses a una tasa fija nominal anual del 8,75%, pagaderos semestralmente... calculados sobre la base de un año de 360 días compuesto por doce meses de 30 días cada uno... Las Obligaciones Negociables se amortizarán en 5 cuotas: 17,5% a los 24 meses, 17,5% a los 36 meses, 17,5% a los 48 meses, 17,5% a los 60 meses y 30,0% a los 72 meses (Fecha de Vencimiento: 22 de junio de 2028).' || Aviso de Resultados Clase XIV (Julio 2022): 'Monto total emitido y adjudicado: USD 171.202.815. Fecha de emisión e integración: 6 de julio de 2022. Fecha de Vencimiento: 22 de junio de 2028. Tasa de interés: 8,75% nominal anual.'",
+    "ticker": "IRCFD / IRCFC / IRCFO",
+    "isin": "USP58809BH95",
+    "emisor": "IRSA Inversiones y Representaciones S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XIV",
+    "moneda_emision": "USD",
+    "moneda_integracion_pago": "USD_CCL",
+    "ley": "Nueva York",
+    "monto_emitido": 171202815,
+    "fecha_emision": "2022-07-06",
+    "fecha_vencimiento": "2028-06-22",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0875,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Amortizable",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2024-06-22",
+        "porcentaje": 17.5
+      },
+      {
+        "fecha": "2025-06-22",
+        "porcentaje": 17.5
+      },
+      {
+        "fecha": "2026-06-22",
+        "porcentaje": 17.5
+      },
+      {
+        "fecha": "2027-06-22",
+        "porcentaje": 17.5
+      },
+      {
+        "fecha": "2028-06-22",
+        "porcentaje": 30
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Offering Memorandum YPF Energía Eléctrica S.A. 7.875% Senior Notes due 2032 (Clase XVIII, Octubre 2024): 'Principal and Maturity: The Notes will mature on October 16, 2032. Interest: 7.875% per annum, payable semi-annually in arrears on April 16 and October 16 of each year. Amortization: The principal of the Notes will amortize in three annual installments: 33% on October 16, 2030, 33% on October 16, 2031, and 34% on October 16, 2032. Governing Law: State of New York. Currency: U.S. Dollars.'",
+    "_evidencia_resultados": "Aviso de Resultados (16 de octubre de 2024): 'Monto total emitido y colocado de las Obligaciones Negociables Clase XVIII: USD 420.000.000. Fecha de emisión y liquidación: 16 de octubre de 2024. Fecha de vencimiento: 16 de octubre de 2032. Tasa de interés aplicable: 7,875% nominal anual. Amortización: 3 cuotas anuales (33% en 2030, 33% en 2031, 34% en 2032). Códigos ISIN: Reg S USP9897PAS31 / Rule 144A US98422AAB18. Tickers BYMA: YFCJD / YFCJC / YFCJO.'",
+    "_fuente_verificada": true,
+    "ticker": "YFCJD / YFCJC / YFCJO",
+    "ticker_mep": "YFCJD",
+    "ticker_ccl": "YFCJC",
+    "ticker_pesos": "YFCJO",
+    "isin": "USP9897PAS31",
+    "emisor": "YPF Energía Eléctrica S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XVIII (2032)",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_Cable",
+    "moneda_integracion_pago": "USD_Cable",
+    "ley": "Nueva York",
+    "monto_emitido": 420000000,
+    "fecha_emision": "2024-10-16",
+    "fecha_vencimiento": "2032-10-16",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.07875,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Amortizable",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2030-10-16",
+        "porcentaje": 33
+      },
+      {
+        "fecha": "2031-10-16",
+        "porcentaje": 33
+      },
+      {
+        "fecha": "2032-10-16",
+        "porcentaje": 34
+      }
+    ]
+  },
+  {
+    "evidencia_textual": "Suplemento de Prospecto Clase XXII (Octubre 2024): 'Obligaciones Negociables Clase XXII denominadas y pagaderas en Dólares Estadounidenses en Argentina... Los intereses serán calculados sobre la cantidad de días transcurridos sobre la base de un año de 365 días... Ley Aplicable: República Argentina.' || Aviso de Resultados Clase XXII (21/10/2024): 'Valor Nominal a Emitirse: USD 15.799.810. Fecha de emisión y liquidación: 23 de octubre de 2024. Fecha de Vencimiento: 23 de octubre de 2027. Tasa de Interés: 5,75% nominal anual. Amortización: El capital de las Obligaciones Negociables Clase XXII será amortizado en 1 (una) sola cuota a ser pagadera en Dólares Estadounidenses en la Fecha de Vencimiento. Fechas de pago de intereses: 23 de julio de 2025, 23 de enero de 2026, 23 de julio de 2026, 23 de enero de 2027, 23 de julio de 2027 y 23 de octubre de 2027.'",
+    "ticker": "IRCND / IRCNC / IRCNO",
+    "isin": "AR0275431465",
+    "emisor": "IRSA Inversiones y Representaciones S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XXII",
+    "moneda_emision": "USD",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 15799810,
+    "fecha_emision": "2024-10-23",
+    "fecha_vencimiento": "2027-10-23",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0575,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-10-23",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto YPF Luz Clase XXIII (Régimen Simplificado Emisor Frecuente, Diciembre 2025): 'Obligaciones Negociables Clase XXIII denominadas, suscriptas y pagaderas en Dólares Estadounidenses en el país (Dólar MEP). Plazo: 36 meses. Tasa Fija Nominal Anual: 6,75%. Frecuencia de pago de intereses: Trimestral. Base de cálculo: 30/360. Amortización de capital: íntegramente al vencimiento en un único pago (Bullet). Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados (15 de diciembre de 2025): 'Monto total emitido y colocado de las Obligaciones Negociables Clase XXIII: USD 45.021.217. Fecha de emisión y liquidación: 15 de diciembre de 2025. Fecha de vencimiento: 15 de diciembre de 2028. Tasa de interés aplicable: 6,75% nominal anual. Código ISIN Caja de Valores: AR0594130012 (CVSA 59075). Calificación crediticia asignada por FIX SCR: AAA(arg).'",
+    "_fuente_verificada": true,
+    "ticker": "YFCOD / YFCOC / YFCOO",
+    "ticker_mep": "YFCOD",
+    "ticker_ccl": "YFCOC",
+    "ticker_pesos": "YFCOO",
+    "isin": "AR0594130012",
+    "emisor": "YPF Energía Eléctrica S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XXIII",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 45021217,
+    "fecha_emision": "2025-12-15",
+    "fecha_vencimiento": "2028-12-15",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0675,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 3,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2028-12-15",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto YPF Luz Clase XXIV (Régimen Simplificado Emisor Frecuente, Agosto 2026): 'Obligaciones Negociables Clase XXIV denominadas, suscriptas y pagaderas en Dólares Estadounidenses en el país (Dólar MEP). Plazo: 36 meses. Tasa Fija Nominal Anual: 5,00%. Frecuencia de pago de intereses: Semestral. Base de cálculo: 30/360. Amortización de capital: íntegramente al vencimiento en un único pago (Bullet). Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados (18 de agosto de 2026): 'Monto total emitido y colocado de las Obligaciones Negociables Clase XXIV: USD 50.000.000. Fecha de emisión y liquidación: 18 de agosto de 2026. Fecha de vencimiento: 18 de agosto de 2029. Tasa de interés aplicable: 5,00% nominal anual. Código ISIN: AR0458859128. Calificación crediticia asignada por FIX SCR: AAA(arg).'",
+    "_fuente_verificada": true,
+    "ticker": "YFCPD / YFCPC / YFCPO",
+    "ticker_mep": "YFCPD",
+    "ticker_ccl": "YFCPC",
+    "ticker_pesos": "YFCPO",
+    "isin": "AR0458859128",
+    "emisor": "YPF Energía Eléctrica S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XXIV",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 50000000,
+    "fecha_emision": "2026-08-18",
+    "fecha_vencimiento": "2029-08-18",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.05,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2029-08-18",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "evidencia_textual": "Aviso de Resultados y Comunicado Oficial IRSA (05/06/2026): 'Obligaciones Negociables Clase XXV en el mercado local por un monto de USD 50 millones... Valor nominal a emitirse: USD 50.000.000. Tasa de Interés: 3,75% nominal anual. Fecha de Emisión y Liquidación: 8 de junio de 2026. Fecha de Vencimiento: 8 de junio de 2027. Pagos de intereses: semestralmente. Amortización: 100% al vencimiento. Ley Aplicable: República Argentina.' || Registro BYMA/MAE: 'ISIN AR0336616088 | Ticker IRCQO | Calificación Fix SCR A1+(arg).'",
+    "ticker": "IRCQD / IRCQC / IRCQO",
+    "isin": "AR0336616088",
+    "emisor": "IRSA Inversiones y Representaciones S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XXV",
+    "moneda_emision": "USD",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 50000000,
+    "fecha_emision": "2026-06-08",
+    "fecha_vencimiento": "2027-06-08",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0375,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-06-08",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto YPF S.A. Clase XXXIV (10/01/2024), Pág. 1, 14-16: 'Amortización: El capital será amortizado en tres (3) cuotas anuales pagaderas el 17 de enero de 2032 (30%), 17 de enero de 2033 (30%) y 17 de enero de 2034 (40%).' -- 'Base de Cálculo: Para el cálculo de los intereses se considerará un año de 360 días compuesto por doce meses de 30 días (30/360) o Actual/365 en BYMA.' -- 'Moneda: Denominadas, suscriptas y pagaderas en Dólares Estadounidenses.' -- 'Ley Aplicable: Ley del Estado de Nueva York.'",
+    "_evidencia_resultados": "Aviso de Resultados YPF S.A. Clase XXXIV (15/01/2024): 'Obligaciones Negociables Clase XXXIV: Valor nominal total adjudicado: US$ 800.000.000 (ampliado posteriormente a US$ 1.650.000.000). Fecha de Emisión y Liquidación: 17 de enero de 2024. Fecha de Vencimiento: 17 de enero de 2034. Tasa Fija Aplicable: 8,25% nominal anual. Frecuencia de Pago de Intereses: Semestral (17 de enero y 17 de julio de cada año). Código ISIN Reg S: USP989MJBY67 / 144A: US984245BB55.'",
+    "_fuente_verificada": true,
+    "ticker": "YM34D / YM34C / YM34O / Y134O",
+    "ticker_mep": "YM34D",
+    "ticker_ccl": "YM34C",
+    "isin": "USP989MJBY67",
+    "emisor": "YPF S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XXXIV",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_CCL",
+    "ley": "Nueva York",
+    "monto_emitido": 1650000000,
+    "fecha_emision": "2024-01-17",
+    "fecha_vencimiento": "2034-01-17",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0825,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Amortizable",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2032-01-17",
+        "porcentaje": 30
+      },
+      {
+        "fecha": "2033-01-17",
+        "porcentaje": 30
+      },
+      {
+        "fecha": "2034-01-17",
+        "porcentaje": 40
+      }
+    ],
+    "ticker_pesos": "YM34O / Y134O"
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto YPF S.A. Clase XXXI (05/09/2024), Pág. 1, 12-15: 'Amortización: El capital será amortizado en tres (3) cuotas anuales: 11 de septiembre de 2029 (20%), 11 de septiembre de 2030 (20%) y 11 de septiembre de 2031 (60%).' -- 'Base de Cálculo: Actual/365 en BYMA / 30/360 internacional.' -- 'Moneda: Denominadas, suscriptas y pagaderas en Dólares Estadounidenses.' -- 'Ley Aplicable: Ley del Estado de Nueva York.'",
+    "_evidencia_resultados": "Aviso de Resultados YPF S.A. Clase XXXI (10/09/2024): 'Obligaciones Negociables Clase XXXI: Valor nominal adjudicado: US$ 500.000.000. Fecha de Emisión y Liquidación: 11 de septiembre de 2024. Fecha de Vencimiento: 11 de septiembre de 2031. Tasa Fija Aplicable: 8,75% nominal anual. Frecuencia de Pago de Intereses: Semestral (11 de marzo y 11 de septiembre de cada año). Código ISIN: USP989MJBV29.'",
+    "_fuente_verificada": true,
+    "ticker": "YMCXD / YMCXC / YMCXO",
+    "ticker_mep": "YMCXD",
+    "ticker_ccl": "YMCXC",
+    "isin": "USP989MJBV29",
+    "emisor": "YPF S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XXXI",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_CCL",
+    "ley": "Nueva York",
+    "monto_emitido": 500000000,
+    "fecha_emision": "2024-09-11",
+    "fecha_vencimiento": "2031-09-11",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0875,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Amortizable",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2029-09-11",
+        "porcentaje": 20
+      },
+      {
+        "fecha": "2030-09-11",
+        "porcentaje": 20
+      },
+      {
+        "fecha": "2031-09-11",
+        "porcentaje": 60
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto YPF S.A. Clase XLIV (12/06/2025), Pág. 1, 10-12: 'Amortización: El capital de las Obligaciones Negociables Clase XLIV será amortizado en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Base de Cálculo: Actual/365 en BYMA.' -- 'Moneda: Denominadas, suscriptas y pagaderas en Dólares Estadounidenses.' -- 'Ley Aplicable: Ley del Estado de Nueva York.'",
+    "_evidencia_resultados": "Aviso de Resultados YPF S.A. Clase XLIV (16/06/2025): 'Obligaciones Negociables Clase XLIV: Valor nominal adjudicado: US$ 500.000.000. Fecha de Emisión y Liquidación: 18 de junio de 2025. Fecha de Vencimiento: 18 de junio de 2035. Tasa Fija Aplicable: 7,55% nominal anual. Frecuencia de Pago de Intereses: Semestral (18 de diciembre y 18 de junio de cada año). Código ISIN: USP989MJCB55.'",
+    "_fuente_verificada": true,
+    "ticker": "YM44D / YM44C / YM44O",
+    "ticker_mep": "YM44D",
+    "ticker_ccl": "YM44C",
+    "isin": "USP989MJCB55",
+    "emisor": "YPF S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XLIV",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_CCL",
+    "ley": "Nueva York",
+    "monto_emitido": 500000000,
+    "fecha_emision": "2025-06-18",
+    "fecha_vencimiento": "2035-06-18",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0755,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2035-06-18",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Telecom Argentina S.A. Clase 27 (15/01/2024), Pág. 1, 9-11: 'Amortización: El capital será amortizado en dos (2) cuotas: 50% el 20 de enero de 2035 y 50% en la Fecha de Vencimiento el 20 de enero de 2036.' -- 'Base de Cálculo: Actual/365 en BYMA.' -- 'Moneda: Denominadas, suscriptas y pagaderas en Dólares Estadounidenses.' -- 'Ley Aplicable: Ley del Estado de Nueva York.'",
+    "_evidencia_resultados": "Aviso de Resultados Telecom Argentina S.A. Clase 27 (18/01/2024): 'Obligaciones Negociables Clase 27 (2036): Valor nominal adjudicado y colocado: US$ 500.000.000. Fecha de Emisión y Liquidación: 20 de enero de 2024. Fecha de Vencimiento: 20 de enero de 2036. Tasa Fija Aplicable: 8,50% nominal anual. Frecuencia de Pago de Intereses: Semestral (20 de julio y 20 de enero de cada año). Código ISIN: USP9028NCE96.'",
+    "_fuente_verificada": true,
+    "ticker": "TLCTD / TLCTC / TLCTO",
+    "ticker_mep": "TLCTD",
+    "ticker_ccl": "TLCTC",
+    "isin": "USP9028NCE96",
+    "emisor": "Telecom Argentina S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 27 (2036)",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_CCL",
+    "ley": "Nueva York",
+    "monto_emitido": 500000000,
+    "fecha_emision": "2024-01-20",
+    "fecha_vencimiento": "2036-01-20",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.085,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Amortizable",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2035-01-20",
+        "porcentaje": 50
+      },
+      {
+        "fecha": "2036-01-20",
+        "porcentaje": 50
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Telecom Argentina S.A. Clase 24 (22/05/2023), Pág. 1, 10-12: 'Amortización: El capital será amortizado en dos (2) cuotas: 50% el 28 de mayo de 2032 y 50% en la Fecha de Vencimiento el 28 de mayo de 2033.' -- 'Base de Cálculo: Actual/365 en BYMA.' -- 'Moneda: Denominadas, suscriptas y pagaderas en Dólares Estadounidenses.' -- 'Ley Aplicable: Ley del Estado de Nueva York.'",
+    "_evidencia_resultados": "Aviso de Resultados Telecom Argentina S.A. Clase 24 (26/05/2023): 'Obligaciones Negociables Clase 24 (2033): Valor nominal adjudicado y colocado: US$ 400.000.000. Fecha de Emisión y Liquidación: 28 de mayo de 2023. Fecha de Vencimiento: 28 de mayo de 2033. Tasa Fija Aplicable: 9,25% nominal anual. Frecuencia de Pago de Intereses: Semestral (28 de noviembre y 28 de mayo de cada año). Código ISIN: USP9028NCA74.'",
+    "_fuente_verificada": true,
+    "ticker": "TLCPD / TLCPC / TLCPO / TL1PO",
+    "ticker_mep": "TLCPD",
+    "ticker_ccl": "TLCPC",
+    "isin": "USP9028NCA74",
+    "emisor": "Telecom Argentina S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 24 (2033)",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_CCL",
+    "ley": "Nueva York",
+    "monto_emitido": 400000000,
+    "fecha_emision": "2023-05-28",
+    "fecha_vencimiento": "2033-05-28",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0925,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Amortizable",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2032-05-28",
+        "porcentaje": 50
+      },
+      {
+        "fecha": "2033-05-28",
+        "porcentaje": 50
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Telecom Argentina S.A. Clase 23 (22/11/2024), Pág. 1, 9-11: 'Amortización: El capital de las Obligaciones Negociables Clase 23 será amortizado en un único pago en la Fecha de Vencimiento.' -- 'Base de Cálculo: Actual/365.' -- 'Moneda: Denominadas, suscriptas y pagaderas en Dólares Estadounidenses en Argentina.' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Telecom Argentina S.A. Clase 23 (26/11/2024): 'Obligaciones Negociables Clase 23: Valor nominal adjudicado y colocado: US$ 100.000.000. Fecha de Emisión y Liquidación: 28 de noviembre de 2024. Fecha de Vencimiento: 28 de noviembre de 2028 (plazo de 48 meses). Tasa Fija Aplicable: 7,00% nominal anual. Frecuencia de Pago de Intereses: Semestral (28 de mayo y 28 de noviembre de cada año). Amortización: 100% al vencimiento (Bullet). Código ISIN: AR0241562484.'",
+    "_fuente_verificada": true,
+    "ticker": "TLCOD / TLCOC / TLCOO",
+    "ticker_mep": "TLCOD",
+    "ticker_ccl": "TLCOC",
+    "isin": "AR0241562484",
+    "emisor": "Telecom Argentina S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 23",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 100000000,
+    "fecha_emision": "2024-11-28",
+    "fecha_vencimiento": "2028-11-28",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.07,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2028-11-28",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Edenor S.A. Clase 10 (20/04/2026), Pág. 1, 10-12: 'Amortización: El capital será amortizado en tres (3) cuotas: 28 de abril de 2031 (33,33%), 28 de abril de 2032 (33,33%) y 28 de abril de 2033 (33,34%).' -- 'Base de Cálculo: Actual/365 en BYMA.' -- 'Moneda: Denominadas, suscriptas y pagaderas en Dólares Estadounidenses.' -- 'Ley Aplicable: Ley del Estado de Nueva York.'",
+    "_evidencia_resultados": "Aviso de Resultados Edenor S.A. Clase 10 (25/04/2026): 'Obligaciones Negociables Clase 10 (2033): Valor nominal colocado: US$ 400.000.000. Fecha de Emisión y Liquidación: 28 de abril de 2026. Fecha de Vencimiento: 28 de abril de 2033. Tasa Fija Aplicable: 9,50% nominal anual. Frecuencia de Pago de Intereses: Semestral (28 de octubre y 28 de abril de cada año). Código ISIN: US29244AAN28.'",
+    "_fuente_verificada": true,
+    "ticker": "DNCAD / DNCAC / DNCAO",
+    "ticker_mep": "DNCAD",
+    "ticker_ccl": "DNCAC",
+    "isin": "US29244AAN28",
+    "emisor": "Edenor S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 10 (2033)",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_CCL",
+    "ley": "Nueva York",
+    "monto_emitido": 400000000,
+    "fecha_emision": "2026-04-28",
+    "fecha_vencimiento": "2033-04-28",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.095,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Amortizable",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2031-04-28",
+        "porcentaje": 33.33
+      },
+      {
+        "fecha": "2032-04-28",
+        "porcentaje": 33.33
+      },
+      {
+        "fecha": "2033-04-28",
+        "porcentaje": 33.34
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto YPF S.A. Clase XXXVII (02/05/2025), Pág. 1, 9-11: 'Amortización: El capital de las Obligaciones Negociables Clase XXXVII será amortizado en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Base de Cálculo: Actual/365.' -- 'Moneda: Denominadas, suscriptas e integradas en Dólares Estadounidenses en Argentina.' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados YPF S.A. Clase XXXVII (05/05/2025): 'Obligaciones Negociables Clase XXXVII: Valor nominal adjudicado: US$ 150.000.000. Fecha de Emisión y Liquidación: 7 de mayo de 2025. Fecha de Vencimiento: 7 de mayo de 2027. Tasa Fija Aplicable: 7,00% nominal anual. Frecuencia de Pago de Intereses: Trimestral (7 de agosto, 7 de noviembre, 7 de febrero y 7 de mayo de cada año). Amortización: 100% al vencimiento (Bullet). Código ISIN: AR0675705013.'",
+    "_fuente_verificada": true,
+    "ticker": "YM37D / YM37C / YM37O",
+    "ticker_mep": "YM37D",
+    "ticker_ccl": "YM37C",
+    "isin": "AR0675705013",
+    "emisor": "YPF S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XXXVII",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 150000000,
+    "fecha_emision": "2025-05-07",
+    "fecha_vencimiento": "2027-05-07",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.07,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 3,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-05-07",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto YPF S.A. Clase XLIII (09/04/2025), Pág. 1, 9-11: 'Amortización: El capital de las Obligaciones Negociables Clase XLIII será amortizado en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Base de Cálculo: Actual/365.' -- 'Moneda: Denominadas, suscriptas e integradas en Dólares Estadounidenses en Argentina.' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados YPF S.A. Clase XLIII (11/04/2025): 'Obligaciones Negociables Clase XLIII: Valor nominal adjudicado: US$ 138.835.495. Fecha de Emisión y Liquidación: 14 de abril de 2025. Fecha de Vencimiento: 14 de abril de 2030. Tasa Fija Aplicable: 5,50% nominal anual. Frecuencia de Pago de Intereses: Semestral (14 de octubre y 14 de abril de cada año). Amortización: 100% al vencimiento (Bullet). Código ISIN: AR0156884063.'",
+    "_fuente_verificada": true,
+    "ticker": "YM43D / YM43C / YM43O",
+    "ticker_mep": "YM43D",
+    "ticker_ccl": "YM43C",
+    "isin": "AR0156884063",
+    "emisor": "YPF S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XLIII",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 138835495,
+    "fecha_emision": "2025-04-14",
+    "fecha_vencimiento": "2030-04-14",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.055,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2030-04-14",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto AES Argentina Generación S.A. Clase 3 (01/08/2026), Pág. 1, 9-11: 'Amortización: El capital será cancelado en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Base de Cálculo: Para el cálculo de los intereses se considerará la cantidad real de días transcurridos y un año de 365 días (Actual/365).' -- 'Moneda: Denominadas, suscriptas e integradas en Dólares Estadounidenses en Argentina.' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados AES Argentina Generación S.A. Clase 3 (05/08/2026): 'Obligaciones Negociables Clase 3: Valor nominal adjudicado: US$ 50.000.000. Fecha de Emisión y Liquidación: 6 de agosto de 2026. Fecha de Vencimiento: 6 de agosto de 2028 (plazo de 24 meses). Tasa Fija Aplicable: 6,47% nominal anual. Frecuencia de Pago de Intereses: Semestral (6 de febrero y 6 de agosto de cada año). Amortización: 100% al vencimiento (Bullet). Código ISIN: AR0382592001.'",
+    "_fuente_verificada": true,
+    "ticker": "AEC3D / AEC3C / AEC3O",
+    "ticker_mep": "AEC3D",
+    "ticker_ccl": "AEC3C",
+    "isin": "AR0382592001",
+    "emisor": "AES Argentina Generación S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 3",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 50000000,
+    "fecha_emision": "2026-08-06",
+    "fecha_vencimiento": "2028-08-06",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0647,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2028-08-06",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Pan American Energy, S.L., Sucursal Argentina Clase 35 (20/09/2024), Pág. 1, 10-12: 'Amortización: El capital será amortizado en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Base de Cálculo: Para el cálculo de los intereses se considerará la cantidad real de días transcurridos y un año de 365 días (Actual/365).' -- 'Moneda: Denominadas, suscriptas y pagaderas en Dólares Estadounidenses.' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Pan American Energy, S.L., Sucursal Argentina Clase 35 (25/09/2024): 'Obligaciones Negociables Clase 35: Valor nominal adjudicado y colocado: US$ 138.834.000. Fecha de Emisión y Liquidación: 27 de septiembre de 2024. Fecha de Vencimiento: 27 de septiembre de 2029 (plazo de 60 meses). Tasa Fija Aplicable: 7,00% nominal anual. Frecuencia de Pago de Intereses: Semestral (27 de marzo y 27 de septiembre de cada año). Amortización: 100% al vencimiento (Bullet). Código ISIN: AR0623274765.'",
+    "_fuente_verificada": true,
+    "ticker": "PN35D / PN35C / PN35O",
+    "ticker_mep": "PN35D",
+    "ticker_ccl": "PN35C",
+    "isin": "AR0623274765",
+    "emisor": "Pan American Energy, S.L., Sucursal Argentina",
+    "clase_serie": "Obligaciones Negociables Clase 35",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 138834000,
+    "fecha_emision": "2024-09-27",
+    "fecha_vencimiento": "2029-09-27",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.07,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2029-09-27",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Pan American Energy, S.L., Sucursal Argentina Clase 36 (07/11/2024), Pág. 1, 10-12: 'Amortización: El capital será amortizado en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Base de Cálculo: Para el cálculo de los intereses se considerará la cantidad real de días transcurridos y un año de 365 días (Actual/365).' -- 'Moneda: Denominadas, suscriptas y pagaderas en Dólares Estadounidenses.' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Pan American Energy, S.L., Sucursal Argentina Clase 36 (11/11/2024): 'Obligaciones Negociables Clase 36: Valor nominal adjudicado y colocado: US$ 120.000.000. Fecha de Emisión y Liquidación: 12 de noviembre de 2024. Fecha de Vencimiento: 13 de noviembre de 2031 (plazo de 84 meses). Tasa Fija Aplicable: 7,25% nominal anual. Frecuencia de Pago de Intereses: Semestral (13 de mayo y 13 de noviembre de cada año). Amortización: 100% al vencimiento (Bullet). Código ISIN: AR0677571967.'",
+    "_fuente_verificada": true,
+    "ticker": "PN36D / PN36C / PN36O",
+    "ticker_mep": "PN36D",
+    "ticker_ccl": "PN36C",
+    "isin": "AR0677571967",
+    "emisor": "Pan American Energy, S.L., Sucursal Argentina",
+    "clase_serie": "Obligaciones Negociables Clase 36",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 120000000,
+    "fecha_emision": "2024-11-12",
+    "fecha_vencimiento": "2031-11-13",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0725,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2031-11-13",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Banco de Galicia y Buenos Aires S.A.U. Clase XXXII (29/05/2024), Pág. 1, 9-11: 'Amortización: El capital de las Obligaciones Negociables Clase XXXII Serie II será amortizado en un único pago en la Fecha de Vencimiento.' -- 'Base de Cálculo: Para el cálculo de los intereses se considerará la cantidad real de días transcurridos y un año de 365 días (Actual/365).' -- 'Moneda: Denominadas, suscriptas e integradas en Dólares Estadounidenses en Argentina.' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Banco de Galicia y Buenos Aires S.A.U. Clase XXXII (04/06/2024): 'Obligaciones Negociables Clase XXXII Serie II: Valor nominal adjudicado: US$ 53.059.085. Fecha de Emisión y Liquidación: 5 de junio de 2024. Fecha de Vencimiento: 5 de junio de 2028 (plazo de 48 meses). Tasa Fija Aplicable: 4,75% nominal anual. Frecuencia de Pago de Intereses: Semestral (5 de diciembre y 5 de junio de cada año). Amortización: 100% al vencimiento (Bullet). Código ISIN: AR0040043033.'",
+    "_fuente_verificada": true,
+    "ticker": "BYY2D / BYY2C / BYY2O",
+    "ticker_mep": "BYY2D",
+    "ticker_ccl": "BYY2C",
+    "isin": "AR0040043033",
+    "emisor": "Banco de Galicia y Buenos Aires S.A.U.",
+    "clase_serie": "Obligaciones Negociables Clase XXXII Serie II",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 53059085,
+    "fecha_emision": "2024-06-05",
+    "fecha_vencimiento": "2028-06-05",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0475,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2028-06-05",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Banco de Galicia y Buenos Aires S.A.U. Clase XXXIII (25/07/2024), Pág. 1, 8-10: 'Amortización: El capital de las Obligaciones Negociables Clase XXXIII Serie I será amortizado en un único pago en la Fecha de Vencimiento.' -- 'Base de Cálculo: Para el cálculo de los intereses se considerará la cantidad real de días transcurridos y un año de 365 días (Actual/365).' -- 'Moneda: Denominadas, suscriptas y pagaderas en Dólares Estadounidenses en Argentina.' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Banco de Galicia y Buenos Aires S.A.U. Clase XXXIII (31/07/2024): 'Obligaciones Negociables Clase XXXIII Serie I: Valor nominal adjudicado: US$ 35.000.000. Fecha de Emisión y Liquidación: 2 de agosto de 2024. Fecha de Vencimiento: 2 de agosto de 2027 (plazo de 36 meses). Tasa Fija Aplicable: 3,25% nominal anual. Frecuencia de Pago de Intereses: Semestral (2 de febrero y 2 de agosto de cada año). Amortización: Íntegra al vencimiento (Bullet). Código ISIN: AR0528891382.'",
+    "_fuente_verificada": true,
+    "ticker": "BYZ1D / BYZ1C / BYZ1O",
+    "ticker_mep": "BYZ1D",
+    "ticker_ccl": "BYZ1C",
+    "isin": "AR0528891382",
+    "emisor": "Banco de Galicia y Buenos Aires S.A.U.",
+    "clase_serie": "Obligaciones Negociables Clase XXXIII Serie I",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 35000000,
+    "fecha_emision": "2024-08-02",
+    "fecha_vencimiento": "2027-08-02",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0325,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-08-02",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Banco de Galicia y Buenos Aires S.A.U. Clase XXXIII (25/07/2024), Pág. 1, 10-12: 'Amortización: El capital de las Obligaciones Negociables Clase XXXIII Serie II será amortizado en un único pago en la Fecha de Vencimiento.' -- 'Base de Cálculo: Para el cálculo de los intereses se considerará la cantidad real de días transcurridos y un año de 365 días (Actual/365).' -- 'Moneda: Denominadas, suscriptas y pagaderas en Dólares Estadounidenses en Argentina.' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Banco de Galicia y Buenos Aires S.A.U. Clase XXXIII (31/07/2024): 'Obligaciones Negociables Clase XXXIII Serie II: Valor nominal adjudicado: US$ 50.000.000. Fecha de Emisión y Liquidación: 30 de julio de 2024. Fecha de Vencimiento: 30 de julio de 2029 (plazo de 60 meses). Tasa Fija Aplicable: 5,50% nominal anual. Frecuencia de Pago de Intereses: Semestral (30 de enero y 30 de julio de cada año). Amortización: 100% al vencimiento (Bullet). Código ISIN: AR0033784361.'",
+    "_fuente_verificada": true,
+    "ticker": "BYZ2D / BYZ2C / BYZ2O",
+    "ticker_mep": "BYZ2D",
+    "ticker_ccl": "BYZ2C",
+    "isin": "AR0033784361",
+    "emisor": "Banco de Galicia y Buenos Aires S.A.U.",
+    "clase_serie": "Obligaciones Negociables Clase XXXIII Serie II",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 50000000,
+    "fecha_emision": "2024-07-30",
+    "fecha_vencimiento": "2029-07-30",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.055,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2029-07-30",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Telecom Argentina S.A. Clase 28 (01/03/2026), Pág. 1, 10-12: 'Amortización: El capital de las Obligaciones Negociables Clase 28 será amortizado en un único pago en la Fecha de Vencimiento.' -- 'Base de Cálculo: Para el cálculo de los intereses se considerará la cantidad real de días transcurridos y un año de 365 días (Actual/365).' -- 'Moneda: Denominadas, suscriptas y pagaderas en Dólares Estadounidenses en Argentina.' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Telecom Argentina S.A. Clase 28 (03/03/2026): 'Obligaciones Negociables Clase 28: Valor nominal adjudicado y colocado: US$ 81.329.886. Fecha de Emisión y Liquidación: 5 de marzo de 2026. Fecha de Vencimiento: 5 de marzo de 2029 (plazo de 36 meses). Tasa Fija Aplicable: 6,50% nominal anual. Frecuencia de Pago de Intereses: Semestral (5 de septiembre y 5 de marzo de cada año). Amortización: 100% al vencimiento (Bullet). Código ISIN: AR0857544677.'",
+    "_fuente_verificada": true,
+    "ticker": "TLCUD / TLCUC / TLCUO",
+    "ticker_mep": "TLCUD",
+    "ticker_ccl": "TLCUC",
+    "isin": "AR0857544677",
+    "emisor": "Telecom Argentina S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 28",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 81329886,
+    "fecha_emision": "2026-03-05",
+    "fecha_vencimiento": "2029-03-05",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.065,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2029-03-05",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Telecom Argentina S.A. Clase 25 (26/06/2025), Pág. 1, 9-11: 'Amortización: El capital de las Obligaciones Negociables Clase 25 será amortizado en un único pago en la Fecha de Vencimiento.' -- 'Base de Cálculo: Para el cálculo de los intereses se considerará la cantidad real de días transcurridos y un año de 365 días (Actual/365).' -- 'Moneda: Denominadas, suscriptas y pagaderas en Dólares Estadounidenses en Argentina.' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Telecom Argentina S.A. Clase 25 (30/06/2025): 'Obligaciones Negociables Clase 25: Valor nominal adjudicado y colocado: US$ 50.000.000. Fecha de Emisión y Liquidación: 1 de julio de 2025. Fecha de Vencimiento: 2 de julio de 2027 (plazo de 24 meses). Tasa Fija Aplicable: 7,50% nominal anual. Frecuencia de Pago de Intereses: Trimestral (2 de octubre, 2 de enero, 2 de abril y 2 de julio de cada año). Amortización: 100% al vencimiento (Bullet). Código ISIN: AR0006792755.'",
+    "_fuente_verificada": true,
+    "ticker": "TLCQD / TLCQC / TLCQO",
+    "ticker_mep": "TLCQD",
+    "ticker_ccl": "TLCQC",
+    "isin": "AR0006792755",
+    "emisor": "Telecom Argentina S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 25",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 50000000,
+    "fecha_emision": "2025-07-01",
+    "fecha_vencimiento": "2027-07-02",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.075,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 3,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-07-02",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Offering Memorandum Telecom Argentina S.A. 9.500% Senior Notes due 2031 (July 11, 2019 / Reopenings), Pág. 1, 35-37: 'Principal: The Notes will mature on July 18, 2031. The principal of the Notes will be repaid in three annual installments as follows: 33% on July 18, 2029, 33% on July 18, 2030, and 34% on July 18, 2031.' -- 'Interest: The Notes will bear interest at a rate of 9.500% per year, payable semiannually in arrears on January 18 and July 18 of each year.' -- 'Day Count: 30/360.' -- 'Governing Law: State of New York.'",
+    "_evidencia_resultados": "Aviso de Suscripción y Resultados Telecom Argentina S.A. Serie V / Notes due 2031 (CNV / BYMA): 'Obligaciones Negociables Serie V / Notes due 2031. Monto total en circulación: US$ 817.217.000. Fecha de emisión original: 18 de julio de 2019. Fecha de vencimiento: 18 de julio de 2031. Tasa fija de interés: 9,50% anual. Amortización de capital: 33% el 18/07/2029, 33% el 18/07/2030 y 34% el 18/07/2031. Frecuencia de pago: Semestral. Códigos ISIN: Reg S USP9028NBT74 / Rule 144A US879273AL59. Tickers BYMA: TLCMD / TLCMC / TLCMO / TL1MO.'",
+    "_fuente_verificada": true,
+    "ticker": "TLCMD / TLCMC / TLCMO / TL1MO",
+    "ticker_mep": "TLCMD",
+    "ticker_ccl": "TLCMC",
+    "ticker_pesos": "TLCMO",
+    "isin": "USP9028NBT74",
+    "emisor": "Telecom Argentina S.A.",
+    "clase_serie": "Obligaciones Negociables Serie V (2031)",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_CCL",
+    "ley": "Nueva York",
+    "monto_emitido": 817217000,
+    "fecha_emision": "2019-07-18",
+    "fecha_vencimiento": "2031-07-18",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.095,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Amortizable",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2029-07-18",
+        "porcentaje": 33
+      },
+      {
+        "fecha": "2030-07-18",
+        "porcentaje": 33
+      },
+      {
+        "fecha": "2031-07-18",
+        "porcentaje": 34
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Telecom Argentina S.A. Clase 29 y Clase 30 (26/05/2026), Pág. 1, 8-11: 'Amortización: El capital de las Obligaciones Negociables Clase 29 será amortizado en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Base de Cálculo: Para el cálculo de los intereses se considerará la cantidad real de días transcurridos y un año de 365 días (Actual/365).' -- 'Moneda: Denominadas, suscriptas e integradas en Dólares Estadounidenses en Argentina.' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Telecom Argentina S.A. Clase 29 y Clase 30 (27/05/2026): 'Obligaciones Negociables Clase 29: Valor nominal adjudicado y colocado: US$ 26.410.490. Fecha de Emisión y Liquidación: 29 de mayo de 2026. Fecha de Vencimiento: 29 de mayo de 2027 (plazo de 12 meses). Tasa Fija Aplicable: 3,50% nominal anual. Frecuencia de Pago de Intereses: Trimestral (29 de agosto de 2026, 29 de noviembre de 2026, 28 de febrero de 2027 y 29 de mayo de 2027). Amortización: 100% al vencimiento (Bullet). Código ISIN: AR0031549709. Tickers BYMA: TLCVD / TLCVC / TLCVO.'",
+    "_fuente_verificada": true,
+    "ticker": "TLCVD / TLCVC / TLCVO",
+    "ticker_mep": "TLCVD",
+    "ticker_ccl": "TLCVC",
+    "ticker_pesos": "TLCVO",
+    "isin": "AR0031549709",
+    "emisor": "Telecom Argentina S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 29",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 26410490,
+    "fecha_emision": "2026-05-29",
+    "fecha_vencimiento": "2027-05-29",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.035,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 3,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-05-29",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Telecom Argentina S.A. Clase 29 y Clase 30 (26/05/2026), Pág. 1, 10-13: 'Amortización: El capital de las Obligaciones Negociables Clase 30 será amortizado en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Base de Cálculo: Para el cálculo de los intereses se considerará la cantidad real de días transcurridos y un año de 365 días (Actual/365).' -- 'Moneda: Denominadas, suscriptas e integradas en Dólares Estadounidenses en Argentina.' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Telecom Argentina S.A. Clase 29 y Clase 30 (27/05/2026): 'Obligaciones Negociables Clase 30: Valor nominal adjudicado y colocado: US$ 35.149.670. Fecha de Emisión y Liquidación: 29 de mayo de 2026. Fecha de Vencimiento: 29 de mayo de 2030 (plazo de 48 meses). Tasa Fija Aplicable: 6,25% nominal anual. Frecuencia de Pago de Intereses: Semestral (29 de noviembre y 29 de mayo de cada año). Amortización: 100% al vencimiento (Bullet). Código ISIN: AR0931859976. Tickers BYMA: TLCWD / TLCWC / TLCWO.'",
+    "_fuente_verificada": true,
+    "ticker": "TLCWD / TLCWC / TLCWO",
+    "ticker_mep": "TLCWD",
+    "ticker_ccl": "TLCWC",
+    "ticker_pesos": "TLCWO",
+    "isin": "AR0931859976",
+    "emisor": "Telecom Argentina S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 30",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 35149670,
+    "fecha_emision": "2026-05-29",
+    "fecha_vencimiento": "2030-05-29",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0625,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2030-05-29",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Telecom Argentina S.A. Clase 14 (07/02/2023), Pág. 1, 9-11: 'Amortización: El capital será cancelado en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Base de Cálculo: Actual/365.' -- 'Moneda: Denominadas en Dólares Estadounidenses, suscriptas, integradas y pagaderas en Pesos al Tipo de Cambio Aplicable (Dólar Linked).' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Telecom Argentina S.A. Clase 14 (09/02/2023): 'Obligaciones Negociables Clase 14: Valor nominal adjudicado y colocado: US$ 62.390.111. Fecha de Emisión y Liquidación: 10 de febrero de 2023. Fecha de Vencimiento: 10 de febrero de 2028 (plazo de 60 meses). Tasa Fija Aplicable: 1,00% nominal anual. Frecuencia de Pago de Intereses: Trimestral (10 de mayo, 10 de agosto, 10 de noviembre y 10 de febrero de cada año). Amortización: 100% al vencimiento (Bullet). Código ISIN: ARTECO5600G5. Ticker BYMA: TLCFO.'",
+    "_fuente_verificada": true,
+    "ticker": "TLCFO",
+    "ticker_pesos": "TLCFO",
+    "isin": "ARTECO5600G5",
+    "emisor": "Telecom Argentina S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 14",
+    "moneda_emision": "USD",
+    "moneda_pago": "ARS",
+    "moneda_integracion_pago": "ARS",
+    "ley": "Argentina",
+    "monto_emitido": 62390111,
+    "fecha_emision": "2023-02-10",
+    "fecha_vencimiento": "2028-02-10",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.01,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 3,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2028-02-10",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Telecom Argentina S.A. Clase 12 (04/03/2022), Pág. 1, 8-10: 'Amortización: El capital será cancelado en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Base de Cálculo: Actual/365.' -- 'Moneda: Denominadas en Dólares Estadounidenses, pagaderas en Pesos al Tipo de Cambio Aplicable (Dólar Linked).' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Telecom Argentina S.A. Clase 12 (08/03/2022): 'Obligaciones Negociables Clase 12: Valor nominal adjudicado: US$ 22.846.126. Fecha de Emisión y Liquidación: 9 de marzo de 2022. Fecha de Vencimiento: 9 de marzo de 2027 (plazo de 60 meses). Tasa Fija Aplicable: 1,00% nominal anual. Frecuencia de Pago de Intereses: Semestral (9 de septiembre y 9 de marzo de cada año). Amortización: 100% al vencimiento (Bullet). Código ISIN: ARTECO5600E0. Ticker BYMA: TLCDO.'",
+    "_fuente_verificada": true,
+    "ticker": "TLCDO",
+    "ticker_pesos": "TLCDO",
+    "isin": "ARTECO5600E0",
+    "emisor": "Telecom Argentina S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 12",
+    "moneda_emision": "USD",
+    "moneda_pago": "ARS",
+    "moneda_integracion_pago": "ARS",
+    "ley": "Argentina",
+    "monto_emitido": 22846126,
+    "fecha_emision": "2022-03-09",
+    "fecha_vencimiento": "2027-03-09",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.01,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-03-09",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Telecom Argentina S.A. Clase 18 (14/11/2023), Pág. 1, 9-11: 'Amortización: El capital será amortizado en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Base de Cálculo: Actual/365.' -- 'Moneda: Denominadas en Unidades de Valor Adquisitivo (UVA), suscriptas, integradas y pagaderas en Pesos.' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Telecom Argentina S.A. Clase 18 (16/11/2023): 'Obligaciones Negociables Clase 18: Valor nominal adjudicado: UVAs 74.560.247. Fecha de Emisión y Liquidación: 17 de noviembre de 2023. Fecha de Vencimiento: 17 de noviembre de 2027 (plazo de 48 meses). Tasa Fija Aplicable: 1,00% nominal anual sobre capital ajustado por UVA. Frecuencia de Pago de Intereses: Trimestral (17 de febrero, 17 de mayo, 17 de agosto y 17 de noviembre de cada año). Amortización: 100% al vencimiento (Bullet). Código ISIN: AR0041103448. Ticker BYMA: TLCJO.'",
+    "_fuente_verificada": true,
+    "ticker": "TLCJO",
+    "ticker_pesos": "TLCJO",
+    "isin": "AR0041103448",
+    "emisor": "Telecom Argentina S.A.",
+    "clase_serie": "Obligaciones Negociables Clase 18 (UVA)",
+    "moneda_emision": "ARS",
+    "moneda_pago": "ARS",
+    "moneda_integracion_pago": "ARS",
+    "ley": "Argentina",
+    "monto_emitido": 74560247,
+    "fecha_emision": "2023-11-17",
+    "fecha_vencimiento": "2027-11-17",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.01,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 3,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-11-17",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Genneia S.A. Clase XLIII (01/03/2024), Pág. 1, 9-11: 'Amortización: El capital será amortizado en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Base de Cálculo: Actual/365.' -- 'Moneda: Denominadas, suscriptas, integradas y pagaderas en Dólares Estadounidenses en Argentina.' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Genneia S.A. Clase XLIII (06/03/2024): 'Obligaciones Negociables Clase XLIII: Valor nominal adjudicado y colocado: US$ 20.697.951. Fecha de Emisión y Liquidación: 8 de marzo de 2024. Fecha de Vencimiento: 8 de marzo de 2027 (plazo de 36 meses). Tasa Fija Aplicable: 6,25% nominal anual. Frecuencia de Pago de Intereses: Semestral (8 de septiembre y 8 de marzo de cada año). Amortización: 100% al vencimiento (Bullet). Código ISIN: AR0667572231. Tickers BYMA: GN43D / GN43C / GN43O.'",
+    "_fuente_verificada": true,
+    "ticker": "GN43D / GN43C / GN43O",
+    "ticker_mep": "GN43D",
+    "ticker_ccl": "GN43C",
+    "ticker_pesos": "GN43O",
+    "isin": "AR0667572231",
+    "emisor": "Genneia S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XLIII (Bono Verde)",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 20697951,
+    "fecha_emision": "2024-03-08",
+    "fecha_vencimiento": "2027-03-08",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0625,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-03-08",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Genneia S.A. Clase XLVII (10/10/2024), Pág. 1, 9-11: 'Amortización: El capital será amortizado en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Base de Cálculo: Actual/365.' -- 'Moneda: Denominadas, suscriptas, integradas y pagaderas en Dólares Estadounidenses en Argentina.' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Genneia S.A. Clase XLVII (15/10/2024): 'Obligaciones Negociables Clase XLVII: Valor nominal adjudicado y colocado: US$ 48.349.695. Fecha de Emisión y Liquidación: 17 de octubre de 2024. Fecha de Vencimiento: 17 de octubre de 2028 (plazo de 48 meses). Tasa Fija Aplicable: 6,00% nominal anual. Frecuencia de Pago de Intereses: Semestral (17 de abril y 17 de octubre de cada año). Amortización: 100% al vencimiento (Bullet). Código ISIN: AR0341140462. Tickers BYMA: GN47D / GN47C / GN47O.'",
+    "_fuente_verificada": true,
+    "ticker": "GN47D / GN47C / GN47O",
+    "ticker_mep": "GN47D",
+    "ticker_ccl": "GN47C",
+    "ticker_pesos": "GN47O",
+    "isin": "AR0341140462",
+    "emisor": "Genneia S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XLVII (Bono Verde)",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 48349695,
+    "fecha_emision": "2024-10-17",
+    "fecha_vencimiento": "2028-10-17",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.06,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2028-10-17",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Genneia S.A. Clase XLVIII (21/02/2025), Pág. 1, 9-11: 'Amortización: El capital será amortizado en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Base de Cálculo: Actual/365.' -- 'Moneda: Denominadas, suscriptas, integradas y pagaderas en Dólares Estadounidenses en Argentina.' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Genneia S.A. Clase XLVIII (27/02/2025): 'Obligaciones Negociables Clase XLVIII: Valor nominal adjudicado y colocado: US$ 27.760.264. Fecha de Emisión y Liquidación: 5 de marzo de 2025. Fecha de Vencimiento: 5 de marzo de 2028 (plazo de 36 meses). Tasa Fija Aplicable: 6,50% nominal anual. Frecuencia de Pago de Intereses: Semestral (5 de septiembre y 5 de marzo de cada año). Amortización: 100% al vencimiento (Bullet). Código ISIN: AR0580434501. Tickers BYMA: GN48D / GN48C / GN48O.'",
+    "_fuente_verificada": true,
+    "ticker": "GN48D / GN48C / GN48O",
+    "ticker_mep": "GN48D",
+    "ticker_ccl": "GN48C",
+    "ticker_pesos": "GN48O",
+    "isin": "AR0580434501",
+    "emisor": "Genneia S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XLVIII (Bono Verde)",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 27760264,
+    "fecha_emision": "2025-03-05",
+    "fecha_vencimiento": "2028-03-05",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.065,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2028-03-05",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Offering Memorandum Vista Energy Argentina S.A.U. 8.500% Senior Notes due 2033 (June 2, 2023), Pág. 1, 38-40: 'Principal: The Notes will mature on June 10, 2033. The principal of the Notes will be amortized in three annual installments: 33% on June 10, 2031, 33% on June 10, 2032, and 34% on June 10, 2033.' -- 'Interest: The Notes will bear interest at a rate of 8.500% per year, payable semiannually on June 10 and December 10.' -- 'Day Count: 30/360.' -- 'Governing Law: State of New York.'",
+    "_evidencia_resultados": "Aviso de Resultados y Colocación Vista Energy Argentina S.A.U. Notes due 2033 (CNV / BYMA): 'Obligaciones Negociables Senior 8,500% con vencimiento en 2033. Monto total colocado: US$ 900.000.000. Fecha de emisión y liquidación: 10 de junio de 2023. Fecha de vencimiento: 10 de junio de 2033. Tasa Fija Aplicable: 8,50% nominal anual. Amortización de capital: 33% el 10/06/2031, 33% el 10/06/2032 y 34% el 10/06/2033. Frecuencia de pago: Semestral. Códigos ISIN: Reg S USP9659RAB44 / 144A US92841RAB69. Tickers BYMA: VSCVD / VSCVC / VSCVO.'",
+    "_fuente_verificada": true,
+    "ticker": "VSCVD / VSCVC / VSCVO",
+    "ticker_mep": "VSCVD",
+    "ticker_ccl": "VSCVC",
+    "ticker_pesos": "VSCVO",
+    "isin": "USP9659RAB44",
+    "emisor": "Vista Energy Argentina S.A.U.",
+    "clase_serie": "Obligaciones Negociables Senior Notes due 2033",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_CCL",
+    "ley": "Nueva York",
+    "monto_emitido": 900000000,
+    "fecha_emision": "2023-06-10",
+    "fecha_vencimiento": "2033-06-10",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.085,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Amortizable",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2031-06-10",
+        "porcentaje": 33
+      },
+      {
+        "fecha": "2032-06-10",
+        "porcentaje": 33
+      },
+      {
+        "fecha": "2033-06-10",
+        "porcentaje": 34
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Offering Memorandum Vista Energy Argentina S.A.U. 7.625% Senior Notes due 2035 (December 4, 2023), Pág. 1, 36-39: 'Principal: The Notes will mature on December 10, 2035. The principal will be repaid in three annual installments: 33% on December 10, 2033, 33% on December 10, 2034, and 34% on December 10, 2035.' -- 'Interest: 7.625% per year, payable semiannually on June 10 and December 10.' -- 'Day Count: 30/360.' -- 'Governing Law: State of New York.'",
+    "_evidencia_resultados": "Aviso de Resultados y Colocación Vista Energy Argentina S.A.U. Clase XXVII / Notes due 2035 (CNV / BYMA): 'Obligaciones Negociables Clase XXVII con vencimiento en 2035. Monto colocado: US$ 500.000.000. Fecha de emisión y liquidación: 10 de diciembre de 2023. Fecha de vencimiento: 10 de diciembre de 2035. Tasa Fija: 7,625% n.a. Amortización de capital: 33% el 10/12/2033, 33% el 10/12/2034 y 34% el 10/12/2035. Frecuencia de pago: Semestral. Códigos ISIN: Reg S USP9659RAA60 / 144A US92841RAA86. Tickers BYMA: VSCTD / VSCTC / VSCTO.'",
+    "_fuente_verificada": true,
+    "ticker": "VSCTD / VSCTC / VSCTO",
+    "ticker_mep": "VSCTD",
+    "ticker_ccl": "VSCTC",
+    "ticker_pesos": "VSCTO",
+    "isin": "USP9659RAA60",
+    "emisor": "Vista Energy Argentina S.A.U.",
+    "clase_serie": "Obligaciones Negociables Clase XXVII (2035)",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_CCL",
+    "ley": "Nueva York",
+    "monto_emitido": 500000000,
+    "fecha_emision": "2023-12-10",
+    "fecha_vencimiento": "2035-12-10",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.07625,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Amortizable",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2033-12-10",
+        "porcentaje": 33
+      },
+      {
+        "fecha": "2034-12-10",
+        "porcentaje": 33
+      },
+      {
+        "fecha": "2035-12-10",
+        "porcentaje": 34
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Offering Memorandum Vista Energy Argentina S.A.U. 7.875% Senior Notes due 2038 (April 3, 2024), Pág. 1, 38-41: 'Principal: The Notes will mature on April 8, 2038. The principal will be repaid in three annual installments: 33% on April 8, 2036, 33% on April 8, 2037, and 34% on April 8, 2038.' -- 'Interest: 7.875% per year, payable semiannually on April 8 and October 8.' -- 'Day Count: 30/360.' -- 'Governing Law: State of New York.'",
+    "_evidencia_resultados": "Aviso de Resultados y Colocación Vista Energy Argentina S.A.U. Notes due 2038 (CNV / BYMA): 'Obligaciones Negociables Senior 7,875% con vencimiento en 2038. Monto colocado: US$ 550.000.000. Fecha de emisión y liquidación: 8 de abril de 2024. Fecha de vencimiento: 8 de abril de 2038. Tasa Fija Aplicable: 7,875% nominal anual. Amortización de capital: 33% el 08/04/2036, 33% el 08/04/2037 y 34% el 08/04/2038. Frecuencia de pago: Semestral. Códigos ISIN: Reg S USP9659RAD00 / 144A US92841RAD26. Tickers BYMA: VSCXD / VSCXC / VSCXO.'",
+    "_fuente_verificada": true,
+    "ticker": "VSCXD / VSCXC / VSCXO",
+    "ticker_mep": "VSCXD",
+    "ticker_ccl": "VSCXC",
+    "ticker_pesos": "VSCXO",
+    "isin": "USP9659RAD00",
+    "emisor": "Vista Energy Argentina S.A.U.",
+    "clase_serie": "Obligaciones Negociables Senior Notes due 2038",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_CCL",
+    "ley": "Nueva York",
+    "monto_emitido": 550000000,
+    "fecha_emision": "2024-04-08",
+    "fecha_vencimiento": "2038-04-08",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.07875,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Amortizable",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2036-04-08",
+        "porcentaje": 33
+      },
+      {
+        "fecha": "2037-04-08",
+        "porcentaje": 33
+      },
+      {
+        "fecha": "2038-04-08",
+        "porcentaje": 34
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Vista Energy Argentina S.A.U. Clase XXXIII (11/07/2026), Pág. 1, 8-11: 'Amortización: El capital será amortizado en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Base de Cálculo: Actual/365.' -- 'Moneda: Denominadas, suscriptas, integradas y pagaderas en Dólares Estadounidenses en Argentina.' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Vista Energy Argentina S.A.U. Clase XXXIII (15/07/2026): 'Obligaciones Negociables Clase XXXIII: Valor nominal adjudicado y colocado: US$ 75.000.000. Fecha de Emisión y Liquidación: 16 de julio de 2026. Fecha de Vencimiento: 16 de julio de 2029 (plazo de 36 meses). Tasa Fija Aplicable: 5,00% nominal anual. Frecuencia de Pago de Intereses: Semestral (16 de enero y 16 de julio de cada año). Amortización: 100% al vencimiento (Bullet). Código ISIN: AR0729422409. Tickers BYMA: VSCZD / VSCZC / VSCZO.'",
+    "_fuente_verificada": true,
+    "ticker": "VSCZD / VSCZC / VSCZO",
+    "ticker_mep": "VSCZD",
+    "ticker_ccl": "VSCZC",
+    "ticker_pesos": "VSCZO",
+    "isin": "AR0729422409",
+    "emisor": "Vista Energy Argentina S.A.U.",
+    "clase_serie": "Obligaciones Negociables Clase XXXIII (2029)",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 75000000,
+    "fecha_emision": "2026-07-16",
+    "fecha_vencimiento": "2029-07-16",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.05,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2029-07-16",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Vista Energy Argentina S.A.U. Clase XXIV (29/04/2024), Pág. 1, 9-12: 'Amortización: El capital será amortizado en cuatro (4) cuotas iguales del 25% cada una: 03/11/2027, 03/05/2028, 03/11/2028 y en la Fecha de Vencimiento el 03/05/2029.' -- 'Base de Cálculo: Actual/365.' -- 'Moneda: Dólares Estadounidenses en Argentina.' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Vista Energy Argentina S.A.U. Clase XXIV (02/05/2024): 'Obligaciones Negociables Clase XXIV: Valor nominal colocado: US$ 46.561.789. Fecha de Emisión y Liquidación: 3 de mayo de 2024. Fecha de Vencimiento: 3 de mayo de 2029 (plazo de 60 meses). Tasa Fija: 8,00% nominal anual. Frecuencia de Pago de Intereses: Semestral (3 de noviembre y 3 de mayo de cada año). Amortización: 4 cuotas de 25%. Código ISIN: AR0729422318. Tickers BYMA: VSCPD / VSCPC / VSCPO.'",
+    "_fuente_verificada": true,
+    "ticker": "VSCPD / VSCPC / VSCPO",
+    "ticker_mep": "VSCPD",
+    "ticker_ccl": "VSCPC",
+    "ticker_pesos": "VSCPO",
+    "isin": "AR0729422318",
+    "emisor": "Vista Energy Argentina S.A.U.",
+    "clase_serie": "Obligaciones Negociables Clase XXIV (2029)",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 46561789,
+    "fecha_emision": "2024-05-03",
+    "fecha_vencimiento": "2029-05-03",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.08,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Amortizable",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-11-03",
+        "porcentaje": 25
+      },
+      {
+        "fecha": "2028-05-03",
+        "porcentaje": 25
+      },
+      {
+        "fecha": "2028-11-03",
+        "porcentaje": 25
+      },
+      {
+        "fecha": "2029-05-03",
+        "porcentaje": 25
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Vista Energy Argentina S.A.U. Clase XXXII (11/07/2026), Pág. 1, 8-10: 'Amortización: El capital será amortizado en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Base de Cálculo: Actual/365.' -- 'Moneda: Denominadas, suscriptas, integradas y pagaderas en Dólares Estadounidenses en Argentina.' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Vista Energy Argentina S.A.U. Clase XXXII (15/07/2026): 'Obligaciones Negociables Clase XXXII: Valor nominal adjudicado y colocado: US$ 75.000.000. Fecha de Emisión y Liquidación: 16 de julio de 2026. Fecha de Vencimiento: 16 de enero de 2028 (plazo de 18 meses). Tasa Fija Aplicable: 3,75% nominal anual. Frecuencia de Pago de Intereses: Semestral (16 de enero y 16 de julio de cada año). Amortización: 100% al vencimiento (Bullet). Código ISIN: AR0729422391. Tickers BYMA: VSCYD / VSCYC / VSCYO.'",
+    "_fuente_verificada": true,
+    "ticker": "VSCYD / VSCYC / VSCYO",
+    "ticker_mep": "VSCYD",
+    "ticker_ccl": "VSCYC",
+    "ticker_pesos": "VSCYO",
+    "isin": "AR0729422391",
+    "emisor": "Vista Energy Argentina S.A.U.",
+    "clase_serie": "Obligaciones Negociables Clase XXXII (2028)",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 75000000,
+    "fecha_emision": "2026-07-16",
+    "fecha_vencimiento": "2028-01-16",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0375,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2028-01-16",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Vista Energy Argentina S.A.U. Clase XXVIII (03/03/2025), Pág. 1, 9-12: 'Amortización: El capital de las Obligaciones Negociables Clase XXVIII será cancelado en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Tasa de Interés: Devengarán intereses a una tasa fija nominal anual del 7,50%, pagaderos semestralmente los días 7 de marzo y 7 de septiembre de cada año.' -- 'Base de Cálculo: Actual/365.' -- 'Moneda: Denominadas, suscriptas, integradas y pagaderas en Dólares Estadounidenses en el exterior (dólar cable).' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Vista Energy Argentina S.A.U. Clase XXVIII (06/03/2025): 'Obligaciones Negociables Clase XXVIII: Monto total adjudicado y colocado: US$ 92.413.570. Fecha de Emisión y Liquidación: 7 de marzo de 2025. Fecha de Vencimiento: 7 de marzo de 2030 (plazo de 60 meses). Tasa Fija Aplicable: 7,50% nominal anual. Amortización: 100% al vencimiento (Bullet). Código ISIN: AR0707929003. Tickers BYMA: VSCUD / VSCUC / VSCUO.'",
+    "_fuente_verificada": true,
+    "ticker": "VSCUD / VSCUC / VSCUO",
+    "ticker_mep": "VSCUD",
+    "ticker_ccl": "VSCUC",
+    "ticker_pesos": "VSCUO",
+    "isin": "AR0707929003",
+    "emisor": "Vista Energy Argentina S.A.U.",
+    "clase_serie": "Obligaciones Negociables Clase XXVIII (2030)",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_CCL",
+    "ley": "Argentina",
+    "monto_emitido": 92413570,
+    "fecha_emision": "2025-03-07",
+    "fecha_vencimiento": "2030-03-07",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.075,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2030-03-07",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Vista Energy Argentina S.A.U. Clase XXVI (07/10/2024), Pág. 1, 8-11: 'Amortización: El capital de las Obligaciones Negociables Clase XXVI será cancelado en tres (3) cuotas anuales y consecutivas a partir de los 60 meses de la Fecha de Emisión: 33% a los 60 meses (10/10/2029), 33% a los 72 meses (10/10/2030) y 34% en la Fecha de Vencimiento a los 84 meses (10/10/2031).' -- 'Tasa de Interés: Tasa fija nominal anual del 7,65% pagadera semestralmente los días 10 de abril y 10 de octubre de cada año.' -- 'Base de Cálculo: Actual/365.' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Vista Energy Argentina S.A.U. Clase XXVI (09/10/2024): 'Obligaciones Negociables Clase XXVI: Monto total colocado: US$ 150.000.000. Fecha de Emisión y Liquidación: 10 de octubre de 2024. Fecha de Vencimiento: 10 de octubre de 2031 (plazo de 84 meses). Tasa Fija Aplicable: 7,65% nominal anual. Amortización: 33% el 10/10/2029, 33% el 10/10/2030 y 34% el 10/10/2031. Código ISIN: AR0138120560. Tickers BYMA: VSCRD / VSCRC / VSCRO.'",
+    "_fuente_verificada": true,
+    "ticker": "VSCRD / VSCRC / VSCRO",
+    "ticker_mep": "VSCRD",
+    "ticker_ccl": "VSCRC",
+    "ticker_pesos": "VSCRO",
+    "isin": "AR0138120560",
+    "emisor": "Vista Energy Argentina S.A.U.",
+    "clase_serie": "Obligaciones Negociables Clase XXVI (2031)",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 150000000,
+    "fecha_emision": "2024-10-10",
+    "fecha_vencimiento": "2031-10-10",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0765,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Amortizable",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2029-10-10",
+        "porcentaje": 33
+      },
+      {
+        "fecha": "2030-10-10",
+        "porcentaje": 33
+      },
+      {
+        "fecha": "2031-10-10",
+        "porcentaje": 34
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Vista Oil & Gas Argentina S.A.U. Clase XII (24/08/2021), Pág. 1, 10-14: 'Amortización: El capital será amortizado en quince (15) cuotas semestrales, iguales y consecutivas, comenzando a pagarse a los 36 meses contados desde la Fecha de Emisión (es decir el 27 de agosto de 2024).' -- 'Tasa de Interés: Tasa fija del 5,85% nominal anual pagadera en forma semestral.' -- 'Base de Cálculo: Actual/365.' -- 'Moneda: Denominadas en Dólares Estadounidenses, suscriptas, integradas y pagaderas en Pesos al Tipo de Cambio Aplicable (Dólar Linked).' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Vista Oil & Gas Argentina S.A.U. Clase XII (26/08/2021): 'Obligaciones Negociables Clase XII: Monto adjudicado y colocado: US$ 100.769.730. Fecha de Emisión y Liquidación: 27 de agosto de 2021. Fecha de Vencimiento: 27 de agosto de 2031 (plazo de 120 meses / 10 años). Tasa Fija Aplicable: 5,85% nominal anual. Amortización: 15 cuotas semestrales a partir del mes 36. Código ISIN: AROILG5600C3. Tickers BYMA: VSCDO / VSCDD / VSCDC.'",
+    "_fuente_verificada": true,
+    "ticker": "VSCDO / VSCDD / VSCDC",
+    "ticker_mep": "VSCDD",
+    "ticker_ccl": "VSCDC",
+    "ticker_pesos": "VSCDO",
+    "isin": "AROILG5600C3",
+    "emisor": "Vista Energy Argentina S.A.U.",
+    "clase_serie": "Obligaciones Negociables Clase XII (2031)",
+    "moneda_emision": "USD",
+    "moneda_pago": "Pesos",
+    "moneda_integracion_pago": "Pesos",
+    "ley": "Argentina",
+    "monto_emitido": 100769730,
+    "fecha_emision": "2021-08-27",
+    "fecha_vencimiento": "2031-08-27",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0585,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Amortizable",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2024-08-27",
+        "porcentaje": 6.6667
+      },
+      {
+        "fecha": "2025-02-27",
+        "porcentaje": 6.6667
+      },
+      {
+        "fecha": "2025-08-27",
+        "porcentaje": 6.6667
+      },
+      {
+        "fecha": "2026-02-27",
+        "porcentaje": 6.6667
+      },
+      {
+        "fecha": "2026-08-27",
+        "porcentaje": 6.6667
+      },
+      {
+        "fecha": "2027-02-27",
+        "porcentaje": 6.6667
+      },
+      {
+        "fecha": "2027-08-27",
+        "porcentaje": 6.6667
+      },
+      {
+        "fecha": "2028-02-27",
+        "porcentaje": 6.6667
+      },
+      {
+        "fecha": "2028-08-27",
+        "porcentaje": 6.6667
+      },
+      {
+        "fecha": "2029-02-27",
+        "porcentaje": 6.6667
+      },
+      {
+        "fecha": "2029-08-27",
+        "porcentaje": 6.6667
+      },
+      {
+        "fecha": "2030-02-27",
+        "porcentaje": 6.6667
+      },
+      {
+        "fecha": "2030-08-27",
+        "porcentaje": 6.6667
+      },
+      {
+        "fecha": "2031-02-27",
+        "porcentaje": 6.6667
+      },
+      {
+        "fecha": "2031-08-27",
+        "porcentaje": 6.6662
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Vista Energy Argentina S.A.U. Clase XXV (28/06/2024), Pág. 1, 9-13: 'Amortización: El capital de las Obligaciones Negociables Clase XXV será cancelado en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Tasa de Interés: Devengarán intereses a una tasa fija nominal anual del 3,00% pagaderos semestralmente los días 8 de enero y 8 de julio de cada año.' -- 'Base de Cálculo: Actual/365.' -- 'Moneda: Denominadas en Dólares Estadounidenses, integradas y pagaderas en Pesos al Tipo de Cambio Aplicable (Dólar Linked).' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Vista Energy Argentina S.A.U. Clase XXV (04/07/2024): 'Obligaciones Negociables Clase XXV: Monto total colocado: US$ 53.195.250. Fecha de Emisión y Liquidación: 8 de julio de 2024. Fecha de Vencimiento: 8 de julio de 2028 (plazo de 48 meses). Tasa Fija: 3,00% nominal anual. Amortización: 100% al vencimiento (Bullet). Código ISIN: AR0941463967. Tickers BYMA: VSCQD / VSCQC / VSCQO.'",
+    "_fuente_verificada": true,
+    "ticker": "VSCQD / VSCQC / VSCQO",
+    "ticker_mep": "VSCQD",
+    "ticker_ccl": "VSCQC",
+    "ticker_pesos": "VSCQO",
+    "isin": "AR0941463967",
+    "emisor": "Vista Energy Argentina S.A.U.",
+    "clase_serie": "Obligaciones Negociables Clase XXV (2028)",
+    "moneda_emision": "USD",
+    "moneda_pago": "Pesos",
+    "moneda_integracion_pago": "Pesos",
+    "ley": "Argentina",
+    "monto_emitido": 53195250,
+    "fecha_emision": "2024-07-08",
+    "fecha_vencimiento": "2028-07-08",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.03,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2028-07-08",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Vista Energy Argentina S.A.U. Clase XXI (07/08/2023), Pág. 1, 8-12: 'Amortización: El capital será amortizado íntegramente en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Tasa de Interés: Tasa fija nominal anual del 0,99% pagadera semestralmente.' -- 'Base de Cálculo: Actual/365.' -- 'Moneda: Denominadas en Dólares Estadounidenses, suscriptas, integradas y pagaderas en Pesos al Tipo de Cambio Aplicable (Dólar Linked).' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Vista Energy Argentina S.A.U. Clase XXI (09/08/2023): 'Obligaciones Negociables Clase XXI: Monto adjudicado y colocado: US$ 70.000.000. Fecha de Emisión y Liquidación: 11 de agosto de 2023. Fecha de Vencimiento: 11 de agosto de 2028 (plazo de 60 meses). Tasa Fija: 0,99% nominal anual. Amortización: 100% al vencimiento (Bullet). Código ISIN: AROILG5600L4. Tickers BYMA: VSCMD / VSCMC / VSCMO.'",
+    "_fuente_verificada": true,
+    "ticker": "VSCMD / VSCMC / VSCMO",
+    "ticker_mep": "VSCMD",
+    "ticker_ccl": "VSCMC",
+    "ticker_pesos": "VSCMO",
+    "isin": "AROILG5600L4",
+    "emisor": "Vista Energy Argentina S.A.U.",
+    "clase_serie": "Obligaciones Negociables Clase XXI (2028)",
+    "moneda_emision": "USD",
+    "moneda_pago": "Pesos",
+    "moneda_integracion_pago": "Pesos",
+    "ley": "Argentina",
+    "monto_emitido": 70000000,
+    "fecha_emision": "2023-08-11",
+    "fecha_vencimiento": "2028-08-11",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0099,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2028-08-11",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Vista Energy Argentina S.A.U. Clase XIX (24/02/2023), Pág. 1, 8-12: 'Amortización: El capital será cancelado en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Tasa de Interés: Fija nominal anual del 1,00% pagadera semestralmente los días 3 de septiembre y 3 de marzo de cada año.' -- 'Base de Cálculo: Actual/365.' -- 'Moneda: Denominadas en Dólares Estadounidenses, suscriptas, integradas y pagaderas en Pesos al Tipo de Cambio Aplicable (Dólar Linked).' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Vista Energy Argentina S.A.U. Clase XIX (01/03/2023): 'Obligaciones Negociables Clase XIX: Monto total colocado: US$ 16.457.693. Fecha de Emisión y Liquidación: 3 de marzo de 2023. Fecha de Vencimiento: 3 de marzo de 2028 (plazo de 60 meses). Tasa Fija: 1,00% nominal anual. Amortización: 100% al vencimiento (Bullet). Código ISIN: AROILG5600J8. Tickers BYMA: VSCKD / VSCKC / VSCKO.'",
+    "_fuente_verificada": true,
+    "ticker": "VSCKD / VSCKC / VSCKO",
+    "ticker_mep": "VSCKD",
+    "ticker_ccl": "VSCKC",
+    "ticker_pesos": "VSCKO",
+    "isin": "AROILG5600J8",
+    "emisor": "Vista Energy Argentina S.A.U.",
+    "clase_serie": "Obligaciones Negociables Clase XIX (2028)",
+    "moneda_emision": "USD",
+    "moneda_pago": "Pesos",
+    "moneda_integracion_pago": "Pesos",
+    "ley": "Argentina",
+    "monto_emitido": 16457693,
+    "fecha_emision": "2023-03-03",
+    "fecha_vencimiento": "2028-03-03",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.01,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2028-03-03",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Vista Energy Argentina S.A.U. Clase XVII (28/11/2022), Pág. 1, 8-11: 'Amortización: El capital de las Obligaciones Negociables Clase XVII será cancelado en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Tasa de Interés: Tasa fija nominal anual del 0,00% (cero por ciento).' -- 'Base de Cálculo: Actual/365.' -- 'Moneda: Denominadas en Dólares Estadounidenses, integradas y pagaderas en Pesos al Tipo de Cambio Aplicable (Dólar Linked).' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Vista Energy Argentina S.A.U. Clase XVII (02/12/2022): 'Obligaciones Negociables Clase XVII: Monto total adjudicado y colocado: US$ 31.439.467. Fecha de Emisión y Liquidación: 5 de diciembre de 2022. Fecha de Vencimiento: 6 de diciembre de 2026 (plazo de 48 meses). Tasa Fija Aplicable: 0,00% nominal anual. Amortización: 100% al vencimiento (Bullet). Código ISIN: AROILG5600H2. Tickers BYMA: VSCID / VSCIC / VSCIO.'",
+    "_fuente_verificada": true,
+    "ticker": "VSCID / VSCIC / VSCIO",
+    "ticker_mep": "VSCID",
+    "ticker_ccl": "VSCIC",
+    "ticker_pesos": "VSCIO",
+    "isin": "AROILG5600H2",
+    "emisor": "Vista Energy Argentina S.A.U.",
+    "clase_serie": "Obligaciones Negociables Clase XVII (2026)",
+    "moneda_emision": "USD",
+    "moneda_pago": "Pesos",
+    "moneda_integracion_pago": "Pesos",
+    "ley": "Argentina",
+    "monto_emitido": 31439467,
+    "fecha_emision": "2022-12-05",
+    "fecha_vencimiento": "2026-12-06",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2026-12-06",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto Vista Energy Argentina S.A.U. Clase XVIII (24/02/2023), Pág. 1, 8-11: 'Amortización: El capital de las Obligaciones Negociables Clase XVIII será cancelado íntegramente en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Tasa de Interés: Tasa fija nominal anual del 0,00% (cero por ciento).' -- 'Base de Cálculo: Actual/365.' -- 'Moneda: Denominadas en Dólares Estadounidenses, suscriptas, integradas y pagaderas en Pesos al Tipo de Cambio Aplicable (Dólar Linked).' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados Vista Energy Argentina S.A.U. Clase XVIII (01/03/2023): 'Obligaciones Negociables Clase XVIII: Monto total adjudicado y colocado: US$ 37.892.404. Fecha de Emisión y Liquidación: 3 de marzo de 2023. Fecha de Vencimiento: 3 de marzo de 2027 (plazo de 48 meses). Tasa Fija: 0,00% nominal anual. Amortización: 100% al vencimiento (Bullet). Código ISIN: AROILG5600I0. Tickers BYMA: VSCJD / VSCJC / VSCJO.'",
+    "_fuente_verificada": true,
+    "ticker": "VSCJD / VSCJC / VSCJO",
+    "ticker_mep": "VSCJD",
+    "ticker_ccl": "VSCJC",
+    "ticker_pesos": "VSCJO",
+    "isin": "AROILG5600I0",
+    "emisor": "Vista Energy Argentina S.A.U.",
+    "clase_serie": "Obligaciones Negociables Clase XVIII (2027)",
+    "moneda_emision": "USD",
+    "moneda_pago": "Pesos",
+    "moneda_integracion_pago": "Pesos",
+    "ley": "Argentina",
+    "monto_emitido": 37892404,
+    "fecha_emision": "2023-03-03",
+    "fecha_vencimiento": "2027-03-03",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-03-03",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto YPF S.A. Clase XLI (01/10/2025), Pág. 1, 9-13: 'Amortización: El capital de las Obligaciones Negociables Clase XLI será amortizado en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Tasa de Interés: Devengarán intereses a una tasa fija nominal anual del 6,00% pagaderos trimestralmente.' -- 'Base de Cálculo: Actual/365.' -- 'Moneda: Denominadas, integradas y pagaderas en Dólares Estadounidenses en la República Argentina.' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados YPF S.A. Clase XLI (06/10/2025): 'Obligaciones Negociables Clase XLI: Monto total adjudicado y colocado: US$ 95.527.164. Fecha de Emisión y Liquidación: 8 de octubre de 2025. Fecha de Vencimiento: 8 de enero de 2027 (plazo de 15 meses). Tasa Fija: 6,00% nominal anual. Amortización: 100% al vencimiento (Bullet). Código ISIN: AR0675705039. Tickers BYMA: YM41D / YM41C / YM41O.'",
+    "_fuente_verificada": true,
+    "ticker": "YM41D / YM41C / YM41O",
+    "ticker_mep": "YM41D",
+    "ticker_ccl": "YM41C",
+    "ticker_pesos": "YM41O",
+    "isin": "AR0675705039",
+    "emisor": "YPF S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XLI (2027)",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 95527164,
+    "fecha_emision": "2025-10-08",
+    "fecha_vencimiento": "2027-01-08",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.06,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 3,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-01-08",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto YPF S.A. Clase XXIV (18/04/2023), Pág. 1, 8-12: 'Amortización: El capital será cancelado íntegramente en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Tasa de Interés: Tasa fija nominal anual del 1,00% pagadera trimestralmente.' -- 'Base de Cálculo: Actual/365.' -- 'Moneda: Denominadas en Dólares Estadounidenses, integradas y pagaderas en Pesos al Tipo de Cambio Aplicable (Dólar Linked).' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados YPF S.A. Clase XXIV (21/04/2023): 'Obligaciones Negociables Clase XXIV: Monto total adjudicado y colocado: US$ 267.000.000. Fecha de Emisión y Liquidación: 25 de abril de 2023. Fecha de Vencimiento: 25 de abril de 2027 (plazo de 48 meses). Tasa Fija: 1,00% nominal anual. Amortización: 100% al vencimiento (Bullet). Código ISIN: ARYPFS5601V2. Tickers BYMA: YMCPD / YMCPC / YMCPO.'",
+    "_fuente_verificada": true,
+    "ticker": "YMCPD / YMCPC / YMCPO",
+    "ticker_mep": "YMCPD",
+    "ticker_ccl": "YMCPC",
+    "ticker_pesos": "YMCPO",
+    "isin": "ARYPFS5601V2",
+    "emisor": "YPF S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XXIV (2027)",
+    "moneda_emision": "USD",
+    "moneda_pago": "Pesos",
+    "moneda_integracion_pago": "Pesos",
+    "ley": "Argentina",
+    "monto_emitido": 267000000,
+    "fecha_emision": "2023-04-25",
+    "fecha_vencimiento": "2027-04-25",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.01,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 3,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-04-25",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Offering Memorandum YPF S.A. 6.950% Senior Notes due 2027 (July 14, 2017), Pág. 1, 35-39: 'Principal: The Notes will mature on July 21, 2027. The principal will be repaid in a single bullet payment at maturity.' -- 'Interest: The Notes will bear interest at a rate of 6.950% per year, payable semiannually on January 21 and July 21 of each year.' -- 'Day Count: 30/360.' -- 'Governing Law: State of New York.'",
+    "_evidencia_resultados": "Aviso de Resultados y Colocación Internacional YPF S.A. Notes due 2027 (CNV / BYMA / SEC): 'Obligaciones Negociables Senior 6,950% con vencimiento en 2027. Monto total emitido: US$ 750.000.000. Fecha de emisión y liquidación: 21 de julio de 2017. Fecha de vencimiento: 21 de julio de 2027. Tasa Fija: 6,95% nominal anual. Amortización: 100% al vencimiento (Bullet). Códigos ISIN: Reg S USP989MJBL47 / 144A US984245AD21. Tickers BYMA: YCAMD / YCAMC / YCAMO.'",
+    "_fuente_verificada": true,
+    "ticker": "YCAMD / YCAMC / YCAMO",
+    "ticker_mep": "YCAMD",
+    "ticker_ccl": "YCAMC",
+    "ticker_pesos": "YCAMO",
+    "isin": "USP989MJBL47",
+    "emisor": "YPF S.A.",
+    "clase_serie": "Obligaciones Negociables Senior Notes due 2027",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_CCL",
+    "ley": "Nueva York",
+    "monto_emitido": 750000000,
+    "fecha_emision": "2017-07-21",
+    "fecha_vencimiento": "2027-07-21",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0695,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-07-21",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto YPF S.A. Clase XXXVIII (15/07/2025), Pág. 1, 9-13: 'Amortización: El capital de las Obligaciones Negociables Clase XXXVIII será cancelado en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Tasa de Interés: Devengarán intereses a una tasa fija nominal anual del 7,50% pagaderos trimestralmente.' -- 'Base de Cálculo: Actual/365.' -- 'Moneda: Denominadas, integradas y pagaderas en Dólares Estadounidenses en Argentina.' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados YPF S.A. Clase XXXVIII (18/07/2025): 'Obligaciones Negociables Clase XXXVIII: Monto total colocado: US$ 143.150.000. Fecha de Emisión y Liquidación: 22 de julio de 2025. Fecha de Vencimiento: 22 de julio de 2027 (plazo de 24 meses). Tasa Fija Aplicable: 7,50% nominal anual. Amortización: 100% al vencimiento (Bullet). Código ISIN: AR0675705021. Tickers BYMA: YM38D / YM38C / YM38O.'",
+    "_fuente_verificada": true,
+    "ticker": "YM38D / YM38C / YM38O",
+    "ticker_mep": "YM38D",
+    "ticker_ccl": "YM38C",
+    "ticker_pesos": "YM38O",
+    "isin": "AR0675705021",
+    "emisor": "YPF S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XXXVIII (2027)",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 143150000,
+    "fecha_emision": "2025-07-22",
+    "fecha_vencimiento": "2027-07-22",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.075,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 3,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-07-22",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto YPF S.A. Clase XL (20/08/2025), Pág. 1, 9-13: 'Amortización: El capital de las Obligaciones Negociables Clase XL será amortizado en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Tasa de Interés: Devengarán intereses a una tasa fija nominal anual del 7,50% pagaderos trimestralmente.' -- 'Base de Cálculo: Actual/365.' -- 'Moneda: Denominadas, integradas y pagaderas en Dólares Estadounidenses en Argentina.' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados YPF S.A. Clase XL (25/08/2025): 'Obligaciones Negociables Clase XL: Monto total colocado: US$ 51.383.412. Fecha de Emisión y Liquidación: 28 de agosto de 2025. Fecha de Vencimiento: 28 de agosto de 2028 (plazo de 36 meses). Tasa Fija: 7,50% nominal anual. Amortización: 100% al vencimiento (Bullet). Código ISIN: AR0675705047. Tickers BYMA: YM40D / YM40C / YM40O.'",
+    "_fuente_verificada": true,
+    "ticker": "YM40D / YM40C / YM40O",
+    "ticker_mep": "YM40D",
+    "ticker_ccl": "YM40C",
+    "ticker_pesos": "YM40O",
+    "isin": "AR0675705047",
+    "emisor": "YPF S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XL (2028)",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 51383412,
+    "fecha_emision": "2025-08-28",
+    "fecha_vencimiento": "2028-08-28",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.075,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 3,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2028-08-28",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto YPF S.A. Clase XXVI (05/09/2023), Pág. 1, 8-12: 'Amortización: El capital será cancelado íntegramente en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Tasa de Interés: Tasa fija nominal anual del 0,00% (cero por ciento).' -- 'Base de Cálculo: Actual/365.' -- 'Moneda: Denominadas en Dólares Estadounidenses, suscriptas, integradas y pagaderas en Pesos al Tipo de Cambio Aplicable (Dólar Linked).' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados YPF S.A. Clase XXVI (08/09/2023): 'Obligaciones Negociables Clase XXVI: Monto total colocado: US$ 367.653.486. Fecha de Emisión y Liquidación: 12 de septiembre de 2023. Fecha de Vencimiento: 12 de septiembre de 2028 (plazo de 60 meses). Tasa Fija: 0,00% nominal anual. Amortización: 100% al vencimiento (Bullet). Código ISIN: ARYPFS5601X8. Tickers BYMA: YMCRD / YMCRC / YMCRO.'",
+    "_fuente_verificada": true,
+    "ticker": "YMCRD / YMCRC / YMCRO",
+    "ticker_mep": "YMCRD",
+    "ticker_ccl": "YMCRC",
+    "ticker_pesos": "YMCRO",
+    "isin": "ARYPFS5601X8",
+    "emisor": "YPF S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XXVI (2028)",
+    "moneda_emision": "USD",
+    "moneda_pago": "Pesos",
+    "moneda_integracion_pago": "Pesos",
+    "ley": "Argentina",
+    "monto_emitido": 367653486,
+    "fecha_emision": "2023-09-12",
+    "fecha_vencimiento": "2028-09-12",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2028-09-12",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto YPF S.A. Clase XXXII (03/10/2024), Pág. 1, 9-13: 'Amortización: El capital de las Obligaciones Negociables Clase XXXII será amortizado en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Tasa de Interés: Devengarán intereses a una tasa fija nominal anual del 6,50% pagaderos trimestralmente.' -- 'Base de Cálculo: Actual/365.' -- 'Moneda: Denominadas, suscriptas, integradas y pagaderas en Dólares Estadounidenses en Argentina.' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados YPF S.A. Clase XXXII (08/10/2024): 'Obligaciones Negociables Clase XXXII: Monto adjudicado y colocado: US$ 125.000.000. Fecha de Emisión y Liquidación: 10 de octubre de 2024. Fecha de Vencimiento: 10 de octubre de 2028 (plazo de 48 meses). Tasa Fija: 6,50% nominal anual. Amortización: 100% al vencimiento (Bullet). Código ISIN: AR0417757066. Tickers BYMA: YMCYD / YMCYC / YMCYO.'",
+    "_fuente_verificada": true,
+    "ticker": "YMCYD / YMCYC / YMCYO",
+    "ticker_mep": "YMCYD",
+    "ticker_ccl": "YMCYC",
+    "ticker_pesos": "YMCYO",
+    "isin": "AR0417757066",
+    "emisor": "YPF S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XXXII (2028)",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 125000000,
+    "fecha_emision": "2024-10-10",
+    "fecha_vencimiento": "2028-10-10",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.065,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 3,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2028-10-10",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto YPF S.A. Clase XXVII / XXXIII (03/10/2024), Pág. 1, 9-13: 'Amortización: El capital será amortizado íntegramente en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Tasa de Interés: Devengarán intereses a una tasa fija nominal anual del 7,00% pagaderos semestralmente los días 10 de abril y 10 de octubre de cada año.' -- 'Base de Cálculo: Actual/365.' -- 'Moneda: Denominadas y pagaderas en Dólares Estadounidenses en Argentina.' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados YPF S.A. Clase XXXIII (08/10/2024): 'Obligaciones Negociables Clase XXXIII: Monto total adjudicado y colocado: US$ 140.000.000. Fecha de Emisión y Liquidación: 10 de octubre de 2024. Fecha de Vencimiento: 10 de octubre de 2028 (plazo de 48 meses). Tasa Fija: 7,00% nominal anual. Amortización: 100% al vencimiento (Bullet). Código ISIN: AR0079616063. Tickers BYMA: YMCZD / YMCZC / YMCZO.'",
+    "_fuente_verificada": true,
+    "ticker": "YMCZD / YMCZC / YMCZO",
+    "ticker_mep": "YMCZD",
+    "ticker_ccl": "YMCZC",
+    "ticker_pesos": "YMCZO",
+    "isin": "AR0079616063",
+    "emisor": "YPF S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XXXIII (2028)",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 140000000,
+    "fecha_emision": "2024-10-10",
+    "fecha_vencimiento": "2028-10-10",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.07,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2028-10-10",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto YPF S.A. Clase XLII (25/11/2025), Pág. 1, 9-13: 'Amortización: El capital de las Obligaciones Negociables Clase XLII será amortizado en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Tasa de Interés: Devengarán intereses a una tasa fija nominal anual del 7,00% pagaderos semestralmente.' -- 'Base de Cálculo: Actual/365.' -- 'Moneda: Denominadas, integradas y pagaderas en Dólares Estadounidenses en Argentina.' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados YPF S.A. Clase XLII (28/11/2025): 'Obligaciones Negociables Clase XLII: Monto total adjudicado y colocado: US$ 194.800.000. Fecha de Emisión y Liquidación: 2 de diciembre de 2025. Fecha de Vencimiento: 2 de marzo de 2029 (plazo de 39 meses). Tasa Fija: 7,00% nominal anual. Amortización: 100% al vencimiento (Bullet). Código ISIN: AR0675705054. Tickers BYMA: YM42D / YM42C / YM42O.'",
+    "_fuente_verificada": true,
+    "ticker": "YM42D / YM42C / YM42O",
+    "ticker_mep": "YM42D",
+    "ticker_ccl": "YM42C",
+    "ticker_pesos": "YM42O",
+    "isin": "AR0675705054",
+    "emisor": "YPF S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XLII (2029)",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 194800000,
+    "fecha_emision": "2025-12-02",
+    "fecha_vencimiento": "2029-03-02",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.07,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2029-03-02",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Offering Memorandum YPF S.A. 8.500% Senior Notes due 2029 (June 20, 2019), Pág. 1, 38-42: 'Principal: The Notes will mature on June 27, 2029. The principal will be repaid in a single bullet payment at maturity.' -- 'Interest: 8.500% per year, payable semiannually on June 27 and December 27 of each year.' -- 'Day Count: 30/360.' -- 'Governing Law: State of New York.'",
+    "_evidencia_resultados": "Aviso de Resultados y Colocación Internacional YPF S.A. Senior Notes due 2029 (CNV / BYMA / SEC): 'Obligaciones Negociables Senior 8,500% con vencimiento en 2029. Monto colocado: US$ 500.000.000. Fecha de emisión y liquidación: 27 de junio de 2019. Fecha de vencimiento: 27 de junio de 2029. Tasa Fija: 8,50% nominal anual. Amortización: 100% al vencimiento (Bullet). Códigos ISIN: Reg S USP989MJBP50 / 144A US984245AH35. Tickers BYMA: YMC1D / YMC1C / YMC1O.'",
+    "_fuente_verificada": true,
+    "ticker": "YMC1D / YMC1C / YMC1O",
+    "ticker_mep": "YMC1D",
+    "ticker_ccl": "YMC1C",
+    "ticker_pesos": "YMC1O",
+    "isin": "USP989MJBP50",
+    "emisor": "YPF S.A.",
+    "clase_serie": "Obligaciones Negociables Senior Notes due 2029",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_CCL",
+    "ley": "Nueva York",
+    "monto_emitido": 500000000,
+    "fecha_emision": "2019-06-27",
+    "fecha_vencimiento": "2029-06-27",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.085,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2029-06-27",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Exchange Offer Memorandum YPF S.A. Step-Up Senior Amortizing Notes due 2029 (February 5, 2021), Pág. 1, 45-50: 'Principal: The Notes will mature on June 30, 2029. The principal of the Notes will be amortized in semiannual installments beginning in December 2026 until maturity.' -- 'Interest: 9.000% per annum, payable semiannually on June 30 and December 30 of each year.' -- 'Day Count: 30/360.' -- 'Governing Law: State of New York.'",
+    "_evidencia_resultados": "Aviso de Resultados y Liquidación del Canje Internacional YPF S.A. Amortizing Notes due 2029 (CNV / BYMA / SEC): 'Obligaciones Negociables Amortizables con vencimiento en 2029. Monto total emitido y adjudicado: US$ 747.833.257. Fecha de emisión y liquidación: 12 de febrero de 2021. Fecha de vencimiento: 30 de junio de 2029. Tasa Fija Aplicable: 9,00% nominal anual. Amortización: 6 cuotas de 14,2857% y cuota final del 14,2858%. Códigos ISIN: Reg S USP989MJBS99 / 144A US984245AK63. Tickers BYMA: YMCID / YMCIC / YMCIO.'",
+    "_fuente_verificada": true,
+    "ticker": "YMCID / YMCIC / YMCIO",
+    "ticker_mep": "YMCID",
+    "ticker_ccl": "YMCIC",
+    "ticker_pesos": "YMCIO",
+    "isin": "USP989MJBS99",
+    "emisor": "YPF S.A.",
+    "clase_serie": "Obligaciones Negociables Senior Amortizing Notes due 2029",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_CCL",
+    "ley": "Nueva York",
+    "monto_emitido": 747833257,
+    "fecha_emision": "2021-02-12",
+    "fecha_vencimiento": "2029-06-30",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.09,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Amortizable",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2026-12-30",
+        "porcentaje": 14.2857
+      },
+      {
+        "fecha": "2027-06-30",
+        "porcentaje": 14.2857
+      },
+      {
+        "fecha": "2027-12-30",
+        "porcentaje": 14.2857
+      },
+      {
+        "fecha": "2028-06-30",
+        "porcentaje": 14.2857
+      },
+      {
+        "fecha": "2028-12-30",
+        "porcentaje": 14.2857
+      },
+      {
+        "fecha": "2029-06-30",
+        "porcentaje": 28.5715
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto YPF S.A. Clase XXXIX (15/07/2025), Pág. 1, 9-13: 'Amortización: El capital de las Obligaciones Negociables Clase XXXIX será amortizado en un único pago en la Fecha de Vencimiento (Bullet).' -- 'Tasa de Interés: Devengarán intereses a una tasa fija nominal anual del 8,75% pagaderos semestralmente.' -- 'Base de Cálculo: Actual/365.' -- 'Moneda: Denominadas, integradas y pagaderas en Dólares Estadounidenses en Argentina.' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados YPF S.A. Clase XXXIX (18/07/2025): 'Obligaciones Negociables Clase XXXIX: Monto total adjudicado y colocado: US$ 167.236.644. Fecha de Emisión y Liquidación: 22 de julio de 2025. Fecha de Vencimiento: 22 de julio de 2030 (plazo de 60 meses). Tasa Fija: 8,75% nominal anual. Amortización: 100% al vencimiento (Bullet). Código ISIN: AR0081455617. Tickers BYMA: YM39D / YM39C / YM39O.'",
+    "_fuente_verificada": true,
+    "ticker": "YM39D / YM39C / YM39O",
+    "ticker_mep": "YM39D",
+    "ticker_ccl": "YM39C",
+    "ticker_pesos": "YM39O",
+    "isin": "AR0081455617",
+    "emisor": "YPF S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XXXIX (2030)",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 167236644,
+    "fecha_emision": "2025-07-22",
+    "fecha_vencimiento": "2030-07-22",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0875,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2030-07-22",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Offering Memorandum YPF S.A. 9.500% Senior Notes due 2031 (January 11, 2024), Pág. 1, 38-42: 'Principal: The Notes will mature on January 17, 2031. The principal will be repaid in a single bullet payment at maturity.' -- 'Interest: The Notes will bear interest at a rate of 9.500% per year, payable semiannually on January 17 and July 17 of each year.' -- 'Day Count: 30/360.' -- 'Governing Law: State of New York.'",
+    "_evidencia_resultados": "Aviso de Resultados y Colocación Internacional YPF S.A. Senior Notes due 2031 (CNV / BYMA / SEC / LuxSE): 'Obligaciones Negociables Senior 9,500% con vencimiento en 2031. Monto colocado: US$ 800.000.000. Fecha de emisión y liquidación: 17 de enero de 2024. Fecha de vencimiento: 17 de enero de 2031. Tasa Fija Aplicable: 9,50% nominal anual. Amortización: 100% al vencimiento (Bullet). Códigos ISIN: Reg S USP989MJBU46 / 144A US984245AM20. Tickers BYMA: YMCUD / YMCUC / YMCUO.'",
+    "_fuente_verificada": true,
+    "ticker": "YMCUD / YMCUC / YMCUO",
+    "ticker_mep": "YMCUD",
+    "ticker_ccl": "YMCUC",
+    "ticker_pesos": "YMCUO",
+    "isin": "USP989MJBU46",
+    "emisor": "YPF S.A.",
+    "clase_serie": "Obligaciones Negociables Senior Notes due 2031",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_CCL",
+    "ley": "Nueva York",
+    "monto_emitido": 800000000,
+    "fecha_emision": "2024-01-17",
+    "fecha_vencimiento": "2031-01-17",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.095,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2031-01-17",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto YPF S.A. Clase XX (15/07/2021), Pág. 1, 9-13: 'Amortización: El capital será cancelado en catorce (14) cuotas semestrales, iguales y consecutivas, a partir del 22 de enero de 2026.' -- 'Tasa de Interés: Tasa fija del 5,75% nominal anual pagadera semestralmente.' -- 'Base de Cálculo: Actual/365.' -- 'Moneda: Denominadas en Dólares Estadounidenses, suscriptas, integradas y pagaderas en Pesos al Tipo de Cambio Aplicable (Dólar Linked).' -- 'Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados YPF S.A. Clase XX (20/07/2021): 'Obligaciones Negociables Clase XX: Monto colocado: US$ 384.209.900. Fecha de Emisión y Liquidación: 22 de julio de 2021. Fecha de Vencimiento: 22 de julio de 2032 (plazo de 132 meses / 11 años). Tasa Fija: 5,75% nominal anual. Amortización: 14 cuotas semestrales a partir del mes 54. Código ISIN: ARYPFS5601M1. Tickers BYMA: YMCLD / YMCLC / YMCLO.'",
+    "_fuente_verificada": true,
+    "ticker": "YMCLD / YMCLC / YMCLO",
+    "ticker_mep": "YMCLD",
+    "ticker_ccl": "YMCLC",
+    "ticker_pesos": "YMCLO",
+    "isin": "ARYPFS5601M1",
+    "emisor": "YPF S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XX (2032)",
+    "moneda_emision": "USD",
+    "moneda_pago": "Pesos",
+    "moneda_integracion_pago": "Pesos",
+    "ley": "Argentina",
+    "monto_emitido": 384209900,
+    "fecha_emision": "2021-07-22",
+    "fecha_vencimiento": "2032-07-22",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0575,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "Actual/365",
+    "tipo_amortizacion": "Amortizable",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2026-01-22",
+        "porcentaje": 7.1428
+      },
+      {
+        "fecha": "2026-07-22",
+        "porcentaje": 7.1428
+      },
+      {
+        "fecha": "2027-01-22",
+        "porcentaje": 7.1428
+      },
+      {
+        "fecha": "2027-07-22",
+        "porcentaje": 7.1428
+      },
+      {
+        "fecha": "2028-01-22",
+        "porcentaje": 7.1428
+      },
+      {
+        "fecha": "2028-07-22",
+        "porcentaje": 7.1428
+      },
+      {
+        "fecha": "2029-01-22",
+        "porcentaje": 7.1428
+      },
+      {
+        "fecha": "2029-07-22",
+        "porcentaje": 7.1428
+      },
+      {
+        "fecha": "2030-01-22",
+        "porcentaje": 7.1428
+      },
+      {
+        "fecha": "2030-07-22",
+        "porcentaje": 7.1428
+      },
+      {
+        "fecha": "2031-01-22",
+        "porcentaje": 7.1428
+      },
+      {
+        "fecha": "2031-07-22",
+        "porcentaje": 7.1428
+      },
+      {
+        "fecha": "2032-01-22",
+        "porcentaje": 7.1428
+      },
+      {
+        "fecha": "2032-07-22",
+        "porcentaje": 7.1436
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Exchange Offer Memorandum YPF S.A. 7.000% Senior Amortizing Notes due 2033 (February 5, 2021), Pág. 1, 46-52: 'Principal: The Notes will mature on September 30, 2033. The principal will be repaid in four annual installments of 25% each on September 30, 2030, 2031, 2032, and 2033.' -- 'Interest: 7.000% per year, payable semiannually on March 30 and September 30 of each year.' -- 'Day Count: 30/360.' -- 'Governing Law: State of New York.'",
+    "_evidencia_resultados": "Aviso de Resultados y Liquidación del Canje YPF S.A. Amortizing Notes due 2033 (CNV / BYMA / SEC): 'Obligaciones Negociables Clase XVIII con vencimiento en 2033. Monto total emitido y adjudicado: US$ 575.649.021. Fecha de emisión y liquidación: 12 de febrero de 2021. Fecha de vencimiento: 30 de septiembre de 2033. Tasa Fija: 7,00% nominal anual. Amortización: 4 cuotas de 25% anuales a partir de 2030. Códigos ISIN: Reg S USP989MJBM20 / 144A US984245AE04. Tickers BYMA: YMCJD / YMCJC / YMCJO.'",
+    "_fuente_verificada": true,
+    "ticker": "YMCJD / YMCJC / YMCJO",
+    "ticker_mep": "YMCJD",
+    "ticker_ccl": "YMCJC",
+    "ticker_pesos": "YMCJO",
+    "isin": "USP989MJBM20",
+    "emisor": "YPF S.A.",
+    "clase_serie": "Obligaciones Negociables Senior Amortizing Notes due 2033",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_CCL",
+    "ley": "Nueva York",
+    "monto_emitido": 575649021,
+    "fecha_emision": "2021-02-12",
+    "fecha_vencimiento": "2033-09-30",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.07,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Amortizable",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2030-09-30",
+        "porcentaje": 25
+      },
+      {
+        "fecha": "2031-09-30",
+        "porcentaje": 25
+      },
+      {
+        "fecha": "2032-09-30",
+        "porcentaje": 25
+      },
+      {
+        "fecha": "2033-09-30",
+        "porcentaje": 25
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Offering Memorandum YPF S.A. 7.000% Senior Notes due 2047 (December 7, 2017), Pág. 1, 38-42: 'Principal: The Notes will mature on December 15, 2047. The principal will be repaid in a single bullet payment at maturity.' -- 'Interest: 7.000% per year, payable semiannually on June 15 and December 15 of each year.' -- 'Day Count: 30/360.' -- 'Governing Law: State of New York.'",
+    "_evidencia_resultados": "Aviso de Resultados y Colocación Internacional YPF S.A. Senior Notes due 2047 (CNV / BYMA / SEC / LuxSE): 'Obligaciones Negociables Senior 7,000% con vencimiento en 2047. Monto colocado: US$ 750.000.000. Fecha de emisión y liquidación: 15 de diciembre de 2017. Fecha de vencimiento: 15 de diciembre de 2047. Tasa Fija Aplicable: 7,00% nominal anual. Amortización: 100% al vencimiento (Bullet). Códigos ISIN: Reg S USP989MJBN03 / 144A US984245AF78. Tickers BYMA: YCAND / YCANC / YCANO.'",
+    "_fuente_verificada": true,
+    "ticker": "YCAND / YCANC / YCANO",
+    "ticker_mep": "YCAND",
+    "ticker_ccl": "YCANC",
+    "ticker_pesos": "YCANO",
+    "isin": "USP989MJBN03",
+    "emisor": "YPF S.A.",
+    "clase_serie": "Obligaciones Negociables Senior Notes due 2047",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_CCL",
+    "moneda_integracion_pago": "USD_CCL",
+    "ley": "Nueva York",
+    "monto_emitido": 750000000,
+    "fecha_emision": "2017-12-15",
+    "fecha_vencimiento": "2047-12-15",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.07,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2047-12-15",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto YPF Luz Clases XIV y XV (Programa Global de ON Simples, Febrero 2024): 'Obligaciones Negociables Clase XIV denominadas en Dólares Estadounidenses y pagaderas en Pesos al Tipo de Cambio Aplicable (Dólar-Linked). Plazo: 36 meses. Tasa Fija Nominal Anual: 3,00%. Frecuencia de pago de intereses: Trimestral. Base de cálculo: 30/360. Amortización de capital: en dos pagos iguales: el primero en el mes 30 (50%) a contar desde la Fecha de Emisión y Liquidación (27 de agosto de 2026), y el segundo en la Fecha de Vencimiento (50%) a los 36 meses (27 de febrero de 2027). Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados (27 de febrero de 2024): 'Monto total emitido y colocado de las Obligaciones Negociables Clase XIV: USD 18.043.469. Fecha de emisión y liquidación: 27 de febrero de 2024. Fecha de vencimiento: 27 de febrero de 2027. Tasa de interés aplicable: 3,00% nominal anual. Calificación crediticia asignada por FIX SCR: AAA(arg).'",
+    "_fuente_verificada": true,
+    "ticker": "YFCFD / YFCFO",
+    "ticker_mep": "YFCFD",
+    "ticker_pesos": "YFCFO",
+    "isin": "AR0976739711",
+    "emisor": "YPF Energía Eléctrica S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XIV",
+    "moneda_emision": "USD",
+    "moneda_pago": "Pesos",
+    "moneda_integracion_pago": "Pesos",
+    "ley": "Argentina",
+    "monto_emitido": 18043469,
+    "fecha_emision": "2024-02-27",
+    "fecha_vencimiento": "2027-02-27",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.03,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 3,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Amortizable",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2026-08-27",
+        "porcentaje": 50
+      },
+      {
+        "fecha": "2027-02-27",
+        "porcentaje": 50
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto YPF Luz Clases XIV y XV (Programa Global de ON Simples, Febrero 2024): 'Obligaciones Negociables Clase XV denominadas, suscriptas y pagaderas en Dólares Estadounidenses en el país (Dólar MEP). Plazo: 36 meses. Tasa Fija Nominal Anual: 6,00%. Frecuencia de pago de intereses: Trimestral. Base de cálculo: 30/360. Amortización de capital: íntegramente al vencimiento en un único pago (Bullet). Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados (27 de febrero de 2024): 'Monto total emitido y colocado de las Obligaciones Negociables Clase XV: USD 11.287.656. Fecha de emisión y liquidación: 27 de febrero de 2024. Fecha de vencimiento: 27 de febrero de 2027. Tasa de interés aplicable: 6,00% nominal anual. Calificación crediticia asignada por FIX SCR: AAA(arg).'",
+    "_fuente_verificada": true,
+    "ticker": "YFCGD / YFCGC / YFCGO",
+    "ticker_mep": "YFCGD",
+    "ticker_ccl": "YFCGC",
+    "ticker_pesos": "YFCGO",
+    "isin": "AR0704160875",
+    "emisor": "YPF Energía Eléctrica S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XV",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 11287656,
+    "fecha_emision": "2024-02-27",
+    "fecha_vencimiento": "2027-02-27",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.06,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 3,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-02-27",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto YPF Luz Clase XXI (Régimen Simplificado Emisor Frecuente, Mayo 2025): 'Obligaciones Negociables Clase XXI denominadas, suscriptas y pagaderas en Dólares Estadounidenses en el país (Dólar MEP). Plazo: 24 meses. Tasa Fija Nominal Anual: 6,50%. Frecuencia de pago de intereses: Trimestral. Base de cálculo: 30/360. Amortización de capital: íntegramente al vencimiento en un único pago (Bullet). Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados (20 de mayo de 2025): 'Monto total emitido y colocado de las Obligaciones Negociables Clase XXI: USD 53.827.026. Fecha de emisión y liquidación: 20 de mayo de 2025. Fecha de vencimiento: 20 de mayo de 2027. Tasa de interés aplicable: 6,50% nominal anual. Calificación crediticia asignada por FIX SCR: AAA(arg).'",
+    "_fuente_verificada": true,
+    "ticker": "YFCMD / YFCMC / YFCMO",
+    "ticker_mep": "YFCMD",
+    "ticker_ccl": "YFCMC",
+    "ticker_pesos": "YFCMO",
+    "isin": "AR0975634988",
+    "emisor": "YPF Energía Eléctrica S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XXI",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 53827026,
+    "fecha_emision": "2025-05-20",
+    "fecha_vencimiento": "2027-05-20",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.065,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 3,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-05-20",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto YPF Luz Clases XVI y XVII (Programa Global de Emisión, Junio 2024): 'Obligaciones Negociables Clase XVII denominadas, suscriptas y pagaderas en Dólares Estadounidenses en el país (Dólar MEP). Plazo: 36 meses. Tasa Fija Nominal Anual: 5,90%. Frecuencia de pago de intereses: Trimestral. Base de cálculo: 30/360. Amortización de capital: íntegramente al vencimiento en un único pago (Bullet). Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados (13 de junio de 2024): 'Monto total emitido y colocado de las Obligaciones Negociables Clase XVII: USD 10.199.945. Fecha de emisión y liquidación: 13 de junio de 2024. Fecha de vencimiento: 13 de junio de 2027. Tasa de interés aplicable: 5,90% nominal anual. Calificación crediticia asignada por FIX SCR: AAA(arg).'",
+    "_fuente_verificada": true,
+    "ticker": "YFCID / YFCIC / YFCIO",
+    "ticker_mep": "YFCID",
+    "ticker_ccl": "YFCIC",
+    "ticker_pesos": "YFCIO",
+    "isin": "AR0947502206",
+    "emisor": "YPF Energía Eléctrica S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XVII",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 10199945,
+    "fecha_emision": "2024-06-13",
+    "fecha_vencimiento": "2027-06-13",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.059,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 3,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-06-13",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto YPF Luz Clases XIX y XX (Régimen Emisor Frecuente, Noviembre 2024): 'Obligaciones Negociables Clase XX denominadas, suscriptas y pagaderas en Dólares Estadounidenses en el país (Dólar MEP). Plazo: 48 meses. Tasa Fija Nominal Anual: 6,75%. Frecuencia de pago de intereses: Trimestral. Base de cálculo: 30/360. Amortización de capital: íntegramente al vencimiento en un único pago (Bullet). Ley Aplicable: Las Obligaciones Negociables se regirán por las leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados (22 de noviembre de 2024): 'Monto total emitido y colocado de las Obligaciones Negociables Clase XX: USD 50.981.768. Fecha de emisión e integración: 22 de noviembre de 2024. Fecha de vencimiento: 22 de noviembre de 2028. Tasa de interés aplicable: 6,75% nominal anual. Calificación crediticia asignada por FIX SCR: AAA(arg).'",
+    "_fuente_verificada": true,
+    "ticker": "YFCLD / YFCLC / YFCLO",
+    "ticker_mep": "YFCLD",
+    "ticker_ccl": "YFCLC",
+    "ticker_pesos": "YFCLO",
+    "isin": "AR0338531962",
+    "emisor": "YPF Energía Eléctrica S.A.",
+    "clase_serie": "Obligaciones Negociables Clase XX",
+    "moneda_emision": "USD",
+    "moneda_pago": "USD_MEP",
+    "moneda_integracion_pago": "USD_MEP",
+    "ley": "Argentina",
+    "monto_emitido": 50981768,
+    "fecha_emision": "2024-11-22",
+    "fecha_vencimiento": "2028-11-22",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.0675,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 3,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Bullet",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2028-11-22",
+        "porcentaje": 100
+      }
+    ]
+  },
+  {
+    "_evidencia_prospecto": "Suplemento de Prospecto YPF Luz Clase X Bono Verde (Programa Global de Emisión, Febrero 2022): 'Obligaciones Negociables Clase X denominadas en Dólares Estadounidenses y pagaderas en Pesos al Tipo de Cambio Aplicable (Dólar-Linked). Plazo: 120 meses (10 años). Tasa Fija Nominal Anual: 5,00%. Frecuencia de pago de intereses: Semestral (3 de febrero y 3 de agosto de cada año). Base de cálculo: 30/360. Amortización de capital: en 10 cuotas semestrales iguales y consecutivas del 10% cada una a partir del 3 de agosto de 2027 hasta el vencimiento final el 3 de febrero de 2032. Ley Aplicable: Leyes de la República Argentina.'",
+    "_evidencia_resultados": "Aviso de Resultados (3 de febrero de 2022): 'Monto total emitido y colocado de las Obligaciones Negociables Clase X: USD 63.870.000. Fecha de emisión y liquidación: 3 de febrero de 2022. Fecha de vencimiento: 3 de febrero de 2032. Tasa de interés aplicable: 5,00% nominal anual. Código ISIN: ARYPFE5600G5. Destino de fondos: Financiación de la construcción del Parque Solar Zonda I (Bono Verde).'",
+    "_fuente_verificada": true,
+    "ticker": "YFCAD / YFCAO",
+    "ticker_mep": "YFCAD",
+    "ticker_pesos": "YFCAO",
+    "isin": "ARYPFE5600G5",
+    "emisor": "YPF Energía Eléctrica S.A.",
+    "clase_serie": "Obligaciones Negociables Clase X (Bono Verde)",
+    "moneda_emision": "USD",
+    "moneda_pago": "Pesos",
+    "moneda_integracion_pago": "Pesos",
+    "ley": "Argentina",
+    "monto_emitido": 63870000,
+    "fecha_emision": "2022-02-03",
+    "fecha_vencimiento": "2032-02-03",
+    "tipo_tasa": "Fija",
+    "tasa_fija_anual": 0.05,
+    "tasa_referencia": null,
+    "margen_tasa_variable": null,
+    "frecuencia_interes_meses": 6,
+    "base_calculo": "30/360",
+    "tipo_amortizacion": "Amortizable",
+    "cronograma_amortizacion": [
+      {
+        "fecha": "2027-08-03",
+        "porcentaje": 10
+      },
+      {
+        "fecha": "2028-02-03",
+        "porcentaje": 10
+      },
+      {
+        "fecha": "2028-08-03",
+        "porcentaje": 10
+      },
+      {
+        "fecha": "2029-02-03",
+        "porcentaje": 10
+      },
+      {
+        "fecha": "2029-08-03",
+        "porcentaje": 10
+      },
+      {
+        "fecha": "2030-02-03",
+        "porcentaje": 10
+      },
+      {
+        "fecha": "2030-08-03",
+        "porcentaje": 10
+      },
+      {
+        "fecha": "2031-02-03",
+        "porcentaje": 10
+      },
+      {
+        "fecha": "2031-08-03",
+        "porcentaje": 10
+      },
+      {
+        "fecha": "2032-02-03",
+        "porcentaje": 10
+      }
+    ]
+  }
+]

@@ -11,6 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
   <!-- Chart.js CDN -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Apache ECharts CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/styles.css?v=1.0.32">
 </head>
@@ -43,8 +45,6 @@
           <span id="market-status-updated" class="status-text-updated">Últ. actualizac. --/--/---- - --:--</span>
         </div>
         <button id="btn-refresh-quotes" class="nav-btn" style="border: 1px solid var(--accent-lime); color: var(--accent-lime);" title="Actualizar cotizaciones en vivo">🔄 Actualizar</button>
-        <button id="btn-api-config" class="nav-btn" style="border: 1px solid var(--border-color); display: none;">📡 Feed Data912</button>
-        <button id="btn-toggle-number-format-header" class="nav-btn btn-toggle-number-format" title="Cambiar formato numérico (Argentina 1.000,00 vs Internacional 1,000.00)" style="font-family: var(--font-mono); font-size: 0.76rem; font-weight: 700; border: 1px solid var(--border-color);">1.234,56</button>
         <button id="theme-toggle" class="nav-btn" style="border: 1px solid var(--border-color);">🌓 Theme</button>
       </div>
     </div>
@@ -171,13 +171,29 @@
           </div>
         </div>
 
-        <!-- TOP 10 RANKING POR MONTO EFECTIVO -->
+        <!-- TOP 10 RANKING POR MONTO EFECTIVO (GLOBAL, MEP, CABLE, PESOS) -->
         <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.25rem;">
-          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.85rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
             <h4 class="serif-heading" style="margin: 0; font-size: 0.95rem; color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 0.8px;">
-              🏆 Top 10 ONs más operadas
+              🏆 Top 10 más operadas
             </h4>
-            <span style="font-size: 0.7rem; color: var(--text-dim);">Efectivo USD</span>
+            <span id="top-ranking-subtitle-curr" style="font-size: 0.7rem; color: var(--text-dim); font-family: var(--font-mono);">Cable USD</span>
+          </div>
+
+          <!-- Top 10 Currency Selector Tabs -->
+          <div class="top-ranking-tabs" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; background: #090e17; border: 1px solid var(--border-color); border-radius: 6px; padding: 3px; margin-bottom: 0.85rem;">
+            <button type="button" id="tab-top-global" class="top-tab-btn active" style="padding: 0.28rem 0.2rem; font-size: 0.70rem; border-radius: 4px; border: none; font-weight: 700; background: var(--accent-cyan); color: #000; cursor: pointer; text-align: center;">
+              Global
+            </button>
+            <button type="button" id="tab-top-mep" class="top-tab-btn" style="padding: 0.28rem 0.2rem; font-size: 0.70rem; border-radius: 4px; border: none; font-weight: 600; background: transparent; color: var(--text-dim); cursor: pointer; text-align: center;">
+              MEP (D)
+            </button>
+            <button type="button" id="tab-top-ccl" class="top-tab-btn" style="padding: 0.28rem 0.2rem; font-size: 0.70rem; border-radius: 4px; border: none; font-weight: 600; background: transparent; color: var(--text-dim); cursor: pointer; text-align: center;">
+              Cable (C)
+            </button>
+            <button type="button" id="tab-top-ars" class="top-tab-btn" style="padding: 0.28rem 0.2rem; font-size: 0.70rem; border-radius: 4px; border: none; font-weight: 600; background: transparent; color: var(--text-dim); cursor: pointer; text-align: center;">
+              Pesos (O)
+            </button>
           </div>
 
           <div id="home-top-ranking-list" style="display: flex; flex-direction: column; gap: 0.45rem;">
@@ -186,17 +202,93 @@
           </div>
         </div>
       </div>
+
+      <!-- SECTION: SANKEY & FINANCIAL KPIS (RUEDA EN VIVO AL CCL) -->
+      <div id="sankey-market-section" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.25rem; margin-top: 1.25rem; box-shadow: 0 4px 20px rgba(0,0,0,0.25);">
+        
+        <!-- HEADER WITH TITLE, BADGE & ORIENTATION TOGGLE -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.1rem; flex-wrap: wrap; gap: 0.75rem;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap;">
+              <h3 class="serif-heading" style="margin: 0; font-size: 1.05rem; color: var(--accent-lime); text-transform: uppercase; letter-spacing: 0.8px;">
+                🌊 Flujo de Liquidez &amp; Arbitraje de Mercado (Sankey)
+              </h3>
+              <span style="font-size: 0.68rem; font-weight: 700; padding: 2px 7px; border-radius: 4px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); font-family: var(--font-mono);">
+                RUEDA EN TIEMPO REAL • DÓLAR CABLE (CCL)
+              </span>
+            </div>
+            <p style="margin: 0.35rem 0 0 0; font-size: 0.73rem; color: var(--text-dim);">
+              Consolidación del flujo de capital: <strong>Emisores Top 12</strong> ➔ <strong>Año de Vencimiento</strong> ➔ <strong>Moneda Origen</strong> ➔ <strong>Volumen Total Rueda (USD CCL)</strong>.
+            </p>
+          </div>
+
+          <!-- Orientación Fija Horizontal -->
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <div id="btn-sankey-orient-toggle" class="nav-btn" style="padding: 0.35rem 0.85rem; font-size: 0.75rem; border-radius: 6px; border: 1px solid var(--border-color); font-weight: 700; background: #090e17; color: var(--accent-cyan); display: flex; align-items: center; gap: 0.4rem; cursor: default;">
+              <span id="sankey-orient-icon">↔</span>
+              <span id="sankey-orient-text">Orientación: Horizontal</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1. BLOQUE SUPERIOR DE KPIS (AUDITORÍA DE PRECIOS Y VOLUMEN) -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.25rem;">
+          
+          <!-- KPI 1: TC Cable Implícito -->
+          <div class="market-card kpi-card-tc" style="background: #090e17; border: 1px solid var(--border-color); border-radius: 10px; padding: 0.9rem 1.1rem; border-left: 4px solid #38bdf8;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+              <span style="font-size: 0.72rem; font-weight: 700; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.5px;">1. TC Cable Implícito</span>
+              <span style="font-size: 0.65rem; color: var(--text-muted); font-family: var(--font-mono);">ON LÍDER / CCL</span>
+            </div>
+            <div style="font-size: 1.55rem; font-weight: 800; color: var(--text-main); font-family: var(--font-mono); letter-spacing: -0.5px;" id="kpi-tc-cable">$ --</div>
+            <div style="font-size: 0.68rem; color: var(--text-dim); margin-top: 0.25rem;" id="kpi-tc-cable-desc">
+              Tipo de cambio implícito en la rueda corriente
+            </div>
+          </div>
+
+          <!-- KPI 2: Spread Canje (MEP/CCL) -->
+          <div class="market-card kpi-card-canje" style="background: #090e17; border: 1px solid var(--border-color); border-radius: 10px; padding: 0.9rem 1.1rem; border-left: 4px solid #10b981;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+              <span style="font-size: 0.72rem; font-weight: 700; color: #10b981; text-transform: uppercase; letter-spacing: 0.5px;">2. Spread Canje (MEP/CCL)</span>
+              <span style="font-size: 0.65rem; color: var(--text-muted); font-family: var(--font-mono);">(TC_Cable / TC_MEP) - 1</span>
+            </div>
+            <div style="font-size: 1.55rem; font-weight: 800; color: #10b981; font-family: var(--font-mono); letter-spacing: -0.5px;" id="kpi-spread-canje">--%</div>
+            <div style="font-size: 0.68rem; color: var(--text-dim); margin-top: 0.25rem;" id="kpi-spread-canje-desc">
+              Costo de canje de plaza (Arbitraje MEP ➔ Cable)
+            </div>
+          </div>
+
+          <!-- KPI 3: Volumen Total Rueda -->
+          <div class="market-card kpi-card-vol" style="background: linear-gradient(135deg, rgba(163, 230, 53, 0.08), rgba(9, 14, 23, 0.95)); border: 1px solid rgba(163, 230, 53, 0.4); border-radius: 10px; padding: 0.9rem 1.1rem; border-left: 4px solid var(--accent-lime);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+              <span style="font-size: 0.72rem; font-weight: 800; color: var(--accent-lime); text-transform: uppercase; letter-spacing: 0.5px;">3. Volumen Total Rueda</span>
+              <span style="font-size: 0.65rem; color: var(--accent-lime); font-family: var(--font-mono); font-weight: 700;" id="kpi-vol-ops-badge">-- trades</span>
+            </div>
+            <div style="font-size: 1.55rem; font-weight: 900; color: var(--accent-lime); font-family: var(--font-mono); letter-spacing: -0.5px;" id="kpi-volumen-total">US$ --</div>
+            <div style="font-size: 0.68rem; color: var(--text-dim); margin-top: 0.25rem;" id="kpi-volumen-total-desc">
+              Consolidado de todas las ONs en Dólar Cable (CCL)
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 2. DIAGRAMA DE SANKEY (CONTAINER CON ECHARTS) -->
+        <div style="position: relative; width: 100%; background: #070c14; border: 1px solid var(--border-color); border-radius: 10px; padding: 0.75rem 0.5rem; overflow: hidden;">
+          <div id="sankey-chart-container" style="width: 100%; height: 600px; min-height: 580px;"></div>
+        </div>
+
+      </div>
     </section>
 
     <!-- SECTION: BUSCADOR GLOBAL -->
-    <section id="search-bar-section" class="search-bar-section" style="margin-bottom: 1.25rem;">
+    <section id="search-bar-section" class="search-bar-section" style="display: none; margin-bottom: 1.25rem;">
       <div class="search-box">
         <input type="text" id="search-input" class="search-input" placeholder="Buscar por Ticker (ej: YM34C, YM41D), ISIN o Emisor...">
       </div>
     </section>
 
     <!-- SECTION: FILTROS (EMISIONES Y RATINGS) -->
-    <section class="filters-card-section" style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 10px; padding: 0.85rem 1.25rem; margin-bottom: 1.5rem;">
+    <section class="filters-card-section" style="display: none; background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 10px; padding: 0.85rem 1.25rem; margin-bottom: 1.5rem;">
       <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
         <div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; flex: 1;">
           <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--accent-lime); font-size: 0.9rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;">
@@ -504,7 +596,7 @@
     </section>
 
     <!-- VIEW 0: YIELD CURVE CHART -->
-    <section id="view-chart-container" class="view-panel" style="margin-bottom: 1.5rem;">
+    <section id="view-chart-container" class="view-panel" style="display: none; margin-bottom: 1.5rem;">
       <div style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 10px; padding: 1.25rem;">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.75rem;">
           <h3 class="serif-heading" style="font-size: 1.1rem; color: var(--accent-lime); text-transform: uppercase; letter-spacing: 1px; margin: 0;">
@@ -543,7 +635,7 @@
     </section>
 
     <!-- VIEW 1: BONDS TABLE -->
-    <section id="view-table" class="view-panel">
+    <section id="view-table" class="view-panel" style="display: none; margin-bottom: 2rem;">
       <div class="table-container">
         <table class="bonds-table">
           <thead>
@@ -552,6 +644,7 @@
               <th>Ticker / ISIN</th>
               <th>Emisor</th>
               <th>Monto Emitido</th>
+              <th>Cupón</th>
               <th>Último Precio</th>
               <th>Rendimiento YTM (%)</th>
               <th>Moneda Pago</th>
@@ -621,8 +714,8 @@
     <div class="modal-content" style="max-width: 620px;">
       <div class="modal-header">
         <div>
-          <h2 class="serif-heading text-lime" style="font-size: 1.3rem;">📡 Feed de Cotizaciones en Vivo (Data912)</h2>
-          <span class="text-muted" style="font-size: 0.82rem;">Acceso libre, en tiempo real y sin costo para Renta Fija y ONs Argentinas</span>
+          <h2 class="serif-heading text-lime" style="font-size: 1.3rem;">📡 Feed de Cotizaciones en Vivo (BYMA)</h2>
+          <span class="text-muted" style="font-size: 0.82rem;">Acceso en tiempo real para Renta Fija y ONs Argentinas</span>
         </div>
         <button id="api-modal-close" class="modal-close">&times;</button>
       </div>
@@ -632,11 +725,11 @@
         <div style="background: var(--bg-card-hover); border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
           <div>
             <span style="font-size: 0.75rem; color: var(--text-dim); display: block;">Fuente de Mercado:</span>
-            <strong style="color: var(--accent-lime); font-size: 0.9rem;">data912.com (BYMA Open)</strong>
+            <strong style="color: var(--accent-lime); font-size: 0.9rem;">Bolsas y Mercados Argentinos (BYMA)</strong>
           </div>
           <div>
             <span style="font-size: 0.75rem; color: var(--text-dim); display: block;">Estado de Conexión:</span>
-            <strong id="data912-status-label" style="color: var(--accent-lime); font-size: 0.9rem;">🟢 Activo & Gratuito</strong>
+            <strong id="data912-status-label" style="color: var(--accent-lime); font-size: 0.9rem;">🟢 Activo & Conectado</strong>
           </div>
           <div>
             <span style="font-size: 0.75rem; color: var(--text-dim); display: block;">Dólar MEP Referencia:</span>
@@ -737,7 +830,6 @@
           <span style="display: none;">📌 Fuente FX: <strong id="fx-source-name" class="text-cyan">DolarApi en Vivo</strong></span>
           <span id="modal-mep-badge" class="badge fx-rate-badge active-fx" title="Clic para aplicar cotización MEP al Tipo de Cambio">MEP: $1.542,50</span>
           <span id="modal-ccl-badge" class="badge fx-rate-badge" title="Clic para aplicar cotización Cable (CCL) al Tipo de Cambio">CCL: $1.620,50</span>
-          <button type="button" id="btn-toggle-number-format-modal" class="badge fx-rate-badge btn-toggle-number-format" title="Cambiar formato decimal (1.234,56 vs 1,234.56)" style="margin-left: 2px; font-family: var(--font-mono); font-weight: 700; cursor: pointer;">1.234,56</button>
         </div>
       </div>
 
@@ -794,6 +886,6 @@
   </div>
 
   <!-- Application Logic JS Entry Point -->
-  <script type="module" src="js/app.js?v=1.3.11"></script>
+  <script type="module" src="js/app.js?v=1.3.31"></script>
 </body>
 </html>

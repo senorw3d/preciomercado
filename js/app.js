@@ -5,7 +5,7 @@
  */
 
 import { FinancialMath } from './financial-math.js?v=1.0.8';
-import { BONDS_DATASET, RATINGS_LIST, SECTORS_LIST, RATING_EQUIVALENCE_TABLE } from './data.js?v=1.0.21';
+import { BONDS_DATASET, RATINGS_LIST, SECTORS_LIST, RATING_EQUIVALENCE_TABLE } from './data.js?v=1.0.34';
 import { MarketApiConnector } from './api.js?v=1.0.6';
 import { Data912Service } from './data912-service.js?v=1.0.6';
 import { ISINValidator } from './isin-validator.js?v=1.0.5';
@@ -23,16 +23,16 @@ class TradingDeskApp {
       // 20 locales pendientes de cotejo
       'NHC1O', 'LR7AO',
       'VWCFO', 'VWCDO', 'CFS9O', 'RC3CO',
-      'GN49C', 'GN49D', 'GN49O', 'CP38C', 'CP38D', 'CP38O', 'TSC4C', 'TSC4D', 'TSC4O',
-      'PLC5C', 'PLC5D', 'PLC5O', 'BDCKO',
-      // 37 internacionales pendientes de cotejo
-      'AER1D', 'AER1O', 'AEC2D', 'AEC2O', 'YPC4D', 'YPC4O', 'AER4D', 'AER4O',
+      'GN49C', 'GN49D', 'GN49O', 'CP38C', 'CP38D', 'CP38O',
+      'BDCKO',
+      // Internacionales pendientes de cotejo
+      'AEC2D', 'AEC2O', 'YPC4D', 'YPC4O',
       'BYCHD', 'BYCHO', 'BACGD', 'BACGO', 'YMC1D', 'YMC1O', 'RAC5D', 'RAC5O', 'DNC7D', 'DNC7O',
-      'RUCDD', 'RUCDO', 'TTCDD', 'TTCDO', 'YMCUD', 'YMCUO', 'BACHD', 'BACHO', 'TLCMD', 'TLCMO',
-      'TSC3D', 'TSC3O', 'MGCMD', 'MGCMO', 'PNXCD', 'PNXCO', 'PLC4D', 'PLC4O', 'DNCAD', 'DNCAO',
-      'YFCJD', 'YFCJO', 'RAC7D', 'RAC7O', 'TTCAD', 'TTCAO', 'VSCVD', 'VSCVO',
-      'RC1CD', 'RC1CO', 'LQC1D', 'LQC1O', 'MGCOD', 'MGCOO', 'TLCTD', 'TLCTO',
-      'VSCTD', 'VSCTO', 'VSCXD', 'VSCXO', 'PN43D', 'PN43O', 'MGCRD', 'MGCRO', 'PLC7D', 'PLC7O',
+      'RUCDD', 'RUCDO', 'YMCUD', 'YMCUO', 'BACHD', 'BACHO', 'TLCMD', 'TLCMO',
+      'DNCAD', 'DNCAO',
+      'YFCJD', 'YFCJO', 'RAC7D', 'RAC7O', 'VSCVD', 'VSCVO',
+      'RC1CD', 'RC1CO', 'LQC1D', 'LQC1O', 'TLCTD', 'TLCTO',
+      'VSCTD', 'VSCTO', 'VSCXD', 'VSCXO',
       'YCAND', 'YCANO', 'YCAMD', 'YCAMO'
     ]);
 
@@ -106,6 +106,9 @@ class TradingDeskApp {
     this.marketVolumeData = null;
     this.hdCurveCurrency = localStorage.getItem('argen_bonds_hd_curve_curr') || 'ALL'; // 'ALL', 'MEP', 'CABLE'
     this.treemapMode = localStorage.getItem('argen_bonds_treemap_mode') || 'issuer'; // 'issuer' or 'species'
+    this.topRankingTab = localStorage.getItem('argen_bonds_top_tab') || 'global'; // 'global', 'mep', 'ccl', 'ars'
+    this.sankeyChart = null;
+    this.sankeyOrient = 'horizontal';
 
     // Number format locale: 'ar' (1.234,56) or 'us' (1,234.56)
     this.numberLocale = localStorage.getItem('argen_bonds_number_locale') || 'ar';
@@ -116,7 +119,7 @@ class TradingDeskApp {
     this.isDragging = false;
 
     // Initialize column order and widths
-    this.defaultColumnOrder = ['fav', 'ticker', 'issuer', 'amount', 'price', 'tir', 'payCurr', 'rating', 'maturity', 'duration', 'parity', 'type', 'clause', 'callable', 'law'];
+    this.defaultColumnOrder = ['fav', 'ticker', 'issuer', 'amount', 'coupon', 'price', 'tir', 'payCurr', 'rating', 'maturity', 'duration', 'parity', 'type', 'clause', 'callable', 'law'];
     this.columnOrder = this.loadColumnOrder() || [...this.defaultColumnOrder];
     this.columnWidths = this.loadColumnWidths() || {};
     this.columns = [
@@ -171,15 +174,82 @@ class TradingDeskApp {
         }
         return `<td class="num-tabular" style="font-size: 0.73rem; font-weight: 600; color: var(--text-main);" title="${tooltipText}">${formatted}</td>`;
       } },
+      { id: 'coupon', label: 'Cupón', render: (b) => {
+        let label = '';
+        let sub = '';
+        const rate = (b.couponRate !== undefined && b.couponRate !== null) ? Number(b.couponRate) : null;
+        const spread = (b.spread !== undefined && b.spread !== null) ? Number(b.spread) : (
+          (b.margin !== undefined && b.margin !== null) ? Number(b.margin) : (
+            (b.margen !== undefined && b.margen !== null) ? Number(b.margen) : null
+          )
+        );
+        
+        const isTamar = b.couponType === 'TAMAR' || (b.instrumentGroup && b.instrumentGroup.includes('TAMAR')) || b.tasaReferencia === 'TAMAR';
+        const isBadlar = b.couponType === 'Badlar' || (b.instrumentGroup && b.instrumentGroup.includes('BADLAR')) || b.tasaReferencia === 'BADLAR';
+        const isUva = b.couponType === 'UVA' || (b.instrumentGroup && b.instrumentGroup.includes('UVA'));
+
+        if (isTamar) {
+          if (spread !== null) {
+            label = `${spread >= 0 ? '+' : ''}${this.formatNumber(spread, 2)}%`;
+            sub = 's/ TAMAR';
+          } else {
+            label = 'TAMAR';
+            sub = rate !== null ? `Est. ${this.formatNumber(rate, 2)}%` : 'Variable';
+          }
+        } else if (isBadlar) {
+          if (spread !== null) {
+            label = `${spread >= 0 ? '+' : ''}${this.formatNumber(spread, 2)}%`;
+            sub = 's/ BADLAR';
+          } else {
+            label = 'BADLAR';
+            sub = rate !== null ? `Est. ${this.formatNumber(rate, 2)}%` : 'Variable';
+          }
+        } else if (b.couponType === 'Variable') {
+          if (spread !== null) {
+            label = `${spread >= 0 ? '+' : ''}${this.formatNumber(spread, 2)}%`;
+            sub = b.tasaReferencia ? `s/ ${b.tasaReferencia}` : 's/ Variable';
+          } else {
+            label = b.tasaReferencia || 'Variable';
+            sub = rate !== null ? `Est. ${this.formatNumber(rate, 2)}%` : 'Variable';
+          }
+        } else if (isUva) {
+          label = rate !== null ? `+${this.formatNumber(rate, 2)}%` : 'UVA';
+          sub = 'UVA + Renta';
+        } else {
+          // Fijo / Hard USD / Standard
+          label = rate !== null ? `${this.formatNumber(rate, 2)}%` : '-';
+          sub = 'TNA Fija';
+        }
+
+        const freqMap = { 1: 'Anual', 2: 'Semestral', 4: 'Trimestral', 12: 'Mensual' };
+        const freqText = b.frequency ? (freqMap[b.frequency] || `${b.frequency} pagos/año`) : '';
+        const tooltip = [
+          (isTamar || isBadlar || b.couponType === 'Variable')
+            ? (spread !== null ? `Margen licitado: ${spread >= 0 ? '+' : ''}${spread}% sobre ${isTamar ? 'Tasa TAMAR promedio' : (isBadlar ? 'Tasa BADLAR promedio' : 'tasa variable')}` : 'Tasa flotante')
+            : `Tasa Cupón de Emisión: ${rate !== null ? rate + '%' : 'N/D'}`,
+          rate !== null && (isTamar || isBadlar || b.couponType === 'Variable') ? `Tasa corriente proyectada período actual: ${rate}% TNA` : '',
+          `Tipo: ${b.couponType || 'Fijo'}`,
+          freqText ? `Frecuencia: ${freqText}` : '',
+          b.dayCount ? `Base: ${b.dayCount}` : ''
+        ].filter(Boolean).join(' • ');
+
+        return `<td class="num-tabular" style="font-size: 0.76rem;" title="${tooltip}">
+          <div style="font-weight: 700; color: var(--text-main);">${label}</div>
+          <div style="font-size: 0.62rem; color: var(--text-dim);">${sub}</div>
+        </td>`;
+      } },
       { id: 'price', label: 'Último Precio', render: (b) => {
         const chg = typeof b.pctChange === 'number' ? b.pctChange : null;
         const chgHtml = chg !== null 
           ? `<span style="font-size: 0.65rem; font-weight: 700; color: ${chg > 0 ? '#10b981' : chg < 0 ? '#ef4444' : 'var(--text-muted)'}; margin-left: 2px;">${chg > 0 ? '+' : ''}${this.formatNumber(chg, 2)}%</span>`
           : '';
+        const isMarketOpen = this.apiConnector.isMarketOpen();
         const quoteDateStr = b.quoteDate 
           ? this.formatDate(b.quoteDate) 
-          : (this.lastSyncTimestamp ? this.lastSyncTimestamp.split(' - ')[0] : 'Hoy (Rueda en Vivo)');
-        const tooltipPrice = `Fecha de cotización: ${quoteDateStr} • Rueda BYMA / Data912 en vivo`;
+          : this.formatDate(this.apiConnector.getLastTradingDate());
+        const tooltipPrice = isMarketOpen
+          ? `Cotización en vivo (${quoteDateStr}) • Rueda BYMA`
+          : `Última rueda operada: ${quoteDateStr} • Cierre BYMA`;
         return `<td class="num-tabular" style="font-weight: 700; cursor: pointer;" title="${tooltipPrice}">
           <div style="display: flex; align-items: baseline; gap: 2px;">
             <div style="color: var(--accent-lime); font-size: 0.84rem;">$${this.formatNumber(b.dirtyPrice, 2)}</div>
@@ -269,6 +339,15 @@ class TradingDeskApp {
             order.splice(issuerIdx + 1, 0, 'amount');
           } else {
             order.splice(3, 0, 'amount');
+          }
+        }
+        // If coupon column is not in saved order, insert it after amount
+        if (!order.includes('coupon')) {
+          const amountIdx = order.indexOf('amount');
+          if (amountIdx !== -1) {
+            order.splice(amountIdx + 1, 0, 'coupon');
+          } else {
+            order.splice(4, 0, 'coupon');
           }
         }
         return order;
@@ -565,8 +644,31 @@ class TradingDeskApp {
       if (!lastCouponDateStr && pastCfs.length > 0) {
         lastCouponDateStr = pastCfs[pastCfs.length - 1].date;
       }
+      if (!lastCouponDateStr && allCfs.length > 0) {
+        // Derive exact previous coupon date from the upcoming cash flow date minus interval
+        const nextFlowDate = (allCfs.find(cf => cf.date >= settlementDateStr) || allCfs[0]).date;
+        const parts = nextFlowDate.split('-').map(Number);
+        const nY = parts[0], nM = parts[1], nD = parts[2];
+        const freq = bond.frequency || 2;
+        const intervalMonths = Math.max(1, Math.floor(12 / freq));
+        let prevM = nM - intervalMonths;
+        let prevY = nY;
+        while (prevM <= 0) {
+          prevM += 12;
+          prevY -= 1;
+        }
+        const lastDay = new Date(prevY, prevM, 0).getDate();
+        const prevD = Math.min(nD, lastDay);
+        const derivedPrevDate = `${prevY}-${String(prevM).padStart(2, '0')}-${String(prevD).padStart(2, '0')}`;
+
+        if (bond.issueDate && bond.issueDate > derivedPrevDate && bond.issueDate <= settlementDateStr) {
+          lastCouponDateStr = bond.issueDate;
+        } else {
+          lastCouponDateStr = derivedPrevDate;
+        }
+      }
       if (!lastCouponDateStr) {
-        lastCouponDateStr = '2026-07-08';
+        lastCouponDateStr = '2026-01-01';
       }
 
       // Active cash flows payable from settlement onwards (date >= settlementDateStr)
@@ -1148,7 +1250,7 @@ class TradingDeskApp {
         if (desc) {
           desc.innerHTML = isIssuer 
             ? 'Consolida el volumen total operado en las 3 monedas (MEP + CCL + Pesos) expresado en <strong>Dólar Cable (CCL)</strong> para cada emisor.'
-            : 'El tamaño de cada recuadro representa el <strong>monto total operado en USD</strong>; el color indica la <strong>variación diaria (%)</strong>.';
+            : 'Cada recuadro muestra el <strong>ticker en pesos (terminación O)</strong> consolidando lo operado en las 3 monedas (MEP vía canje + CCL + Pesos al CCL) expresado en <strong>Cable USD</strong>; el color indica la variación diaria (%).';
         }
         if (legend) {
           legend.innerHTML = isIssuer
@@ -1182,6 +1284,38 @@ class TradingDeskApp {
 
       updateTreemapButtons();
     }
+
+    // Top 10 Ranking Currency Tabs (Global, MEP, CCL, Pesos)
+    const topTabs = [
+      { id: 'tab-top-global', mode: 'global' },
+      { id: 'tab-top-mep', mode: 'mep' },
+      { id: 'tab-top-ccl', mode: 'ccl' },
+      { id: 'tab-top-ars', mode: 'ars' }
+    ];
+
+    topTabs.forEach(t => {
+      const btn = document.getElementById(t.id);
+      if (btn) {
+        btn.addEventListener('click', () => {
+          this.topRankingTab = t.mode;
+          localStorage.setItem('argen_bonds_top_tab', t.mode);
+          this.renderHomeMarket();
+        });
+      }
+    });
+
+    // Sankey Diagram Fixed Horizontal Orientation
+    const btnSankeyToggle = document.getElementById('btn-sankey-orient-toggle');
+    if (btnSankeyToggle) {
+      this.updateSankeyToggleButton();
+    }
+    this.updateSankeyToggleButton();
+
+    window.addEventListener('resize', () => {
+      if (this.sankeyChart) {
+        this.sankeyChart.resize();
+      }
+    });
 
     // Main Control Bar Multi-Grouping Filters
     document.getElementById('search-input')?.addEventListener('input', (e) => {
@@ -1442,12 +1576,13 @@ class TradingDeskApp {
       if (!isNaN(n)) e.target.value = this.formatInputNumber(n, 2);
     });
 
-    // Number format toggle buttons (header, footer, modal)
-    document.querySelectorAll('.btn-toggle-number-format, #btn-toggle-number-format').forEach(btn => {
-      btn.addEventListener('click', () => {
+    // Number format toggle button (strictly single footer button)
+    const btnToggleFormat = document.getElementById('btn-toggle-number-format');
+    if (btnToggleFormat) {
+      btnToggleFormat.addEventListener('click', () => {
         this.toggleNumberFormat();
       });
-    });
+    }
     this.updateNumberFormatButton();
   }
 
@@ -1460,7 +1595,10 @@ class TradingDeskApp {
       const filtered = list.filter(b => {
         const matchSearch = (b.ticker && b.ticker.toLowerCase().includes(q)) ||
           (b.tickerMEP && b.tickerMEP.toLowerCase().includes(q)) ||
+          (b.tickerCable && b.tickerCable.toLowerCase().includes(q)) ||
           (b.tickerPesos && b.tickerPesos.toLowerCase().includes(q)) ||
+          (Array.isArray(b.aliases) && b.aliases.some(a => a.toLowerCase().includes(q))) ||
+          (b.provisionalISIN && b.provisionalISIN.toLowerCase().includes(q)) ||
           (b.isin && b.isin.toLowerCase().includes(q)) ||
           (b.issuer && b.issuer.toLowerCase().includes(q)) ||
           (b.shortIssuer && b.shortIssuer.toLowerCase().includes(q));
@@ -1548,6 +1686,14 @@ class TradingDeskApp {
         return b.shortIssuer || '';
       case 'amount':
         return b.issuedAmount || 0;
+      case 'coupon': {
+        const isVar = b.couponType === 'TAMAR' || b.couponType === 'Badlar' || b.couponType === 'Variable' || (b.instrumentGroup && (b.instrumentGroup.includes('TAMAR') || b.instrumentGroup.includes('BADLAR')));
+        if (isVar) {
+          const sp = (b.spread !== undefined && b.spread !== null) ? Number(b.spread) : null;
+          if (sp !== null) return sp;
+        }
+        return (b.couponRate !== undefined && b.couponRate !== null) ? Number(b.couponRate) : 0;
+      }
       case 'type':
         return b.instrumentGroup || '';
       case 'clause':
@@ -1745,6 +1891,88 @@ class TradingDeskApp {
       iss.sharePct = totalCableMarket > 0 ? ((iss.cableUSD / totalCableMarket) * 100) : 0;
     });
 
+    // Build consolidated bond list for fallback (usando siempre la terminación en Pesos 'O')
+    const bondConsolidatedMap = new Map();
+    allTraded.forEach(item => {
+      let groupKey = item.bondRef ? item.bondRef.id : null;
+      let displaySymbol = item.symbol;
+
+      if (item.bondRef) {
+        // Usar ticker en pesos (terminación 'O') para mostrarlo una sola vez
+        displaySymbol = item.bondRef.tickerPesos || (
+          item.bondRef.ticker ? (
+            item.bondRef.ticker.endsWith('D') || item.bondRef.ticker.endsWith('C') 
+              ? item.bondRef.ticker.slice(0, -1) + 'O' 
+              : item.bondRef.ticker + 'O'
+          ) : item.symbol
+        );
+      } else {
+        if (item.symbol.length === 5 && (item.symbol.endsWith('C') || item.symbol.endsWith('D') || item.symbol.endsWith('O'))) {
+          groupKey = item.symbol.slice(0, 4);
+          displaySymbol = groupKey + 'O';
+        } else {
+          groupKey = item.symbol;
+          displaySymbol = item.symbol.endsWith('O') ? item.symbol : item.symbol + 'O';
+        }
+      }
+
+      if (!bondConsolidatedMap.has(groupKey)) {
+        bondConsolidatedMap.set(groupKey, {
+          symbol: displaySymbol,
+          issuer: item.issuer,
+          sector: item.sector,
+          bondRef: item.bondRef,
+          cableUSD: 0,
+          usdVal: 0,
+          ops: 0,
+          vol: 0,
+          chgWeightedSum: 0,
+          primaryItem: item,
+          mepUSD: 0,
+          cclUSD: 0,
+          arsARS: 0
+        });
+      }
+
+      const bEntry = bondConsolidatedMap.get(groupKey);
+      bEntry.cableUSD += (item.cableUSD || 0);
+      bEntry.usdVal += (item.usdVal || 0);
+      bEntry.ops += (item.ops || 0);
+      bEntry.vol += (item.vol || 0);
+      bEntry.chgWeightedSum += (item.chg || 0) * (item.cableUSD || 0);
+
+      if (item.currencyType === 'MEP') bEntry.mepUSD += item.usdVal;
+      else if (item.currencyType === 'CCL') bEntry.cclUSD += item.usdVal;
+      else bEntry.arsARS += ((item.vol * item.px) / 100);
+    });
+
+    const consolidatedBonds = Array.from(bondConsolidatedMap.values())
+      .map(entry => {
+        const finalChg = entry.cableUSD > 0 ? (entry.chgWeightedSum / entry.cableUSD) : (entry.primaryItem?.chg || 0);
+        return {
+          symbol: entry.symbol,
+          issuer: entry.issuer,
+          sector: entry.sector,
+          cableUSD: entry.cableUSD,
+          usdVal: entry.cableUSD,
+          vol: entry.vol,
+          ops: entry.ops,
+          chg: finalChg,
+          bondRef: entry.bondRef,
+          mepUSD: entry.mepUSD,
+          cclUSD: entry.cclUSD,
+          arsARS: entry.arsARS,
+          isConsolidatedTicker: true
+        };
+      })
+      .sort((a, b) => b.cableUSD - a.cableUSD);
+
+    // Top 10 listas específicas por moneda
+    const topListGlobal = consolidatedBonds.slice(0, 10);
+    const topListMEP = allTraded.filter(i => i.currencyType === 'MEP').slice(0, 10);
+    const topListCCL = allTraded.filter(i => i.currencyType === 'CCL').slice(0, 10);
+    const topListARS = allTraded.filter(i => i.currencyType === 'ARS').slice(0, 10);
+
     this.marketVolumeData = {
       cclRate,
       mepRate,
@@ -1756,7 +1984,12 @@ class TradingDeskApp {
       totalUSD, totalOps,
       totalCableMarket,
       speciesCount: allTraded.length,
-      topList: allTraded.slice(0, 10),
+      uniqueTickerCount: consolidatedBonds.length,
+      topList: topListGlobal,
+      topListGlobal,
+      topListMEP,
+      topListCCL,
+      topListARS,
       issuerList,
       allTraded
     };
@@ -1797,6 +2030,12 @@ class TradingDeskApp {
       if (b.tickerPesos) bondMap.set(b.tickerPesos.toUpperCase(), b);
     });
 
+    // Provisional ticker aliases (e.g. Reg S tap / additional notes prior to 40-day seasoning fungibility)
+    const tt1Bond = bondMap.get('TT1AC') || bondMap.get('TTCAD');
+    if (tt1Bond) {
+      bondMap.set('TT1A', tt1Bond);
+    }
+
     // Known issuer mappings for high-volume tickers
     const knownIssuers = {
       'YM4': 'YPF S.A.', 'YM3': 'YPF S.A.', 'YMC': 'YPF S.A.', 'YFC': 'YPF Luz',
@@ -1810,8 +2049,10 @@ class TradingDeskApp {
       'DNC': 'Edenor', 'PVC': 'Banco Provincia', 'BYC': 'Banco Galicia', 'SIC': 'Sidersa',
       'AER': 'AA2000', 'MIC': 'Mirgor', 'VBC': 'Banco de Valores', 'SXC': 'Mercado Pago',
       'BAC': 'Banco Macro', 'MGC': 'Pampa Energía', 'TLC': 'Telecom', 'TTC': 'Tecpetrol',
+      'TT1': 'Tecpetrol',
       'IRC': 'IRSA', 'STC': 'San Miguel', 'MR4': 'MSU Energy', 'PN3': 'Pan American Energy',
-      'NPC': 'Central Puerto', 'WNC': 'Newsan', 'MCC': 'Pecom Energía'
+      'NPC': 'Central Puerto', 'WNC': 'Newsan', 'MCC': 'Pecom Energía',
+      'LOC': 'Loma Negra'
     };
 
     let mepUSD = 0, mepNom = 0, mepOps = 0;
@@ -1961,6 +2202,88 @@ class TradingDeskApp {
       iss.sharePct = totalCableMarket > 0 ? ((iss.cableUSD / totalCableMarket) * 100) : 0;
     });
 
+    // Build consolidated bond list (cada ticker una sola vez con terminación en pesos 'O': MEP al cable, ARS al cable, CCL directo)
+    const bondConsolidatedMap = new Map();
+    allTraded.forEach(item => {
+      let groupKey = item.bondRef ? item.bondRef.id : null;
+      let displaySymbol = item.symbol;
+
+      if (item.bondRef) {
+        // Usar ticker en pesos (terminación 'O') para mostrarlo una sola vez
+        displaySymbol = item.bondRef.tickerPesos || (
+          item.bondRef.ticker ? (
+            item.bondRef.ticker.endsWith('D') || item.bondRef.ticker.endsWith('C') 
+              ? item.bondRef.ticker.slice(0, -1) + 'O' 
+              : item.bondRef.ticker + 'O'
+          ) : item.symbol
+        );
+      } else {
+        if (item.symbol.length === 5 && (item.symbol.endsWith('C') || item.symbol.endsWith('D') || item.symbol.endsWith('O'))) {
+          groupKey = item.symbol.slice(0, 4);
+          displaySymbol = groupKey + 'O';
+        } else {
+          groupKey = item.symbol;
+          displaySymbol = item.symbol.endsWith('O') ? item.symbol : item.symbol + 'O';
+        }
+      }
+
+      if (!bondConsolidatedMap.has(groupKey)) {
+        bondConsolidatedMap.set(groupKey, {
+          symbol: displaySymbol,
+          issuer: item.issuer,
+          sector: item.sector,
+          bondRef: item.bondRef,
+          cableUSD: 0,
+          usdVal: 0,
+          ops: 0,
+          vol: 0,
+          chgWeightedSum: 0,
+          primaryItem: item,
+          mepUSD: 0,
+          cclUSD: 0,
+          arsARS: 0
+        });
+      }
+
+      const bEntry = bondConsolidatedMap.get(groupKey);
+      bEntry.cableUSD += (item.cableUSD || 0);
+      bEntry.usdVal += (item.usdVal || 0);
+      bEntry.ops += (item.ops || 0);
+      bEntry.vol += (item.vol || 0);
+      bEntry.chgWeightedSum += (item.chg || 0) * (item.cableUSD || 0);
+
+      if (item.currencyType === 'MEP') bEntry.mepUSD += item.usdVal;
+      else if (item.currencyType === 'CCL') bEntry.cclUSD += item.usdVal;
+      else bEntry.arsARS += ((item.vol * item.px) / 100);
+    });
+
+    const consolidatedBonds = Array.from(bondConsolidatedMap.values())
+      .map(entry => {
+        const finalChg = entry.cableUSD > 0 ? (entry.chgWeightedSum / entry.cableUSD) : (entry.primaryItem?.chg || 0);
+        return {
+          symbol: entry.symbol,
+          issuer: entry.issuer,
+          sector: entry.sector,
+          cableUSD: entry.cableUSD,
+          usdVal: entry.cableUSD,
+          vol: entry.vol,
+          ops: entry.ops,
+          chg: finalChg,
+          bondRef: entry.bondRef,
+          mepUSD: entry.mepUSD,
+          cclUSD: entry.cclUSD,
+          arsARS: entry.arsARS,
+          isConsolidatedTicker: true
+        };
+      })
+      .sort((a, b) => b.cableUSD - a.cableUSD);
+
+    // Top 10 listas específicas por moneda
+    const topListGlobal = consolidatedBonds.slice(0, 10);
+    const topListMEP = allTraded.filter(i => i.currencyType === 'MEP').slice(0, 10);
+    const topListCCL = allTraded.filter(i => i.currencyType === 'CCL').slice(0, 10);
+    const topListARS = allTraded.filter(i => i.currencyType === 'ARS').slice(0, 10);
+
     this.marketVolumeData = {
       cclRate,
       mepRate,
@@ -1972,7 +2295,12 @@ class TradingDeskApp {
       totalUSD, totalOps,
       totalCableMarket,
       speciesCount: allTraded.length,
-      topList: allTraded.slice(0, 10),
+      uniqueTickerCount: consolidatedBonds.length,
+      topList: topListGlobal,
+      topListGlobal,
+      topListMEP,
+      topListCCL,
+      topListARS,
       issuerList,
       allTraded
     };
@@ -2048,35 +2376,96 @@ class TradingDeskApp {
     if (lblCcl) lblCcl.textContent = `${this.formatNumber(pctCCL, 1)}% (US$ ${fmtMillions(d.cclUSD)})`;
     if (lblArs) lblArs.textContent = `${this.formatNumber(pctARS, 1)}% (US$ ${fmtMillions(d.arsUSD)})`;
 
-    // Render Top 10 Ranking
+    // Update Top 10 Ranking Tabs UI State
+    const activeTopMode = this.topRankingTab || 'global';
+    const topTabGlobal = document.getElementById('tab-top-global');
+    const topTabMep = document.getElementById('tab-top-mep');
+    const topTabCcl = document.getElementById('tab-top-ccl');
+    const topTabArs = document.getElementById('tab-top-ars');
+    const topSubTitle = document.getElementById('top-ranking-subtitle-curr');
+
+    const setTabStyle = (btn, isActive, activeColor = 'var(--accent-cyan)') => {
+      if (!btn) return;
+      btn.classList.toggle('active', isActive);
+      btn.style.background = isActive ? activeColor : 'transparent';
+      btn.style.color = isActive ? '#000' : 'var(--text-dim)';
+      btn.style.fontWeight = isActive ? '700' : '600';
+    };
+
+    setTabStyle(topTabGlobal, activeTopMode === 'global', 'var(--accent-cyan)');
+    setTabStyle(topTabMep, activeTopMode === 'mep', '#10b981');
+    setTabStyle(topTabCcl, activeTopMode === 'ccl', '#38bdf8');
+    setTabStyle(topTabArs, activeTopMode === 'ars', '#f59e0b');
+
+    let currentTopList = [];
+    let currSubLabel = 'Cable USD';
+
+    if (activeTopMode === 'mep') {
+      currentTopList = d.topListMEP || (d.allTraded || []).filter(i => i.currencyType === 'MEP').slice(0, 10);
+      currSubLabel = 'Monto MEP (D)';
+    } else if (activeTopMode === 'ccl') {
+      currentTopList = d.topListCCL || (d.allTraded || []).filter(i => i.currencyType === 'CCL').slice(0, 10);
+      currSubLabel = 'Monto Cable (C)';
+    } else if (activeTopMode === 'ars') {
+      currentTopList = d.topListARS || (d.allTraded || []).filter(i => i.currencyType === 'ARS').slice(0, 10);
+      currSubLabel = 'Monto Pesos (O)';
+    } else {
+      currentTopList = d.topListGlobal || d.topList || [];
+      currSubLabel = 'Consolidado Cable USD';
+    }
+
+    if (topSubTitle) topSubTitle.textContent = currSubLabel;
+
+    // Render Top 10 Ranking List
     const rankContainer = document.getElementById('home-top-ranking-list');
-    if (rankContainer && Array.isArray(d.topList)) {
-      rankContainer.innerHTML = d.topList.map((item, idx) => {
-        const chgClass = item.chg > 0 ? 'text-green' : item.chg < 0 ? 'text-red' : 'text-slate';
-        const chgSign = item.chg > 0 ? '+' : '';
-        const chgColor = item.chg > 0 ? '#10b981' : item.chg < 0 ? '#ef4444' : '#94a3b8';
-        const currBadge = item.symbol.endsWith('D') ? 'badge-mep' : item.symbol.endsWith('C') ? 'badge-ccl' : 'badge-ars';
-        const currLabel = item.symbol.endsWith('D') ? 'MEP' : item.symbol.endsWith('C') ? 'CCL' : 'ARS';
-        
-        return `
-          <div class="top-ranking-row" style="display: flex; align-items: center; justify-content: space-between; padding: 0.48rem 0.65rem; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 6px; cursor: pointer; transition: background 0.2s;" onclick="window.app.handleHomeTickerClick('${item.symbol}')">
-            <div style="display: flex; align-items: center; gap: 0.6rem;">
-              <span class="top-ranking-idx" style="font-size: 0.75rem; font-weight: 800; color: var(--accent-lime); width: 18px; font-family: var(--font-mono);">${idx + 1}.</span>
-              <div>
-                <div style="display: flex; align-items: center; gap: 0.4rem;">
-                  <strong class="top-ranking-ticker" style="font-size: 0.88rem; font-family: var(--font-mono);">${item.symbol}</strong>
-                  <span style="font-size: 0.62rem; padding: 1px 4px; border-radius: 3px; font-weight: 700; background: ${item.symbol.endsWith('D') ? 'rgba(16,185,129,0.15)' : item.symbol.endsWith('C') ? 'rgba(56,189,248,0.15)' : 'rgba(245,158,11,0.15)'}; color: ${item.symbol.endsWith('D') ? '#10b981' : item.symbol.endsWith('C') ? '#0284c7' : '#d97706'};">${currLabel}</span>
+    if (rankContainer) {
+      if (!Array.isArray(currentTopList) || currentTopList.length === 0) {
+        rankContainer.innerHTML = `<div style="text-align: center; color: var(--text-dim); padding: 1.5rem 0; font-size: 0.8rem;">Sin operaciones registradas en este segmento</div>`;
+      } else {
+        rankContainer.innerHTML = currentTopList.map((item, idx) => {
+          const chgClass = item.chg > 0 ? 'text-green' : item.chg < 0 ? 'text-red' : 'text-slate';
+          const chgSign = item.chg > 0 ? '+' : '';
+          const chgColor = item.chg > 0 ? '#10b981' : item.chg < 0 ? '#ef4444' : '#94a3b8';
+          
+          let currBadgeHtml = '';
+          let displayMonto = '';
+
+          if (activeTopMode === 'global') {
+            currBadgeHtml = `<span style="font-size: 0.60rem; padding: 1px 4px; border-radius: 3px; font-weight: 700; background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3);">Cable USD</span>`;
+            displayMonto = `US$ ${fmtMillions(item.cableUSD || item.usdVal)}`;
+          } else if (activeTopMode === 'mep') {
+            currBadgeHtml = `<span style="font-size: 0.60rem; padding: 1px 4px; border-radius: 3px; font-weight: 700; background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3);">MEP</span>`;
+            displayMonto = `US$ ${fmtMillions(item.usdVal)}`;
+          } else if (activeTopMode === 'ccl') {
+            currBadgeHtml = `<span style="font-size: 0.60rem; padding: 1px 4px; border-radius: 3px; font-weight: 700; background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3);">CCL</span>`;
+            displayMonto = `US$ ${fmtMillions(item.usdVal)}`;
+          } else {
+            currBadgeHtml = `<span style="font-size: 0.60rem; padding: 1px 4px; border-radius: 3px; font-weight: 700; background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3);">ARS</span>`;
+            // En pesos mostrar en millones de pesos ARS si es posible o usdVal equivalente
+            const rawArs = (item.vol && item.px) ? ((item.vol * item.px) / 100) : (item.usdVal * (d.cclRate || 1611));
+            displayMonto = `$ ${fmtMillions(rawArs)}`;
+          }
+          
+          return `
+            <div class="top-ranking-row" style="display: flex; align-items: center; justify-content: space-between; padding: 0.46rem 0.65rem; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 6px; cursor: pointer; transition: background 0.2s;" onclick="window.app.handleHomeTickerClick('${item.symbol}')">
+              <div style="display: flex; align-items: center; gap: 0.6rem;">
+                <span class="top-ranking-idx" style="font-size: 0.75rem; font-weight: 800; color: var(--accent-lime); width: 18px; font-family: var(--font-mono);">${idx + 1}.</span>
+                <div>
+                  <div style="display: flex; align-items: center; gap: 0.4rem;">
+                    <strong class="top-ranking-ticker" style="font-size: 0.88rem; font-family: var(--font-mono);">${item.symbol}</strong>
+                    ${currBadgeHtml}
+                  </div>
+                  <div style="font-size: 0.68rem; color: var(--text-dim); max-width: 140px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${item.issuer}</div>
                 </div>
-                <div style="font-size: 0.68rem; color: var(--text-dim); max-width: 140px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${item.issuer}</div>
+              </div>
+              <div style="text-align: right; font-family: var(--font-mono);">
+                <div class="top-ranking-monto" style="font-size: 0.82rem; font-weight: 800; color: var(--accent-lime);">${displayMonto}</div>
+                <div style="font-size: 0.68rem; color: ${chgColor}; font-weight: 600;">${chgSign}${this.formatNumber(item.chg, 2)}% • ${this.formatNumber(item.ops, 0)} ops</div>
               </div>
             </div>
-            <div style="text-align: right; font-family: var(--font-mono);">
-              <div class="top-ranking-monto" style="font-size: 0.82rem; font-weight: 800; color: var(--accent-lime);">US$ ${fmtMillions(item.usdVal)}</div>
-              <div style="font-size: 0.68rem; color: ${chgColor}; font-weight: 600;">${chgSign}${this.formatNumber(item.chg, 2)}% • ${this.formatNumber(item.ops, 0)} ops</div>
-            </div>
-          </div>
-        `;
-      }).join('');
+          `;
+        }).join('');
+      }
     }
 
     // Prepare Treemap Layout (Por Emisor con Cable USD vs Por Especie & % Var)
@@ -2154,7 +2543,8 @@ class TradingDeskApp {
 
         this.treemap.render(issuerItems);
       } else {
-        // --- 📊 MODO POR ESPECIE & % VARIACIÓN DIARIA ---
+        // --- 📊 MODO POR ESPECIE & % VARIACIÓN DIARIA (CONSOLIDADO POR TICKER) ---
+        // Se consolida cada ticker una sola vez: MEP convertido a Cable (canje), CCL directo, ARS convertido a Cable (CCL FX)
         const issuerGroups = new Map();
         d.allTraded.forEach(item => {
           if (!issuerGroups.has(item.issuer)) {
@@ -2163,14 +2553,117 @@ class TradingDeskApp {
           issuerGroups.get(item.issuer).push(item);
         });
 
+        // Helper para consolidar una lista de items de especies en tickers únicos
+        const consolidateItemsByTicker = (rawItems) => {
+          const tickerMap = new Map();
+
+          rawItems.forEach(item => {
+            // Clave única del bono: ID del bono o ticker base sin letra de moneda final
+            let groupKey = item.bondRef ? item.bondRef.id : null;
+            let displaySymbol = item.symbol;
+
+            if (item.bondRef) {
+              // Usar ticker en pesos (terminación 'O') para mostrarlo una sola vez
+              displaySymbol = item.bondRef.tickerPesos || (
+                item.bondRef.ticker ? (
+                  item.bondRef.ticker.endsWith('D') || item.bondRef.ticker.endsWith('C') 
+                    ? item.bondRef.ticker.slice(0, -1) + 'O' 
+                    : item.bondRef.ticker + 'O'
+                ) : item.symbol
+              );
+            } else {
+              if (item.symbol.length === 5 && (item.symbol.endsWith('C') || item.symbol.endsWith('D') || item.symbol.endsWith('O'))) {
+                groupKey = item.symbol.slice(0, 4);
+                displaySymbol = groupKey + 'O';
+              } else {
+                groupKey = item.symbol;
+                displaySymbol = item.symbol.endsWith('O') ? item.symbol : item.symbol + 'O';
+              }
+            }
+
+            if (!tickerMap.has(groupKey)) {
+              tickerMap.set(groupKey, {
+                symbol: displaySymbol,
+                name: item.issuer,
+                issuer: item.issuer,
+                sector: item.sector,
+                bondRef: item.bondRef,
+                maturity: item.bondRef?.maturity || '',
+                cableUSD: 0,
+                usdVal: 0,
+                vol: 0,
+                ops: 0,
+                mepUSD: 0,
+                cclUSD: 0,
+                arsARS: 0,
+                // Ponderación de variación de precio
+                chgWeightedSum: 0,
+                // Guardar mejor precio representativo (Hard Dollar / MEP / CCL)
+                repPrice: item.px,
+                primaryItem: item,
+                speciesCount: 0
+              });
+            }
+
+            const bondEntry = tickerMap.get(groupKey);
+            bondEntry.cableUSD += (item.cableUSD || 0);
+            bondEntry.usdVal += (item.usdVal || 0);
+            bondEntry.vol += (item.vol || 0);
+            bondEntry.ops += (item.ops || 0);
+            bondEntry.speciesCount += 1;
+
+            if (item.currencyType === 'MEP') {
+              bondEntry.mepUSD += (item.usdVal || 0);
+            } else if (item.currencyType === 'CCL') {
+              bondEntry.cclUSD += (item.usdVal || 0);
+            } else {
+              bondEntry.arsARS += ((item.vol * item.px) / 100);
+            }
+
+            // Acumular variación ponderada por volumen Cable USD
+            const itemCable = item.cableUSD || 0;
+            bondEntry.chgWeightedSum += (item.chg || 0) * itemCable;
+
+            // Preferir precio en USD (MEP o CCL) sobre precio en pesos para repPrice
+            if (item.currencyType === 'MEP' || item.currencyType === 'CCL') {
+              bondEntry.repPrice = item.px;
+            }
+          });
+
+          // Convertir map a array de nodos listos para el Treemap
+          return Array.from(tickerMap.values()).map(entry => {
+            const finalChg = entry.cableUSD > 0 ? (entry.chgWeightedSum / entry.cableUSD) : (entry.primaryItem?.chg || 0);
+            return {
+              symbol: entry.symbol,
+              name: entry.issuer,
+              value: entry.cableUSD,
+              cableUSD: entry.cableUSD,
+              usdVal: entry.usdVal,
+              px: entry.repPrice,
+              vol: entry.vol,
+              ops: entry.ops,
+              chg: finalChg,
+              subLabel: (finalChg > 0 ? `+${this.formatNumber(finalChg, 2)}%` : `${this.formatNumber(finalChg || 0, 2)}%`),
+              bondRef: entry.bondRef,
+              maturity: entry.maturity,
+              mepUSD: entry.mepUSD,
+              cclUSD: entry.cclUSD,
+              arsARS: entry.arsARS,
+              isConsolidatedTicker: true,
+              isIssuerSummary: false
+            };
+          });
+        };
+
         const rawCategories = [];
         issuerGroups.forEach((items, issuerName) => {
-          const catTotal = items.reduce((sum, i) => sum + i.cableUSD, 0);
+          const consolidatedTickers = consolidateItemsByTicker(items);
+          const catTotal = consolidatedTickers.reduce((sum, i) => sum + i.cableUSD, 0);
           if (catTotal > 0) {
             rawCategories.push({
               name: issuerName,
               value: catTotal,
-              rawItems: items
+              rawTickers: consolidatedTickers
             });
           }
         });
@@ -2183,36 +2676,21 @@ class TradingDeskApp {
         const overflowCategories = rawCategories.slice(mainCategories.length);
 
         const categories = mainCategories.map(cat => {
-          // Dentro de cada emisor principal, ordenar especies y agrupar colas diminutas (< US$ 2.000 o más allá del top 8)
-          const sortedItems = [...cat.rawItems].sort((a, b) => b.cableUSD - a.cableUSD);
-          const topSpecies = sortedItems.slice(0, 8).filter(i => i.cableUSD >= 2000);
-          const restSpecies = sortedItems.slice(topSpecies.length);
+          // Dentro de cada emisor principal, ordenar tickers únicos y agrupar colas diminutas (< US$ 2.000 o más allá del top 8)
+          const sortedTickers = [...cat.rawTickers].sort((a, b) => b.cableUSD - a.cableUSD);
+          const topTickers = sortedTickers.slice(0, 8).filter(i => i.cableUSD >= 2000);
+          const restTickers = sortedTickers.slice(topTickers.length);
 
-          const children = topSpecies.map(i => ({
-            symbol: i.symbol,
-            name: i.issuer,
-            value: i.cableUSD,
-            cableUSD: i.cableUSD,
-            usdVal: i.usdVal,
-            px: i.px,
-            vol: i.vol,
-            ops: i.ops,
-            chg: i.chg,
-            subLabel: (i.chg > 0 ? `+${this.formatNumber(i.chg, 2)}%` : `${this.formatNumber(i.chg || 0, 2)}%`),
-            bondRef: i.bondRef,
-            maturity: i.bondRef?.maturity || '',
-            isIssuerSummary: false
-          }));
+          const children = topTickers.map(i => ({ ...i }));
 
-          if (restSpecies.length > 0) {
-            const restVal = restSpecies.reduce((s, i) => s + i.cableUSD, 0);
-            const restVol = restSpecies.reduce((s, i) => s + (i.vol || 0), 0);
-            const restOps = restSpecies.reduce((s, i) => s + (i.ops || 0), 0);
-            // Promedio ponderado de variación
-            const weightedChg = restVal > 0 ? restSpecies.reduce((s, i) => s + (i.chg || 0) * i.cableUSD, 0) / restVal : 0;
+          if (restTickers.length > 0) {
+            const restVal = restTickers.reduce((s, i) => s + i.cableUSD, 0);
+            const restVol = restTickers.reduce((s, i) => s + (i.vol || 0), 0);
+            const restOps = restTickers.reduce((s, i) => s + (i.ops || 0), 0);
+            const weightedChg = restVal > 0 ? restTickers.reduce((s, i) => s + (i.chg || 0) * i.cableUSD, 0) / restVal : 0;
             children.push({
               symbol: 'Otras',
-              name: `${cat.name} (${restSpecies.length} ONs)`,
+              name: `${cat.name} (${restTickers.length} ONs)`,
               value: restVal,
               cableUSD: restVal,
               usdVal: restVal,
@@ -2234,30 +2712,15 @@ class TradingDeskApp {
 
         // Si existen emisores menores fuera de los principales, agruparlos en un macro-bloque "Resto de Emisores"
         if (overflowCategories.length > 0) {
-          const allOverflowItems = overflowCategories.flatMap(c => c.rawItems);
-          const overflowTotal = allOverflowItems.reduce((s, i) => s + i.cableUSD, 0);
+          const allOverflowTickers = overflowCategories.flatMap(c => c.rawTickers);
+          const overflowTotal = allOverflowTickers.reduce((s, i) => s + i.cableUSD, 0);
           
           if (overflowTotal > 0) {
-            // Ordenar y tomar los más relevantes de este grupo o resumir
-            const sortedOverflow = [...allOverflowItems].sort((a, b) => b.cableUSD - a.cableUSD);
+            const sortedOverflow = [...allOverflowTickers].sort((a, b) => b.cableUSD - a.cableUSD);
             const topOverflow = sortedOverflow.slice(0, 10).filter(i => i.cableUSD >= 2000);
             const tailOverflow = sortedOverflow.slice(topOverflow.length);
 
-            const overflowChildren = topOverflow.map(i => ({
-              symbol: i.symbol,
-              name: i.issuer,
-              value: i.cableUSD,
-              cableUSD: i.cableUSD,
-              usdVal: i.usdVal,
-              px: i.px,
-              vol: i.vol,
-              ops: i.ops,
-              chg: i.chg,
-              subLabel: (i.chg > 0 ? `+${this.formatNumber(i.chg, 2)}%` : `${this.formatNumber(i.chg || 0, 2)}%`),
-              bondRef: i.bondRef,
-              maturity: i.bondRef?.maturity || '',
-              isIssuerSummary: false
-            }));
+            const overflowChildren = topOverflow.map(i => ({ ...i }));
 
             if (tailOverflow.length > 0) {
               const tailVal = tailOverflow.reduce((s, i) => s + i.cableUSD, 0);
@@ -2266,7 +2729,7 @@ class TradingDeskApp {
               const tailChg = tailVal > 0 ? tailOverflow.reduce((s, i) => s + (i.chg || 0) * i.cableUSD, 0) / tailVal : 0;
               overflowChildren.push({
                 symbol: 'Resto',
-                name: `Otras ${tailOverflow.length} especies menores`,
+                name: `Otras ${tailOverflow.length} ONs menores`,
                 value: tailVal,
                 cableUSD: tailVal,
                 usdVal: tailVal,
@@ -2290,6 +2753,431 @@ class TradingDeskApp {
         this.treemap.render(categories);
       }
     }
+
+    // Actualizar Bloque Superior de KPIs Financieros en Tiempo Real (Homogeneizados al Cable USD)
+    let tcCableVal = d.cclRate || 1544.10;
+    let bestTcVol = 0;
+    let tcTickerRef = '';
+
+    if (Array.isArray(d.allTraded)) {
+      const pesoTrades = d.allTraded.filter(t => t.currencyType === 'ARS' && t.vol > 0 && t.px > 0);
+      const cableTrades = d.allTraded.filter(t => t.currencyType === 'CCL' && t.vol > 0 && t.px > 0);
+      
+      for (const pTrade of pesoTrades) {
+        const basePrefix = pTrade.symbol.length === 5 ? pTrade.symbol.slice(0, 4) : pTrade.symbol;
+        const cTrade = cableTrades.find(c => (c.symbol.length === 5 ? c.symbol.slice(0, 4) : c.symbol) === basePrefix);
+        if (cTrade && cTrade.px > 0) {
+          const pairVol = (pTrade.cableUSD || 0) + (cTrade.cableUSD || 0);
+          if (pairVol > bestTcVol) {
+            let ratio = pTrade.px / cTrade.px;
+            if (ratio < 100) ratio *= 100;
+            if (ratio > 500 && ratio < 5000) {
+              tcCableVal = ratio;
+              bestTcVol = pairVol;
+              tcTickerRef = basePrefix;
+            }
+          }
+        }
+      }
+    }
+
+    const canjePctVal = typeof d.canjePct === 'number' && !isNaN(d.canjePct) 
+      ? d.canjePct 
+      : (((d.cclRate / (d.mepRate || 1520)) - 1) * 100);
+
+    const kpiTcEl = document.getElementById('kpi-tc-cable');
+    const kpiTcDesc = document.getElementById('kpi-tc-cable-desc');
+    const kpiCanjeEl = document.getElementById('kpi-spread-canje');
+    const kpiVolEl = document.getElementById('kpi-volumen-total');
+    const kpiOpsBadge = document.getElementById('kpi-vol-ops-badge');
+
+    if (kpiTcEl) kpiTcEl.textContent = `$ ${this.formatNumber(tcCableVal, 2)}`;
+    if (kpiTcDesc && tcTickerRef) kpiTcDesc.textContent = `Ref: ON ${tcTickerRef} (Pesos / Cable)`;
+    if (kpiCanjeEl) {
+      kpiCanjeEl.textContent = `${canjePctVal >= 0 ? '+' : ''}${this.formatNumber(canjePctVal, 2)}%`;
+      kpiCanjeEl.style.color = canjePctVal >= 0 ? '#10b981' : '#38bdf8';
+    }
+    if (kpiVolEl) kpiVolEl.textContent = `US$ ${this.formatNumber(Math.round(d.totalUSD), 0)}`;
+    if (kpiOpsBadge) kpiOpsBadge.textContent = `${this.formatNumber(d.totalOps, 0)} trades`;
+
+    this.updateSankeyToggleButton();
+    this.renderSankeyChart();
+  }
+
+  updateSankeyToggleButton() {
+    const icon = document.getElementById('sankey-orient-icon');
+    const text = document.getElementById('sankey-orient-text');
+    if (icon) icon.textContent = '↔';
+    if (text) text.textContent = 'Orientación: Horizontal';
+  }
+
+  buildSankeyData() {
+    const d = this.marketVolumeData;
+    if (!d || !Array.isArray(d.allTraded)) {
+      return { nodes: [], links: [], totalVolume: 0 };
+    }
+
+    // 1. Filtrar únicamente las ONs que tengan volumen operado > 0 en la rueda corriente del día
+    const tradedItems = d.allTraded.filter(item => (item.cableUSD > 0 || (item.vol > 0 && item.px > 0)));
+    if (tradedItems.length === 0) {
+      return { nodes: [], links: [], totalVolume: 0 };
+    }
+
+    // Calcular volumen total por emisor para determinar el Top 12
+    const issuerVolMap = new Map();
+    tradedItems.forEach(item => {
+      const val = item.cableUSD || 0;
+      if (val <= 0) return;
+      const iss = item.issuer || (item.bondRef ? (item.bondRef.shortIssuer || item.bondRef.issuer) : 'Otras');
+      issuerVolMap.set(iss, (issuerVolMap.get(iss) || 0) + val);
+    });
+
+    const sortedIssuers = Array.from(issuerVolMap.entries()).sort((a, b) => b[1] - a[1]);
+    const top12Set = new Set(sortedIssuers.slice(0, 12).map(e => e[0]));
+
+    // Mapeo de monedas
+    const currNodeMap = {
+      'ARS': 'Operado en Pesos (ARS)',
+      'MEP': 'Operado en MEP (USD D)',
+      'CCL': 'Operado en Cable (USD C)'
+    };
+
+    const totalNodeName = 'VOLUMEN TOTAL RUEDA (USD CCL)';
+
+    const links12 = new Map(); // Emisor -> Vto
+    const links23 = new Map(); // Vto -> Moneda
+    const links34 = new Map(); // Moneda -> Total
+
+    const nodeValues = new Map();
+    const vtoYearsSet = new Set();
+    let totalVolume = 0;
+
+    const addNodeVal = (name, val) => {
+      nodeValues.set(name, (nodeValues.get(name) || 0) + val);
+    };
+
+    tradedItems.forEach(item => {
+      const val = item.cableUSD || 0;
+      if (val <= 0) return;
+
+      totalVolume += val;
+
+      // Nivel 0: Emisor (Top 12 o "OTRAS EMISORAS")
+      const rawIssuer = item.issuer || (item.bondRef ? (item.bondRef.shortIssuer || item.bondRef.issuer) : 'Otras');
+      const issuerNode = top12Set.has(rawIssuer) ? rawIssuer : 'OTRAS EMISORAS';
+
+      // Nivel 1: Año de Vencimiento Individual (Desagrupado 2030+)
+      // Nivel 1: Año de Vencimiento Individual (Desagrupado 2030+)
+      let vtoNode = null;
+      const maturity = item.bondRef?.maturity;
+      if (maturity && typeof maturity === 'string' && maturity.length >= 4) {
+        const year = parseInt(maturity.slice(0, 4), 10);
+        if (!isNaN(year)) {
+          if (year <= 2026) vtoNode = 'Vto 2026';
+          else if (year >= 2045) vtoNode = 'Vto 2045+';
+          else vtoNode = `Vto ${year}`;
+        }
+      }
+      if (!vtoNode) {
+        vtoNode = 'Vto S/D';
+      }
+      vtoYearsSet.add(vtoNode);
+
+      // Nivel 2: Moneda Origen (Plaza)
+      const currNode = currNodeMap[item.currencyType] || 'Operado en MEP (USD D)';
+
+      // Acumular Enlaces
+      // Nivel 0 -> Nivel 1
+      const key12 = `${issuerNode}___${vtoNode}`;
+      links12.set(key12, (links12.get(key12) || 0) + val);
+
+      // Nivel 1 -> Nivel 2
+      const key23 = `${vtoNode}___${currNode}`;
+      links23.set(key23, (links23.get(key23) || 0) + val);
+
+      // Nivel 2 -> Nivel 3
+      const key34 = `${currNode}___${totalNodeName}`;
+      links34.set(key34, (links34.get(key34) || 0) + val);
+
+      addNodeVal(issuerNode, val);
+      addNodeVal(vtoNode, val);
+      addNodeVal(currNode, val);
+      addNodeVal(totalNodeName, val);
+    });
+
+    // Orden cronológico estricto para los años de vencimiento (2026 -> 2045+ -> Vto S/D)
+    const sortedVtoNodes = Array.from(vtoYearsSet).sort((a, b) => {
+      const getYear = s => {
+        if (s.includes('45+')) return 2045;
+        if (s.includes('S/D')) return 9999;
+        const m = s.match(/\d{4}/);
+        return m ? parseInt(m[0], 10) : 9998;
+      };
+      return getYear(a) - getYear(b);
+    });
+
+    // Paleta de colores para años (armoniosa y diferenciable)
+    const yearColors = {
+      'Vto 2026': '#818cf8',
+      'Vto 2027': '#93c5fd',
+      'Vto 2028': '#38bdf8',
+      'Vto 2029': '#a78bfa',
+      'Vto 2030': '#c084fc',
+      'Vto 2031': '#e879f9',
+      'Vto 2032': '#f472b6',
+      'Vto 2033': '#fb7185',
+      'Vto 2034': '#f87171',
+      'Vto 2035': '#fb923c',
+      'Vto 2036': '#facc15',
+      'Vto 2037': '#a3e635',
+      'Vto 2038': '#4ade80',
+      'Vto 2045+': '#cbd5e1',
+      'Vto S/D': '#64748b'
+    };
+
+    // Colores definidos para cada nodo
+    const nodeColors = {
+      'Operado en Pesos (ARS)': '#38bdf8', // Celeste
+      'Operado en MEP (USD D)': '#10b981', // Verde
+      'Operado en Cable (USD C)': '#f59e0b', // Dorado/Naranja
+      'VOLUMEN TOTAL RUEDA (USD CCL)': '#a3e635', // Lima Accent
+      'OTRAS EMISORAS': '#64748b',
+      ...yearColors
+    };
+
+    // Paleta curada institucional para Top 12 Emisores
+    const issuerPalette = [
+      '#0ea5e9', '#06b6d4', '#14b8a6', '#10b981', '#3b82f6',
+      '#6366f1', '#8b5cf6', '#a855f7', '#d946ef', '#f43f5e',
+      '#0284c7', '#0891b2'
+    ];
+
+    let pIdx = 0;
+    sortedIssuers.slice(0, 12).forEach(entry => {
+      if (!nodeColors[entry[0]]) {
+        nodeColors[entry[0]] = issuerPalette[pIdx % issuerPalette.length];
+        pIdx++;
+      }
+    });
+
+    // Construcción ordenada de nodos respetando los 4 niveles:
+    // Level 0: Emisoras (Top 12 por volumen desc, luego OTRAS EMISORAS)
+    // Level 1: Años de Vencimiento (orden cronológico estricto: 2026 -> 2045+)
+    // Level 2: Plazas de Moneda (MEP, ARS, Cable)
+    // Level 3: Volumen Total Rueda
+    const orderedNodeNames = [
+      ...sortedIssuers.slice(0, 12).map(e => e[0]),
+      'OTRAS EMISORAS',
+      ...sortedVtoNodes,
+      'Operado en MEP (USD D)',
+      'Operado en Pesos (ARS)',
+      'Operado en Cable (USD C)',
+      totalNodeName
+    ];
+
+    const nodes = [];
+    const seenNodes = new Set();
+    orderedNodeNames.forEach(name => {
+      if (nodeValues.has(name) && !seenNodes.has(name)) {
+        seenNodes.add(name);
+        nodes.push({
+          name,
+          value: Math.round((nodeValues.get(name) || 0) * 100) / 100,
+          itemStyle: {
+            color: nodeColors[name] || '#94a3b8',
+            borderColor: '#0f172a',
+            borderWidth: 1
+          }
+        });
+      }
+    });
+
+    const links = [];
+
+    // Enlaces Nivel 0 -> Nivel 1 (Emisor ➔ Vto)
+    links12.forEach((val, key) => {
+      const [source, target] = key.split('___');
+      links.push({
+        source,
+        target,
+        value: Math.round(val * 100) / 100,
+        lineStyle: {
+          color: nodeColors[source] || 'rgba(14, 165, 233, 0.4)',
+          opacity: 0.35
+        }
+      });
+    });
+
+    // Enlaces Nivel 1 -> Nivel 2 (Vto ➔ Moneda Origen con venas coloreadas)
+    links23.forEach((val, key) => {
+      const [source, target] = key.split('___');
+      let linkColor = 'rgba(16, 185, 129, 0.45)'; // MEP verde
+      if (target.includes('Pesos')) linkColor = 'rgba(56, 189, 248, 0.45)'; // Celeste
+      else if (target.includes('Cable')) linkColor = 'rgba(245, 158, 11, 0.45)'; // Dorado/Naranja
+      links.push({
+        source,
+        target,
+        value: Math.round(val * 100) / 100,
+        lineStyle: {
+          color: linkColor,
+          opacity: 0.45
+        }
+      });
+    });
+
+    // Enlaces Nivel 2 -> Nivel 3 (Moneda Origen ➔ Volumen Total Rueda)
+    links34.forEach((val, key) => {
+      const [source, target] = key.split('___');
+      let linkColor = 'rgba(16, 185, 129, 0.6)'; // MEP
+      if (source.includes('Pesos')) linkColor = 'rgba(56, 189, 248, 0.6)'; // ARS
+      else if (source.includes('Cable')) linkColor = 'rgba(245, 158, 11, 0.6)'; // Cable
+      links.push({
+        source,
+        target,
+        value: Math.round(val * 100) / 100,
+        lineStyle: {
+          color: linkColor,
+          opacity: 0.6
+        }
+      });
+    });
+
+    return { nodes, links, totalVolume };
+  }
+
+  renderSankeyChart() {
+    if (typeof window === 'undefined' || typeof window.echarts === 'undefined') {
+      return;
+    }
+
+    const container = document.getElementById('sankey-chart-container');
+    if (!container) return;
+
+    if (container.clientWidth === 0 || container.clientHeight === 0) {
+      return;
+    }
+
+    if (!this.sankeyChart) {
+      this.sankeyChart = window.echarts.init(container);
+    }
+
+    const { nodes, links, totalVolume } = this.buildSankeyData();
+    if (!nodes || nodes.length === 0 || !links || links.length === 0) {
+      container.innerHTML = `<div style="text-align: center; color: var(--text-dim); padding: 4rem 0; font-size: 0.85rem;">Sin operaciones registradas en la rueda corriente para graficar el diagrama de flujo</div>`;
+      return;
+    }
+
+    const isVert = (this.sankeyOrient === 'vertical');
+
+    const option = {
+      backgroundColor: 'transparent',
+      animationDuration: 600,
+      tooltip: {
+        trigger: 'item',
+        triggerOn: 'mousemove',
+        backgroundColor: 'rgba(9, 14, 23, 0.95)',
+        borderColor: '#334155',
+        borderWidth: 1,
+        padding: [8, 12],
+        textStyle: {
+          color: '#f8fafc',
+          fontSize: 12
+        },
+        formatter: (params) => {
+          const val = params.value || 0;
+          const pct = totalVolume > 0 ? ((val / totalVolume) * 100) : 0;
+          const valFormatted = this.formatNumber(val, 2);
+          const pctFormatted = this.formatNumber(pct, 2);
+
+          if (params.dataType === 'edge') {
+            return `
+              <div style="font-family: var(--font-sans); line-height: 1.4;">
+                <div style="font-weight: 700; color: #f8fafc; font-size: 0.82rem; margin-bottom: 4px;">
+                  ${params.data.source} ➔ ${params.data.target}
+                </div>
+                <div style="color: var(--accent-lime); font-family: var(--font-mono); font-size: 0.92rem; font-weight: 800;">
+                  US$ ${valFormatted} Cable
+                </div>
+                <div style="color: #94a3b8; font-size: 0.72rem; margin-top: 3px;">
+                  ${pctFormatted}% sobre el Volumen Total de la Rueda
+                </div>
+              </div>
+            `;
+          }
+          return `
+            <div style="font-family: var(--font-sans); line-height: 1.4;">
+              <div style="font-weight: 700; color: #f8fafc; font-size: 0.82rem; margin-bottom: 4px;">
+                ${params.name}
+              </div>
+              <div style="color: var(--accent-lime); font-family: var(--font-mono); font-size: 0.92rem; font-weight: 800;">
+                US$ ${valFormatted} Cable
+              </div>
+              <div style="color: #94a3b8; font-size: 0.72rem; margin-top: 3px;">
+                ${pctFormatted}% sobre el Volumen Total de la Rueda
+              </div>
+            </div>
+          `;
+        }
+      },
+      series: [{
+        type: 'sankey',
+        orient: 'horizontal',
+        layoutIterations: 0,
+        nodeMinHeight: 18,
+        nodeGap: 12,
+        nodeWidth: 20,
+        nodeAlign: 'justify',
+        draggable: true,
+        left: 120,
+        right: 180,
+        top: 20,
+        bottom: 20,
+        emphasis: {
+          focus: 'adjacency'
+        },
+        label: {
+          position: 'right',
+          color: '#f1f5f9',
+          fontSize: 11,
+          fontWeight: 600,
+          formatter: '{b}'
+        },
+        lineStyle: {
+          curveness: 0.5
+        },
+        levels: [
+          {
+            depth: 0,
+            label: { position: 'left', distance: 6 },
+            itemStyle: { borderWidth: 1, borderColor: '#0f172a' },
+            lineStyle: { opacity: 0.35 }
+          },
+          {
+            depth: 1,
+            label: { position: 'right', distance: 6 },
+            itemStyle: { borderWidth: 1, borderColor: '#0f172a' },
+            lineStyle: { opacity: 0.45 }
+          },
+          {
+            depth: 2,
+            label: { position: 'right', distance: 6 },
+            itemStyle: { borderWidth: 1, borderColor: '#0f172a' },
+            lineStyle: { opacity: 0.55 }
+          },
+          {
+            depth: 3,
+            label: { position: 'right', distance: 8 },
+            itemStyle: { borderWidth: 1, borderColor: '#0f172a', color: '#a3e635' },
+            lineStyle: { opacity: 0.6 }
+          }
+        ],
+        data: nodes,
+        links: links
+      }]
+    };
+
+    this.sankeyChart.setOption(option, true);
+    this.sankeyChart.resize();
   }
 
   handleHomeTickerClick(symbolOrIssuer) {
@@ -2668,10 +3556,11 @@ class TradingDeskApp {
       ? 'Formato numérico actual: Argentina (1.234,56). Clic para cambiar a Internacional (1,234.56)'
       : 'Formato numérico actual: Internacional (1,234.56). Clic para cambiar a Argentina (1.234,56)';
 
-    document.querySelectorAll('.btn-toggle-number-format, #btn-toggle-number-format').forEach(btn => {
+    const btn = document.getElementById('btn-toggle-number-format');
+    if (btn) {
       btn.textContent = label;
       btn.title = title;
-    });
+    }
   }
 
   formatDate(dateStr) {
@@ -2820,7 +3709,8 @@ class TradingDeskApp {
   }
 
   openModal(bond) {
-    this.selectedBondForModal = bond;
+    const calcBond = this.calculatedBonds?.find(b => b.id === bond.id || b.ticker === bond.ticker) || bond;
+    this.selectedBondForModal = calcBond;
 
     // Auto-select currency based on bond classification
     if (bond.paymentCurrency === 'Dólar Cable' || bond.instrumentGroup === 'USD Cable' || bond.ticker.endsWith('C')) {
@@ -2848,7 +3738,18 @@ class TradingDeskApp {
     const vtoDateStr = bond.maturity ? ` • Venc: ${this.formatDate(bond.maturity)}` : '';
     document.getElementById('modal-bond-ticker').textContent = `${bond.ticker} - ${bond.issuer}${vtoDateStr}`;
     const callStr = bond.isCallable ? (bond.callDate ? ` • Call: ${bond.callDate}${bond.callPrice ? ` @ $${bond.callPrice}` : ''}` : ' (Callable)') : '';
-    document.getElementById('modal-bond-isin').textContent = `ISIN: ${isinStatus} • Ley: ${bond.law} • Pago: ${bond.paymentCurrency} • Especie: ${bond.instrumentGroup} • Estructura: ${bond.structureType}${callStr} • Rating: ${bond.rating} (${bond.ratingAgency || 'FIX'})${amountStr}`;
+    
+    let rateInfoStr = '';
+    const isVar = bond.couponType === 'TAMAR' || bond.couponType === 'Badlar' || bond.couponType === 'Variable' || (bond.instrumentGroup && (bond.instrumentGroup.includes('TAMAR') || bond.instrumentGroup.includes('BADLAR')));
+    if (isVar) {
+      const sp = (bond.spread !== undefined && bond.spread !== null) ? `${bond.spread >= 0 ? '+' : ''}${bond.spread}%` : '';
+      const ref = bond.tasaReferencia || (bond.couponType === 'TAMAR' ? 'TAMAR' : (bond.couponType === 'Badlar' ? 'BADLAR' : 'Variable'));
+      rateInfoStr = ` • Tasa: ${sp ? `${ref} ${sp}` : ref}`;
+    } else if (bond.couponRate) {
+      rateInfoStr = ` • Cupón: ${bond.couponRate}%`;
+    }
+
+    document.getElementById('modal-bond-isin').textContent = `ISIN: ${isinStatus} • Ley: ${bond.law} • Pago: ${bond.paymentCurrency}${rateInfoStr} • Especie: ${bond.instrumentGroup} • Estructura: ${bond.structureType}${callStr} • Rating: ${bond.rating} (${bond.ratingAgency || 'FIX'})${amountStr}`;
 
     const flowHeader = document.getElementById('modal-flow-curr-header');
     if (flowHeader) {
@@ -2893,6 +3794,12 @@ class TradingDeskApp {
     document.getElementById('lbl-clean-price').textContent = `Precio Limpio (${currLabel}) ✍`;
     document.getElementById('lbl-accrued-interest').textContent = `Interés Corrido (${currLabel})`;
     document.getElementById('lbl-dirty-price').textContent = `Precio Sucio (${currLabel}) ✍`;
+
+    const flowHeader = document.getElementById('modal-flow-curr-header');
+    if (flowHeader) {
+      const headerCurrText = (curr === 'ARS') ? 'Pesos (ARS)' : (curr === 'MEP' ? 'Dólar MEP' : 'Dólar Cable');
+      flowHeader.textContent = `Flujo Total (${headerCurrText})`;
+    }
 
     // Determine active ticker and quote for the chosen currency
     let activeTicker = bond.ticker;
@@ -3001,8 +3908,13 @@ class TradingDeskApp {
 
     if (lastEl) {
       lastEl.textContent = fmtPrice(dirtyVal);
-      const quoteDateStr = bond.quoteDate ? this.formatDate(bond.quoteDate) : (this.lastSyncTimestamp ? this.lastSyncTimestamp.split(' - ')[0] : 'Hoy');
-      lastEl.title = `Fecha de cotización: ${quoteDateStr} • Rueda BYMA / Data912 en vivo`;
+      const isMarketOpen = this.apiConnector.isMarketOpen();
+      const quoteDateStr = bond.quoteDate 
+        ? this.formatDate(bond.quoteDate) 
+        : this.formatDate(this.apiConnector.getLastTradingDate());
+      lastEl.title = isMarketOpen
+        ? `Cotización en vivo (${quoteDateStr}) • Rueda BYMA`
+        : `Última rueda operada: ${quoteDateStr} • Cierre BYMA`;
     }
     if (chgEl) {
       chgEl.textContent = `${pctChg >= 0 ? '+' : ''}${this.formatNumber(pctChg, 2)}%`;
@@ -3014,7 +3926,7 @@ class TradingDeskApp {
     if (tradesEl) tradesEl.textContent = trades > 0 ? `Operaciones: ${this.formatNumber(trades, 0)}` : (vol > 0 ? 'Operaciones: -' : 'Operaciones: 0');
     if (montoEl) {
       montoEl.textContent = vol > 0 
-        ? `~${currSymbol}${this.formatNumber(Math.round(cashTurnover), 0)}`
+        ? `${currSymbol}${this.formatNumber(Math.round(cashTurnover), 0)}`
         : `${currSymbol}0`;
     }
 
@@ -3042,10 +3954,15 @@ class TradingDeskApp {
     const tbody = document.getElementById('modal-cashflows-body');
     if (tbody) {
       const displayFlows = bond.allCashFlows || bond.cashFlows;
-      const settlStr = bond.settlementDate;
+      const settlStr = bond.settlementDate || FinancialMath.getSettlementDate(this.settlementMode) || new Date().toISOString().slice(0, 10);
+      let foundNext = false;
       tbody.innerHTML = displayFlows.map((cf, idx) => {
         const isPast = cf.date < settlStr;
-        const isNext = cf.date === settlStr || (!isPast && !displayFlows.some(other => other.date < cf.date && other.date >= settlStr));
+        let isNext = false;
+        if (!isPast && !foundNext) {
+          isNext = true;
+          foundNext = true;
+        }
         const statusBadge = isPast 
           ? `<span style="font-size: 0.65rem; color: var(--text-dim); background: rgba(255,255,255,0.06); padding: 1px 5px; border-radius: 4px; margin-left: 6px;">Cobrado</span>`
           : isNext 
@@ -3168,7 +4085,7 @@ class TradingDeskApp {
     if (statusDiv) {
       statusDiv.style.display = 'block';
       statusDiv.style.color = 'var(--accent-cyan)';
-      statusDiv.textContent = '⏳ Conectando con Data912 y obteniendo cotizaciones de ONs y Bonos...';
+      statusDiv.textContent = '⏳ Obteniendo cotizaciones de mercado de ONs y Bonos...';
     }
 
     try {
@@ -3210,6 +4127,8 @@ class TradingDeskApp {
         this.processMarketVolumeData(corpQuotes, cclRate, mepRate, sovQuotes);
       }
 
+      // Set exact last trading date on service so all bonds receive proper trading session stamp
+      this.data912.lastTradingDate = this.apiConnector.getLastTradingDate();
       const res = this.data912.applyQuotesToBonds(this.bonds, corpQuotes, sovQuotes);
 
       // Recalculate metrics and curves with real market prices
@@ -3244,10 +4163,10 @@ class TradingDeskApp {
         }, 3000);
       }
     } catch (err) {
-      console.error('[Data912 Sync Error]', err);
+      console.error('[Market Sync Error]', err);
       if (statusDiv) {
         statusDiv.style.color = 'var(--accent-red, #ff4d4d)';
-        statusDiv.textContent = `❌ Error al conectar con Data912: ${err.message}`;
+        statusDiv.textContent = `❌ Error al sincronizar mercado: ${err.message}`;
       }
       this.updateMarketStatusBadge();
     } finally {

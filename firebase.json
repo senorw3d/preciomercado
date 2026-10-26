@@ -4,9 +4,13 @@
     "ignore": [
       "firebase.json",
       "**/.*",
+      "node_modules/**",
+      "scratch/**",
+      "historico_data/**",
       "**/*.py",
       "**/*.pyc",
-      "**/__pycache__/**"
+      "**/__pycache__/**",
+      "**/*.ps1"
     ],
     "rewrites": [
       {
